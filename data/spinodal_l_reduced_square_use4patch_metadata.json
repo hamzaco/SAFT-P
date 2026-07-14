@@ -1,0 +1,28 @@
+{
+  "factor": 4.0,
+  "z": 4,
+  "canonicalize_by_boundary_edges": true,
+  "canonicalize_by_edges": false,
+  "use_4_patch": true,
+  "patches_shape": [
+    5,
+    4
+  ],
+  "rot90_species": [
+    1,
+    2,
+    3,
+    0,
+    4
+  ],
+  "n_points": 1213,
+  "n_binodals": 1213,
+  "eps_as_range": [
+    0.0,
+    10.0
+  ],
+  "eps_cs_range": [
+    0.0,
+    2.1
+  ]
+}

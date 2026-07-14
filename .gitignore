@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Numba cache
+*.nbc
+*.nbi
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large archive (kept locally, not pushed)
+Archive.zip
+
+# Runtime scratch / caches produced by scans
+cache/
+build_*/
+*.mmap

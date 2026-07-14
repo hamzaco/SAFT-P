@@ -1,0 +1,1229 @@
+[ising-ref] loaded cached triangular Ising reference from: cache/triangular_ising_reference_L64_b3000_n20000_seed12345.npz
+[array([1, 0, 1, 0, 1, 0]), array([0, 1, 0, 1, 0, 1]), array([2, 2, 2, 2, 2, 2])]
+Species (3 total, 2 non-empty):
+  0: [1 0 1 0 1 0]
+  1: [0 1 0 1 0 1]
+  2: [2 2 2 2 2 2]
+
+=== Step: target eps_sp=1.340 (prev=1.320, step=0.0200) ===
+/pool/hamza/simulate_mercedes_parallel.py:1003: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  P_ref=P_smooth / np.trapz(P_smooth, centers_ref),
+/pool/hamza/simulate_mercedes_parallel.py:334: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  norm = np.trapz(P, x_grid)
+/pool/hamza/simulate_mercedes_parallel.py:380: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  match_L2 = np.trapz(diff * diff, x_ref)
+/pool/hamza/simulate_mercedes_parallel.py:385: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  asym_L2 = np.trapz(A * A, x_ref)
+/pool/hamza/simulate_mercedes_parallel.py:399: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  match_L2 = float(np.trapz(diff * diff, x_ref))
+/pool/hamza/simulate_mercedes_parallel.py:402: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  asym_L2 = float(np.trapz(A * A, x_ref))
+/pool/hamza/simulate_mercedes_parallel.py:1020: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  P_ref_norm = fit["P_ref"] / max(np.trapz(fit['P_ref'], fit['x']), 1e-300)
+/pool/hamza/simulate_mercedes_parallel.py:1021: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  P_fit_norm = fit["P_fit"] / max(np.trapz(fit['P_fit'], fit['x']), 1e-300)
+/pool/hamza/simulate_mercedes_parallel.py:1039: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  edges_ref, P_smooth / np.trapz(P_smooth, centers_ref),
+[mu=4.070000] f=m_dense-m_dilute=+0.2091
+[step] mu=4.090000 f=-0.4396
+[bisect] mu=4.080000 f=-0.1282 bracket=[4.090000,4.070000]
+[bisect] mu=4.075000 f=+0.0410 bracket=[4.080000,4.070000]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9900]
+DEBUG: u range=[-3.432600, -0.000000]
+DEBUG: C_ns range=[0, 212], C_sp range=[0, 95]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.075000, dA=+0.0410, ESS~7505
+[equal-rho] bracket mu=4.075100, dA=+0.0377, ESS~7505
+[equal-rho] bracket mu=4.075200, dA=+0.0343, ESS~7505
+[equal-rho] bracket mu=4.075300, dA=+0.0310, ESS~7504
+[equal-rho] bracket mu=4.075400, dA=+0.0276, ESS~7503
+[equal-rho] bracket mu=4.075500, dA=+0.0242, ESS~7503
+[equal-rho] bracket mu=4.075600, dA=+0.0209, ESS~7502
+[equal-rho] bracket mu=4.075700, dA=+0.0175, ESS~7500
+[equal-rho] bracket mu=4.075800, dA=+0.0142, ESS~7499
+[equal-rho] bracket mu=4.075900, dA=+0.0108, ESS~7497
+[equal-rho] bracket mu=4.076000, dA=+0.0074, ESS~7495
+[equal-rho] bracket mu=4.076100, dA=+0.0041, ESS~7493
+[equal-rho] bracket mu=4.076200, dA=+0.0007, ESS~7491
+[equal-rho] bracket mu=4.076300, dA=-0.0027, ESS~7489
+[equal-rho] bisect mu=4.075650, dA=+0.0192, ESS~7501
+[equal-rho] bisect mu=4.075975, dA=+0.0083, ESS~7496
+mu* = 4.075975   ESS ~ 7496
+weighted <rho> = 0.4884
+DEBUG: w_mu ESS=7496, w_mu range=[1.27e-04, 1.40e-04]
+DEBUG: x_test range=[-1.3684, 1.4056], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.001422, r=-0.000000, match_L2=0.037097
+success: True
+chi2*  : 0.001600
+theta* : (0.7455862636504343, 1.34, 4.0705706590706265, 1.0000000000002105, 0.48582844263441466, 0.0014218631239592816)
+
+=== Step: target eps_sp=1.360 (prev=1.340, step=0.0200) ===
+[mu=4.070571] f=m_dense-m_dilute=+0.3816
+[step] mu=4.090571 f=-0.2782
+[bisect] mu=4.080571 f=+0.0564 bracket=[4.090571,4.070571]
+[bisect] mu=4.085571 f=-0.1095 bracket=[4.090571,4.080571]
+[bisect] mu=4.083071 f=-0.0340 bracket=[4.085571,4.080571]
+DEBUG: len(rho)=7505, rho range=[0.0000, 1.0000]
+DEBUG: u range=[-3.442759, -0.000000]
+DEBUG: C_ns range=[0, 210], C_sp range=[0, 94]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.083071, dA=-0.0340, ESS~7505
+[equal-rho] bracket mu=4.082971, dA=-0.0306, ESS~7505
+[equal-rho] bracket mu=4.082871, dA=-0.0272, ESS~7505
+[equal-rho] bracket mu=4.082771, dA=-0.0238, ESS~7504
+[equal-rho] bracket mu=4.082671, dA=-0.0205, ESS~7503
+[equal-rho] bracket mu=4.082571, dA=-0.0171, ESS~7503
+[equal-rho] bracket mu=4.082471, dA=-0.0137, ESS~7502
+[equal-rho] bracket mu=4.082371, dA=-0.0103, ESS~7500
+[equal-rho] bracket mu=4.082271, dA=-0.0070, ESS~7499
+[equal-rho] bracket mu=4.082171, dA=-0.0036, ESS~7497
+[equal-rho] bracket mu=4.082071, dA=-0.0002, ESS~7495
+[equal-rho] bracket mu=4.081971, dA=+0.0032, ESS~7493
+[equal-rho] bisect mu=4.082521, dA=-0.0154, ESS~7502
+[equal-rho] bisect mu=4.082246, dA=-0.0061, ESS~7498
+mu* = 4.082246   ESS ~ 7498
+weighted <rho> = 0.4845
+DEBUG: w_mu ESS=7498, w_mu range=[1.28e-04, 1.39e-04]
+DEBUG: x_test range=[-1.3544, 1.4411], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=-0.006846, r=-0.000000, match_L2=0.024090
+success: True
+chi2*  : 0.001415
+theta* : (0.7402247916692479, 1.36, 4.079224590310811, 0.9999999999978858, 0.473782223719361, -0.006845970169351976)
+
+=== Step: target eps_sp=1.380 (prev=1.360, step=0.0200) ===
+[mu=4.079225] f=m_dense-m_dilute=+0.2081
+[step] mu=4.099225 f=-0.4390
+[bisect] mu=4.089225 f=-0.1376 bracket=[4.099225,4.079225]
+[bisect] mu=4.084225 f=+0.0457 bracket=[4.089225,4.079225]
+DEBUG: len(rho)=7505, rho range=[0.0000, 1.0000]
+DEBUG: u range=[-3.471874, -0.000000]
+DEBUG: C_ns range=[0, 209], C_sp range=[0, 96]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.084225, dA=+0.0457, ESS~7505
+[equal-rho] bracket mu=4.084325, dA=+0.0423, ESS~7505
+[equal-rho] bracket mu=4.084425, dA=+0.0390, ESS~7505
+[equal-rho] bracket mu=4.084525, dA=+0.0356, ESS~7504
+[equal-rho] bracket mu=4.084625, dA=+0.0323, ESS~7503
+[equal-rho] bracket mu=4.084725, dA=+0.0289, ESS~7503
+[equal-rho] bracket mu=4.084825, dA=+0.0255, ESS~7502
+[equal-rho] bracket mu=4.084925, dA=+0.0222, ESS~7500
+[equal-rho] bracket mu=4.085025, dA=+0.0188, ESS~7499
+[equal-rho] bracket mu=4.085125, dA=+0.0154, ESS~7497
+[equal-rho] bracket mu=4.085225, dA=+0.0121, ESS~7495
+[equal-rho] bracket mu=4.085325, dA=+0.0087, ESS~7493
+[equal-rho] bracket mu=4.085425, dA=+0.0053, ESS~7491
+[equal-rho] bracket mu=4.085525, dA=+0.0020, ESS~7489
+[equal-rho] bracket mu=4.085625, dA=-0.0014, ESS~7486
+[equal-rho] bisect mu=4.084925, dA=+0.0222, ESS~7500
+[equal-rho] bisect mu=4.085275, dA=+0.0104, ESS~7494
+[equal-rho] bisect mu=4.085450, dA=+0.0045, ESS~7491
+mu* = 4.085450   ESS ~ 7491
+weighted <rho> = 0.4862
+DEBUG: w_mu ESS=7491, w_mu range=[1.25e-04, 1.42e-04]
+DEBUG: x_test range=[-1.3634, 1.4411], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.007455, r=-0.000000, match_L2=0.027973
+success: True
+chi2*  : 0.001542
+theta* : (0.7356636031074115, 1.3800000000000001, 4.079993680139133, 1.0000000000019025, 0.49614143704619634, 0.007455361629129495)
+
+=== Step: target eps_sp=1.400 (prev=1.380, step=0.0200) ===
+[mu=4.079994] f=m_dense-m_dilute=+0.3259
+[step] mu=4.099994 f=-0.2977
+[bisect] mu=4.089994 f=+0.0473 bracket=[4.099994,4.079994]
+DEBUG: len(rho)=7505, rho range=[0.0000, 1.0000]
+DEBUG: u range=[-3.476591, -0.000000]
+DEBUG: C_ns range=[0, 210], C_sp range=[0, 96]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.089994, dA=+0.0473, ESS~7505
+[equal-rho] bracket mu=4.090094, dA=+0.0439, ESS~7505
+[equal-rho] bracket mu=4.090194, dA=+0.0406, ESS~7505
+[equal-rho] bracket mu=4.090294, dA=+0.0372, ESS~7504
+[equal-rho] bracket mu=4.090394, dA=+0.0338, ESS~7503
+[equal-rho] bracket mu=4.090494, dA=+0.0305, ESS~7503
+[equal-rho] bracket mu=4.090594, dA=+0.0271, ESS~7502
+[equal-rho] bracket mu=4.090694, dA=+0.0237, ESS~7500
+[equal-rho] bracket mu=4.090794, dA=+0.0204, ESS~7499
+[equal-rho] bracket mu=4.090894, dA=+0.0170, ESS~7497
+[equal-rho] bracket mu=4.090994, dA=+0.0136, ESS~7495
+[equal-rho] bracket mu=4.091094, dA=+0.0102, ESS~7493
+[equal-rho] bracket mu=4.091194, dA=+0.0069, ESS~7491
+[equal-rho] bracket mu=4.091294, dA=+0.0035, ESS~7489
+[equal-rho] bracket mu=4.091394, dA=+0.0001, ESS~7486
+[equal-rho] bracket mu=4.091494, dA=-0.0032, ESS~7484
+[equal-rho] bisect mu=4.090744, dA=+0.0220, ESS~7500
+[equal-rho] bisect mu=4.091119, dA=+0.0094, ESS~7493
+mu* = 4.091119   ESS ~ 7493
+weighted <rho> = 0.4866
+DEBUG: w_mu ESS=7493, w_mu range=[1.26e-04, 1.41e-04]
+DEBUG: x_test range=[-1.3647, 1.4400], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.010835, r=-0.000000, match_L2=0.032272
+success: True
+chi2*  : 0.001561
+theta* : (0.7311284823756351, 1.4000000000000001, 4.085760553440126, 1.0000000000028277, 0.49848126572144535, 0.010835374748576411)
+
+=== Step: target eps_sp=1.420 (prev=1.400, step=0.0200) ===
+[mu=4.085761] f=m_dense-m_dilute=+0.3459
+[step] mu=4.105761 f=-0.2801
+[bisect] mu=4.095761 f=+0.0245 bracket=[4.105761,4.085761]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9900]
+DEBUG: u range=[-3.409518, -0.000000]
+DEBUG: C_ns range=[0, 206], C_sp range=[0, 96]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.095761, dA=+0.0245, ESS~7505
+[equal-rho] bracket mu=4.095861, dA=+0.0212, ESS~7505
+[equal-rho] bracket mu=4.095961, dA=+0.0178, ESS~7505
+[equal-rho] bracket mu=4.096061, dA=+0.0144, ESS~7504
+[equal-rho] bracket mu=4.096161, dA=+0.0111, ESS~7503
+[equal-rho] bracket mu=4.096261, dA=+0.0077, ESS~7503
+[equal-rho] bracket mu=4.096361, dA=+0.0044, ESS~7502
+[equal-rho] bracket mu=4.096461, dA=+0.0010, ESS~7500
+[equal-rho] bracket mu=4.096561, dA=-0.0023, ESS~7499
+[equal-rho] bisect mu=4.096161, dA=+0.0111, ESS~7503
+[equal-rho] bisect mu=4.096361, dA=+0.0044, ESS~7502
+mu* = 4.096361   ESS ~ 7502
+weighted <rho> = 0.4857
+DEBUG: w_mu ESS=7502, w_mu range=[1.29e-04, 1.37e-04]
+DEBUG: x_test range=[-1.3670, 1.4191], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.004701, r=-0.000000, match_L2=0.031195
+success: True
+chi2*  : 0.001786
+theta* : (0.7265346095757794, 1.4200000000000002, 4.0910727752225355, 1.0000000000011782, 0.48966676375639306, 0.0047008410727724746)
+
+=== Step: target eps_sp=1.440 (prev=1.420, step=0.0200) ===
+[mu=4.091073] f=m_dense-m_dilute=+0.3712
+[step] mu=4.111073 f=-0.3029
+[bisect] mu=4.101073 f=+0.0225 bracket=[4.111073,4.091073]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9900]
+DEBUG: u range=[-3.399812, -0.000000]
+DEBUG: C_ns range=[0, 205], C_sp range=[0, 95]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.101073, dA=+0.0225, ESS~7505
+[equal-rho] bracket mu=4.101173, dA=+0.0192, ESS~7505
+[equal-rho] bracket mu=4.101273, dA=+0.0158, ESS~7505
+[equal-rho] bracket mu=4.101373, dA=+0.0125, ESS~7504
+[equal-rho] bracket mu=4.101473, dA=+0.0091, ESS~7503
+[equal-rho] bracket mu=4.101573, dA=+0.0058, ESS~7503
+[equal-rho] bracket mu=4.101673, dA=+0.0024, ESS~7502
+[equal-rho] bracket mu=4.101773, dA=-0.0009, ESS~7500
+[equal-rho] bisect mu=4.101423, dA=+0.0108, ESS~7504
+[equal-rho] bisect mu=4.101598, dA=+0.0049, ESS~7502
+mu* = 4.101598   ESS ~ 7502
+weighted <rho> = 0.4844
+DEBUG: w_mu ESS=7502, w_mu range=[1.30e-04, 1.37e-04]
+DEBUG: x_test range=[-1.3638, 1.4238], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.005222, r=-0.000000, match_L2=0.033422
+success: True
+chi2*  : 0.001618
+theta* : (0.7218664827440885, 1.4400000000000002, 4.096467419449016, 1.0000000000013551, 0.48892482130569576, 0.005221645048094353)
+
+=== Step: target eps_sp=1.460 (prev=1.440, step=0.0200) ===
+[mu=4.096467] f=m_dense-m_dilute=+0.3662
+[step] mu=4.116467 f=-0.2985
+[bisect] mu=4.106467 f=+0.0636 bracket=[4.116467,4.096467]
+[bisect] mu=4.111467 f=-0.1203 bracket=[4.116467,4.106467]
+[bisect] mu=4.108967 f=-0.0385 bracket=[4.111467,4.106467]
+DEBUG: len(rho)=7505, rho range=[0.0000, 1.0000]
+DEBUG: u range=[-3.490399, -0.000000]
+DEBUG: C_ns range=[0, 208], C_sp range=[0, 95]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.108967, dA=-0.0385, ESS~7505
+[equal-rho] bracket mu=4.108867, dA=-0.0352, ESS~7505
+[equal-rho] bracket mu=4.108767, dA=-0.0318, ESS~7505
+[equal-rho] bracket mu=4.108667, dA=-0.0285, ESS~7504
+[equal-rho] bracket mu=4.108567, dA=-0.0251, ESS~7503
+[equal-rho] bracket mu=4.108467, dA=-0.0218, ESS~7503
+[equal-rho] bracket mu=4.108367, dA=-0.0184, ESS~7502
+[equal-rho] bracket mu=4.108267, dA=-0.0151, ESS~7500
+[equal-rho] bracket mu=4.108167, dA=-0.0117, ESS~7499
+[equal-rho] bracket mu=4.108067, dA=-0.0084, ESS~7497
+[equal-rho] bracket mu=4.107967, dA=-0.0050, ESS~7496
+[equal-rho] bracket mu=4.107867, dA=-0.0016, ESS~7494
+[equal-rho] bracket mu=4.107767, dA=+0.0017, ESS~7491
+[equal-rho] bisect mu=4.108367, dA=-0.0184, ESS~7502
+[equal-rho] bisect mu=4.108067, dA=-0.0084, ESS~7497
+mu* = 4.108067   ESS ~ 7497
+weighted <rho> = 0.4799
+DEBUG: w_mu ESS=7497, w_mu range=[1.28e-04, 1.40e-04]
+DEBUG: x_test range=[-1.3497, 1.4625], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=-0.021751, r=-0.000000, match_L2=0.030537
+success: True
+chi2*  : 0.001298
+theta* : (0.7164426285511899, 1.4600000000000002, 4.1048517722463735, 0.9999999999930316, 0.44952674672977827, -0.021750895932998372)
+
+=== Step: target eps_sp=1.480 (prev=1.460, step=0.0200) ===
+[mu=4.104852] f=m_dense-m_dilute=+0.1912
+[step] mu=4.124852 f=-0.4376
+[bisect] mu=4.114852 f=-0.1318 bracket=[4.124852,4.104852]
+[bisect] mu=4.109852 f=+0.0509 bracket=[4.114852,4.104852]
+[bisect] mu=4.112352 f=-0.0496 bracket=[4.114852,4.109852]
+DEBUG: len(rho)=7505, rho range=[0.0000, 1.0000]
+DEBUG: u range=[-3.536328, -0.000000]
+DEBUG: C_ns range=[0, 205], C_sp range=[0, 95]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.112352, dA=-0.0496, ESS~7505
+[equal-rho] bracket mu=4.112252, dA=-0.0462, ESS~7505
+[equal-rho] bracket mu=4.112152, dA=-0.0429, ESS~7505
+[equal-rho] bracket mu=4.112052, dA=-0.0396, ESS~7504
+[equal-rho] bracket mu=4.111952, dA=-0.0362, ESS~7503
+[equal-rho] bracket mu=4.111852, dA=-0.0329, ESS~7503
+[equal-rho] bracket mu=4.111752, dA=-0.0295, ESS~7502
+[equal-rho] bracket mu=4.111652, dA=-0.0262, ESS~7500
+[equal-rho] bracket mu=4.111552, dA=-0.0229, ESS~7499
+[equal-rho] bracket mu=4.111452, dA=-0.0195, ESS~7497
+[equal-rho] bracket mu=4.111352, dA=-0.0162, ESS~7496
+[equal-rho] bracket mu=4.111252, dA=-0.0128, ESS~7494
+[equal-rho] bracket mu=4.111152, dA=-0.0095, ESS~7491
+[equal-rho] bracket mu=4.111052, dA=-0.0062, ESS~7489
+[equal-rho] bracket mu=4.110952, dA=-0.0028, ESS~7487
+[equal-rho] bracket mu=4.110852, dA=+0.0005, ESS~7484
+[equal-rho] bisect mu=4.111602, dA=-0.0245, ESS~7500
+[equal-rho] bisect mu=4.111227, dA=-0.0120, ESS~7493
+[equal-rho] bisect mu=4.111039, dA=-0.0057, ESS~7489
+mu* = 4.111039   ESS ~ 7489
+weighted <rho> = 0.4811
+DEBUG: w_mu ESS=7489, w_mu range=[1.25e-04, 1.43e-04]
+DEBUG: x_test range=[-1.3587, 1.4653], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=-0.007966, r=-0.000000, match_L2=0.026959
+success: True
+chi2*  : 0.001510
+theta* : (0.7112684418120853, 1.4800000000000002, 4.107212132814798, 0.999999999997028, 0.4672243726979112, -0.007965924187392216)
+
+=== Step: target eps_sp=1.500 (prev=1.480, step=0.0200) ===
+[mu=4.107212] f=m_dense-m_dilute=+0.2759
+[step] mu=4.127212 f=-0.3738
+[bisect] mu=4.117212 f=-0.0610 bracket=[4.127212,4.107212]
+[bisect] mu=4.112212 f=+0.1163 bracket=[4.117212,4.107212]
+[bisect] mu=4.114712 f=-0.0079 bracket=[4.117212,4.112212]
+DEBUG: len(rho)=7505, rho range=[0.0000, 1.0000]
+DEBUG: u range=[-3.495405, -0.000000]
+DEBUG: C_ns range=[0, 208], C_sp range=[0, 95]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.114712, dA=-0.0079, ESS~7505
+mu* = 4.114712   ESS ~ 7505
+weighted <rho> = 0.4795
+DEBUG: w_mu ESS=7505, w_mu range=[1.33e-04, 1.33e-04]
+DEBUG: x_test range=[-1.3613, 1.4776], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=-0.016980, r=-0.000000, match_L2=0.036208
+success: True
+chi2*  : 0.001416
+theta* : (0.7060602354434231, 1.5000000000000002, 4.110796669870549, 0.9999999999949779, 0.4546601356002147, -0.016980030744810456)
+
+=== Step: target eps_sp=1.520 (prev=1.500, step=0.0200) ===
+[mu=4.110797] f=m_dense-m_dilute=+0.2791
+[step] mu=4.130797 f=-0.3574
+[bisect] mu=4.120797 f=-0.0346 bracket=[4.130797,4.110797]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9900]
+DEBUG: u range=[-3.428453, -0.000000]
+DEBUG: C_ns range=[0, 206], C_sp range=[0, 95]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.120797, dA=-0.0346, ESS~7505
+[equal-rho] bracket mu=4.120697, dA=-0.0313, ESS~7505
+[equal-rho] bracket mu=4.120597, dA=-0.0280, ESS~7505
+[equal-rho] bracket mu=4.120497, dA=-0.0247, ESS~7504
+[equal-rho] bracket mu=4.120397, dA=-0.0214, ESS~7504
+[equal-rho] bracket mu=4.120297, dA=-0.0181, ESS~7503
+[equal-rho] bracket mu=4.120197, dA=-0.0148, ESS~7502
+[equal-rho] bracket mu=4.120097, dA=-0.0114, ESS~7500
+[equal-rho] bracket mu=4.119997, dA=-0.0081, ESS~7499
+[equal-rho] bracket mu=4.119897, dA=-0.0048, ESS~7497
+[equal-rho] bracket mu=4.119797, dA=-0.0015, ESS~7496
+[equal-rho] bracket mu=4.119697, dA=+0.0018, ESS~7494
+[equal-rho] bisect mu=4.120247, dA=-0.0164, ESS~7502
+[equal-rho] bisect mu=4.119972, dA=-0.0073, ESS~7499
+mu* = 4.119972   ESS ~ 7499
+weighted <rho> = 0.4765
+DEBUG: w_mu ESS=7499, w_mu range=[1.28e-04, 1.39e-04]
+DEBUG: x_test range=[-1.3535, 1.4583], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=-0.027945, r=-0.000000, match_L2=0.036518
+success: True
+chi2*  : 0.001445
+theta* : (0.7009208988398821, 1.5200000000000002, 4.115784520173278, 0.9999999999898429, 0.4361103856300826, -0.027944977914888574)
+
+=== Step: target eps_sp=1.540 (prev=1.520, step=0.0200) ===
+[mu=4.115785] f=m_dense-m_dilute=+0.2440
+[step] mu=4.135785 f=-0.3789
+[bisect] mu=4.125785 f=-0.0706 bracket=[4.135785,4.115785]
+[bisect] mu=4.120785 f=+0.1009 bracket=[4.125785,4.115785]
+[bisect] mu=4.123285 f=+0.0033 bracket=[4.125785,4.120785]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9900]
+DEBUG: u range=[-3.477852, -0.000000]
+DEBUG: C_ns range=[0, 207], C_sp range=[0, 96]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.123285, dA=+0.0033, ESS~7505
+mu* = 4.123285   ESS ~ 7505
+weighted <rho> = 0.4836
+DEBUG: w_mu ESS=7505, w_mu range=[1.33e-04, 1.33e-04]
+DEBUG: x_test range=[-1.3750, 1.4397], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.015117, r=-0.000000, match_L2=0.039116
+success: True
+chi2*  : 0.001695
+theta* : (0.6960515813525537, 1.5400000000000003, 4.118450841182944, 1.0000000000063152, 0.5010304880898768, 0.015116508405130128)
+
+=== Step: target eps_sp=1.560 (prev=1.540, step=0.0200) ===
+[mu=4.118451] f=m_dense-m_dilute=+0.3459
+[step] mu=4.138451 f=-0.2901
+[bisect] mu=4.128451 f=+0.0177 bracket=[4.138451,4.118451]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9800]
+DEBUG: u range=[-3.436829, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 95]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.128451, dA=+0.0177, ESS~7505
+[equal-rho] bracket mu=4.128551, dA=+0.0144, ESS~7505
+[equal-rho] bracket mu=4.128651, dA=+0.0111, ESS~7505
+[equal-rho] bracket mu=4.128751, dA=+0.0078, ESS~7504
+[equal-rho] bracket mu=4.128851, dA=+0.0045, ESS~7504
+[equal-rho] bracket mu=4.128951, dA=+0.0012, ESS~7503
+[equal-rho] bracket mu=4.129051, dA=-0.0021, ESS~7502
+[equal-rho] bisect mu=4.128751, dA=+0.0078, ESS~7504
+mu* = 4.128751   ESS ~ 7504
+weighted <rho> = 0.4835
+DEBUG: w_mu ESS=7504, w_mu range=[1.31e-04, 1.35e-04]
+DEBUG: x_test range=[-1.3817, 1.4189], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.018666, r=-0.000000, match_L2=0.043950
+success: True
+chi2*  : 0.001623
+theta* : (0.6912179977925924, 1.5600000000000003, 4.123907755483532, 1.0000000000082567, 0.5039430721111198, 0.018665686085616723)
+
+=== Step: target eps_sp=1.580 (prev=1.560, step=0.0200) ===
+[mu=4.123908] f=m_dense-m_dilute=+0.3363
+[step] mu=4.143908 f=-0.3027
+[bisect] mu=4.133908 f=+0.0241 bracket=[4.143908,4.123908]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9900]
+DEBUG: u range=[-3.467381, -0.000000]
+DEBUG: C_ns range=[0, 210], C_sp range=[0, 97]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.133908, dA=+0.0241, ESS~7505
+[equal-rho] bracket mu=4.134008, dA=+0.0208, ESS~7505
+[equal-rho] bracket mu=4.134108, dA=+0.0176, ESS~7505
+[equal-rho] bracket mu=4.134208, dA=+0.0143, ESS~7504
+[equal-rho] bracket mu=4.134308, dA=+0.0110, ESS~7504
+[equal-rho] bracket mu=4.134408, dA=+0.0077, ESS~7503
+[equal-rho] bracket mu=4.134508, dA=+0.0045, ESS~7502
+[equal-rho] bracket mu=4.134608, dA=+0.0012, ESS~7501
+[equal-rho] bracket mu=4.134708, dA=-0.0021, ESS~7499
+[equal-rho] bisect mu=4.134308, dA=+0.0110, ESS~7504
+[equal-rho] bisect mu=4.134508, dA=+0.0045, ESS~7502
+mu* = 4.134508   ESS ~ 7502
+weighted <rho> = 0.4801
+DEBUG: w_mu ESS=7502, w_mu range=[1.29e-04, 1.37e-04]
+DEBUG: x_test range=[-1.3762, 1.4619], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=-0.000496, r=-0.000000, match_L2=0.052429
+success: True
+chi2*  : 0.002427
+theta* : (0.6864925700531315, 1.5800000000000003, 4.129316889379069, 0.9999999999999114, 0.4731176209147076, -0.0004958151245869794)
+
+=== Step: target eps_sp=1.600 (prev=1.580, step=0.0200) ===
+[mu=4.129317] f=m_dense-m_dilute=+0.3294
+[step] mu=4.149317 f=-0.2736
+[bisect] mu=4.139317 f=+0.0497 bracket=[4.149317,4.129317]
+DEBUG: len(rho)=7505, rho range=[0.0000, 1.0000]
+DEBUG: u range=[-3.576278, -0.000000]
+DEBUG: C_ns range=[0, 207], C_sp range=[0, 96]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.139317, dA=+0.0497, ESS~7505
+[equal-rho] bracket mu=4.139417, dA=+0.0464, ESS~7505
+[equal-rho] bracket mu=4.139517, dA=+0.0432, ESS~7505
+[equal-rho] bracket mu=4.139617, dA=+0.0399, ESS~7504
+[equal-rho] bracket mu=4.139717, dA=+0.0367, ESS~7504
+[equal-rho] bracket mu=4.139817, dA=+0.0334, ESS~7503
+[equal-rho] bracket mu=4.139917, dA=+0.0301, ESS~7502
+[equal-rho] bracket mu=4.140017, dA=+0.0269, ESS~7501
+[equal-rho] bracket mu=4.140117, dA=+0.0236, ESS~7499
+[equal-rho] bracket mu=4.140217, dA=+0.0203, ESS~7498
+[equal-rho] bracket mu=4.140317, dA=+0.0171, ESS~7496
+[equal-rho] bracket mu=4.140417, dA=+0.0138, ESS~7494
+[equal-rho] bracket mu=4.140517, dA=+0.0105, ESS~7492
+[equal-rho] bracket mu=4.140617, dA=+0.0072, ESS~7490
+[equal-rho] bracket mu=4.140717, dA=+0.0040, ESS~7487
+[equal-rho] bracket mu=4.140817, dA=+0.0007, ESS~7485
+[equal-rho] bracket mu=4.140917, dA=-0.0026, ESS~7482
+[equal-rho] bisect mu=4.140117, dA=+0.0236, ESS~7499
+[equal-rho] bisect mu=4.140517, dA=+0.0105, ESS~7492
+[equal-rho] bisect mu=4.140717, dA=+0.0040, ESS~7487
+mu* = 4.140717   ESS ~ 7487
+weighted <rho> = 0.4803
+DEBUG: w_mu ESS=7487, w_mu range=[1.24e-04, 1.43e-04]
+DEBUG: x_test range=[-1.3788, 1.4920], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.022887, r=-0.000000, match_L2=0.042335
+success: True
+chi2*  : 0.001792
+theta* : (0.6818037100851052, 1.6000000000000003, 4.135062125560446, 1.000000000012062, 0.510072201403949, 0.02288683056370226)
+
+=== Step: target eps_sp=1.620 (prev=1.600, step=0.0200) ===
+[mu=4.135062] f=m_dense-m_dilute=+0.3332
+[step] mu=4.155062 f=-0.2777
+[bisect] mu=4.145062 f=+0.0231 bracket=[4.155062,4.135062]
+DEBUG: len(rho)=7505, rho range=[0.0000, 1.0000]
+DEBUG: u range=[-3.508503, -0.000000]
+DEBUG: C_ns range=[0, 212], C_sp range=[0, 96]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.145062, dA=+0.0231, ESS~7505
+[equal-rho] bracket mu=4.145162, dA=+0.0198, ESS~7505
+[equal-rho] bracket mu=4.145262, dA=+0.0165, ESS~7505
+[equal-rho] bracket mu=4.145362, dA=+0.0133, ESS~7504
+[equal-rho] bracket mu=4.145462, dA=+0.0100, ESS~7504
+[equal-rho] bracket mu=4.145562, dA=+0.0067, ESS~7503
+[equal-rho] bracket mu=4.145662, dA=+0.0035, ESS~7502
+[equal-rho] bracket mu=4.145762, dA=+0.0002, ESS~7501
+[equal-rho] bracket mu=4.145862, dA=-0.0030, ESS~7499
+[equal-rho] bisect mu=4.145462, dA=+0.0100, ESS~7504
+[equal-rho] bisect mu=4.145662, dA=+0.0035, ESS~7502
+mu* = 4.145662   ESS ~ 7502
+weighted <rho> = 0.4797
+DEBUG: w_mu ESS=7502, w_mu range=[1.29e-04, 1.37e-04]
+DEBUG: x_test range=[-1.3783, 1.4950], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.003535, r=-0.000000, match_L2=0.051650
+success: True
+chi2*  : 0.002563
+theta* : (0.6770114479789623, 1.6200000000000003, 4.140476747656629, 1.0000000000006948, 0.47911618637218467, 0.0035347351205960134)
+
+=== Step: target eps_sp=1.640 (prev=1.620, step=0.0200) ===
+[mu=4.140477] f=m_dense-m_dilute=+0.3716
+[step] mu=4.160477 f=-0.2601
+[bisect] mu=4.150477 f=+0.0597 bracket=[4.160477,4.140477]
+[bisect] mu=4.155477 f=-0.1047 bracket=[4.160477,4.150477]
+[bisect] mu=4.152977 f=-0.0345 bracket=[4.155477,4.150477]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9700]
+DEBUG: u range=[-3.431972, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 95]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.152977, dA=-0.0345, ESS~7505
+[equal-rho] bracket mu=4.152877, dA=-0.0313, ESS~7505
+[equal-rho] bracket mu=4.152777, dA=-0.0280, ESS~7505
+[equal-rho] bracket mu=4.152677, dA=-0.0248, ESS~7504
+[equal-rho] bracket mu=4.152577, dA=-0.0215, ESS~7504
+[equal-rho] bracket mu=4.152477, dA=-0.0183, ESS~7503
+[equal-rho] bracket mu=4.152377, dA=-0.0150, ESS~7502
+[equal-rho] bracket mu=4.152277, dA=-0.0118, ESS~7501
+[equal-rho] bracket mu=4.152177, dA=-0.0085, ESS~7499
+[equal-rho] bracket mu=4.152077, dA=-0.0053, ESS~7498
+[equal-rho] bracket mu=4.151977, dA=-0.0020, ESS~7496
+[equal-rho] bracket mu=4.151877, dA=+0.0012, ESS~7494
+[equal-rho] bisect mu=4.152427, dA=-0.0166, ESS~7502
+[equal-rho] bisect mu=4.152152, dA=-0.0077, ESS~7499
+mu* = 4.152152   ESS ~ 7499
+weighted <rho> = 0.4756
+DEBUG: w_mu ESS=7499, w_mu range=[1.28e-04, 1.39e-04]
+DEBUG: x_test range=[-1.3725, 1.4265], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=-0.005378, r=-0.000000, match_L2=0.047941
+success: True
+chi2*  : 0.002205
+theta* : (0.6715379626992407, 1.6400000000000003, 4.148510238142029, 0.9999999999984438, 0.46591430771039166, -0.005378430780417973)
+
+=== Step: target eps_sp=1.660 (prev=1.640, step=0.0200) ===
+[mu=4.148510] f=m_dense-m_dilute=+0.2406
+[step] mu=4.168510 f=-0.3863
+[bisect] mu=4.158510 f=-0.0905 bracket=[4.168510,4.148510]
+[bisect] mu=4.153510 f=+0.0673 bracket=[4.158510,4.148510]
+[bisect] mu=4.156010 f=+0.0161 bracket=[4.158510,4.153510]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9800]
+DEBUG: u range=[-3.492029, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 96]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.156010, dA=+0.0161, ESS~7505
+[equal-rho] bracket mu=4.156110, dA=+0.0129, ESS~7505
+[equal-rho] bracket mu=4.156210, dA=+0.0096, ESS~7505
+[equal-rho] bracket mu=4.156310, dA=+0.0063, ESS~7504
+[equal-rho] bracket mu=4.156410, dA=+0.0031, ESS~7504
+[equal-rho] bracket mu=4.156510, dA=-0.0002, ESS~7503
+[equal-rho] bisect mu=4.156260, dA=+0.0080, ESS~7504
+mu* = 4.156260   ESS ~ 7504
+weighted <rho> = 0.4805
+DEBUG: w_mu ESS=7504, w_mu range=[1.32e-04, 1.35e-04]
+DEBUG: x_test range=[-1.3838, 1.4384], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.040734, r=-0.000000, match_L2=0.049794
+success: True
+chi2*  : 0.001839
+theta* : (0.6666112223677391, 1.6600000000000004, 4.151170195422718, 1.0000000000379505, 0.5338212074064483, 0.040734224787505595)
+
+=== Step: target eps_sp=1.680 (prev=1.660, step=0.0200) ===
+[mu=4.151170] f=m_dense-m_dilute=+0.3233
+[step] mu=4.171170 f=-0.2777
+[bisect] mu=4.161170 f=+0.0233 bracket=[4.171170,4.151170]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9900]
+DEBUG: u range=[-3.473444, -0.000000]
+DEBUG: C_ns range=[0, 204], C_sp range=[0, 96]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.161170, dA=+0.0233, ESS~7505
+[equal-rho] bracket mu=4.161270, dA=+0.0201, ESS~7505
+[equal-rho] bracket mu=4.161370, dA=+0.0169, ESS~7505
+[equal-rho] bracket mu=4.161470, dA=+0.0137, ESS~7504
+[equal-rho] bracket mu=4.161570, dA=+0.0104, ESS~7504
+[equal-rho] bracket mu=4.161670, dA=+0.0072, ESS~7503
+[equal-rho] bracket mu=4.161770, dA=+0.0040, ESS~7502
+[equal-rho] bracket mu=4.161870, dA=+0.0008, ESS~7501
+[equal-rho] bracket mu=4.161970, dA=-0.0025, ESS~7499
+[equal-rho] bisect mu=4.161570, dA=+0.0104, ESS~7504
+[equal-rho] bisect mu=4.161770, dA=+0.0040, ESS~7502
+mu* = 4.161770   ESS ~ 7502
+weighted <rho> = 0.4777
+DEBUG: w_mu ESS=7502, w_mu range=[1.29e-04, 1.37e-04]
+DEBUG: x_test range=[-1.3879, 1.4885], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.005285, r=-0.000000, match_L2=0.057737
+success: True
+chi2*  : 0.002553
+theta* : (0.6616596734641929, 1.6800000000000004, 4.1570185994665465, 1.000000000003644, 0.4767341460246605, 0.005284688505274215)
+
+=== Step: target eps_sp=1.700 (prev=1.680, step=0.0200) ===
+[mu=4.157019] f=m_dense-m_dilute=+0.3098
+[step] mu=4.177019 f=-0.3181
+[bisect] mu=4.167019 f=+0.0115 bracket=[4.177019,4.157019]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9900]
+DEBUG: u range=[-3.484780, -0.000000]
+DEBUG: C_ns range=[0, 209], C_sp range=[0, 95]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.167019, dA=+0.0115, ESS~7505
+[equal-rho] bracket mu=4.167119, dA=+0.0082, ESS~7505
+[equal-rho] bracket mu=4.167219, dA=+0.0050, ESS~7505
+[equal-rho] bracket mu=4.167319, dA=+0.0017, ESS~7504
+[equal-rho] bracket mu=4.167419, dA=-0.0015, ESS~7504
+[equal-rho] bisect mu=4.167219, dA=+0.0050, ESS~7505
+mu* = 4.167219   ESS ~ 7505
+weighted <rho> = 0.4789
+DEBUG: w_mu ESS=7505, w_mu range=[1.32e-04, 1.35e-04]
+DEBUG: x_test range=[-1.3845, 1.4775], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.018409, r=-0.000000, match_L2=0.051235
+success: True
+chi2*  : 0.002026
+theta* : (0.6564524129515191, 1.7000000000000004, 4.1629982672589705, 1.0000000000193745, 0.4978986279700527, 0.01840907997182379)
+
+=== Step: target eps_sp=1.720 (prev=1.700, step=0.0200) ===
+[mu=4.162998] f=m_dense-m_dilute=+0.2837
+[step] mu=4.182998 f=-0.3331
+[bisect] mu=4.172998 f=-0.0145 bracket=[4.182998,4.162998]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9800]
+DEBUG: u range=[-3.505583, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 97]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.172998, dA=-0.0145, ESS~7505
+[equal-rho] bracket mu=4.172898, dA=-0.0113, ESS~7505
+[equal-rho] bracket mu=4.172798, dA=-0.0081, ESS~7505
+[equal-rho] bracket mu=4.172698, dA=-0.0049, ESS~7504
+[equal-rho] bracket mu=4.172598, dA=-0.0016, ESS~7504
+[equal-rho] bracket mu=4.172498, dA=+0.0016, ESS~7503
+[equal-rho] bisect mu=4.172748, dA=-0.0065, ESS~7504
+mu* = 4.172748   ESS ~ 7504
+weighted <rho> = 0.4730
+DEBUG: w_mu ESS=7504, w_mu range=[1.32e-04, 1.35e-04]
+DEBUG: x_test range=[-1.3748, 1.4736], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=-0.003568, r=-0.000000, match_L2=0.057496
+success: True
+chi2*  : 0.003043
+theta* : (0.6511896072570146, 1.7200000000000004, 4.1682874966254895, 0.9999999999989176, 0.46441238658711276, -0.0035679076197262503)
+
+=== Step: target eps_sp=1.740 (prev=1.720, step=0.0200) ===
+[mu=4.168287] f=m_dense-m_dilute=+0.2729
+[step] mu=4.188287 f=-0.3370
+[bisect] mu=4.178287 f=-0.0470 bracket=[4.188287,4.168287]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9800]
+DEBUG: u range=[-3.492226, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 95]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.178287, dA=-0.0470, ESS~7505
+[equal-rho] bracket mu=4.178187, dA=-0.0438, ESS~7505
+[equal-rho] bracket mu=4.178087, dA=-0.0406, ESS~7505
+[equal-rho] bracket mu=4.177987, dA=-0.0374, ESS~7504
+[equal-rho] bracket mu=4.177887, dA=-0.0342, ESS~7504
+[equal-rho] bracket mu=4.177787, dA=-0.0310, ESS~7503
+[equal-rho] bracket mu=4.177687, dA=-0.0278, ESS~7502
+[equal-rho] bracket mu=4.177587, dA=-0.0246, ESS~7501
+[equal-rho] bracket mu=4.177487, dA=-0.0214, ESS~7499
+[equal-rho] bracket mu=4.177387, dA=-0.0182, ESS~7498
+[equal-rho] bracket mu=4.177287, dA=-0.0150, ESS~7496
+[equal-rho] bracket mu=4.177187, dA=-0.0118, ESS~7494
+[equal-rho] bracket mu=4.177087, dA=-0.0086, ESS~7492
+[equal-rho] bracket mu=4.176987, dA=-0.0054, ESS~7490
+[equal-rho] bracket mu=4.176887, dA=-0.0022, ESS~7488
+[equal-rho] bracket mu=4.176787, dA=+0.0010, ESS~7485
+[equal-rho] bisect mu=4.177537, dA=-0.0230, ESS~7500
+[equal-rho] bisect mu=4.177162, dA=-0.0110, ESS~7494
+[equal-rho] bisect mu=4.176975, dA=-0.0050, ESS~7490
+mu* = 4.176975   ESS ~ 7490
+weighted <rho> = 0.4732
+DEBUG: w_mu ESS=7490, w_mu range=[1.25e-04, 1.43e-04]
+DEBUG: x_test range=[-1.3837, 1.4817], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.007125, r=-0.000000, match_L2=0.061039
+success: True
+chi2*  : 0.002997
+theta* : (0.6451539171197757, 1.7400000000000004, 4.174791313967013, 1.0000000000048714, 0.4775007791372229, 0.007124720658122758)
+
+=== Step: target eps_sp=1.760 (prev=1.740, step=0.0200) ===
+[mu=4.174791] f=m_dense-m_dilute=+0.1823
+[step] mu=4.194791 f=-0.4325
+[bisect] mu=4.184791 f=-0.1515 bracket=[4.194791,4.174791]
+[bisect] mu=4.179791 f=+0.0049 bracket=[4.184791,4.174791]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9700]
+DEBUG: u range=[-3.472334, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 99]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.179791, dA=+0.0049, ESS~7505
+mu* = 4.179791   ESS ~ 7505
+weighted <rho> = 0.4756
+DEBUG: w_mu ESS=7505, w_mu range=[1.33e-04, 1.33e-04]
+DEBUG: x_test range=[-1.4020, 1.4577], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.029674, r=-0.000000, match_L2=0.071851
+success: True
+chi2*  : 0.002483
+theta* : (0.6400952277829376, 1.7600000000000005, 4.174804457628023, 1.0000000000391247, 0.5105723658682484, 0.02967444449241111)
+
+=== Step: target eps_sp=1.780 (prev=1.760, step=0.0200) ===
+[mu=4.174804] f=m_dense-m_dilute=+0.3448
+[step] mu=4.194804 f=-0.2799
+[bisect] mu=4.184804 f=+0.0256 bracket=[4.194804,4.174804]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9900]
+DEBUG: u range=[-3.518680, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 97]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.184804, dA=+0.0256, ESS~7505
+[equal-rho] bracket mu=4.184904, dA=+0.0224, ESS~7505
+[equal-rho] bracket mu=4.185004, dA=+0.0192, ESS~7505
+[equal-rho] bracket mu=4.185104, dA=+0.0161, ESS~7504
+[equal-rho] bracket mu=4.185204, dA=+0.0129, ESS~7504
+[equal-rho] bracket mu=4.185304, dA=+0.0097, ESS~7503
+[equal-rho] bracket mu=4.185404, dA=+0.0065, ESS~7502
+[equal-rho] bracket mu=4.185504, dA=+0.0034, ESS~7501
+[equal-rho] bracket mu=4.185604, dA=+0.0002, ESS~7499
+[equal-rho] bracket mu=4.185704, dA=-0.0030, ESS~7498
+[equal-rho] bisect mu=4.185254, dA=+0.0113, ESS~7503
+[equal-rho] bisect mu=4.185479, dA=+0.0041, ESS~7501
+mu* = 4.185479   ESS ~ 7501
+weighted <rho> = 0.4759
+DEBUG: w_mu ESS=7501, w_mu range=[1.29e-04, 1.38e-04]
+DEBUG: x_test range=[-1.4001, 1.5124], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.029629, r=-0.000000, match_L2=0.066566
+success: True
+chi2*  : 0.002421
+theta* : (0.6351310794200102, 1.7800000000000005, 4.180122078072883, 1.0000000000368918, 0.511486732269163, 0.029629174328470762)
+
+=== Step: target eps_sp=1.800 (prev=1.780, step=0.0200) ===
+[mu=4.180122] f=m_dense-m_dilute=+0.3507
+[step] mu=4.200122 f=-0.2613
+[bisect] mu=4.190122 f=+0.0689 bracket=[4.200122,4.180122]
+[bisect] mu=4.195122 f=-0.0881 bracket=[4.200122,4.190122]
+[bisect] mu=4.192622 f=-0.0364 bracket=[4.195122,4.190122]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9700]
+DEBUG: u range=[-3.414713, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 97]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.192622, dA=-0.0364, ESS~7505
+[equal-rho] bracket mu=4.192522, dA=-0.0332, ESS~7505
+[equal-rho] bracket mu=4.192422, dA=-0.0300, ESS~7505
+[equal-rho] bracket mu=4.192322, dA=-0.0268, ESS~7504
+[equal-rho] bracket mu=4.192222, dA=-0.0236, ESS~7504
+[equal-rho] bracket mu=4.192122, dA=-0.0205, ESS~7503
+[equal-rho] bracket mu=4.192022, dA=-0.0173, ESS~7502
+[equal-rho] bracket mu=4.191922, dA=-0.0141, ESS~7501
+[equal-rho] bracket mu=4.191822, dA=-0.0109, ESS~7499
+[equal-rho] bracket mu=4.191722, dA=-0.0077, ESS~7498
+[equal-rho] bracket mu=4.191622, dA=-0.0045, ESS~7496
+[equal-rho] bracket mu=4.191522, dA=-0.0014, ESS~7494
+[equal-rho] bracket mu=4.191422, dA=+0.0018, ESS~7493
+[equal-rho] bisect mu=4.192022, dA=-0.0173, ESS~7502
+[equal-rho] bisect mu=4.191722, dA=-0.0077, ESS~7498
+mu* = 4.191722   ESS ~ 7498
+weighted <rho> = 0.4697
+DEBUG: w_mu ESS=7498, w_mu range=[1.28e-04, 1.39e-04]
+DEBUG: x_test range=[-1.3805, 1.4701], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.011148, r=-0.000000, match_L2=0.054784
+success: True
+chi2*  : 0.002500
+theta* : (0.629271748495861, 1.8000000000000005, 4.188541689732635, 1.0000000000086662, 0.4816317715327926, 0.01114842360704398)
+
+=== Step: target eps_sp=1.820 (prev=1.800, step=0.0200) ===
+[mu=4.188542] f=m_dense-m_dilute=+0.2120
+[step] mu=4.208542 f=-0.4055
+[bisect] mu=4.198542 f=-0.0821 bracket=[4.208542,4.188542]
+[bisect] mu=4.193542 f=+0.0648 bracket=[4.198542,4.188542]
+[bisect] mu=4.196042 f=-0.0215 bracket=[4.198542,4.193542]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9700]
+DEBUG: u range=[-3.454839, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 96]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.196042, dA=-0.0215, ESS~7505
+[equal-rho] bracket mu=4.195942, dA=-0.0183, ESS~7505
+[equal-rho] bracket mu=4.195842, dA=-0.0152, ESS~7505
+[equal-rho] bracket mu=4.195742, dA=-0.0121, ESS~7504
+[equal-rho] bracket mu=4.195642, dA=-0.0089, ESS~7504
+[equal-rho] bracket mu=4.195542, dA=-0.0058, ESS~7503
+[equal-rho] bracket mu=4.195442, dA=-0.0027, ESS~7502
+[equal-rho] bracket mu=4.195342, dA=+0.0004, ESS~7501
+[equal-rho] bisect mu=4.195692, dA=-0.0105, ESS~7504
+[equal-rho] bisect mu=4.195517, dA=-0.0050, ESS~7503
+mu* = 4.195517   ESS ~ 7503
+weighted <rho> = 0.4708
+DEBUG: w_mu ESS=7503, w_mu range=[1.30e-04, 1.37e-04]
+DEBUG: x_test range=[-1.4041, 1.4888], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.027963, r=-0.000000, match_L2=0.067640
+success: True
+chi2*  : 0.002630
+theta* : (0.6237555547162764, 1.8200000000000005, 4.191267999411751, 1.0000000000395348, 0.5062030868479932, 0.027963467030041524)
+
+=== Step: target eps_sp=1.840 (prev=1.820, step=0.0200) ===
+[mu=4.191268] f=m_dense-m_dilute=+0.2987
+[step] mu=4.211268 f=-0.3141
+[bisect] mu=4.201268 f=-0.0282 bracket=[4.211268,4.191268]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9800]
+DEBUG: u range=[-3.525416, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 98]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.201268, dA=-0.0282, ESS~7505
+[equal-rho] bracket mu=4.201168, dA=-0.0251, ESS~7505
+[equal-rho] bracket mu=4.201068, dA=-0.0220, ESS~7505
+[equal-rho] bracket mu=4.200968, dA=-0.0188, ESS~7504
+[equal-rho] bracket mu=4.200868, dA=-0.0157, ESS~7504
+[equal-rho] bracket mu=4.200768, dA=-0.0125, ESS~7503
+[equal-rho] bracket mu=4.200668, dA=-0.0094, ESS~7502
+[equal-rho] bracket mu=4.200568, dA=-0.0063, ESS~7501
+[equal-rho] bracket mu=4.200468, dA=-0.0031, ESS~7500
+[equal-rho] bracket mu=4.200368, dA=+0.0000, ESS~7498
+[equal-rho] bisect mu=4.200818, dA=-0.0141, ESS~7503
+[equal-rho] bisect mu=4.200593, dA=-0.0070, ESS~7501
+mu* = 4.200593   ESS ~ 7501
+weighted <rho> = 0.4673
+DEBUG: w_mu ESS=7501, w_mu range=[1.29e-04, 1.38e-04]
+DEBUG: x_test range=[-1.3892, 1.5244], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=-0.004995, r=-0.000000, match_L2=0.061819
+success: True
+chi2*  : 0.002878
+theta* : (0.6180189089637249, 1.8400000000000005, 4.197334668421198, 0.9999999999966154, 0.45035461003916083, -0.004995296805335159)
+
+=== Step: target eps_sp=1.860 (prev=1.840, step=0.0200) ===
+[mu=4.197335] f=m_dense-m_dilute=+0.2381
+[step] mu=4.217335 f=-0.3779
+[bisect] mu=4.207335 f=-0.0806 bracket=[4.217335,4.197335]
+[bisect] mu=4.202335 f=+0.0638 bracket=[4.207335,4.197335]
+[bisect] mu=4.204835 f=+0.0045 bracket=[4.207335,4.202335]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9800]
+DEBUG: u range=[-3.509494, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 98]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.204835, dA=+0.0045, ESS~7505
+mu* = 4.204835   ESS ~ 7505
+weighted <rho> = 0.4721
+DEBUG: w_mu ESS=7505, w_mu range=[1.33e-04, 1.33e-04]
+DEBUG: x_test range=[-1.4147, 1.5220], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.036868, r=-0.000000, match_L2=0.073350
+success: True
+chi2*  : 0.002704
+theta* : (0.6128136607172345, 1.8600000000000005, 4.199733279776145, 1.0000000000592084, 0.5173589035387239, 0.036868319995494996)
+
+=== Step: target eps_sp=1.880 (prev=1.860, step=0.0200) ===
+[mu=4.199733] f=m_dense-m_dilute=+0.3157
+[step] mu=4.219733 f=-0.2613
+[bisect] mu=4.209733 f=+0.0197 bracket=[4.219733,4.199733]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9800]
+DEBUG: u range=[-3.532335, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 99]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.209733, dA=+0.0197, ESS~7505
+[equal-rho] bracket mu=4.209833, dA=+0.0167, ESS~7505
+[equal-rho] bracket mu=4.209933, dA=+0.0136, ESS~7505
+[equal-rho] bracket mu=4.210033, dA=+0.0105, ESS~7504
+[equal-rho] bracket mu=4.210133, dA=+0.0075, ESS~7504
+[equal-rho] bracket mu=4.210233, dA=+0.0044, ESS~7503
+[equal-rho] bracket mu=4.210333, dA=+0.0013, ESS~7502
+[equal-rho] bracket mu=4.210433, dA=-0.0017, ESS~7501
+[equal-rho] bisect mu=4.210083, dA=+0.0090, ESS~7504
+mu* = 4.210083   ESS ~ 7504
+weighted <rho> = 0.4752
+DEBUG: w_mu ESS=7504, w_mu range=[1.31e-04, 1.35e-04]
+DEBUG: x_test range=[-1.4362, 1.5255], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.078392, r=-0.000000, match_L2=0.096792
+success: True
+chi2*  : 0.003444
+theta* : (0.6076005998940932, 1.8800000000000006, 4.205184076640141, 1.0000000001534084, 0.5762965344845088, 0.07839160249422261)
+
+=== Step: target eps_sp=1.900 (prev=1.880, step=0.0200) ===
+[mu=4.205184] f=m_dense-m_dilute=+0.3366
+[step] mu=4.225184 f=-0.2640
+[bisect] mu=4.215184 f=+0.0606 bracket=[4.225184,4.205184]
+[bisect] mu=4.220184 f=-0.1078 bracket=[4.225184,4.215184]
+[bisect] mu=4.217684 f=-0.0139 bracket=[4.220184,4.215184]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9700]
+DEBUG: u range=[-3.499434, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 98]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.217684, dA=-0.0139, ESS~7505
+[equal-rho] bracket mu=4.217584, dA=-0.0108, ESS~7505
+[equal-rho] bracket mu=4.217484, dA=-0.0077, ESS~7505
+[equal-rho] bracket mu=4.217384, dA=-0.0046, ESS~7504
+[equal-rho] bracket mu=4.217284, dA=-0.0015, ESS~7504
+[equal-rho] bracket mu=4.217184, dA=+0.0016, ESS~7503
+[equal-rho] bisect mu=4.217434, dA=-0.0061, ESS~7504
+mu* = 4.217434   ESS ~ 7504
+weighted <rho> = 0.4658
+DEBUG: w_mu ESS=7504, w_mu range=[1.32e-04, 1.35e-04]
+DEBUG: x_test range=[-1.4018, 1.5171], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.034898, r=-0.000000, match_L2=0.080550
+success: True
+chi2*  : 0.003070
+theta* : (0.6021134479197711, 1.9000000000000006, 4.212778887743048, 1.0000000000568727, 0.5087886023244033, 0.03489825583737342)
+
+=== Step: target eps_sp=1.920 (prev=1.900, step=0.0200) ===
+[mu=4.212779] f=m_dense-m_dilute=+0.2805
+[step] mu=4.232779 f=-0.3276
+[bisect] mu=4.222779 f=-0.0180 bracket=[4.232779,4.212779]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9700]
+DEBUG: u range=[-3.466833, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 98]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.222779, dA=-0.0180, ESS~7505
+[equal-rho] bracket mu=4.222679, dA=-0.0149, ESS~7505
+[equal-rho] bracket mu=4.222579, dA=-0.0118, ESS~7505
+[equal-rho] bracket mu=4.222479, dA=-0.0088, ESS~7504
+[equal-rho] bracket mu=4.222379, dA=-0.0057, ESS~7504
+[equal-rho] bracket mu=4.222279, dA=-0.0026, ESS~7503
+[equal-rho] bracket mu=4.222179, dA=+0.0005, ESS~7502
+[equal-rho] bisect mu=4.222479, dA=-0.0088, ESS~7504
+mu* = 4.222479   ESS ~ 7504
+weighted <rho> = 0.4639
+DEBUG: w_mu ESS=7504, w_mu range=[1.31e-04, 1.35e-04]
+DEBUG: x_test range=[-1.4025, 1.5300], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.024675, r=-0.000000, match_L2=0.081080
+success: True
+chi2*  : 0.003569
+theta* : (0.5965515894720155, 1.9200000000000006, 4.21802723311139, 1.0000000000358977, 0.4904879302507752, 0.024675026579672445)
+
+=== Step: target eps_sp=1.940 (prev=1.920, step=0.0200) ===
+[mu=4.218027] f=m_dense-m_dilute=+0.2989
+[step] mu=4.238027 f=-0.3157
+[bisect] mu=4.228027 f=-0.0280 bracket=[4.238027,4.218027]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9700]
+DEBUG: u range=[-3.448675, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 98]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.228027, dA=-0.0280, ESS~7505
+[equal-rho] bracket mu=4.227927, dA=-0.0249, ESS~7505
+[equal-rho] bracket mu=4.227827, dA=-0.0219, ESS~7505
+[equal-rho] bracket mu=4.227727, dA=-0.0188, ESS~7504
+[equal-rho] bracket mu=4.227627, dA=-0.0158, ESS~7504
+[equal-rho] bracket mu=4.227527, dA=-0.0127, ESS~7503
+[equal-rho] bracket mu=4.227427, dA=-0.0097, ESS~7502
+[equal-rho] bracket mu=4.227327, dA=-0.0066, ESS~7501
+[equal-rho] bracket mu=4.227227, dA=-0.0035, ESS~7500
+[equal-rho] bracket mu=4.227127, dA=-0.0005, ESS~7498
+[equal-rho] bracket mu=4.227027, dA=+0.0026, ESS~7497
+[equal-rho] bisect mu=4.227527, dA=-0.0127, ESS~7503
+[equal-rho] bisect mu=4.227277, dA=-0.0051, ESS~7500
+mu* = 4.227277   ESS ~ 7500
+weighted <rho> = 0.4648
+DEBUG: w_mu ESS=7500, w_mu range=[1.29e-04, 1.38e-04]
+DEBUG: x_test range=[-1.4114, 1.5342], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.039583, r=-0.000000, match_L2=0.085391
+success: True
+chi2*  : 0.003401
+theta* : (0.590407656541702, 1.9400000000000006, 4.2243236457081865, 1.00000000007229, 0.5126477153664539, 0.03958335458458793)
+
+=== Step: target eps_sp=1.960 (prev=1.940, step=0.0200) ===
+[mu=4.224324] f=m_dense-m_dilute=+0.1956
+[step] mu=4.244324 f=-0.3611
+[bisect] mu=4.234324 f=-0.0857 bracket=[4.244324,4.224324]
+[bisect] mu=4.229324 f=+0.0773 bracket=[4.234324,4.224324]
+[bisect] mu=4.231824 f=-0.0017 bracket=[4.234324,4.229324]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9600]
+DEBUG: u range=[-3.433725, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 99]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.231824, dA=-0.0017, ESS~7505
+mu* = 4.231824   ESS ~ 7505
+weighted <rho> = 0.4645
+DEBUG: w_mu ESS=7505, w_mu range=[1.33e-04, 1.33e-04]
+DEBUG: x_test range=[-1.4209, 1.5158], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.048671, r=-0.000000, match_L2=0.087416
+success: True
+chi2*  : 0.003179
+theta* : (0.5846744476824814, 1.9600000000000006, 4.227673240903854, 1.0000000000981621, 0.5235041104247105, 0.04867139127457622)
+
+=== Step: target eps_sp=1.980 (prev=1.960, step=0.0200) ===
+[mu=4.227673] f=m_dense-m_dilute=+0.2586
+[step] mu=4.247673 f=-0.3146
+[bisect] mu=4.237673 f=-0.0426 bracket=[4.247673,4.227673]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9700]
+DEBUG: u range=[-3.456101, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 99]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.237673, dA=-0.0426, ESS~7505
+[equal-rho] bracket mu=4.237573, dA=-0.0397, ESS~7505
+[equal-rho] bracket mu=4.237473, dA=-0.0367, ESS~7505
+[equal-rho] bracket mu=4.237373, dA=-0.0337, ESS~7504
+[equal-rho] bracket mu=4.237273, dA=-0.0307, ESS~7504
+[equal-rho] bracket mu=4.237173, dA=-0.0277, ESS~7503
+[equal-rho] bracket mu=4.237073, dA=-0.0248, ESS~7502
+[equal-rho] bracket mu=4.236973, dA=-0.0218, ESS~7501
+[equal-rho] bracket mu=4.236873, dA=-0.0188, ESS~7500
+[equal-rho] bracket mu=4.236773, dA=-0.0158, ESS~7499
+[equal-rho] bracket mu=4.236673, dA=-0.0128, ESS~7497
+[equal-rho] bracket mu=4.236573, dA=-0.0098, ESS~7496
+[equal-rho] bracket mu=4.236473, dA=-0.0069, ESS~7494
+[equal-rho] bracket mu=4.236373, dA=-0.0039, ESS~7492
+[equal-rho] bracket mu=4.236273, dA=-0.0009, ESS~7490
+[equal-rho] bracket mu=4.236173, dA=+0.0021, ESS~7487
+[equal-rho] bisect mu=4.236923, dA=-0.0203, ESS~7501
+[equal-rho] bisect mu=4.236548, dA=-0.0091, ESS~7495
+mu* = 4.236548   ESS ~ 7495
+weighted <rho> = 0.4629
+DEBUG: w_mu ESS=7495, w_mu range=[1.27e-04, 1.41e-04]
+DEBUG: x_test range=[-1.4324, 1.5690], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.041734, r=-0.000000, match_L2=0.095177
+success: True
+chi2*  : 0.004073
+theta* : (0.5789031627054111, 1.9800000000000006, 4.2325086684647655, 1.0000000000897118, 0.5103242093213421, 0.04173400086553083)
+
+=== Step: target eps_sp=2.000 (prev=1.980, step=0.0200) ===
+[mu=4.232509] f=m_dense-m_dilute=+0.2947
+[step] mu=4.252509 f=-0.3034
+[bisect] mu=4.242509 f=-0.0293 bracket=[4.252509,4.232509]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9700]
+DEBUG: u range=[-3.493707, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 97]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.242509, dA=-0.0293, ESS~7505
+[equal-rho] bracket mu=4.242409, dA=-0.0263, ESS~7505
+[equal-rho] bracket mu=4.242309, dA=-0.0234, ESS~7505
+[equal-rho] bracket mu=4.242209, dA=-0.0204, ESS~7504
+[equal-rho] bracket mu=4.242109, dA=-0.0174, ESS~7504
+[equal-rho] bracket mu=4.242009, dA=-0.0144, ESS~7503
+[equal-rho] bracket mu=4.241909, dA=-0.0114, ESS~7502
+[equal-rho] bracket mu=4.241809, dA=-0.0085, ESS~7501
+[equal-rho] bracket mu=4.241709, dA=-0.0055, ESS~7500
+[equal-rho] bracket mu=4.241609, dA=-0.0025, ESS~7499
+[equal-rho] bracket mu=4.241509, dA=+0.0005, ESS~7497
+[equal-rho] bisect mu=4.242009, dA=-0.0144, ESS~7503
+[equal-rho] bisect mu=4.241759, dA=-0.0070, ESS~7501
+mu* = 4.241759   ESS ~ 7501
+weighted <rho> = 0.4621
+DEBUG: w_mu ESS=7501, w_mu range=[1.29e-04, 1.38e-04]
+DEBUG: x_test range=[-1.4329, 1.5748], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.072301, r=-0.000000, match_L2=0.103466
+success: True
+chi2*  : 0.004129
+theta* : (0.5732123930278485, 2.0000000000000004, 4.237400508583346, 1.0000000001591003, 0.5505409095704031, 0.07230062248997082)
+
+=== Step: target eps_sp=2.020 (prev=2.000, step=0.0200) ===
+[mu=4.237401] f=m_dense-m_dilute=+0.2982
+[step] mu=4.257401 f=-0.2917
+[bisect] mu=4.247401 f=-0.0027 bracket=[4.257401,4.237401]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9600]
+DEBUG: u range=[-3.462066, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 99]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.247401, dA=-0.0027, ESS~7505
+mu* = 4.247401   ESS ~ 7505
+weighted <rho> = 0.4609
+DEBUG: w_mu ESS=7505, w_mu range=[1.33e-04, 1.33e-04]
+DEBUG: x_test range=[-1.4178, 1.5351], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.053575, r=-0.000000, match_L2=0.085610
+success: True
+chi2*  : 0.003419
+theta* : (0.5677062288927146, 2.0200000000000005, 4.2421049774328585, 1.0000000000957034, 0.5283886601821044, 0.05357478248901652)
+
+=== Step: target eps_sp=2.040 (prev=2.020, step=0.0200) ===
+[mu=4.242105] f=m_dense-m_dilute=+0.3478
+[step] mu=4.262105 f=-0.2426
+[bisect] mu=4.252105 f=+0.0638 bracket=[4.262105,4.242105]
+[bisect] mu=4.257105 f=-0.0850 bracket=[4.262105,4.252105]
+[bisect] mu=4.254605 f=-0.0107 bracket=[4.257105,4.252105]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9500]
+DEBUG: u range=[-3.472007, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 99]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.254605, dA=-0.0107, ESS~7505
+[equal-rho] bracket mu=4.254505, dA=-0.0077, ESS~7505
+[equal-rho] bracket mu=4.254405, dA=-0.0047, ESS~7505
+[equal-rho] bracket mu=4.254305, dA=-0.0018, ESS~7504
+[equal-rho] bracket mu=4.254205, dA=+0.0012, ESS~7504
+[equal-rho] bisect mu=4.254405, dA=-0.0047, ESS~7505
+mu* = 4.254405   ESS ~ 7505
+weighted <rho> = 0.4602
+DEBUG: w_mu ESS=7505, w_mu range=[1.32e-04, 1.35e-04]
+DEBUG: x_test range=[-1.4340, 1.5263], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.054208, r=-0.000000, match_L2=0.098184
+success: True
+chi2*  : 0.003997
+theta* : (0.5622010001001978, 2.0400000000000005, 4.249176913481264, 1.0000000000913318, 0.5245676775857547, 0.05420791399258366)
+
+=== Step: target eps_sp=2.060 (prev=2.040, step=0.0200) ===
+[mu=4.249177] f=m_dense-m_dilute=+0.3122
+[step] mu=4.269177 f=-0.2586
+[bisect] mu=4.259177 f=+0.0368 bracket=[4.269177,4.249177]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9700]
+DEBUG: u range=[-3.510075, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 99]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.259177, dA=+0.0368, ESS~7505
+[equal-rho] bracket mu=4.259277, dA=+0.0338, ESS~7505
+[equal-rho] bracket mu=4.259377, dA=+0.0309, ESS~7505
+[equal-rho] bracket mu=4.259477, dA=+0.0280, ESS~7504
+[equal-rho] bracket mu=4.259577, dA=+0.0250, ESS~7504
+[equal-rho] bracket mu=4.259677, dA=+0.0221, ESS~7503
+[equal-rho] bracket mu=4.259777, dA=+0.0191, ESS~7502
+[equal-rho] bracket mu=4.259877, dA=+0.0162, ESS~7501
+[equal-rho] bracket mu=4.259977, dA=+0.0132, ESS~7500
+[equal-rho] bracket mu=4.260077, dA=+0.0103, ESS~7499
+[equal-rho] bracket mu=4.260177, dA=+0.0073, ESS~7497
+[equal-rho] bracket mu=4.260277, dA=+0.0044, ESS~7496
+[equal-rho] bracket mu=4.260377, dA=+0.0015, ESS~7494
+[equal-rho] bracket mu=4.260477, dA=-0.0015, ESS~7492
+[equal-rho] bisect mu=4.259827, dA=+0.0177, ESS~7502
+[equal-rho] bisect mu=4.260152, dA=+0.0081, ESS~7498
+mu* = 4.260152   ESS ~ 7498
+weighted <rho> = 0.4662
+DEBUG: w_mu ESS=7498, w_mu range=[1.27e-04, 1.40e-04]
+DEBUG: x_test range=[-1.4621, 1.5798], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.173760, r=0.000000, match_L2=0.109977
+success: True
+chi2*  : 0.003993
+theta* : (0.5568502649500524, 2.0600000000000005, 4.254492420423199, 1.0, 0.6991792480199686, 0.1737604732412632)
+
+=== Step: target eps_sp=2.080 (prev=2.060, step=0.0200) ===
+[mu=4.254492] f=m_dense-m_dilute=+0.3600
+[step] mu=4.274492 f=-0.1956
+[bisect] mu=4.264492 f=+0.1055 bracket=[4.274492,4.254492]
+[bisect] mu=4.269492 f=-0.0545 bracket=[4.274492,4.264492]
+[bisect] mu=4.266992 f=+0.0103 bracket=[4.269492,4.264492]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9600]
+DEBUG: u range=[-3.493907, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 99]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.266992, dA=+0.0103, ESS~7505
+[equal-rho] bracket mu=4.267092, dA=+0.0073, ESS~7505
+[equal-rho] bracket mu=4.267192, dA=+0.0044, ESS~7505
+[equal-rho] bracket mu=4.267292, dA=+0.0014, ESS~7504
+[equal-rho] bracket mu=4.267392, dA=-0.0015, ESS~7504
+[equal-rho] bisect mu=4.267192, dA=+0.0044, ESS~7505
+mu* = 4.267192   ESS ~ 7505
+weighted <rho> = 0.4606
+DEBUG: w_mu ESS=7505, w_mu range=[1.32e-04, 1.34e-04]
+DEBUG: x_test range=[-1.4411, 1.5625], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.102674, r=-0.000000, match_L2=0.101143
+success: True
+chi2*  : 0.004177
+theta* : (0.5512753958264949, 2.0800000000000005, 4.261833702345543, 1.0000000002171225, 0.593297117136044, 0.10267368836306008)
+
+=== Step: target eps_sp=2.100 (prev=2.080, step=0.0200) ===
+[mu=4.261834] f=m_dense-m_dilute=+0.3526
+[step] mu=4.281834 f=-0.2075
+[bisect] mu=4.271834 f=+0.0750 bracket=[4.281834,4.261834]
+[bisect] mu=4.276834 f=-0.0706 bracket=[4.281834,4.271834]
+[bisect] mu=4.274334 f=+0.0009 bracket=[4.276834,4.271834]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9500]
+DEBUG: u range=[-3.460691, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 100]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.274334, dA=+0.0009, ESS~7505
+mu* = 4.274334   ESS ~ 7505
+weighted <rho> = 0.4563
+DEBUG: w_mu ESS=7505, w_mu range=[1.33e-04, 1.33e-04]
+DEBUG: x_test range=[-1.4326, 1.5498], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.082670, r=-0.000000, match_L2=0.096485
+success: True
+chi2*  : 0.003917
+theta* : (0.5456866009162756, 2.1000000000000005, 4.268805931948389, 1.000000000194906, 0.5596646171768035, 0.08267043357564885)
+
+=== Step: target eps_sp=2.120 (prev=2.100, step=0.0200) ===
+[mu=4.268806] f=m_dense-m_dilute=+0.3395
+[step] mu=4.288806 f=-0.2120
+[bisect] mu=4.278806 f=+0.0716 bracket=[4.288806,4.268806]
+[bisect] mu=4.283806 f=-0.0594 bracket=[4.288806,4.278806]
+[bisect] mu=4.281306 f=+0.0116 bracket=[4.283806,4.278806]
+DEBUG: len(rho)=7505, rho range=[0.0000, 0.9500]
+DEBUG: u range=[-3.388648, -0.000000]
+DEBUG: C_ns range=[0, 202], C_sp range=[0, 99]
+DEBUG: any NaN? rho:False, u:False
+[equal-rho] mu0=4.281306, dA=+0.0116, ESS~7505
+[equal-rho] bracket mu=4.281406, dA=+0.0086, ESS~7505
+[equal-rho] bracket mu=4.281506, dA=+0.0057, ESS~7505
+[equal-rho] bracket mu=4.281606, dA=+0.0028, ESS~7504
+[equal-rho] bracket mu=4.281706, dA=-0.0002, ESS~7504
+[equal-rho] bisect mu=4.281506, dA=+0.0057, ESS~7505
+mu* = 4.281506   ESS ~ 7505
+weighted <rho> = 0.4581
+DEBUG: w_mu ESS=7505, w_mu range=[1.32e-04, 1.34e-04]
+DEBUG: x_test range=[-1.4382, 1.5441], std=1.0000
+DEBUG: x_ref range=[-1.5222, 1.5222]
+DEBUG: grid spacing dx=0.027182
+s_ref=0.096980, r=0.000000, match_L2=0.108298
+success: True
+chi2*  : 0.004269
+theta* : (0.5401219721746626, 2.1200000000000006, 4.276025670554903, 1.0, 0.5787446016936815, 0.09698049030972643)
+
+=== Step: target eps_sp=2.140 (prev=2.120, step=0.0200) ===
+slurmstepd-node210: error: *** JOB 9866 ON node210 CANCELLED AT 2026-04-10T17:13:11 ***

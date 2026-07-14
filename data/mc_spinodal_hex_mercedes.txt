@@ -1,0 +1,3975 @@
+Triangular lattice Ising reference:  Tc = 3.640957,  p_add = 0.422650
+
+[array([1, 0, 1, 0, 1, 0]), array([0, 1, 0, 1, 0, 1]), array([2, 2, 2, 2, 2, 2])]
+Species (3 total, 2 non-empty):
+  0: [1 0 1 0 1 0]
+  1: [0 1 0 1 0 1]
+  2: [2 2 2 2 2 2]
+
+=== Step: target eps_sp=0.000 (prev=0.000) ===
+[mu=3.988947] f=m_dense-m_dilute=+0.0100
+[equal-rho] mu0=3.988947, dA=+0.0100, ESS~7505
+mu* = 3.988947   ESS ~ 7505
+0.5021652231845436
+
+
+success: False
+chi^2* : 0.009493857493244379
+theta* : (1.0986, 0.0, 3.9889471805599452, 1.0000000000060019, 0.5190959111683711, 0.016034941043421472)
+
+=== Step: target eps_sp=0.020 (prev=0.000) ===
+[mu=3.988947] f=m_dense-m_dilute=+0.0093
+[equal-rho] mu0=3.988947, dA=+0.0093, ESS~7505
+mu* = 3.988947   ESS ~ 7505
+0.5043304463690872
+
+
+success: True
+chi^2* : 0.009957228733910032
+theta* : (1.093993153429169, 0.02, 3.9843390007983075, 1.0000000000239755, 0.5484025249458344, 0.041240499627614564)
+
+=== Step: target eps_sp=0.040 (prev=0.020) ===
+[mu=3.984339] f=m_dense-m_dilute=+0.2111
+[step] mu=3.988339 f=+0.0986
+[equal-rho] mu0=3.988339, dA=+0.0986, ESS~7505
+[equal-rho] bracket mu=3.988439, dA=+0.0949, ESS~7505
+[equal-rho] bracket mu=3.988539, dA=+0.0913, ESS~7505
+[equal-rho] bracket mu=3.988639, dA=+0.0876, ESS~7504
+[equal-rho] bracket mu=3.988739, dA=+0.0839, ESS~7503
+[equal-rho] bracket mu=3.988839, dA=+0.0802, ESS~7502
+[equal-rho] bracket mu=3.988939, dA=+0.0765, ESS~7501
+[equal-rho] bracket mu=3.989039, dA=+0.0729, ESS~7500
+[equal-rho] bracket mu=3.989139, dA=+0.0692, ESS~7498
+[equal-rho] bracket mu=3.989239, dA=+0.0655, ESS~7496
+[equal-rho] bracket mu=3.989339, dA=+0.0618, ESS~7494
+[equal-rho] bracket mu=3.989439, dA=+0.0581, ESS~7492
+[equal-rho] bracket mu=3.989539, dA=+0.0544, ESS~7489
+[equal-rho] bracket mu=3.989639, dA=+0.0507, ESS~7486
+[equal-rho] bracket mu=3.989739, dA=+0.0470, ESS~7483
+[equal-rho] bracket mu=3.989839, dA=+0.0433, ESS~7480
+[equal-rho] bracket mu=3.989939, dA=+0.0396, ESS~7477
+[equal-rho] bracket mu=3.990039, dA=+0.0359, ESS~7473
+[equal-rho] bracket mu=3.990139, dA=+0.0322, ESS~7469
+[equal-rho] bracket mu=3.990239, dA=+0.0285, ESS~7465
+[equal-rho] bracket mu=3.990339, dA=+0.0248, ESS~7461
+mu* = 3.988339   ESS ~ 7505
+0.5392085276482346
+
+
+success: True
+chi^2* : 0.3260224195931213
+theta* : (1.0739934219368745, 0.04, 3.9683391815141764, 1.0, 2.124442355476479, 0.5877872837241865)
+
+=== Step: target eps_sp=0.060 (prev=0.040) ===
+[mu=3.968339] f=m_dense-m_dilute=-0.6612
+[step] mu=3.964339 f=-0.5887
+[step] mu=3.960339 f=-0.4943
+[step] mu=3.956339 f=-0.3734
+[step] mu=3.952339 f=-0.2484
+[step] mu=3.948339 f=-0.0945
+[equal-rho] mu0=3.948339, dA=-0.0945, ESS~7505
+[equal-rho] bracket mu=3.948239, dA=-0.0909, ESS~7505
+[equal-rho] bracket mu=3.948139, dA=-0.0874, ESS~7505
+[equal-rho] bracket mu=3.948039, dA=-0.0839, ESS~7504
+[equal-rho] bracket mu=3.947939, dA=-0.0803, ESS~7503
+[equal-rho] bracket mu=3.947839, dA=-0.0768, ESS~7502
+[equal-rho] bracket mu=3.947739, dA=-0.0733, ESS~7501
+[equal-rho] bracket mu=3.947639, dA=-0.0697, ESS~7500
+[equal-rho] bracket mu=3.947539, dA=-0.0662, ESS~7498
+[equal-rho] bracket mu=3.947439, dA=-0.0626, ESS~7497
+[equal-rho] bracket mu=3.947339, dA=-0.0591, ESS~7495
+[equal-rho] bracket mu=3.947239, dA=-0.0555, ESS~7492
+[equal-rho] bracket mu=3.947139, dA=-0.0520, ESS~7490
+[equal-rho] bracket mu=3.947039, dA=-0.0484, ESS~7487
+[equal-rho] bracket mu=3.946939, dA=-0.0449, ESS~7485
+[equal-rho] bracket mu=3.946839, dA=-0.0413, ESS~7482
+[equal-rho] bracket mu=3.946739, dA=-0.0378, ESS~7478
+[equal-rho] bracket mu=3.946639, dA=-0.0342, ESS~7475
+[equal-rho] bracket mu=3.946539, dA=-0.0307, ESS~7471
+[equal-rho] bracket mu=3.946439, dA=-0.0271, ESS~7467
+[equal-rho] bracket mu=3.946339, dA=-0.0235, ESS~7463
+mu* = 3.948339   ESS ~ 7505
+0.46178680879413725
+
+
+success: False
+chi^2* : 0.2778682513205384
+theta* : (1.0928638669801716, 0.06, 3.966418859894364, 1.0, 0.08684137974045844, -0.18896402652577224)
+
+=== Step: target eps_sp=0.080 (prev=0.060) ===
+[mu=3.966419] f=m_dense-m_dilute=+0.9499
+[step] mu=3.970419 f=+0.9354
+[step] mu=3.974419 f=+0.9155
+[step] mu=3.978419 f=+0.8889
+[step] mu=3.982419 f=+0.8520
+[step] mu=3.986419 f=+0.8250
+[step] mu=3.990419 f=+0.7622
+[step] mu=3.994419 f=+0.6837
+[step] mu=3.998419 f=+0.5963
+[step] mu=4.002419 f=+0.4979
+[step] mu=4.006419 f=+0.3833
+[step] mu=4.010419 f=+0.2573
+[step] mu=4.014419 f=+0.1011
+[step] mu=4.018419 f=-0.0533
+[equal-rho] mu0=4.018419, dA=-0.0533, ESS~7505
+[equal-rho] bracket mu=4.018319, dA=-0.0495, ESS~7505
+[equal-rho] bracket mu=4.018219, dA=-0.0457, ESS~7505
+[equal-rho] bracket mu=4.018119, dA=-0.0420, ESS~7504
+[equal-rho] bracket mu=4.018019, dA=-0.0382, ESS~7503
+[equal-rho] bracket mu=4.017919, dA=-0.0344, ESS~7502
+[equal-rho] bracket mu=4.017819, dA=-0.0306, ESS~7501
+[equal-rho] bracket mu=4.017719, dA=-0.0269, ESS~7499
+[equal-rho] bracket mu=4.017619, dA=-0.0231, ESS~7498
+[equal-rho] bracket mu=4.017519, dA=-0.0193, ESS~7496
+[equal-rho] bracket mu=4.017419, dA=-0.0155, ESS~7494
+[equal-rho] bracket mu=4.017319, dA=-0.0117, ESS~7491
+[equal-rho] bracket mu=4.017219, dA=-0.0079, ESS~7488
+[equal-rho] bracket mu=4.017119, dA=-0.0042, ESS~7486
+[equal-rho] bracket mu=4.017019, dA=-0.0004, ESS~7483
+[equal-rho] bracket mu=4.016919, dA=+0.0034, ESS~7479
+[equal-rho] bisect mu=4.017669, dA=-0.0250, ESS~7499
+[equal-rho] bisect mu=4.017294, dA=-0.0108, ESS~7490
+[equal-rho] bisect mu=4.017106, dA=-0.0037, ESS~7485
+mu* = 4.017106   ESS ~ 7485
+0.4931165889407062
+
+
+success: True
+chi^2* : 0.015963817663387374
+theta* : (1.0880976999477703, 0.08, 4.012301205992453, 0.9999999999919506, 0.4519484853311113, -0.043122294603925825)
+
+=== Step: target eps_sp=0.100 (prev=0.080) ===
+[mu=4.012301] f=m_dense-m_dilute=+0.2163
+[step] mu=4.016301 f=+0.0689
+[equal-rho] mu0=4.016301, dA=+0.0689, ESS~7505
+[equal-rho] bracket mu=4.016401, dA=+0.0651, ESS~7505
+[equal-rho] bracket mu=4.016501, dA=+0.0613, ESS~7505
+[equal-rho] bracket mu=4.016601, dA=+0.0575, ESS~7504
+[equal-rho] bracket mu=4.016701, dA=+0.0538, ESS~7503
+[equal-rho] bracket mu=4.016801, dA=+0.0500, ESS~7502
+[equal-rho] bracket mu=4.016901, dA=+0.0462, ESS~7501
+[equal-rho] bracket mu=4.017001, dA=+0.0424, ESS~7499
+[equal-rho] bracket mu=4.017101, dA=+0.0386, ESS~7498
+[equal-rho] bracket mu=4.017201, dA=+0.0348, ESS~7496
+[equal-rho] bracket mu=4.017301, dA=+0.0310, ESS~7493
+[equal-rho] bracket mu=4.017401, dA=+0.0272, ESS~7491
+[equal-rho] bracket mu=4.017501, dA=+0.0235, ESS~7488
+[equal-rho] bracket mu=4.017601, dA=+0.0197, ESS~7486
+[equal-rho] bracket mu=4.017701, dA=+0.0159, ESS~7482
+[equal-rho] bracket mu=4.017801, dA=+0.0121, ESS~7479
+[equal-rho] bracket mu=4.017901, dA=+0.0083, ESS~7475
+[equal-rho] bracket mu=4.018001, dA=+0.0045, ESS~7472
+[equal-rho] bracket mu=4.018101, dA=+0.0007, ESS~7468
+[equal-rho] bracket mu=4.018201, dA=-0.0031, ESS~7463
+[equal-rho] bisect mu=4.017251, dA=+0.0329, ESS~7495
+[equal-rho] bisect mu=4.017726, dA=+0.0149, ESS~7482
+[equal-rho] bisect mu=4.017964, dA=+0.0059, ESS~7473
+mu* = 4.017964   ESS ~ 7473
+0.5055189873417721
+
+
+success: True
+chi^2* : 0.42049086469561103
+theta* : (1.068108940291592, 0.1, 3.997970944296937, 1.0000000000251879, 1.0038822002113248, 0.049522018742601676)
+
+=== Step: target eps_sp=0.120 (prev=0.100) ===
+[mu=3.997971] f=m_dense-m_dilute=-0.7070
+[step] mu=3.993971 f=-0.6417
+[step] mu=3.989971 f=-0.5262
+[step] mu=3.985971 f=-0.4240
+[step] mu=3.981971 f=-0.2813
+[step] mu=3.977971 f=-0.1558
+[step] mu=3.973971 f=-0.0031
+[equal-rho] mu0=3.973971, dA=-0.0031, ESS~7505
+mu* = 3.973971   ESS ~ 7505
+0.49918720852764825
+
+
+success: True
+chi^2* : 0.060634940344327655
+theta* : (1.0623764335689707, 0.12, 3.968526794516734, 0.9999999999996935, 0.5392782598868568, -0.0017315171668838753)
+
+=== Step: target eps_sp=0.140 (prev=0.120) ===
+[mu=3.968527] f=m_dense-m_dilute=+0.1162
+[step] mu=3.972527 f=-0.0326
+[equal-rho] mu0=3.972527, dA=-0.0326, ESS~7505
+[equal-rho] bracket mu=3.972427, dA=-0.0290, ESS~7505
+[equal-rho] bracket mu=3.972327, dA=-0.0254, ESS~7505
+[equal-rho] bracket mu=3.972227, dA=-0.0217, ESS~7504
+[equal-rho] bracket mu=3.972127, dA=-0.0181, ESS~7503
+[equal-rho] bracket mu=3.972027, dA=-0.0144, ESS~7502
+[equal-rho] bracket mu=3.971927, dA=-0.0108, ESS~7501
+[equal-rho] bracket mu=3.971827, dA=-0.0071, ESS~7500
+[equal-rho] bracket mu=3.971727, dA=-0.0035, ESS~7498
+[equal-rho] bracket mu=3.971627, dA=+0.0001, ESS~7496
+[equal-rho] bisect mu=3.972077, dA=-0.0163, ESS~7503
+[equal-rho] bisect mu=3.971852, dA=-0.0081, ESS~7500
+mu* = 3.971852   ESS ~ 7500
+0.49537508327781477
+
+
+success: False
+chi^2* : 0.007067891262460054
+theta* : (1.0579107074275835, 0.14, 3.9663159880023864, 0.9999999999904525, 0.46913054994031006, -0.026487839885213957)
+
+=== Step: target eps_sp=0.160 (prev=0.140) ===
+[mu=3.966316] f=m_dense-m_dilute=+0.2974
+[step] mu=3.970316 f=+0.1249
+[step] mu=3.974316 f=-0.0161
+[equal-rho] mu0=3.974316, dA=-0.0161, ESS~7505
+[equal-rho] bracket mu=3.974216, dA=-0.0125, ESS~7505
+[equal-rho] bracket mu=3.974116, dA=-0.0089, ESS~7505
+[equal-rho] bracket mu=3.974016, dA=-0.0052, ESS~7504
+[equal-rho] bracket mu=3.973916, dA=-0.0016, ESS~7503
+[equal-rho] bracket mu=3.973816, dA=+0.0020, ESS~7502
+[equal-rho] bisect mu=3.974066, dA=-0.0070, ESS~7504
+mu* = 3.974066   ESS ~ 7504
+0.49877415056628915
+
+
+success: True
+chi^2* : 0.10366951348854775
+theta* : (1.0549032764309538, 0.16, 3.9693576638412966, 0.9999999999977455, 0.43327675632384577, -0.008520079634601378)
+
+=== Step: target eps_sp=0.180 (prev=0.160) ===
+[mu=3.969358] f=m_dense-m_dilute=+0.3905
+[step] mu=3.973358 f=+0.2597
+[step] mu=3.977358 f=+0.1307
+[step] mu=3.981358 f=-0.0514
+[equal-rho] mu0=3.981358, dA=-0.0514, ESS~7505
+[equal-rho] bracket mu=3.981258, dA=-0.0478, ESS~7505
+[equal-rho] bracket mu=3.981158, dA=-0.0442, ESS~7505
+[equal-rho] bracket mu=3.981058, dA=-0.0405, ESS~7504
+[equal-rho] bracket mu=3.980958, dA=-0.0369, ESS~7503
+[equal-rho] bracket mu=3.980858, dA=-0.0333, ESS~7502
+[equal-rho] bracket mu=3.980758, dA=-0.0296, ESS~7501
+[equal-rho] bracket mu=3.980658, dA=-0.0260, ESS~7500
+[equal-rho] bracket mu=3.980558, dA=-0.0224, ESS~7498
+[equal-rho] bracket mu=3.980458, dA=-0.0187, ESS~7496
+[equal-rho] bracket mu=3.980358, dA=-0.0151, ESS~7494
+[equal-rho] bracket mu=3.980258, dA=-0.0115, ESS~7492
+[equal-rho] bracket mu=3.980158, dA=-0.0078, ESS~7489
+[equal-rho] bracket mu=3.980058, dA=-0.0042, ESS~7487
+[equal-rho] bracket mu=3.979958, dA=-0.0005, ESS~7484
+[equal-rho] bracket mu=3.979858, dA=+0.0031, ESS~7481
+[equal-rho] bisect mu=3.980608, dA=-0.0242, ESS~7499
+[equal-rho] bisect mu=3.980233, dA=-0.0105, ESS~7491
+[equal-rho] bisect mu=3.980045, dA=-0.0037, ESS~7486
+mu* = 3.980045   ESS ~ 7486
+0.4967368421052632
+
+
+success: True
+chi^2* : 0.0060780189120776176
+theta* : (1.0498428900260095, 0.18, 3.975792156716343, 0.9999999999888247, 0.4667960046822768, -0.02800925181195117)
+
+=== Step: target eps_sp=0.200 (prev=0.180) ===
+[mu=3.975792] f=m_dense-m_dilute=+0.1623
+[step] mu=3.979792 f=+0.0345
+[equal-rho] mu0=3.979792, dA=+0.0345, ESS~7505
+[equal-rho] bracket mu=3.979892, dA=+0.0308, ESS~7505
+[equal-rho] bracket mu=3.979992, dA=+0.0272, ESS~7505
+[equal-rho] bracket mu=3.980092, dA=+0.0235, ESS~7504
+[equal-rho] bracket mu=3.980192, dA=+0.0199, ESS~7503
+[equal-rho] bracket mu=3.980292, dA=+0.0162, ESS~7502
+[equal-rho] bracket mu=3.980392, dA=+0.0125, ESS~7501
+[equal-rho] bracket mu=3.980492, dA=+0.0089, ESS~7500
+[equal-rho] bracket mu=3.980592, dA=+0.0052, ESS~7498
+[equal-rho] bracket mu=3.980692, dA=+0.0015, ESS~7496
+[equal-rho] bracket mu=3.980792, dA=-0.0021, ESS~7494
+[equal-rho] bisect mu=3.980292, dA=+0.0162, ESS~7502
+[equal-rho] bisect mu=3.980542, dA=+0.0070, ESS~7499
+mu* = 3.980542   ESS ~ 7499
+0.4987061958694204
+
+
+success: False
+chi^2* : 0.007909292807209412
+theta* : (1.0450559530475714, 0.2, 3.9757061601081323, 0.999999999998028, 0.4882004678420116, -0.007906290245475215)
+
+=== Step: target eps_sp=0.220 (prev=0.200) ===
+[mu=3.975706] f=m_dense-m_dilute=+0.2368
+[step] mu=3.979706 f=+0.0915
+[equal-rho] mu0=3.979706, dA=+0.0915, ESS~7505
+[equal-rho] bracket mu=3.979806, dA=+0.0879, ESS~7505
+[equal-rho] bracket mu=3.979906, dA=+0.0842, ESS~7505
+[equal-rho] bracket mu=3.980006, dA=+0.0805, ESS~7504
+[equal-rho] bracket mu=3.980106, dA=+0.0769, ESS~7503
+[equal-rho] bracket mu=3.980206, dA=+0.0732, ESS~7502
+[equal-rho] bracket mu=3.980306, dA=+0.0695, ESS~7501
+[equal-rho] bracket mu=3.980406, dA=+0.0659, ESS~7500
+[equal-rho] bracket mu=3.980506, dA=+0.0622, ESS~7498
+[equal-rho] bracket mu=3.980606, dA=+0.0585, ESS~7496
+[equal-rho] bracket mu=3.980706, dA=+0.0548, ESS~7494
+[equal-rho] bracket mu=3.980806, dA=+0.0511, ESS~7492
+[equal-rho] bracket mu=3.980906, dA=+0.0474, ESS~7489
+[equal-rho] bracket mu=3.981006, dA=+0.0438, ESS~7486
+[equal-rho] bracket mu=3.981106, dA=+0.0401, ESS~7483
+[equal-rho] bracket mu=3.981206, dA=+0.0364, ESS~7480
+[equal-rho] bracket mu=3.981306, dA=+0.0327, ESS~7477
+[equal-rho] bracket mu=3.981406, dA=+0.0290, ESS~7473
+[equal-rho] bracket mu=3.981506, dA=+0.0253, ESS~7469
+[equal-rho] bracket mu=3.981606, dA=+0.0216, ESS~7465
+[equal-rho] bracket mu=3.981706, dA=+0.0179, ESS~7461
+mu* = 3.979706   ESS ~ 7505
+0.53527381745503
+
+
+success: True
+chi^2* : 0.33933233692237735
+theta* : (1.025056347786218, 0.22, 3.9597063872394984, 1.0, 1.853559076180315, 0.4623064372022001)
+
+=== Step: target eps_sp=0.240 (prev=0.220) ===
+[mu=3.959706] f=m_dense-m_dilute=-0.6305
+[step] mu=3.955706 f=-0.5530
+[step] mu=3.951706 f=-0.4500
+[step] mu=3.947706 f=-0.3419
+[step] mu=3.943706 f=-0.1896
+[step] mu=3.939706 f=-0.0626
+[equal-rho] mu0=3.939706, dA=-0.0626, ESS~7505
+[equal-rho] bracket mu=3.939606, dA=-0.0591, ESS~7505
+[equal-rho] bracket mu=3.939506, dA=-0.0556, ESS~7505
+[equal-rho] bracket mu=3.939406, dA=-0.0521, ESS~7504
+[equal-rho] bracket mu=3.939306, dA=-0.0486, ESS~7503
+[equal-rho] bracket mu=3.939206, dA=-0.0451, ESS~7502
+[equal-rho] bracket mu=3.939106, dA=-0.0416, ESS~7501
+[equal-rho] bracket mu=3.939006, dA=-0.0381, ESS~7500
+[equal-rho] bracket mu=3.938906, dA=-0.0346, ESS~7498
+[equal-rho] bracket mu=3.938806, dA=-0.0311, ESS~7497
+[equal-rho] bracket mu=3.938706, dA=-0.0276, ESS~7495
+[equal-rho] bracket mu=3.938606, dA=-0.0241, ESS~7493
+[equal-rho] bracket mu=3.938506, dA=-0.0206, ESS~7490
+[equal-rho] bracket mu=3.938406, dA=-0.0171, ESS~7488
+[equal-rho] bracket mu=3.938306, dA=-0.0136, ESS~7485
+[equal-rho] bracket mu=3.938206, dA=-0.0100, ESS~7482
+[equal-rho] bracket mu=3.938106, dA=-0.0065, ESS~7479
+[equal-rho] bracket mu=3.938006, dA=-0.0030, ESS~7475
+[equal-rho] bracket mu=3.937906, dA=+0.0005, ESS~7472
+[equal-rho] bisect mu=3.938806, dA=-0.0311, ESS~7497
+[equal-rho] bisect mu=3.938356, dA=-0.0153, ESS~7486
+[equal-rho] bisect mu=3.938131, dA=-0.0074, ESS~7480
+mu* = 3.938131   ESS ~ 7480
+0.49573750832778146
+
+
+success: True
+chi^2* : 0.017807184550740443
+theta* : (1.0201357648613256, 0.24, 3.931709410406934, 0.9999999999845536, 0.48447758288201986, -0.030022522083690693)
+
+=== Step: target eps_sp=0.260 (prev=0.240) ===
+[mu=3.931709] f=m_dense-m_dilute=+0.2520
+[step] mu=3.935709 f=+0.1178
+[step] mu=3.939709 f=-0.0224
+[equal-rho] mu0=3.939709, dA=-0.0224, ESS~7505
+[equal-rho] bracket mu=3.939609, dA=-0.0188, ESS~7505
+[equal-rho] bracket mu=3.939509, dA=-0.0153, ESS~7505
+[equal-rho] bracket mu=3.939409, dA=-0.0117, ESS~7504
+[equal-rho] bracket mu=3.939309, dA=-0.0082, ESS~7503
+[equal-rho] bracket mu=3.939209, dA=-0.0046, ESS~7502
+[equal-rho] bracket mu=3.939109, dA=-0.0011, ESS~7501
+[equal-rho] bracket mu=3.939009, dA=+0.0025, ESS~7500
+[equal-rho] bisect mu=3.939359, dA=-0.0099, ESS~7504
+mu* = 3.939359   ESS ~ 7504
+0.4994510326449034
+
+
+success: True
+chi^2* : 0.07355670863796371
+theta* : (1.0207129990245296, 0.26, 3.9256405110676744, 0.9999999999985528, 0.44833312819007, -0.004968540086028314)
+
+=== Step: target eps_sp=0.280 (prev=0.260) ===
+[mu=3.925641] f=m_dense-m_dilute=+0.8060
+[step] mu=3.929641 f=+0.7555
+[step] mu=3.933641 f=+0.6847
+[step] mu=3.937641 f=+0.5877
+[step] mu=3.941641 f=+0.4902
+[step] mu=3.945641 f=+0.3687
+[step] mu=3.949641 f=+0.2526
+[step] mu=3.953641 f=+0.1110
+[step] mu=3.957641 f=-0.0268
+[equal-rho] mu0=3.957641, dA=-0.0268, ESS~7505
+[equal-rho] bracket mu=3.957541, dA=-0.0232, ESS~7505
+[equal-rho] bracket mu=3.957441, dA=-0.0197, ESS~7505
+[equal-rho] bracket mu=3.957341, dA=-0.0161, ESS~7504
+[equal-rho] bracket mu=3.957241, dA=-0.0126, ESS~7503
+[equal-rho] bracket mu=3.957141, dA=-0.0090, ESS~7502
+[equal-rho] bracket mu=3.957041, dA=-0.0055, ESS~7501
+[equal-rho] bracket mu=3.956941, dA=-0.0019, ESS~7500
+[equal-rho] bracket mu=3.956841, dA=+0.0016, ESS~7498
+[equal-rho] bisect mu=3.957241, dA=-0.0126, ESS~7503
+[equal-rho] bisect mu=3.957041, dA=-0.0055, ESS~7501
+mu* = 3.957041   ESS ~ 7501
+0.4983530979347102
+
+
+success: True
+chi^2* : 0.14626424153417963
+theta* : (1.0182731442830175, 0.28, 3.952045174349446, 0.9999999999970719, 0.41556502567137016, -0.009032429464414928)
+
+=== Step: target eps_sp=0.300 (prev=0.280) ===
+[mu=3.952045] f=m_dense-m_dilute=+0.4526
+[step] mu=3.956045 f=+0.3287
+[step] mu=3.960045 f=+0.1924
+[step] mu=3.964045 f=+0.0518
+[equal-rho] mu0=3.964045, dA=+0.0518, ESS~7505
+[equal-rho] bracket mu=3.964145, dA=+0.0482, ESS~7505
+[equal-rho] bracket mu=3.964245, dA=+0.0447, ESS~7505
+[equal-rho] bracket mu=3.964345, dA=+0.0411, ESS~7504
+[equal-rho] bracket mu=3.964445, dA=+0.0375, ESS~7503
+[equal-rho] bracket mu=3.964545, dA=+0.0339, ESS~7502
+[equal-rho] bracket mu=3.964645, dA=+0.0303, ESS~7501
+[equal-rho] bracket mu=3.964745, dA=+0.0267, ESS~7500
+[equal-rho] bracket mu=3.964845, dA=+0.0231, ESS~7498
+[equal-rho] bracket mu=3.964945, dA=+0.0195, ESS~7496
+[equal-rho] bracket mu=3.965045, dA=+0.0159, ESS~7494
+[equal-rho] bracket mu=3.965145, dA=+0.0123, ESS~7492
+[equal-rho] bracket mu=3.965245, dA=+0.0087, ESS~7490
+[equal-rho] bracket mu=3.965345, dA=+0.0051, ESS~7487
+[equal-rho] bracket mu=3.965445, dA=+0.0015, ESS~7484
+[equal-rho] bracket mu=3.965545, dA=-0.0021, ESS~7481
+[equal-rho] bisect mu=3.964795, dA=+0.0249, ESS~7499
+[equal-rho] bisect mu=3.965170, dA=+0.0114, ESS~7492
+[equal-rho] bisect mu=3.965358, dA=+0.0047, ESS~7487
+mu* = 3.965358   ESS ~ 7487
+0.5021585609593604
+
+
+success: True
+chi^2* : 0.00893997128682701
+theta* : (1.0133120608251376, 0.3, 3.9596807447589883, 1.000000000009466, 0.5330008421722677, 0.020864164190902642)
+
+=== Step: target eps_sp=0.320 (prev=0.300) ===
+[mu=3.959681] f=m_dense-m_dilute=+0.2516
+[step] mu=3.963681 f=+0.1147
+[step] mu=3.967681 f=-0.0313
+[equal-rho] mu0=3.967681, dA=-0.0313, ESS~7505
+[equal-rho] bracket mu=3.967581, dA=-0.0277, ESS~7505
+[equal-rho] bracket mu=3.967481, dA=-0.0241, ESS~7505
+[equal-rho] bracket mu=3.967381, dA=-0.0205, ESS~7504
+[equal-rho] bracket mu=3.967281, dA=-0.0169, ESS~7503
+[equal-rho] bracket mu=3.967181, dA=-0.0133, ESS~7502
+[equal-rho] bracket mu=3.967081, dA=-0.0096, ESS~7501
+[equal-rho] bracket mu=3.966981, dA=-0.0060, ESS~7500
+[equal-rho] bracket mu=3.966881, dA=-0.0024, ESS~7498
+[equal-rho] bracket mu=3.966781, dA=+0.0012, ESS~7496
+[equal-rho] bisect mu=3.967231, dA=-0.0151, ESS~7503
+[equal-rho] bisect mu=3.967006, dA=-0.0069, ESS~7500
+mu* = 3.967006   ESS ~ 7500
+0.49471019320453036
+
+
+success: True
+chi^2* : 0.00606172499299743
+theta* : (1.0094847509577827, 0.32, 3.9592122665864484, 0.9999999999916148, 0.4730221394746347, -0.02307283663265284)
+
+=== Step: target eps_sp=0.340 (prev=0.320) ===
+[mu=3.959212] f=m_dense-m_dilute=+0.4211
+[step] mu=3.963212 f=+0.2754
+[step] mu=3.967212 f=+0.1348
+[step] mu=3.971212 f=+0.0088
+[equal-rho] mu0=3.971212, dA=+0.0088, ESS~7505
+mu* = 3.971212   ESS ~ 7505
+0.5020413057961358
+
+
+success: True
+chi^2* : 0.010535261754501594
+theta* : (1.0044800725133045, 0.34, 3.966207745634783, 1.0000000000087177, 0.5216407181830819, 0.020859346765871433)
+
+=== Step: target eps_sp=0.360 (prev=0.340) ===
+[mu=3.966208] f=m_dense-m_dilute=+0.2111
+[step] mu=3.970208 f=+0.0799
+[equal-rho] mu0=3.970208, dA=+0.0799, ESS~7505
+[equal-rho] bracket mu=3.970308, dA=+0.0763, ESS~7505
+[equal-rho] bracket mu=3.970408, dA=+0.0727, ESS~7505
+[equal-rho] bracket mu=3.970508, dA=+0.0691, ESS~7504
+[equal-rho] bracket mu=3.970608, dA=+0.0655, ESS~7503
+[equal-rho] bracket mu=3.970708, dA=+0.0619, ESS~7502
+[equal-rho] bracket mu=3.970808, dA=+0.0583, ESS~7501
+[equal-rho] bracket mu=3.970908, dA=+0.0546, ESS~7500
+[equal-rho] bracket mu=3.971008, dA=+0.0510, ESS~7498
+[equal-rho] bracket mu=3.971108, dA=+0.0474, ESS~7496
+[equal-rho] bracket mu=3.971208, dA=+0.0438, ESS~7494
+[equal-rho] bracket mu=3.971308, dA=+0.0401, ESS~7492
+[equal-rho] bracket mu=3.971408, dA=+0.0365, ESS~7489
+[equal-rho] bracket mu=3.971508, dA=+0.0329, ESS~7487
+[equal-rho] bracket mu=3.971608, dA=+0.0293, ESS~7484
+[equal-rho] bracket mu=3.971708, dA=+0.0256, ESS~7481
+[equal-rho] bracket mu=3.971808, dA=+0.0220, ESS~7477
+[equal-rho] bracket mu=3.971908, dA=+0.0184, ESS~7474
+[equal-rho] bracket mu=3.972008, dA=+0.0147, ESS~7470
+[equal-rho] bracket mu=3.972108, dA=+0.0111, ESS~7466
+[equal-rho] bracket mu=3.972208, dA=+0.0075, ESS~7462
+mu* = 3.970208   ESS ~ 7505
+0.5300106595602931
+
+
+success: True
+chi^2* : 0.35270641152719284
+theta* : (0.9844808067306419, 0.36, 3.95020847985212, 1.0, 1.6524333868977432, 0.37166973324717917)
+
+=== Step: target eps_sp=0.380 (prev=0.360) ===
+[mu=3.950208] f=m_dense-m_dilute=-0.6167
+[step] mu=3.946208 f=-0.5319
+[step] mu=3.942208 f=-0.4249
+[step] mu=3.938208 f=-0.3126
+[step] mu=3.934208 f=-0.1714
+[step] mu=3.930208 f=-0.0521
+[equal-rho] mu0=3.930208, dA=-0.0521, ESS~7505
+[equal-rho] bracket mu=3.930108, dA=-0.0487, ESS~7505
+[equal-rho] bracket mu=3.930008, dA=-0.0453, ESS~7505
+[equal-rho] bracket mu=3.929908, dA=-0.0418, ESS~7504
+[equal-rho] bracket mu=3.929808, dA=-0.0384, ESS~7503
+[equal-rho] bracket mu=3.929708, dA=-0.0350, ESS~7503
+[equal-rho] bracket mu=3.929608, dA=-0.0315, ESS~7501
+[equal-rho] bracket mu=3.929508, dA=-0.0281, ESS~7500
+[equal-rho] bracket mu=3.929408, dA=-0.0247, ESS~7499
+[equal-rho] bracket mu=3.929308, dA=-0.0213, ESS~7497
+[equal-rho] bracket mu=3.929208, dA=-0.0178, ESS~7495
+[equal-rho] bracket mu=3.929108, dA=-0.0144, ESS~7493
+[equal-rho] bracket mu=3.929008, dA=-0.0110, ESS~7491
+[equal-rho] bracket mu=3.928908, dA=-0.0075, ESS~7488
+[equal-rho] bracket mu=3.928808, dA=-0.0041, ESS~7486
+[equal-rho] bracket mu=3.928708, dA=-0.0007, ESS~7483
+[equal-rho] bracket mu=3.928608, dA=+0.0028, ESS~7480
+[equal-rho] bisect mu=3.929408, dA=-0.0247, ESS~7499
+[equal-rho] bisect mu=3.929008, dA=-0.0110, ESS~7491
+[equal-rho] bisect mu=3.928808, dA=-0.0041, ESS~7486
+mu* = 3.928808   ESS ~ 7486
+0.5032351765489673
+
+
+success: True
+chi^2* : 0.07837934665107299
+theta* : (0.9821801199402307, 0.38, 3.9213675433760615, 1.0000000000230953, 0.4841353530463962, 0.03293550774169719)
+
+=== Step: target eps_sp=0.400 (prev=0.380) ===
+[mu=3.921368] f=m_dense-m_dilute=+0.5251
+[step] mu=3.925368 f=+0.4197
+[step] mu=3.929368 f=+0.2930
+[step] mu=3.933368 f=+0.1815
+[step] mu=3.937368 f=+0.0410
+[equal-rho] mu0=3.937368, dA=+0.0410, ESS~7505
+[equal-rho] bracket mu=3.937468, dA=+0.0375, ESS~7505
+[equal-rho] bracket mu=3.937568, dA=+0.0340, ESS~7505
+[equal-rho] bracket mu=3.937668, dA=+0.0305, ESS~7504
+[equal-rho] bracket mu=3.937768, dA=+0.0270, ESS~7503
+[equal-rho] bracket mu=3.937868, dA=+0.0235, ESS~7502
+[equal-rho] bracket mu=3.937968, dA=+0.0200, ESS~7501
+[equal-rho] bracket mu=3.938068, dA=+0.0165, ESS~7500
+[equal-rho] bracket mu=3.938168, dA=+0.0130, ESS~7498
+[equal-rho] bracket mu=3.938268, dA=+0.0095, ESS~7497
+[equal-rho] bracket mu=3.938368, dA=+0.0060, ESS~7495
+[equal-rho] bracket mu=3.938468, dA=+0.0025, ESS~7493
+[equal-rho] bracket mu=3.938568, dA=-0.0010, ESS~7490
+[equal-rho] bisect mu=3.937968, dA=+0.0200, ESS~7501
+[equal-rho] bisect mu=3.938268, dA=+0.0095, ESS~7497
+mu* = 3.938268   ESS ~ 7497
+0.503236508994004
+
+
+success: False
+chi^2* : 0.052056722764065005
+theta* : (0.9761921475053104, 0.4, 3.9322228595940736, 1.0000000000181213, 0.5737931962541756, 0.029331577732598143)
+
+=== Step: target eps_sp=0.420 (prev=0.400) ===
+[mu=3.932223] f=m_dense-m_dilute=+0.1479
+[step] mu=3.936223 f=+0.0232
+[equal-rho] mu0=3.936223, dA=+0.0232, ESS~7505
+[equal-rho] bracket mu=3.936323, dA=+0.0197, ESS~7505
+[equal-rho] bracket mu=3.936423, dA=+0.0162, ESS~7505
+[equal-rho] bracket mu=3.936523, dA=+0.0126, ESS~7504
+[equal-rho] bracket mu=3.936623, dA=+0.0091, ESS~7503
+[equal-rho] bracket mu=3.936723, dA=+0.0056, ESS~7502
+[equal-rho] bracket mu=3.936823, dA=+0.0021, ESS~7501
+[equal-rho] bracket mu=3.936923, dA=-0.0014, ESS~7500
+[equal-rho] bisect mu=3.936573, dA=+0.0109, ESS~7504
+[equal-rho] bisect mu=3.936748, dA=+0.0047, ESS~7502
+mu* = 3.936748   ESS ~ 7502
+0.503128580946036
+
+
+success: False
+chi^2* : 0.04844110935760303
+theta* : (0.9702271914137788, 0.42, 3.9307829237374805, 1.0000000000168519, 0.5699013383603123, 0.02881335535582529)
+
+=== Step: target eps_sp=0.440 (prev=0.420) ===
+[mu=3.930783] f=m_dense-m_dilute=+0.1463
+[step] mu=3.934783 f=+0.0362
+[equal-rho] mu0=3.934783, dA=+0.0362, ESS~7505
+[equal-rho] bracket mu=3.934883, dA=+0.0328, ESS~7505
+[equal-rho] bracket mu=3.934983, dA=+0.0293, ESS~7505
+[equal-rho] bracket mu=3.935083, dA=+0.0258, ESS~7504
+[equal-rho] bracket mu=3.935183, dA=+0.0224, ESS~7503
+[equal-rho] bracket mu=3.935283, dA=+0.0189, ESS~7502
+[equal-rho] bracket mu=3.935383, dA=+0.0154, ESS~7501
+[equal-rho] bracket mu=3.935483, dA=+0.0119, ESS~7500
+[equal-rho] bracket mu=3.935583, dA=+0.0085, ESS~7499
+[equal-rho] bracket mu=3.935683, dA=+0.0050, ESS~7497
+[equal-rho] bracket mu=3.935783, dA=+0.0015, ESS~7495
+[equal-rho] bracket mu=3.935883, dA=-0.0019, ESS~7493
+[equal-rho] bisect mu=3.935333, dA=+0.0172, ESS~7502
+[equal-rho] bisect mu=3.935608, dA=+0.0076, ESS~7498
+mu* = 3.935608   ESS ~ 7498
+0.5016788807461692
+
+
+success: True
+chi^2* : 0.009276300609534747
+theta* : (0.9662323193303313, 0.44, 3.9281593582855026, 1.0000000000072193, 0.5129076286570996, 0.01534103272589784)
+
+=== Step: target eps_sp=0.460 (prev=0.440) ===
+[mu=3.928159] f=m_dense-m_dilute=+0.3872
+[step] mu=3.932159 f=+0.2522
+[step] mu=3.936159 f=+0.1256
+[step] mu=3.940159 f=-0.0037
+[equal-rho] mu0=3.940159, dA=-0.0037, ESS~7505
+mu* = 3.940159   ESS ~ 7505
+0.49621585609593605
+
+
+success: True
+chi^2* : 0.010281932011189916
+theta* : (0.9665227477046435, 0.46, 3.9234227999235083, 0.9999999999913658, 0.4708213448141918, -0.02037545582170612)
+
+=== Step: target eps_sp=0.480 (prev=0.460) ===
+[mu=3.923423] f=m_dense-m_dilute=+0.8262
+[step] mu=3.927423 f=+0.7735
+[step] mu=3.931423 f=+0.7173
+[step] mu=3.935423 f=+0.6472
+[step] mu=3.939423 f=+0.5426
+[step] mu=3.943423 f=+0.4556
+[step] mu=3.947423 f=+0.3278
+[step] mu=3.951423 f=+0.2208
+[step] mu=3.955423 f=+0.0702
+[equal-rho] mu0=3.955423, dA=+0.0702, ESS~7505
+[equal-rho] bracket mu=3.955523, dA=+0.0667, ESS~7505
+[equal-rho] bracket mu=3.955623, dA=+0.0632, ESS~7505
+[equal-rho] bracket mu=3.955723, dA=+0.0596, ESS~7504
+[equal-rho] bracket mu=3.955823, dA=+0.0561, ESS~7503
+[equal-rho] bracket mu=3.955923, dA=+0.0525, ESS~7502
+[equal-rho] bracket mu=3.956023, dA=+0.0490, ESS~7501
+[equal-rho] bracket mu=3.956123, dA=+0.0455, ESS~7500
+[equal-rho] bracket mu=3.956223, dA=+0.0419, ESS~7498
+[equal-rho] bracket mu=3.956323, dA=+0.0384, ESS~7497
+[equal-rho] bracket mu=3.956423, dA=+0.0348, ESS~7495
+[equal-rho] bracket mu=3.956523, dA=+0.0313, ESS~7492
+[equal-rho] bracket mu=3.956623, dA=+0.0277, ESS~7490
+[equal-rho] bracket mu=3.956723, dA=+0.0242, ESS~7487
+[equal-rho] bracket mu=3.956823, dA=+0.0206, ESS~7485
+[equal-rho] bracket mu=3.956923, dA=+0.0171, ESS~7482
+[equal-rho] bracket mu=3.957023, dA=+0.0135, ESS~7478
+[equal-rho] bracket mu=3.957123, dA=+0.0100, ESS~7475
+[equal-rho] bracket mu=3.957223, dA=+0.0064, ESS~7471
+[equal-rho] bracket mu=3.957323, dA=+0.0029, ESS~7467
+[equal-rho] bracket mu=3.957423, dA=-0.0007, ESS~7463
+[equal-rho] bisect mu=3.956423, dA=+0.0348, ESS~7495
+[equal-rho] bisect mu=3.956923, dA=+0.0171, ESS~7482
+[equal-rho] bisect mu=3.957173, dA=+0.0082, ESS~7473
+mu* = 3.957173   ESS ~ 7473
+0.49849033977348434
+
+
+success: True
+chi^2* : 0.05872765966479281
+theta* : (0.9622505698409438, 0.48, 3.952899869314152, 0.9999999999966589, 0.4467627255949549, -0.011444783520575739)
+
+=== Step: target eps_sp=0.500 (prev=0.480) ===
+[mu=3.952900] f=m_dense-m_dilute=+0.2847
+[step] mu=3.956900 f=+0.1410
+[step] mu=3.960900 f=+0.0135
+[equal-rho] mu0=3.960900, dA=+0.0135, ESS~7505
+[equal-rho] bracket mu=3.961000, dA=+0.0099, ESS~7505
+[equal-rho] bracket mu=3.961100, dA=+0.0064, ESS~7505
+[equal-rho] bracket mu=3.961200, dA=+0.0029, ESS~7504
+[equal-rho] bracket mu=3.961300, dA=-0.0007, ESS~7503
+[equal-rho] bisect mu=3.961100, dA=+0.0064, ESS~7505
+mu* = 3.961100   ESS ~ 7505
+0.4999720186542305
+
+
+success: True
+chi^2* : 0.009870434968523304
+theta* : (0.958331513346535, 0.5, 3.9522412653717907, 1.0000000000031426, 0.5191606637696615, 0.008760838867336964)
+
+=== Step: target eps_sp=0.520 (prev=0.500) ===
+[mu=3.952241] f=m_dense-m_dilute=+0.4565
+[step] mu=3.956241 f=+0.3364
+[step] mu=3.960241 f=+0.2096
+[step] mu=3.964241 f=+0.0562
+[equal-rho] mu0=3.964241, dA=+0.0562, ESS~7505
+[equal-rho] bracket mu=3.964341, dA=+0.0527, ESS~7505
+[equal-rho] bracket mu=3.964441, dA=+0.0491, ESS~7505
+[equal-rho] bracket mu=3.964541, dA=+0.0456, ESS~7504
+[equal-rho] bracket mu=3.964641, dA=+0.0420, ESS~7503
+[equal-rho] bracket mu=3.964741, dA=+0.0385, ESS~7502
+[equal-rho] bracket mu=3.964841, dA=+0.0349, ESS~7501
+[equal-rho] bracket mu=3.964941, dA=+0.0314, ESS~7500
+[equal-rho] bracket mu=3.965041, dA=+0.0278, ESS~7498
+[equal-rho] bracket mu=3.965141, dA=+0.0243, ESS~7497
+[equal-rho] bracket mu=3.965241, dA=+0.0207, ESS~7495
+[equal-rho] bracket mu=3.965341, dA=+0.0172, ESS~7492
+[equal-rho] bracket mu=3.965441, dA=+0.0136, ESS~7490
+[equal-rho] bracket mu=3.965541, dA=+0.0101, ESS~7487
+[equal-rho] bracket mu=3.965641, dA=+0.0065, ESS~7485
+[equal-rho] bracket mu=3.965741, dA=+0.0030, ESS~7482
+[equal-rho] bracket mu=3.965841, dA=-0.0006, ESS~7478
+[equal-rho] bisect mu=3.965041, dA=+0.0278, ESS~7498
+[equal-rho] bisect mu=3.965441, dA=+0.0136, ESS~7490
+[equal-rho] bisect mu=3.965641, dA=+0.0065, ESS~7485
+mu* = 3.965641   ESS ~ 7485
+0.504107928047968
+
+
+success: True
+chi^2* : 0.006267250898148884
+theta* : (0.9548229440434803, 0.52, 3.957159423034548, 1.0000000000246079, 0.5331731413268735, 0.03607886756446645)
+
+=== Step: target eps_sp=0.540 (prev=0.520) ===
+[mu=3.957159] f=m_dense-m_dilute=+0.4923
+[step] mu=3.961159 f=+0.3627
+[step] mu=3.965159 f=+0.2486
+[step] mu=3.969159 f=+0.1173
+[step] mu=3.973159 f=-0.0278
+[equal-rho] mu0=3.973159, dA=-0.0278, ESS~7505
+[equal-rho] bracket mu=3.973059, dA=-0.0243, ESS~7505
+[equal-rho] bracket mu=3.972959, dA=-0.0207, ESS~7505
+[equal-rho] bracket mu=3.972859, dA=-0.0171, ESS~7504
+[equal-rho] bracket mu=3.972759, dA=-0.0136, ESS~7503
+[equal-rho] bracket mu=3.972659, dA=-0.0100, ESS~7502
+[equal-rho] bracket mu=3.972559, dA=-0.0064, ESS~7501
+[equal-rho] bracket mu=3.972459, dA=-0.0029, ESS~7500
+[equal-rho] bracket mu=3.972359, dA=+0.0007, ESS~7498
+[equal-rho] bisect mu=3.972759, dA=-0.0136, ESS~7503
+[equal-rho] bisect mu=3.972559, dA=-0.0064, ESS~7501
+mu* = 3.972559   ESS ~ 7501
+0.4992418387741506
+
+
+success: True
+chi^2* : 0.34951333969398024
+theta* : (0.9534297776698882, 0.54, 3.9711662566603043, 1.0000000000002733, 0.34021988674737347, 0.0013898653851973316)
+
+=== Step: target eps_sp=0.560 (prev=0.540) ===
+[mu=3.971166] f=m_dense-m_dilute=+0.4338
+[step] mu=3.975166 f=+0.3556
+[step] mu=3.979166 f=+0.2005
+[step] mu=3.983166 f=+0.0741
+[equal-rho] mu0=3.983166, dA=+0.0741, ESS~7505
+[equal-rho] bracket mu=3.983266, dA=+0.0705, ESS~7505
+[equal-rho] bracket mu=3.983366, dA=+0.0669, ESS~7505
+[equal-rho] bracket mu=3.983466, dA=+0.0633, ESS~7504
+[equal-rho] bracket mu=3.983566, dA=+0.0598, ESS~7503
+[equal-rho] bracket mu=3.983666, dA=+0.0562, ESS~7502
+[equal-rho] bracket mu=3.983766, dA=+0.0526, ESS~7501
+[equal-rho] bracket mu=3.983866, dA=+0.0490, ESS~7500
+[equal-rho] bracket mu=3.983966, dA=+0.0454, ESS~7498
+[equal-rho] bracket mu=3.984066, dA=+0.0418, ESS~7496
+[equal-rho] bracket mu=3.984166, dA=+0.0382, ESS~7494
+[equal-rho] bracket mu=3.984266, dA=+0.0346, ESS~7492
+[equal-rho] bracket mu=3.984366, dA=+0.0310, ESS~7490
+[equal-rho] bracket mu=3.984466, dA=+0.0274, ESS~7487
+[equal-rho] bracket mu=3.984566, dA=+0.0238, ESS~7484
+[equal-rho] bracket mu=3.984666, dA=+0.0202, ESS~7481
+[equal-rho] bracket mu=3.984766, dA=+0.0166, ESS~7478
+[equal-rho] bracket mu=3.984866, dA=+0.0130, ESS~7474
+[equal-rho] bracket mu=3.984966, dA=+0.0094, ESS~7471
+[equal-rho] bracket mu=3.985066, dA=+0.0058, ESS~7467
+[equal-rho] bracket mu=3.985166, dA=+0.0022, ESS~7463
+mu* = 3.983166   ESS ~ 7505
+0.5272858094603597
+
+
+success: True
+chi^2* : 0.3691689159911733
+theta* : (0.9334305806927471, 0.56, 3.963166731802599, 1.0, 1.5237821654089894, 0.31192891821911867)
+
+=== Step: target eps_sp=0.580 (prev=0.560) ===
+[mu=3.963167] f=m_dense-m_dilute=-0.6124
+[step] mu=3.959167 f=-0.5174
+[step] mu=3.955167 f=-0.4373
+[step] mu=3.951167 f=-0.3110
+[step] mu=3.947167 f=-0.1813
+[step] mu=3.943167 f=-0.0529
+[equal-rho] mu0=3.943167, dA=-0.0529, ESS~7505
+[equal-rho] bracket mu=3.943067, dA=-0.0495, ESS~7505
+[equal-rho] bracket mu=3.942967, dA=-0.0460, ESS~7505
+[equal-rho] bracket mu=3.942867, dA=-0.0426, ESS~7504
+[equal-rho] bracket mu=3.942767, dA=-0.0391, ESS~7503
+[equal-rho] bracket mu=3.942667, dA=-0.0357, ESS~7503
+[equal-rho] bracket mu=3.942567, dA=-0.0322, ESS~7501
+[equal-rho] bracket mu=3.942467, dA=-0.0288, ESS~7500
+[equal-rho] bracket mu=3.942367, dA=-0.0254, ESS~7499
+[equal-rho] bracket mu=3.942267, dA=-0.0219, ESS~7497
+[equal-rho] bracket mu=3.942167, dA=-0.0185, ESS~7495
+[equal-rho] bracket mu=3.942067, dA=-0.0150, ESS~7493
+[equal-rho] bracket mu=3.941967, dA=-0.0116, ESS~7491
+[equal-rho] bracket mu=3.941867, dA=-0.0081, ESS~7488
+[equal-rho] bracket mu=3.941767, dA=-0.0047, ESS~7486
+[equal-rho] bracket mu=3.941667, dA=-0.0012, ESS~7483
+[equal-rho] bracket mu=3.941567, dA=+0.0022, ESS~7480
+[equal-rho] bisect mu=3.942367, dA=-0.0254, ESS~7499
+[equal-rho] bisect mu=3.941967, dA=-0.0116, ESS~7491
+[equal-rho] bisect mu=3.941767, dA=-0.0047, ESS~7486
+mu* = 3.941767   ESS ~ 7486
+0.49639840106595606
+
+
+success: True
+chi^2* : 0.009793670217770556
+theta* : (0.9286998632036956, 0.58, 3.9343097367982867, 0.9999999999941173, 0.4941817442448819, -0.011902549688186109)
+
+=== Step: target eps_sp=0.600 (prev=0.580) ===
+[mu=3.934310] f=m_dense-m_dilute=+0.3387
+[step] mu=3.938310 f=+0.2197
+[step] mu=3.942310 f=+0.0785
+[equal-rho] mu0=3.942310, dA=+0.0785, ESS~7505
+[equal-rho] bracket mu=3.942410, dA=+0.0750, ESS~7505
+[equal-rho] bracket mu=3.942510, dA=+0.0716, ESS~7505
+[equal-rho] bracket mu=3.942610, dA=+0.0682, ESS~7504
+[equal-rho] bracket mu=3.942710, dA=+0.0647, ESS~7503
+[equal-rho] bracket mu=3.942810, dA=+0.0613, ESS~7503
+[equal-rho] bracket mu=3.942910, dA=+0.0578, ESS~7501
+[equal-rho] bracket mu=3.943010, dA=+0.0544, ESS~7500
+[equal-rho] bracket mu=3.943110, dA=+0.0510, ESS~7499
+[equal-rho] bracket mu=3.943210, dA=+0.0475, ESS~7497
+[equal-rho] bracket mu=3.943310, dA=+0.0441, ESS~7495
+[equal-rho] bracket mu=3.943410, dA=+0.0406, ESS~7493
+[equal-rho] bracket mu=3.943510, dA=+0.0372, ESS~7491
+[equal-rho] bracket mu=3.943610, dA=+0.0337, ESS~7488
+[equal-rho] bracket mu=3.943710, dA=+0.0303, ESS~7485
+[equal-rho] bracket mu=3.943810, dA=+0.0268, ESS~7482
+[equal-rho] bracket mu=3.943910, dA=+0.0233, ESS~7479
+[equal-rho] bracket mu=3.944010, dA=+0.0199, ESS~7476
+[equal-rho] bracket mu=3.944110, dA=+0.0164, ESS~7473
+[equal-rho] bracket mu=3.944210, dA=+0.0130, ESS~7469
+[equal-rho] bracket mu=3.944310, dA=+0.0095, ESS~7465
+mu* = 3.942310   ESS ~ 7505
+0.5294297135243171
+
+
+success: True
+chi^2* : 0.36242237420202994
+theta* : (0.9087008046828929, 0.6, 3.9223102456230095, 1.0, 1.5713636406896418, 0.34645781355012073)
+
+=== Step: target eps_sp=0.620 (prev=0.600) ===
+[mu=3.922310] f=m_dense-m_dilute=-0.5684
+[step] mu=3.918310 f=-0.4863
+[step] mu=3.914310 f=-0.3927
+[step] mu=3.910310 f=-0.2549
+[step] mu=3.906310 f=-0.1439
+[step] mu=3.902310 f=-0.0023
+[equal-rho] mu0=3.902310, dA=-0.0023, ESS~7505
+mu* = 3.902310   ESS ~ 7505
+0.49837175216522317
+
+
+success: True
+chi^2* : 0.3525010400565055
+theta* : (0.908575446298997, 0.62, 3.9021592408006267, 0.9999999999982037, 0.31592527625318095, -0.0030734528656655266)
+
+=== Step: target eps_sp=0.640 (prev=0.620) ===
+[mu=3.902159] f=m_dense-m_dilute=+0.5095
+[step] mu=3.906159 f=+0.4061
+[step] mu=3.910159 f=+0.2729
+[step] mu=3.914159 f=+0.1626
+[step] mu=3.918159 f=+0.0131
+[equal-rho] mu0=3.918159, dA=+0.0131, ESS~7505
+[equal-rho] bracket mu=3.918259, dA=+0.0097, ESS~7505
+[equal-rho] bracket mu=3.918359, dA=+0.0064, ESS~7505
+[equal-rho] bracket mu=3.918459, dA=+0.0031, ESS~7504
+[equal-rho] bracket mu=3.918559, dA=-0.0003, ESS~7503
+[equal-rho] bisect mu=3.918359, dA=+0.0064, ESS~7505
+mu* = 3.918359   ESS ~ 7505
+0.49360559626915385
+
+
+success: True
+chi^2* : 0.17616530824916599
+theta* : (0.9114968376077502, 0.64, 3.90267424334459, 0.9999999999933227, 0.3865672463006507, -0.022539949570746932)
+
+=== Step: target eps_sp=0.660 (prev=0.640) ===
+[mu=3.902674] f=m_dense-m_dilute=+0.8851
+[step] mu=3.906674 f=+0.8561
+[step] mu=3.910674 f=+0.8083
+[step] mu=3.914674 f=+0.7695
+[step] mu=3.918674 f=+0.6999
+[step] mu=3.922674 f=+0.6247
+[step] mu=3.926674 f=+0.5392
+[step] mu=3.930674 f=+0.4474
+[step] mu=3.934674 f=+0.3166
+[step] mu=3.938674 f=+0.2057
+[step] mu=3.942674 f=+0.0734
+[equal-rho] mu0=3.942674, dA=+0.0734, ESS~7505
+[equal-rho] bracket mu=3.942774, dA=+0.0700, ESS~7505
+[equal-rho] bracket mu=3.942874, dA=+0.0666, ESS~7505
+[equal-rho] bracket mu=3.942974, dA=+0.0632, ESS~7504
+[equal-rho] bracket mu=3.943074, dA=+0.0598, ESS~7503
+[equal-rho] bracket mu=3.943174, dA=+0.0564, ESS~7503
+[equal-rho] bracket mu=3.943274, dA=+0.0530, ESS~7501
+[equal-rho] bracket mu=3.943374, dA=+0.0496, ESS~7500
+[equal-rho] bracket mu=3.943474, dA=+0.0462, ESS~7499
+[equal-rho] bracket mu=3.943574, dA=+0.0428, ESS~7497
+[equal-rho] bracket mu=3.943674, dA=+0.0394, ESS~7495
+[equal-rho] bracket mu=3.943774, dA=+0.0360, ESS~7493
+[equal-rho] bracket mu=3.943874, dA=+0.0326, ESS~7491
+[equal-rho] bracket mu=3.943974, dA=+0.0292, ESS~7488
+[equal-rho] bracket mu=3.944074, dA=+0.0258, ESS~7486
+[equal-rho] bracket mu=3.944174, dA=+0.0223, ESS~7483
+[equal-rho] bracket mu=3.944274, dA=+0.0189, ESS~7480
+[equal-rho] bracket mu=3.944374, dA=+0.0155, ESS~7477
+[equal-rho] bracket mu=3.944474, dA=+0.0121, ESS~7473
+[equal-rho] bracket mu=3.944574, dA=+0.0087, ESS~7470
+[equal-rho] bracket mu=3.944674, dA=+0.0053, ESS~7466
+mu* = 3.942674   ESS ~ 7505
+0.525780146568954
+
+
+success: True
+chi^2* : 0.3628815826808897
+theta* : (0.8914975581233759, 0.66, 3.9226746426903762, 1.0, 1.5209252870540404, 0.3263039739233362)
+
+=== Step: target eps_sp=0.680 (prev=0.660) ===
+[mu=3.922675] f=m_dense-m_dilute=-0.5731
+[step] mu=3.918675 f=-0.5023
+[step] mu=3.914675 f=-0.3867
+[step] mu=3.910675 f=-0.2724
+[step] mu=3.906675 f=-0.1432
+[step] mu=3.902675 f=-0.0288
+[equal-rho] mu0=3.902675, dA=-0.0288, ESS~7505
+[equal-rho] bracket mu=3.902575, dA=-0.0255, ESS~7505
+[equal-rho] bracket mu=3.902475, dA=-0.0223, ESS~7505
+[equal-rho] bracket mu=3.902375, dA=-0.0190, ESS~7504
+[equal-rho] bracket mu=3.902275, dA=-0.0157, ESS~7504
+[equal-rho] bracket mu=3.902175, dA=-0.0125, ESS~7503
+[equal-rho] bracket mu=3.902075, dA=-0.0092, ESS~7502
+[equal-rho] bracket mu=3.901975, dA=-0.0060, ESS~7501
+[equal-rho] bracket mu=3.901875, dA=-0.0027, ESS~7499
+[equal-rho] bracket mu=3.901775, dA=+0.0005, ESS~7498
+[equal-rho] bisect mu=3.902225, dA=-0.0141, ESS~7503
+[equal-rho] bisect mu=3.902000, dA=-0.0068, ESS~7501
+mu* = 3.902000   ESS ~ 7501
+0.49535243171219184
+
+
+success: True
+chi^2* : 0.24898019733723742
+theta* : (0.8930074380831183, 0.68, 3.893205310593685, 0.9999999999883354, 0.3552545796805793, -0.013996282399389895)
+
+=== Step: target eps_sp=0.700 (prev=0.680) ===
+[mu=3.893205] f=m_dense-m_dilute=+0.7639
+[step] mu=3.897205 f=+0.6973
+[step] mu=3.901205 f=+0.6398
+[step] mu=3.905205 f=+0.5420
+[step] mu=3.909205 f=+0.4264
+[step] mu=3.913205 f=+0.3214
+[step] mu=3.917205 f=+0.2011
+[step] mu=3.921205 f=+0.0938
+[equal-rho] mu0=3.921205, dA=+0.0938, ESS~7505
+[equal-rho] bracket mu=3.921305, dA=+0.0905, ESS~7505
+[equal-rho] bracket mu=3.921405, dA=+0.0872, ESS~7505
+[equal-rho] bracket mu=3.921505, dA=+0.0838, ESS~7504
+[equal-rho] bracket mu=3.921605, dA=+0.0805, ESS~7503
+[equal-rho] bracket mu=3.921705, dA=+0.0772, ESS~7503
+[equal-rho] bracket mu=3.921805, dA=+0.0738, ESS~7502
+[equal-rho] bracket mu=3.921905, dA=+0.0705, ESS~7500
+[equal-rho] bracket mu=3.922005, dA=+0.0672, ESS~7499
+[equal-rho] bracket mu=3.922105, dA=+0.0638, ESS~7497
+[equal-rho] bracket mu=3.922205, dA=+0.0605, ESS~7496
+[equal-rho] bracket mu=3.922305, dA=+0.0572, ESS~7494
+[equal-rho] bracket mu=3.922405, dA=+0.0538, ESS~7491
+[equal-rho] bracket mu=3.922505, dA=+0.0505, ESS~7489
+[equal-rho] bracket mu=3.922605, dA=+0.0471, ESS~7486
+[equal-rho] bracket mu=3.922705, dA=+0.0438, ESS~7484
+[equal-rho] bracket mu=3.922805, dA=+0.0404, ESS~7481
+[equal-rho] bracket mu=3.922905, dA=+0.0371, ESS~7478
+[equal-rho] bracket mu=3.923005, dA=+0.0338, ESS~7474
+[equal-rho] bracket mu=3.923105, dA=+0.0304, ESS~7471
+[equal-rho] bracket mu=3.923205, dA=+0.0271, ESS~7467
+mu* = 3.921205   ESS ~ 7505
+0.5324663557628248
+
+
+success: True
+chi^2* : 0.3490788540053658
+theta* : (0.8730079265704096, 0.7000000000000001, 3.901205588951844, 1.0, 1.7040630392118372, 0.42630631516713136)
+
+=== Step: target eps_sp=0.720 (prev=0.700) ===
+[mu=3.901206] f=m_dense-m_dilute=-0.5480
+[step] mu=3.897206 f=-0.4560
+[step] mu=3.893206 f=-0.3542
+[step] mu=3.889206 f=-0.2558
+[step] mu=3.885206 f=-0.1245
+[step] mu=3.881206 f=+0.0011
+[equal-rho] mu0=3.881206, dA=+0.0011, ESS~7505
+mu* = 3.881206   ESS ~ 7505
+0.49702998001332444
+
+
+success: False
+chi^2* : 0.06380124554265688
+theta* : (0.8663439485878841, 0.72, 3.8745421954564425, 0.99999999999426, 0.532470783839908, -0.005327866313982849)
+
+=== Step: target eps_sp=0.740 (prev=0.720) ===
+[mu=3.874542] f=m_dense-m_dilute=+0.1199
+[step] mu=3.878542 f=-0.0047
+[equal-rho] mu0=3.878542, dA=-0.0047, ESS~7505
+mu* = 3.878542   ESS ~ 7505
+0.4944930046635576
+
+
+success: True
+chi^2* : 0.07236598525042855
+theta* : (0.867974339778727, 0.74, 3.8585667356401516, 0.9999999999980156, 0.48363679464467607, -0.0026052213821630434)
+
+=== Step: target eps_sp=0.760 (prev=0.740) ===
+[mu=3.858567] f=m_dense-m_dilute=+0.8665
+[step] mu=3.862567 f=+0.8341
+[step] mu=3.866567 f=+0.7984
+[step] mu=3.870567 f=+0.7535
+[step] mu=3.874567 f=+0.6997
+[step] mu=3.878567 f=+0.6139
+[step] mu=3.882567 f=+0.5134
+[step] mu=3.886567 f=+0.4318
+[step] mu=3.890567 f=+0.3055
+[step] mu=3.894567 f=+0.2017
+[step] mu=3.898567 f=+0.0536
+[equal-rho] mu0=3.898567, dA=+0.0536, ESS~7505
+[equal-rho] bracket mu=3.898667, dA=+0.0504, ESS~7505
+[equal-rho] bracket mu=3.898767, dA=+0.0472, ESS~7505
+[equal-rho] bracket mu=3.898867, dA=+0.0440, ESS~7504
+[equal-rho] bracket mu=3.898967, dA=+0.0408, ESS~7504
+[equal-rho] bracket mu=3.899067, dA=+0.0376, ESS~7503
+[equal-rho] bracket mu=3.899167, dA=+0.0345, ESS~7502
+[equal-rho] bracket mu=3.899267, dA=+0.0313, ESS~7501
+[equal-rho] bracket mu=3.899367, dA=+0.0281, ESS~7499
+[equal-rho] bracket mu=3.899467, dA=+0.0249, ESS~7498
+[equal-rho] bracket mu=3.899567, dA=+0.0217, ESS~7496
+[equal-rho] bracket mu=3.899667, dA=+0.0185, ESS~7494
+[equal-rho] bracket mu=3.899767, dA=+0.0153, ESS~7492
+[equal-rho] bracket mu=3.899867, dA=+0.0121, ESS~7490
+[equal-rho] bracket mu=3.899967, dA=+0.0089, ESS~7488
+[equal-rho] bracket mu=3.900067, dA=+0.0057, ESS~7485
+[equal-rho] bracket mu=3.900167, dA=+0.0025, ESS~7482
+[equal-rho] bracket mu=3.900267, dA=-0.0006, ESS~7479
+[equal-rho] bisect mu=3.899417, dA=+0.0265, ESS~7499
+[equal-rho] bisect mu=3.899842, dA=+0.0129, ESS~7491
+[equal-rho] bisect mu=3.900054, dA=+0.0061, ESS~7485
+mu* = 3.900054   ESS ~ 7485
+0.49583477681545635
+
+
+success: True
+chi^2* : 0.28400179884472354
+theta* : (0.867607133414781, 0.76, 3.8976904352766253, 1.0000000000144003, 0.3507654413603843, 0.013121687882766346)
+
+=== Step: target eps_sp=0.780 (prev=0.760) ===
+[mu=3.897690] f=m_dense-m_dilute=+0.5556
+[step] mu=3.901690 f=+0.4618
+[step] mu=3.905690 f=+0.3639
+[step] mu=3.909690 f=+0.2449
+[step] mu=3.913690 f=+0.1159
+[step] mu=3.917690 f=-0.0147
+[equal-rho] mu0=3.917690, dA=-0.0147, ESS~7505
+[equal-rho] bracket mu=3.917590, dA=-0.0113, ESS~7505
+[equal-rho] bracket mu=3.917490, dA=-0.0080, ESS~7505
+[equal-rho] bracket mu=3.917390, dA=-0.0047, ESS~7504
+[equal-rho] bracket mu=3.917290, dA=-0.0014, ESS~7504
+[equal-rho] bracket mu=3.917190, dA=+0.0019, ESS~7503
+[equal-rho] bisect mu=3.917440, dA=-0.0064, ESS~7504
+mu* = 3.917440   ESS ~ 7504
+0.4949353764157228
+
+
+success: True
+chi^2* : 0.04443954592956928
+theta* : (0.8611372900272269, 0.78, 3.91096990546806, 0.9999999999933861, 0.5130053116697854, -0.014496217762208633)
+
+=== Step: target eps_sp=0.800 (prev=0.780) ===
+[mu=3.910970] f=m_dense-m_dilute=+0.1371
+[step] mu=3.914970 f=+0.0164
+[equal-rho] mu0=3.914970, dA=+0.0164, ESS~7505
+[equal-rho] bracket mu=3.915070, dA=+0.0131, ESS~7505
+[equal-rho] bracket mu=3.915170, dA=+0.0099, ESS~7505
+[equal-rho] bracket mu=3.915270, dA=+0.0067, ESS~7504
+[equal-rho] bracket mu=3.915370, dA=+0.0034, ESS~7504
+[equal-rho] bracket mu=3.915470, dA=+0.0002, ESS~7503
+[equal-rho] bracket mu=3.915570, dA=-0.0031, ESS~7502
+[equal-rho] bisect mu=3.915270, dA=+0.0067, ESS~7504
+mu* = 3.915270   ESS ~ 7504
+0.5010099933377749
+
+
+success: True
+chi^2* : 0.22612165301256826
+theta* : (0.8612934084362525, 0.8, 3.908174668781058, 1.0000000000530005, 0.40379483124229315, 0.03473810253920088)
+
+=== Step: target eps_sp=0.820 (prev=0.800) ===
+[mu=3.908175] f=m_dense-m_dilute=+0.6614
+[step] mu=3.912175 f=+0.5920
+[step] mu=3.916175 f=+0.5070
+[step] mu=3.920175 f=+0.4163
+[step] mu=3.924175 f=+0.2954
+[step] mu=3.928175 f=+0.1714
+[step] mu=3.932175 f=+0.0306
+[equal-rho] mu0=3.932175, dA=+0.0306, ESS~7505
+[equal-rho] bracket mu=3.932275, dA=+0.0274, ESS~7505
+[equal-rho] bracket mu=3.932375, dA=+0.0241, ESS~7505
+[equal-rho] bracket mu=3.932475, dA=+0.0208, ESS~7504
+[equal-rho] bracket mu=3.932575, dA=+0.0175, ESS~7504
+[equal-rho] bracket mu=3.932675, dA=+0.0142, ESS~7503
+[equal-rho] bracket mu=3.932775, dA=+0.0109, ESS~7502
+[equal-rho] bracket mu=3.932875, dA=+0.0076, ESS~7500
+[equal-rho] bracket mu=3.932975, dA=+0.0043, ESS~7499
+[equal-rho] bracket mu=3.933075, dA=+0.0010, ESS~7497
+[equal-rho] bracket mu=3.933175, dA=-0.0023, ESS~7496
+[equal-rho] bisect mu=3.932675, dA=+0.0142, ESS~7503
+[equal-rho] bisect mu=3.932925, dA=+0.0059, ESS~7500
+mu* = 3.932925   ESS ~ 7500
+0.4975536309127249
+
+
+success: True
+chi^2* : 0.24043679920370153
+theta* : (0.8588924343271238, 0.8200000000000001, 3.9305219491622965, 1.000000000005485, 0.387902275977891, 0.01233140891808565)
+
+=== Step: target eps_sp=0.840 (prev=0.820) ===
+[mu=3.930522] f=m_dense-m_dilute=+0.4159
+[step] mu=3.934522 f=+0.2998
+[step] mu=3.938522 f=+0.1623
+[step] mu=3.942522 f=+0.0377
+[equal-rho] mu0=3.942522, dA=+0.0377, ESS~7505
+[equal-rho] bracket mu=3.942622, dA=+0.0344, ESS~7505
+[equal-rho] bracket mu=3.942722, dA=+0.0311, ESS~7505
+[equal-rho] bracket mu=3.942822, dA=+0.0277, ESS~7504
+[equal-rho] bracket mu=3.942922, dA=+0.0244, ESS~7503
+[equal-rho] bracket mu=3.943022, dA=+0.0211, ESS~7503
+[equal-rho] bracket mu=3.943122, dA=+0.0178, ESS~7502
+[equal-rho] bracket mu=3.943222, dA=+0.0144, ESS~7500
+[equal-rho] bracket mu=3.943322, dA=+0.0111, ESS~7499
+[equal-rho] bracket mu=3.943422, dA=+0.0078, ESS~7497
+[equal-rho] bracket mu=3.943522, dA=+0.0045, ESS~7496
+[equal-rho] bracket mu=3.943622, dA=+0.0011, ESS~7494
+[equal-rho] bracket mu=3.943722, dA=-0.0022, ESS~7491
+[equal-rho] bisect mu=3.943122, dA=+0.0178, ESS~7502
+[equal-rho] bisect mu=3.943422, dA=+0.0078, ESS~7497
+mu* = 3.943422   ESS ~ 7497
+0.49806795469686876
+
+
+success: True
+chi^2* : 0.06933051380353275
+theta* : (0.8543473660133375, 0.84, 3.938876807866803, 1.0000000000065024, 0.4712641782481416, 0.016928668238655617)
+
+=== Step: target eps_sp=0.860 (prev=0.840) ===
+[mu=3.938877] f=m_dense-m_dilute=+0.2751
+[step] mu=3.942877 f=+0.1574
+[step] mu=3.946877 f=+0.0268
+[equal-rho] mu0=3.946877, dA=+0.0268, ESS~7505
+[equal-rho] bracket mu=3.946977, dA=+0.0235, ESS~7505
+[equal-rho] bracket mu=3.947077, dA=+0.0201, ESS~7505
+[equal-rho] bracket mu=3.947177, dA=+0.0168, ESS~7504
+[equal-rho] bracket mu=3.947277, dA=+0.0135, ESS~7503
+[equal-rho] bracket mu=3.947377, dA=+0.0102, ESS~7503
+[equal-rho] bracket mu=3.947477, dA=+0.0069, ESS~7502
+[equal-rho] bracket mu=3.947577, dA=+0.0035, ESS~7500
+[equal-rho] bracket mu=3.947677, dA=+0.0002, ESS~7499
+[equal-rho] bracket mu=3.947777, dA=-0.0031, ESS~7497
+[equal-rho] bisect mu=3.947327, dA=+0.0118, ESS~7503
+[equal-rho] bisect mu=3.947552, dA=+0.0044, ESS~7501
+mu* = 3.947552   ESS ~ 7501
+0.495836109260493
+
+
+success: True
+chi^2* : 0.02134426320606909
+theta* : (0.8491365206162678, 0.86, 3.9418160287062602, 0.9999999999994692, 0.48222721369127086, -0.0023363122169474705)
+
+=== Step: target eps_sp=0.880 (prev=0.860) ===
+[mu=3.941816] f=m_dense-m_dilute=+0.2513
+[step] mu=3.945816 f=+0.1404
+[step] mu=3.949816 f=+0.0095
+[equal-rho] mu0=3.949816, dA=+0.0095, ESS~7505
+mu* = 3.949816   ESS ~ 7505
+0.4979000666222518
+
+
+success: False
+chi^2* : 0.18140131385330072
+theta* : (0.8464323592335187, 0.88, 3.9298160287062602, 1.0000000000127942, 0.622924995462003, 0.02231377414164623)
+
+=== Step: target eps_sp=0.900 (prev=0.880) ===
+[mu=3.929816] f=m_dense-m_dilute=+0.7768
+[step] mu=3.933816 f=+0.6785
+[step] mu=3.937816 f=+0.6312
+[step] mu=3.941816 f=+0.5383
+[step] mu=3.945816 f=+0.4350
+[step] mu=3.949816 f=+0.2965
+[step] mu=3.953816 f=+0.1791
+[step] mu=3.957816 f=+0.0657
+[equal-rho] mu0=3.957816, dA=+0.0657, ESS~7505
+[equal-rho] bracket mu=3.957916, dA=+0.0624, ESS~7505
+[equal-rho] bracket mu=3.958016, dA=+0.0591, ESS~7505
+[equal-rho] bracket mu=3.958116, dA=+0.0557, ESS~7504
+[equal-rho] bracket mu=3.958216, dA=+0.0524, ESS~7503
+[equal-rho] bracket mu=3.958316, dA=+0.0491, ESS~7503
+[equal-rho] bracket mu=3.958416, dA=+0.0458, ESS~7502
+[equal-rho] bracket mu=3.958516, dA=+0.0424, ESS~7500
+[equal-rho] bracket mu=3.958616, dA=+0.0391, ESS~7499
+[equal-rho] bracket mu=3.958716, dA=+0.0358, ESS~7497
+[equal-rho] bracket mu=3.958816, dA=+0.0325, ESS~7496
+[equal-rho] bracket mu=3.958916, dA=+0.0291, ESS~7494
+[equal-rho] bracket mu=3.959016, dA=+0.0258, ESS~7491
+[equal-rho] bracket mu=3.959116, dA=+0.0225, ESS~7489
+[equal-rho] bracket mu=3.959216, dA=+0.0191, ESS~7486
+[equal-rho] bracket mu=3.959316, dA=+0.0158, ESS~7484
+[equal-rho] bracket mu=3.959416, dA=+0.0125, ESS~7481
+[equal-rho] bracket mu=3.959516, dA=+0.0092, ESS~7478
+[equal-rho] bracket mu=3.959616, dA=+0.0058, ESS~7474
+[equal-rho] bracket mu=3.959716, dA=+0.0025, ESS~7471
+[equal-rho] bracket mu=3.959816, dA=-0.0008, ESS~7467
+[equal-rho] bisect mu=3.958816, dA=+0.0325, ESS~7496
+[equal-rho] bisect mu=3.959316, dA=+0.0158, ESS~7484
+[equal-rho] bisect mu=3.959566, dA=+0.0075, ESS~7476
+mu* = 3.959566   ESS ~ 7476
+0.4902998001332445
+
+
+success: True
+chi^2* : 0.20593290539025055
+theta* : (0.8439359827299139, 0.9, 3.9553097636566985, 0.9999999999939688, 0.37928071270359265, -0.015483408915543924)
+
+=== Step: target eps_sp=0.920 (prev=0.900) ===
+[mu=3.955310] f=m_dense-m_dilute=+0.4538
+[step] mu=3.959310 f=+0.3456
+[step] mu=3.963310 f=+0.2212
+[step] mu=3.967310 f=+0.0721
+[equal-rho] mu0=3.967310, dA=+0.0721, ESS~7505
+[equal-rho] bracket mu=3.967410, dA=+0.0687, ESS~7505
+[equal-rho] bracket mu=3.967510, dA=+0.0654, ESS~7505
+[equal-rho] bracket mu=3.967610, dA=+0.0620, ESS~7504
+[equal-rho] bracket mu=3.967710, dA=+0.0586, ESS~7503
+[equal-rho] bracket mu=3.967810, dA=+0.0553, ESS~7503
+[equal-rho] bracket mu=3.967910, dA=+0.0519, ESS~7502
+[equal-rho] bracket mu=3.968010, dA=+0.0485, ESS~7500
+[equal-rho] bracket mu=3.968110, dA=+0.0452, ESS~7499
+[equal-rho] bracket mu=3.968210, dA=+0.0418, ESS~7497
+[equal-rho] bracket mu=3.968310, dA=+0.0384, ESS~7495
+[equal-rho] bracket mu=3.968410, dA=+0.0350, ESS~7493
+[equal-rho] bracket mu=3.968510, dA=+0.0317, ESS~7491
+[equal-rho] bracket mu=3.968610, dA=+0.0283, ESS~7489
+[equal-rho] bracket mu=3.968710, dA=+0.0249, ESS~7486
+[equal-rho] bracket mu=3.968810, dA=+0.0215, ESS~7483
+[equal-rho] bracket mu=3.968910, dA=+0.0182, ESS~7480
+[equal-rho] bracket mu=3.969010, dA=+0.0148, ESS~7477
+[equal-rho] bracket mu=3.969110, dA=+0.0114, ESS~7474
+[equal-rho] bracket mu=3.969210, dA=+0.0080, ESS~7470
+[equal-rho] bracket mu=3.969310, dA=+0.0047, ESS~7467
+mu* = 3.967310   ESS ~ 7505
+0.5202918054630247
+
+
+success: True
+chi^2* : 0.019475494342768004
+theta* : (0.8386880564903758, 0.92, 3.961500722576568, 1.0, 0.7705710549328402, 0.2430109767656002)
+
+=== Step: target eps_sp=0.940 (prev=0.920) ===
+[mu=3.961501] f=m_dense-m_dilute=+0.3588
+[step] mu=3.965501 f=+0.2195
+[step] mu=3.969501 f=+0.0839
+[equal-rho] mu0=3.969501, dA=+0.0839, ESS~7505
+[equal-rho] bracket mu=3.969601, dA=+0.0806, ESS~7505
+[equal-rho] bracket mu=3.969701, dA=+0.0772, ESS~7505
+[equal-rho] bracket mu=3.969801, dA=+0.0739, ESS~7504
+[equal-rho] bracket mu=3.969901, dA=+0.0705, ESS~7503
+[equal-rho] bracket mu=3.970001, dA=+0.0671, ESS~7503
+[equal-rho] bracket mu=3.970101, dA=+0.0637, ESS~7502
+[equal-rho] bracket mu=3.970201, dA=+0.0604, ESS~7500
+[equal-rho] bracket mu=3.970301, dA=+0.0570, ESS~7499
+[equal-rho] bracket mu=3.970401, dA=+0.0536, ESS~7497
+[equal-rho] bracket mu=3.970501, dA=+0.0502, ESS~7495
+[equal-rho] bracket mu=3.970601, dA=+0.0469, ESS~7493
+[equal-rho] bracket mu=3.970701, dA=+0.0435, ESS~7491
+[equal-rho] bracket mu=3.970801, dA=+0.0401, ESS~7489
+[equal-rho] bracket mu=3.970901, dA=+0.0367, ESS~7486
+[equal-rho] bracket mu=3.971001, dA=+0.0333, ESS~7483
+[equal-rho] bracket mu=3.971101, dA=+0.0300, ESS~7480
+[equal-rho] bracket mu=3.971201, dA=+0.0266, ESS~7477
+[equal-rho] bracket mu=3.971301, dA=+0.0232, ESS~7474
+[equal-rho] bracket mu=3.971401, dA=+0.0198, ESS~7470
+[equal-rho] bracket mu=3.971501, dA=+0.0164, ESS~7466
+mu* = 3.969501   ESS ~ 7505
+0.5256229180546302
+
+
+success: True
+chi^2* : 0.37744293556426933
+theta* : (0.8195259012325394, 0.9400000000000001, 3.950007490684102, 1.0, 1.4633787829159177, 0.3028605374950458)
+
+=== Step: target eps_sp=0.960 (prev=0.940) ===
+[mu=3.950007] f=m_dense-m_dilute=-0.5043
+[step] mu=3.946007 f=-0.3949
+[step] mu=3.942007 f=-0.2755
+[step] mu=3.938007 f=-0.1488
+[step] mu=3.934007 f=-0.0175
+[equal-rho] mu0=3.934007, dA=-0.0175, ESS~7505
+[equal-rho] bracket mu=3.933907, dA=-0.0143, ESS~7505
+[equal-rho] bracket mu=3.933807, dA=-0.0110, ESS~7505
+[equal-rho] bracket mu=3.933707, dA=-0.0078, ESS~7504
+[equal-rho] bracket mu=3.933607, dA=-0.0046, ESS~7504
+[equal-rho] bracket mu=3.933507, dA=-0.0014, ESS~7503
+[equal-rho] bracket mu=3.933407, dA=+0.0018, ESS~7502
+[equal-rho] bisect mu=3.933707, dA=-0.0078, ESS~7504
+mu* = 3.933707   ESS ~ 7504
+0.49725916055962693
+
+
+success: True
+chi^2* : 0.28725537680771895
+theta* : (0.8187988192272083, 0.96, 3.9316808893044506, 1.000000000018916, 0.35198913772506635, 0.017048736799720184)
+
+=== Step: target eps_sp=0.980 (prev=0.960) ===
+[mu=3.931681] f=m_dense-m_dilute=+0.5202
+[step] mu=3.935681 f=+0.3833
+[step] mu=3.939681 f=+0.2790
+[step] mu=3.943681 f=+0.1488
+[step] mu=3.947681 f=+0.0356
+[equal-rho] mu0=3.947681, dA=+0.0356, ESS~7505
+[equal-rho] bracket mu=3.947781, dA=+0.0323, ESS~7505
+[equal-rho] bracket mu=3.947881, dA=+0.0291, ESS~7505
+[equal-rho] bracket mu=3.947981, dA=+0.0258, ESS~7504
+[equal-rho] bracket mu=3.948081, dA=+0.0225, ESS~7504
+[equal-rho] bracket mu=3.948181, dA=+0.0193, ESS~7503
+[equal-rho] bracket mu=3.948281, dA=+0.0160, ESS~7502
+[equal-rho] bracket mu=3.948381, dA=+0.0127, ESS~7501
+[equal-rho] bracket mu=3.948481, dA=+0.0095, ESS~7499
+[equal-rho] bracket mu=3.948581, dA=+0.0062, ESS~7498
+[equal-rho] bracket mu=3.948681, dA=+0.0030, ESS~7496
+[equal-rho] bracket mu=3.948781, dA=-0.0003, ESS~7494
+[equal-rho] bisect mu=3.948231, dA=+0.0176, ESS~7502
+[equal-rho] bisect mu=3.948506, dA=+0.0087, ESS~7499
+mu* = 3.948506   ESS ~ 7499
+0.494055962691539
+
+
+success: True
+chi^2* : 0.2458070268783954
+theta* : (0.8181796523592495, 0.98, 3.942744503513326, 0.9999999999939411, 0.36435530097357727, -0.007893359895348232)
+
+=== Step: target eps_sp=1.000 (prev=0.980) ===
+[mu=3.942745] f=m_dense-m_dilute=+0.6289
+[step] mu=3.946745 f=+0.5295
+[step] mu=3.950745 f=+0.4348
+[step] mu=3.954745 f=+0.3415
+[step] mu=3.958745 f=+0.2096
+[step] mu=3.962745 f=+0.0787
+[equal-rho] mu0=3.962745, dA=+0.0787, ESS~7505
+[equal-rho] bracket mu=3.962845, dA=+0.0755, ESS~7505
+[equal-rho] bracket mu=3.962945, dA=+0.0722, ESS~7505
+[equal-rho] bracket mu=3.963045, dA=+0.0690, ESS~7504
+[equal-rho] bracket mu=3.963145, dA=+0.0657, ESS~7504
+[equal-rho] bracket mu=3.963245, dA=+0.0624, ESS~7503
+[equal-rho] bracket mu=3.963345, dA=+0.0592, ESS~7502
+[equal-rho] bracket mu=3.963445, dA=+0.0559, ESS~7501
+[equal-rho] bracket mu=3.963545, dA=+0.0526, ESS~7499
+[equal-rho] bracket mu=3.963645, dA=+0.0494, ESS~7498
+[equal-rho] bracket mu=3.963745, dA=+0.0461, ESS~7496
+[equal-rho] bracket mu=3.963845, dA=+0.0428, ESS~7494
+[equal-rho] bracket mu=3.963945, dA=+0.0395, ESS~7492
+[equal-rho] bracket mu=3.964045, dA=+0.0363, ESS~7489
+[equal-rho] bracket mu=3.964145, dA=+0.0330, ESS~7487
+[equal-rho] bracket mu=3.964245, dA=+0.0297, ESS~7484
+[equal-rho] bracket mu=3.964345, dA=+0.0264, ESS~7481
+[equal-rho] bracket mu=3.964445, dA=+0.0231, ESS~7478
+[equal-rho] bracket mu=3.964545, dA=+0.0199, ESS~7475
+[equal-rho] bracket mu=3.964645, dA=+0.0166, ESS~7472
+[equal-rho] bracket mu=3.964745, dA=+0.0133, ESS~7468
+mu* = 3.962745   ESS ~ 7505
+0.5223530979347102
+
+
+success: True
+chi^2* : 0.3559277038784471
+theta* : (0.7981799411222561, 1.0, 3.942744664470107, 1.0, 1.4834510285433633, 0.316379804244501)
+
+=== Step: target eps_sp=1.020 (prev=1.000) ===
+[mu=3.942745] f=m_dense-m_dilute=-0.5260
+[step] mu=3.938745 f=-0.4152
+[step] mu=3.934745 f=-0.3134
+[step] mu=3.930745 f=-0.2028
+[step] mu=3.926745 f=-0.0813
+[equal-rho] mu0=3.926745, dA=-0.0813, ESS~7505
+[equal-rho] bracket mu=3.926645, dA=-0.0782, ESS~7505
+[equal-rho] bracket mu=3.926545, dA=-0.0751, ESS~7505
+[equal-rho] bracket mu=3.926445, dA=-0.0720, ESS~7504
+[equal-rho] bracket mu=3.926345, dA=-0.0690, ESS~7504
+[equal-rho] bracket mu=3.926245, dA=-0.0659, ESS~7503
+[equal-rho] bracket mu=3.926145, dA=-0.0628, ESS~7502
+[equal-rho] bracket mu=3.926045, dA=-0.0597, ESS~7501
+[equal-rho] bracket mu=3.925945, dA=-0.0566, ESS~7500
+[equal-rho] bracket mu=3.925845, dA=-0.0535, ESS~7498
+[equal-rho] bracket mu=3.925745, dA=-0.0504, ESS~7497
+[equal-rho] bracket mu=3.925645, dA=-0.0474, ESS~7495
+[equal-rho] bracket mu=3.925545, dA=-0.0443, ESS~7493
+[equal-rho] bracket mu=3.925445, dA=-0.0412, ESS~7491
+[equal-rho] bracket mu=3.925345, dA=-0.0381, ESS~7488
+[equal-rho] bracket mu=3.925245, dA=-0.0350, ESS~7486
+[equal-rho] bracket mu=3.925145, dA=-0.0319, ESS~7483
+[equal-rho] bracket mu=3.925045, dA=-0.0288, ESS~7481
+[equal-rho] bracket mu=3.924945, dA=-0.0257, ESS~7478
+[equal-rho] bracket mu=3.924845, dA=-0.0226, ESS~7474
+[equal-rho] bracket mu=3.924745, dA=-0.0195, ESS~7471
+mu* = 3.926745   ESS ~ 7505
+0.4631605596269154
+
+
+success: True
+chi^2* : 0.28666130407825297
+theta* : (0.818179732234763, 1.02, 3.946744273473855, 1.0, 0.1065266573407216, -0.1203445270527414)
+
+
+Triangular lattice Ising reference:  Tc = 3.640957,  p_add = 0.422650
+
+[array([1, 0, 1, 0, 1, 0]), array([0, 1, 0, 1, 0, 1]), array([2, 2, 2, 2, 2, 2])]
+Species (3 total, 2 non-empty):
+  0: [1 0 1 0 1 0]
+  1: [0 1 0 1 0 1]
+  2: [2 2 2 2 2 2]
+
+=== Step: target eps_sp=1.000 (prev=1.000) ===
+[mu=3.971745] f=m_dense-m_dilute=-0.3973
+[step] mu=3.967745 f=-0.2894
+[step] mu=3.963745 f=-0.1462
+[step] mu=3.959745 f=-0.0265
+[equal-rho] mu0=3.959745, dA=-0.0265, ESS~7505
+[equal-rho] bracket mu=3.959645, dA=-0.0233, ESS~7505
+[equal-rho] bracket mu=3.959545, dA=-0.0200, ESS~7505
+[equal-rho] bracket mu=3.959445, dA=-0.0167, ESS~7504
+[equal-rho] bracket mu=3.959345, dA=-0.0135, ESS~7504
+[equal-rho] bracket mu=3.959245, dA=-0.0102, ESS~7503
+[equal-rho] bracket mu=3.959145, dA=-0.0069, ESS~7502
+[equal-rho] bracket mu=3.959045, dA=-0.0037, ESS~7501
+[equal-rho] bracket mu=3.958945, dA=-0.0004, ESS~7499
+[equal-rho] bracket mu=3.958845, dA=+0.0029, ESS~7498
+[equal-rho] bisect mu=3.959295, dA=-0.0118, ESS~7503
+[equal-rho] bisect mu=3.959070, dA=-0.0045, ESS~7501
+mu* = 3.959070   ESS ~ 7501
+0.49362291805463027
+
+
+success: True
+chi^2* : 0.029190365487042465
+theta* : (0.8099732265783943, 1.0, 3.959043106271741, 1.0000000000024776, 0.4991751852967527, 0.004353924785229137)
+
+=== Step: target eps_sp=1.020 (prev=1.000) ===
+[mu=3.959043] f=m_dense-m_dilute=+0.0035
+[equal-rho] mu0=3.959043, dA=+0.0035, ESS~7505
+mu* = 3.959043   ESS ~ 7505
+0.4935589606928714
+
+
+success: True
+chi^2* : 0.25853472587032017
+theta* : (0.8033269225112478, 1.02, 3.9434214880566776, 1.000000000002811, 0.6297610606785203, 0.004313879933593274)
+
+=== Step: target eps_sp=1.040 (prev=1.020) ===
+[mu=3.943421] f=m_dense-m_dilute=+0.4205
+[step] mu=3.947421 f=+0.2995
+[step] mu=3.951421 f=+0.1795
+[step] mu=3.955421 f=+0.0668
+[equal-rho] mu0=3.955421, dA=+0.0668, ESS~7505
+[equal-rho] bracket mu=3.955521, dA=+0.0635, ESS~7505
+[equal-rho] bracket mu=3.955621, dA=+0.0603, ESS~7505
+[equal-rho] bracket mu=3.955721, dA=+0.0571, ESS~7504
+[equal-rho] bracket mu=3.955821, dA=+0.0539, ESS~7504
+[equal-rho] bracket mu=3.955921, dA=+0.0506, ESS~7503
+[equal-rho] bracket mu=3.956021, dA=+0.0474, ESS~7502
+[equal-rho] bracket mu=3.956121, dA=+0.0442, ESS~7501
+[equal-rho] bracket mu=3.956221, dA=+0.0410, ESS~7499
+[equal-rho] bracket mu=3.956321, dA=+0.0377, ESS~7498
+[equal-rho] bracket mu=3.956421, dA=+0.0345, ESS~7496
+[equal-rho] bracket mu=3.956521, dA=+0.0313, ESS~7494
+[equal-rho] bracket mu=3.956621, dA=+0.0280, ESS~7492
+[equal-rho] bracket mu=3.956721, dA=+0.0248, ESS~7490
+[equal-rho] bracket mu=3.956821, dA=+0.0216, ESS~7487
+[equal-rho] bracket mu=3.956921, dA=+0.0183, ESS~7485
+[equal-rho] bracket mu=3.957021, dA=+0.0151, ESS~7482
+[equal-rho] bracket mu=3.957121, dA=+0.0119, ESS~7479
+[equal-rho] bracket mu=3.957221, dA=+0.0086, ESS~7476
+[equal-rho] bracket mu=3.957321, dA=+0.0054, ESS~7472
+[equal-rho] bracket mu=3.957421, dA=+0.0022, ESS~7469
+mu* = 3.955421   ESS ~ 7505
+0.5162691538974017
+
+
+success: True
+chi^2* : 0.08983574199127364
+theta* : (0.7992049742974948, 1.04, 3.9512988830983287, 1.0, 0.6797477303983045, 0.2432826939879437)
+
+=== Step: target eps_sp=1.060 (prev=1.040) ===
+[mu=3.951299] f=m_dense-m_dilute=+0.3492
+[step] mu=3.955299 f=+0.2490
+[step] mu=3.959299 f=+0.1223
+[step] mu=3.963299 f=-0.0369
+[equal-rho] mu0=3.963299, dA=-0.0369, ESS~7505
+[equal-rho] bracket mu=3.963199, dA=-0.0337, ESS~7505
+[equal-rho] bracket mu=3.963099, dA=-0.0304, ESS~7505
+[equal-rho] bracket mu=3.962999, dA=-0.0272, ESS~7504
+[equal-rho] bracket mu=3.962899, dA=-0.0240, ESS~7504
+[equal-rho] bracket mu=3.962799, dA=-0.0207, ESS~7503
+[equal-rho] bracket mu=3.962699, dA=-0.0175, ESS~7502
+[equal-rho] bracket mu=3.962599, dA=-0.0143, ESS~7501
+[equal-rho] bracket mu=3.962499, dA=-0.0110, ESS~7499
+[equal-rho] bracket mu=3.962399, dA=-0.0078, ESS~7498
+[equal-rho] bracket mu=3.962299, dA=-0.0045, ESS~7496
+[equal-rho] bracket mu=3.962199, dA=-0.0013, ESS~7494
+[equal-rho] bracket mu=3.962099, dA=+0.0019, ESS~7492
+[equal-rho] bisect mu=3.962699, dA=-0.0175, ESS~7502
+[equal-rho] bisect mu=3.962399, dA=-0.0078, ESS~7498
+mu* = 3.962399   ESS ~ 7498
+0.4929700199866755
+
+
+success: True
+chi^2* : 0.05773913318189999
+theta* : (0.7941737249516654, 1.06, 3.95736761960108, 1.0000000000028193, 0.46534500464788153, 0.005079905385132258)
+
+=== Step: target eps_sp=1.080 (prev=1.060) ===
+[mu=3.957368] f=m_dense-m_dilute=+0.2645
+[step] mu=3.961368 f=+0.1566
+[step] mu=3.965368 f=+0.0545
+[equal-rho] mu0=3.965368, dA=+0.0545, ESS~7505
+[equal-rho] bracket mu=3.965468, dA=+0.0513, ESS~7505
+[equal-rho] bracket mu=3.965568, dA=+0.0481, ESS~7505
+[equal-rho] bracket mu=3.965668, dA=+0.0448, ESS~7504
+[equal-rho] bracket mu=3.965768, dA=+0.0416, ESS~7504
+[equal-rho] bracket mu=3.965868, dA=+0.0384, ESS~7503
+[equal-rho] bracket mu=3.965968, dA=+0.0351, ESS~7502
+[equal-rho] bracket mu=3.966068, dA=+0.0319, ESS~7501
+[equal-rho] bracket mu=3.966168, dA=+0.0287, ESS~7499
+[equal-rho] bracket mu=3.966268, dA=+0.0255, ESS~7498
+[equal-rho] bracket mu=3.966368, dA=+0.0222, ESS~7496
+[equal-rho] bracket mu=3.966468, dA=+0.0190, ESS~7494
+[equal-rho] bracket mu=3.966568, dA=+0.0158, ESS~7492
+[equal-rho] bracket mu=3.966668, dA=+0.0125, ESS~7490
+[equal-rho] bracket mu=3.966768, dA=+0.0093, ESS~7487
+[equal-rho] bracket mu=3.966868, dA=+0.0061, ESS~7485
+[equal-rho] bracket mu=3.966968, dA=+0.0029, ESS~7482
+[equal-rho] bracket mu=3.967068, dA=-0.0004, ESS~7479
+[equal-rho] bisect mu=3.966218, dA=+0.0271, ESS~7498
+[equal-rho] bisect mu=3.966643, dA=+0.0134, ESS~7490
+[equal-rho] bisect mu=3.966855, dA=+0.0065, ESS~7485
+mu* = 3.966855   ESS ~ 7485
+0.4910766155896069
+
+
+success: True
+chi^2* : 0.06526375307679322
+theta* : (0.7870774264938485, 1.08, 3.959758819000214, 0.9999999999953101, 0.5267945335835046, -0.0060127096564596355)
+
+=== Step: target eps_sp=1.100 (prev=1.080) ===
+[mu=3.959759] f=m_dense-m_dilute=+0.1330
+[step] mu=3.963759 f=+0.0023
+[equal-rho] mu0=3.963759, dA=+0.0023, ESS~7505
+mu* = 3.963759   ESS ~ 7505
+0.48968554297135247
+
+
+success: True
+chi^2* : 0.24564136822979948
+theta* : (0.7859295147345093, 1.1, 3.959730686972153, 0.9999999999877649, 0.3494975302880913, -0.014283682628776478)
+
+=== Step: target eps_sp=1.120 (prev=1.100) ===
+[mu=3.959731] f=m_dense-m_dilute=+0.5351
+[step] mu=3.963731 f=+0.4305
+[step] mu=3.967731 f=+0.3350
+[step] mu=3.971731 f=+0.2336
+[step] mu=3.975731 f=+0.0781
+[equal-rho] mu0=3.975731, dA=+0.0781, ESS~7505
+[equal-rho] bracket mu=3.975831, dA=+0.0749, ESS~7505
+[equal-rho] bracket mu=3.975931, dA=+0.0717, ESS~7505
+[equal-rho] bracket mu=3.976031, dA=+0.0685, ESS~7504
+[equal-rho] bracket mu=3.976131, dA=+0.0653, ESS~7504
+[equal-rho] bracket mu=3.976231, dA=+0.0621, ESS~7503
+[equal-rho] bracket mu=3.976331, dA=+0.0589, ESS~7502
+[equal-rho] bracket mu=3.976431, dA=+0.0557, ESS~7501
+[equal-rho] bracket mu=3.976531, dA=+0.0525, ESS~7499
+[equal-rho] bracket mu=3.976631, dA=+0.0493, ESS~7498
+[equal-rho] bracket mu=3.976731, dA=+0.0461, ESS~7496
+[equal-rho] bracket mu=3.976831, dA=+0.0429, ESS~7494
+[equal-rho] bracket mu=3.976931, dA=+0.0397, ESS~7492
+[equal-rho] bracket mu=3.977031, dA=+0.0365, ESS~7490
+[equal-rho] bracket mu=3.977131, dA=+0.0333, ESS~7488
+[equal-rho] bracket mu=3.977231, dA=+0.0301, ESS~7485
+[equal-rho] bracket mu=3.977331, dA=+0.0269, ESS~7482
+[equal-rho] bracket mu=3.977431, dA=+0.0237, ESS~7479
+[equal-rho] bracket mu=3.977531, dA=+0.0205, ESS~7476
+[equal-rho] bracket mu=3.977631, dA=+0.0173, ESS~7473
+[equal-rho] bracket mu=3.977731, dA=+0.0141, ESS~7469
+mu* = 3.975731   ESS ~ 7505
+0.520267821452365
+
+
+success: True
+chi^2* : 0.033786071216939904
+theta* : (0.78036783999468, 1.12, 3.970162158107905, 1.0, 0.8164944272315071, 0.28593210371071737)
+
+=== Step: target eps_sp=1.140 (prev=1.120) ===
+[mu=3.970162] f=m_dense-m_dilute=+0.3149
+[step] mu=3.974162 f=+0.1963
+[step] mu=3.978162 f=+0.0682
+[equal-rho] mu0=3.978162, dA=+0.0682, ESS~7505
+[equal-rho] bracket mu=3.978262, dA=+0.0650, ESS~7505
+[equal-rho] bracket mu=3.978362, dA=+0.0618, ESS~7505
+[equal-rho] bracket mu=3.978462, dA=+0.0587, ESS~7504
+[equal-rho] bracket mu=3.978562, dA=+0.0555, ESS~7504
+[equal-rho] bracket mu=3.978662, dA=+0.0523, ESS~7503
+[equal-rho] bracket mu=3.978762, dA=+0.0491, ESS~7502
+[equal-rho] bracket mu=3.978862, dA=+0.0459, ESS~7501
+[equal-rho] bracket mu=3.978962, dA=+0.0427, ESS~7499
+[equal-rho] bracket mu=3.979062, dA=+0.0395, ESS~7498
+[equal-rho] bracket mu=3.979162, dA=+0.0363, ESS~7496
+[equal-rho] bracket mu=3.979262, dA=+0.0331, ESS~7494
+[equal-rho] bracket mu=3.979362, dA=+0.0299, ESS~7492
+[equal-rho] bracket mu=3.979462, dA=+0.0267, ESS~7490
+[equal-rho] bracket mu=3.979562, dA=+0.0235, ESS~7488
+[equal-rho] bracket mu=3.979662, dA=+0.0203, ESS~7485
+[equal-rho] bracket mu=3.979762, dA=+0.0171, ESS~7482
+[equal-rho] bracket mu=3.979862, dA=+0.0139, ESS~7479
+[equal-rho] bracket mu=3.979962, dA=+0.0107, ESS~7476
+[equal-rho] bracket mu=3.980062, dA=+0.0075, ESS~7473
+[equal-rho] bracket mu=3.980162, dA=+0.0043, ESS~7470
+mu* = 3.978162   ESS ~ 7505
+0.5143277814790139
+
+
+success: True
+chi^2* : 0.13059659957356995
+theta* : (0.7767424485710727, 1.1400000000000001, 3.97453580104304, 1.0, 0.612965118414357, 0.20480159506237733)
+
+=== Step: target eps_sp=1.160 (prev=1.140) ===
+[mu=3.974536] f=m_dense-m_dilute=+0.4208
+[step] mu=3.978536 f=+0.2855
+[step] mu=3.982536 f=+0.1671
+[step] mu=3.986536 f=+0.0342
+[equal-rho] mu0=3.986536, dA=+0.0342, ESS~7505
+[equal-rho] bracket mu=3.986636, dA=+0.0310, ESS~7505
+[equal-rho] bracket mu=3.986736, dA=+0.0277, ESS~7505
+[equal-rho] bracket mu=3.986836, dA=+0.0245, ESS~7504
+[equal-rho] bracket mu=3.986936, dA=+0.0212, ESS~7504
+[equal-rho] bracket mu=3.987036, dA=+0.0180, ESS~7503
+[equal-rho] bracket mu=3.987136, dA=+0.0147, ESS~7502
+[equal-rho] bracket mu=3.987236, dA=+0.0115, ESS~7501
+[equal-rho] bracket mu=3.987336, dA=+0.0082, ESS~7499
+[equal-rho] bracket mu=3.987436, dA=+0.0049, ESS~7498
+[equal-rho] bracket mu=3.987536, dA=+0.0017, ESS~7496
+[equal-rho] bracket mu=3.987636, dA=-0.0016, ESS~7494
+[equal-rho] bisect mu=3.987086, dA=+0.0163, ESS~7502
+[equal-rho] bisect mu=3.987361, dA=+0.0074, ESS~7499
+mu* = 3.987361   ESS ~ 7499
+0.4915842771485676
+
+
+success: True
+chi^2* : 0.03153021468217444
+theta* : (0.7721007387029597, 1.1600000000000001, 3.978224517811048, 1.0000000000002989, 0.49620561865551094, 0.0011056361697398573)
+
+=== Step: target eps_sp=1.180 (prev=1.160) ===
+[mu=3.978225] f=m_dense-m_dilute=+0.4405
+[step] mu=3.982225 f=+0.3213
+[step] mu=3.986225 f=+0.1843
+[step] mu=3.990225 f=+0.0811
+[equal-rho] mu0=3.990225, dA=+0.0811, ESS~7505
+[equal-rho] bracket mu=3.990325, dA=+0.0779, ESS~7505
+[equal-rho] bracket mu=3.990425, dA=+0.0747, ESS~7505
+[equal-rho] bracket mu=3.990525, dA=+0.0715, ESS~7504
+[equal-rho] bracket mu=3.990625, dA=+0.0683, ESS~7504
+[equal-rho] bracket mu=3.990725, dA=+0.0651, ESS~7503
+[equal-rho] bracket mu=3.990825, dA=+0.0619, ESS~7502
+[equal-rho] bracket mu=3.990925, dA=+0.0587, ESS~7501
+[equal-rho] bracket mu=3.991025, dA=+0.0555, ESS~7499
+[equal-rho] bracket mu=3.991125, dA=+0.0522, ESS~7498
+[equal-rho] bracket mu=3.991225, dA=+0.0490, ESS~7496
+[equal-rho] bracket mu=3.991325, dA=+0.0458, ESS~7494
+[equal-rho] bracket mu=3.991425, dA=+0.0426, ESS~7492
+[equal-rho] bracket mu=3.991525, dA=+0.0394, ESS~7490
+[equal-rho] bracket mu=3.991625, dA=+0.0362, ESS~7487
+[equal-rho] bracket mu=3.991725, dA=+0.0329, ESS~7485
+[equal-rho] bracket mu=3.991825, dA=+0.0297, ESS~7482
+[equal-rho] bracket mu=3.991925, dA=+0.0265, ESS~7479
+[equal-rho] bracket mu=3.992025, dA=+0.0233, ESS~7476
+[equal-rho] bracket mu=3.992125, dA=+0.0200, ESS~7473
+[equal-rho] bracket mu=3.992225, dA=+0.0168, ESS~7469
+mu* = 3.990225   ESS ~ 7505
+0.5197921385742839
+
+
+success: True
+chi^2* : 0.34708976583161355
+theta* : (0.7521082573944914, 1.1800000000000002, 3.970227575936975, 1.0, 1.45991897677764, 0.3079031483745153)
+
+=== Step: target eps_sp=1.200 (prev=1.180) ===
+[mu=3.970228] f=m_dense-m_dilute=-0.5022
+[step] mu=3.966228 f=-0.4157
+[step] mu=3.962228 f=-0.2858
+[step] mu=3.958228 f=-0.1759
+[step] mu=3.954228 f=-0.0550
+[equal-rho] mu0=3.954228, dA=-0.0550, ESS~7505
+[equal-rho] bracket mu=3.954128, dA=-0.0520, ESS~7505
+[equal-rho] bracket mu=3.954028, dA=-0.0489, ESS~7505
+[equal-rho] bracket mu=3.953928, dA=-0.0459, ESS~7504
+[equal-rho] bracket mu=3.953828, dA=-0.0429, ESS~7504
+[equal-rho] bracket mu=3.953728, dA=-0.0398, ESS~7503
+[equal-rho] bracket mu=3.953628, dA=-0.0368, ESS~7502
+[equal-rho] bracket mu=3.953528, dA=-0.0337, ESS~7501
+[equal-rho] bracket mu=3.953428, dA=-0.0307, ESS~7500
+[equal-rho] bracket mu=3.953328, dA=-0.0276, ESS~7498
+[equal-rho] bracket mu=3.953228, dA=-0.0246, ESS~7497
+[equal-rho] bracket mu=3.953128, dA=-0.0215, ESS~7495
+[equal-rho] bracket mu=3.953028, dA=-0.0185, ESS~7493
+[equal-rho] bracket mu=3.952928, dA=-0.0154, ESS~7491
+[equal-rho] bracket mu=3.952828, dA=-0.0124, ESS~7489
+[equal-rho] bracket mu=3.952728, dA=-0.0093, ESS~7486
+[equal-rho] bracket mu=3.952628, dA=-0.0063, ESS~7484
+[equal-rho] bracket mu=3.952528, dA=-0.0032, ESS~7481
+[equal-rho] bracket mu=3.952428, dA=-0.0002, ESS~7478
+[equal-rho] bracket mu=3.952328, dA=+0.0029, ESS~7475
+[equal-rho] bisect mu=3.953278, dA=-0.0261, ESS~7498
+[equal-rho] bisect mu=3.952803, dA=-0.0116, ESS~7488
+[equal-rho] bisect mu=3.952565, dA=-0.0044, ESS~7482
+mu* = 3.952565   ESS ~ 7482
+0.4874830113257828
+
+
+success: True
+chi^2* : 0.307898346849403
+theta* : (0.752108280714722, 1.2000000000000002, 3.9525650992572054, 1.0, 0.2980597684188718, -0.018285013802390206)
+
+=== Step: target eps_sp=1.220 (prev=1.200) ===
+[mu=3.952565] f=m_dense-m_dilute=+0.5166
+[step] mu=3.956565 f=+0.4334
+[step] mu=3.960565 f=+0.3137
+[step] mu=3.964565 f=+0.1808
+[step] mu=3.968565 f=+0.0746
+[equal-rho] mu0=3.968565, dA=+0.0746, ESS~7505
+[equal-rho] bracket mu=3.968665, dA=+0.0715, ESS~7505
+[equal-rho] bracket mu=3.968765, dA=+0.0684, ESS~7505
+[equal-rho] bracket mu=3.968865, dA=+0.0654, ESS~7504
+[equal-rho] bracket mu=3.968965, dA=+0.0623, ESS~7504
+[equal-rho] bracket mu=3.969065, dA=+0.0592, ESS~7503
+[equal-rho] bracket mu=3.969165, dA=+0.0561, ESS~7502
+[equal-rho] bracket mu=3.969265, dA=+0.0530, ESS~7501
+[equal-rho] bracket mu=3.969365, dA=+0.0499, ESS~7500
+[equal-rho] bracket mu=3.969465, dA=+0.0468, ESS~7498
+[equal-rho] bracket mu=3.969565, dA=+0.0437, ESS~7497
+[equal-rho] bracket mu=3.969665, dA=+0.0406, ESS~7495
+[equal-rho] bracket mu=3.969765, dA=+0.0375, ESS~7493
+[equal-rho] bracket mu=3.969865, dA=+0.0344, ESS~7491
+[equal-rho] bracket mu=3.969965, dA=+0.0313, ESS~7488
+[equal-rho] bracket mu=3.970065, dA=+0.0282, ESS~7486
+[equal-rho] bracket mu=3.970165, dA=+0.0251, ESS~7483
+[equal-rho] bracket mu=3.970265, dA=+0.0220, ESS~7481
+[equal-rho] bracket mu=3.970365, dA=+0.0189, ESS~7478
+[equal-rho] bracket mu=3.970465, dA=+0.0158, ESS~7475
+[equal-rho] bracket mu=3.970565, dA=+0.0127, ESS~7471
+mu* = 3.968565   ESS ~ 7505
+0.515854763491006
+
+
+success: True
+chi^2* : 0.18128823473396571
+theta* : (0.7493944304580896, 1.2200000000000002, 3.9658289012104957, 1.0, 0.5979652530308621, 0.23630606460771375)
+
+=== Step: target eps_sp=1.240 (prev=1.220) ===
+[mu=3.965829] f=m_dense-m_dilute=+0.4486
+[step] mu=3.969829 f=+0.3419
+[step] mu=3.973829 f=+0.2285
+[step] mu=3.977829 f=+0.1114
+[step] mu=3.981829 f=-0.0136
+[equal-rho] mu0=3.981829, dA=-0.0136, ESS~7505
+[equal-rho] bracket mu=3.981729, dA=-0.0104, ESS~7505
+[equal-rho] bracket mu=3.981629, dA=-0.0073, ESS~7505
+[equal-rho] bracket mu=3.981529, dA=-0.0042, ESS~7504
+[equal-rho] bracket mu=3.981429, dA=-0.0010, ESS~7504
+[equal-rho] bracket mu=3.981329, dA=+0.0021, ESS~7503
+[equal-rho] bisect mu=3.981579, dA=-0.0057, ESS~7504
+mu* = 3.981579   ESS ~ 7504
+0.49322451698867426
+
+
+success: True
+chi^2* : 0.24509826852381983
+theta* : (0.7392276787805466, 1.2400000000000002, 3.9714121495329526, 1.0000000000748868, 0.6895936837001445, 0.04298767678585404)
+
+=== Step: target eps_sp=1.260 (prev=1.240) ===
+[mu=3.971412] f=m_dense-m_dilute=-0.0384
+[equal-rho] mu0=3.971412, dA=-0.0384, ESS~7505
+[equal-rho] bracket mu=3.971312, dA=-0.0353, ESS~7505
+[equal-rho] bracket mu=3.971212, dA=-0.0323, ESS~7505
+[equal-rho] bracket mu=3.971112, dA=-0.0292, ESS~7504
+[equal-rho] bracket mu=3.971012, dA=-0.0261, ESS~7504
+[equal-rho] bracket mu=3.970912, dA=-0.0231, ESS~7503
+[equal-rho] bracket mu=3.970812, dA=-0.0200, ESS~7502
+[equal-rho] bracket mu=3.970712, dA=-0.0170, ESS~7501
+[equal-rho] bracket mu=3.970612, dA=-0.0139, ESS~7500
+[equal-rho] bracket mu=3.970512, dA=-0.0108, ESS~7498
+[equal-rho] bracket mu=3.970412, dA=-0.0078, ESS~7497
+[equal-rho] bracket mu=3.970312, dA=-0.0047, ESS~7495
+[equal-rho] bracket mu=3.970212, dA=-0.0016, ESS~7493
+[equal-rho] bracket mu=3.970112, dA=+0.0014, ESS~7491
+[equal-rho] bisect mu=3.970762, dA=-0.0185, ESS~7501
+[equal-rho] bisect mu=3.970437, dA=-0.0085, ESS~7497
+mu* = 3.970437   ESS ~ 7497
+0.48417188540972683
+
+
+success: True
+chi^2* : 0.2988981653596724
+theta* : (0.7389827774957535, 1.2600000000000002, 3.9674198376681757, 1.0, 0.32891062152220474, -0.005364648905977805)
+
+=== Step: target eps_sp=1.280 (prev=1.260) ===
+[mu=3.967420] f=m_dense-m_dilute=+0.5674
+[step] mu=3.971420 f=+0.4661
+[step] mu=3.975420 f=+0.3905
+[step] mu=3.979420 f=+0.2626
+[step] mu=3.983420 f=+0.1512
+[step] mu=3.987420 f=+0.0337
+[equal-rho] mu0=3.987420, dA=+0.0337, ESS~7505
+[equal-rho] bracket mu=3.987520, dA=+0.0306, ESS~7505
+[equal-rho] bracket mu=3.987620, dA=+0.0275, ESS~7505
+[equal-rho] bracket mu=3.987720, dA=+0.0244, ESS~7504
+[equal-rho] bracket mu=3.987820, dA=+0.0213, ESS~7504
+[equal-rho] bracket mu=3.987920, dA=+0.0182, ESS~7503
+[equal-rho] bracket mu=3.988020, dA=+0.0152, ESS~7502
+[equal-rho] bracket mu=3.988120, dA=+0.0121, ESS~7501
+[equal-rho] bracket mu=3.988220, dA=+0.0090, ESS~7500
+[equal-rho] bracket mu=3.988320, dA=+0.0059, ESS~7498
+[equal-rho] bracket mu=3.988420, dA=+0.0028, ESS~7497
+[equal-rho] bracket mu=3.988520, dA=-0.0003, ESS~7495
+[equal-rho] bisect mu=3.987970, dA=+0.0167, ESS~7502
+[equal-rho] bisect mu=3.988245, dA=+0.0082, ESS~7499
+mu* = 3.988245   ESS ~ 7499
+0.49086209193870756
+
+
+success: True
+chi^2* : 0.33195552604866296
+theta* : (0.7389828778925732, 1.2800000000000002, 3.988244717932612, 1.0000000000168878, 0.3131182977459075, 0.013667222071864904)
+
+=== Step: target eps_sp=1.300 (prev=1.280) ===
+[mu=3.988245] f=m_dense-m_dilute=+0.5286
+[step] mu=3.992245 f=+0.4322
+[step] mu=3.996245 f=+0.2873
+[step] mu=4.000245 f=+0.1907
+[step] mu=4.004245 f=+0.0891
+[equal-rho] mu0=4.004245, dA=+0.0891, ESS~7505
+[equal-rho] bracket mu=4.004345, dA=+0.0860, ESS~7505
+[equal-rho] bracket mu=4.004445, dA=+0.0828, ESS~7505
+[equal-rho] bracket mu=4.004545, dA=+0.0797, ESS~7504
+[equal-rho] bracket mu=4.004645, dA=+0.0765, ESS~7504
+[equal-rho] bracket mu=4.004745, dA=+0.0734, ESS~7503
+[equal-rho] bracket mu=4.004845, dA=+0.0702, ESS~7502
+[equal-rho] bracket mu=4.004945, dA=+0.0671, ESS~7501
+[equal-rho] bracket mu=4.005045, dA=+0.0639, ESS~7499
+[equal-rho] bracket mu=4.005145, dA=+0.0607, ESS~7498
+[equal-rho] bracket mu=4.005245, dA=+0.0576, ESS~7496
+[equal-rho] bracket mu=4.005345, dA=+0.0544, ESS~7494
+[equal-rho] bracket mu=4.005445, dA=+0.0512, ESS~7492
+[equal-rho] bracket mu=4.005545, dA=+0.0481, ESS~7490
+[equal-rho] bracket mu=4.005645, dA=+0.0449, ESS~7488
+[equal-rho] bracket mu=4.005745, dA=+0.0417, ESS~7485
+[equal-rho] bracket mu=4.005845, dA=+0.0386, ESS~7483
+[equal-rho] bracket mu=4.005945, dA=+0.0354, ESS~7480
+[equal-rho] bracket mu=4.006045, dA=+0.0322, ESS~7477
+[equal-rho] bracket mu=4.006145, dA=+0.0290, ESS~7474
+[equal-rho] bracket mu=4.006245, dA=+0.0259, ESS~7470
+mu* = 4.004245   ESS ~ 7505
+0.5212431712191872
+
+
+success: True
+chi^2* : 0.3334723340051947
+theta* : (0.7189828778925732, 1.3000000000000003, 3.984244717932611, 1.0, 1.5632019876733778, 0.36369761816385665)
+
+=== Step: target eps_sp=1.320 (prev=1.300) ===
+[mu=3.984245] f=m_dense-m_dilute=-0.4709
+[step] mu=3.980245 f=-0.3642
+[step] mu=3.976245 f=-0.2669
+[step] mu=3.972245 f=-0.1495
+[step] mu=3.968245 f=-0.0296
+[equal-rho] mu0=3.968245, dA=-0.0296, ESS~7505
+[equal-rho] bracket mu=3.968145, dA=-0.0266, ESS~7505
+[equal-rho] bracket mu=3.968045, dA=-0.0236, ESS~7505
+[equal-rho] bracket mu=3.967945, dA=-0.0206, ESS~7504
+[equal-rho] bracket mu=3.967845, dA=-0.0176, ESS~7504
+[equal-rho] bracket mu=3.967745, dA=-0.0147, ESS~7503
+[equal-rho] bracket mu=3.967645, dA=-0.0117, ESS~7502
+[equal-rho] bracket mu=3.967545, dA=-0.0087, ESS~7501
+[equal-rho] bracket mu=3.967445, dA=-0.0057, ESS~7500
+[equal-rho] bracket mu=3.967345, dA=-0.0027, ESS~7499
+[equal-rho] bracket mu=3.967245, dA=+0.0003, ESS~7497
+[equal-rho] bisect mu=3.967745, dA=-0.0147, ESS~7503
+[equal-rho] bisect mu=3.967495, dA=-0.0072, ESS~7501
+mu* = 3.967495   ESS ~ 7501
+0.4843451032644904
+
+
+success: True
+chi^2* : 0.33406365121205694
+theta* : (0.7190744632639464, 1.3200000000000003, 3.9674031325612242, 1.0, 0.304218627012738, -0.0051942589454984185)
+
+=== Step: target eps_sp=1.340 (prev=1.320) ===
+[mu=3.967403] f=m_dense-m_dilute=+0.5330
+[step] mu=3.971403 f=+0.4084
+[step] mu=3.975403 f=+0.3029
+[step] mu=3.979403 f=+0.2012
+[step] mu=3.983403 f=+0.1029
+[step] mu=3.987403 f=-0.0317
+[equal-rho] mu0=3.987403, dA=-0.0317, ESS~7505
+[equal-rho] bracket mu=3.987303, dA=-0.0287, ESS~7505
+[equal-rho] bracket mu=3.987203, dA=-0.0256, ESS~7505
+[equal-rho] bracket mu=3.987103, dA=-0.0226, ESS~7504
+[equal-rho] bracket mu=3.987003, dA=-0.0195, ESS~7504
+[equal-rho] bracket mu=3.986903, dA=-0.0165, ESS~7503
+[equal-rho] bracket mu=3.986803, dA=-0.0135, ESS~7502
+[equal-rho] bracket mu=3.986703, dA=-0.0104, ESS~7501
+[equal-rho] bracket mu=3.986603, dA=-0.0074, ESS~7500
+[equal-rho] bracket mu=3.986503, dA=-0.0043, ESS~7498
+[equal-rho] bracket mu=3.986403, dA=-0.0013, ESS~7497
+[equal-rho] bracket mu=3.986303, dA=+0.0018, ESS~7495
+[equal-rho] bisect mu=3.986853, dA=-0.0150, ESS~7503
+[equal-rho] bisect mu=3.986578, dA=-0.0066, ESS~7499
+mu* = 3.986578   ESS ~ 7499
+0.4858454363757495
+
+
+success: True
+chi^2* : 0.3253487677967478
+theta* : (0.719074367222516, 1.3400000000000003, 3.9865780365197936, 1.0000000000333436, 0.3150199788197816, 0.019329041644628602)
+
+=== Step: target eps_sp=1.360 (prev=1.340) ===
+[mu=3.986578] f=m_dense-m_dilute=+0.5087
+[step] mu=3.990578 f=+0.4155
+[step] mu=3.994578 f=+0.3318
+[step] mu=3.998578 f=+0.2035
+[step] mu=4.002578 f=+0.0879
+[equal-rho] mu0=4.002578, dA=+0.0879, ESS~7505
+[equal-rho] bracket mu=4.002678, dA=+0.0849, ESS~7505
+[equal-rho] bracket mu=4.002778, dA=+0.0819, ESS~7505
+[equal-rho] bracket mu=4.002878, dA=+0.0789, ESS~7504
+[equal-rho] bracket mu=4.002978, dA=+0.0758, ESS~7504
+[equal-rho] bracket mu=4.003078, dA=+0.0728, ESS~7503
+[equal-rho] bracket mu=4.003178, dA=+0.0697, ESS~7502
+[equal-rho] bracket mu=4.003278, dA=+0.0667, ESS~7501
+[equal-rho] bracket mu=4.003378, dA=+0.0637, ESS~7500
+[equal-rho] bracket mu=4.003478, dA=+0.0606, ESS~7498
+[equal-rho] bracket mu=4.003578, dA=+0.0576, ESS~7497
+[equal-rho] bracket mu=4.003678, dA=+0.0545, ESS~7495
+[equal-rho] bracket mu=4.003778, dA=+0.0515, ESS~7493
+[equal-rho] bracket mu=4.003878, dA=+0.0485, ESS~7491
+[equal-rho] bracket mu=4.003978, dA=+0.0454, ESS~7489
+[equal-rho] bracket mu=4.004078, dA=+0.0424, ESS~7486
+[equal-rho] bracket mu=4.004178, dA=+0.0393, ESS~7484
+[equal-rho] bracket mu=4.004278, dA=+0.0363, ESS~7481
+[equal-rho] bracket mu=4.004378, dA=+0.0332, ESS~7478
+[equal-rho] bracket mu=4.004478, dA=+0.0302, ESS~7475
+[equal-rho] bracket mu=4.004578, dA=+0.0271, ESS~7472
+mu* = 4.002578   ESS ~ 7505
+0.5191512325116588
+
+
+success: True
+chi^2* : 0.07048995213586746
+theta* : (0.7124071580148277, 1.3600000000000003, 3.9959124668900126, 1.0, 0.8965562650422576, 0.30753070917017405)
+
+=== Step: target eps_sp=1.380 (prev=1.360) ===
+[mu=3.995912] f=m_dense-m_dilute=+0.2668
+[step] mu=3.999912 f=+0.1395
+[step] mu=4.003912 f=+0.0233
+[equal-rho] mu0=4.003912, dA=+0.0233, ESS~7505
+[equal-rho] bracket mu=4.004012, dA=+0.0202, ESS~7505
+[equal-rho] bracket mu=4.004112, dA=+0.0172, ESS~7505
+[equal-rho] bracket mu=4.004212, dA=+0.0141, ESS~7504
+[equal-rho] bracket mu=4.004312, dA=+0.0110, ESS~7504
+[equal-rho] bracket mu=4.004412, dA=+0.0080, ESS~7503
+[equal-rho] bracket mu=4.004512, dA=+0.0049, ESS~7502
+[equal-rho] bracket mu=4.004612, dA=+0.0018, ESS~7501
+[equal-rho] bracket mu=4.004712, dA=-0.0012, ESS~7500
+[equal-rho] bisect mu=4.004312, dA=+0.0110, ESS~7504
+[equal-rho] bisect mu=4.004512, dA=+0.0049, ESS~7502
+mu* = 4.004512   ESS ~ 7502
+0.4903517654896736
+
+
+success: True
+chi^2* : 0.26035036601758493
+theta* : (0.7113909808568422, 1.3800000000000003, 4.001508623848312, 1.0, 0.3775577157490398, 0.04338065719483984)
+
+=== Step: target eps_sp=1.400 (prev=1.380) ===
+[mu=4.001509] f=m_dense-m_dilute=+0.5123
+[step] mu=4.005509 f=+0.4236
+[step] mu=4.009509 f=+0.3145
+[step] mu=4.013509 f=+0.2235
+[step] mu=4.017509 f=+0.0934
+[equal-rho] mu0=4.017509, dA=+0.0934, ESS~7505
+[equal-rho] bracket mu=4.017609, dA=+0.0904, ESS~7505
+[equal-rho] bracket mu=4.017709, dA=+0.0873, ESS~7505
+[equal-rho] bracket mu=4.017809, dA=+0.0843, ESS~7504
+[equal-rho] bracket mu=4.017909, dA=+0.0812, ESS~7504
+[equal-rho] bracket mu=4.018009, dA=+0.0782, ESS~7503
+[equal-rho] bracket mu=4.018109, dA=+0.0751, ESS~7502
+[equal-rho] bracket mu=4.018209, dA=+0.0720, ESS~7501
+[equal-rho] bracket mu=4.018309, dA=+0.0690, ESS~7500
+[equal-rho] bracket mu=4.018409, dA=+0.0659, ESS~7498
+[equal-rho] bracket mu=4.018509, dA=+0.0629, ESS~7497
+[equal-rho] bracket mu=4.018609, dA=+0.0598, ESS~7495
+[equal-rho] bracket mu=4.018709, dA=+0.0567, ESS~7493
+[equal-rho] bracket mu=4.018809, dA=+0.0537, ESS~7491
+[equal-rho] bracket mu=4.018909, dA=+0.0506, ESS~7489
+[equal-rho] bracket mu=4.019009, dA=+0.0475, ESS~7486
+[equal-rho] bracket mu=4.019109, dA=+0.0445, ESS~7484
+[equal-rho] bracket mu=4.019209, dA=+0.0414, ESS~7481
+[equal-rho] bracket mu=4.019309, dA=+0.0383, ESS~7478
+[equal-rho] bracket mu=4.019409, dA=+0.0353, ESS~7475
+[equal-rho] bracket mu=4.019509, dA=+0.0322, ESS~7472
+mu* = 4.017509   ESS ~ 7505
+0.5204716855429713
+
+
+success: False
+chi^2* : 0.042271693967607576
+theta* : (0.7078502252717723, 1.4000000000000004, 4.007981350881319, 1.0, 0.8928047541996871, 0.3629599080018129)
+
+=== Step: target eps_sp=1.420 (prev=1.400) ===
+[mu=4.007981] f=m_dense-m_dilute=+0.5707
+[step] mu=4.011981 f=+0.4841
+[step] mu=4.015981 f=+0.3800
+[step] mu=4.019981 f=+0.2843
+[step] mu=4.023981 f=+0.1771
+[step] mu=4.027981 f=+0.0654
+[equal-rho] mu0=4.027981, dA=+0.0654, ESS~7505
+[equal-rho] bracket mu=4.028081, dA=+0.0623, ESS~7505
+[equal-rho] bracket mu=4.028181, dA=+0.0593, ESS~7505
+[equal-rho] bracket mu=4.028281, dA=+0.0562, ESS~7504
+[equal-rho] bracket mu=4.028381, dA=+0.0531, ESS~7504
+[equal-rho] bracket mu=4.028481, dA=+0.0500, ESS~7503
+[equal-rho] bracket mu=4.028581, dA=+0.0470, ESS~7502
+[equal-rho] bracket mu=4.028681, dA=+0.0439, ESS~7501
+[equal-rho] bracket mu=4.028781, dA=+0.0408, ESS~7500
+[equal-rho] bracket mu=4.028881, dA=+0.0377, ESS~7498
+[equal-rho] bracket mu=4.028981, dA=+0.0346, ESS~7497
+[equal-rho] bracket mu=4.029081, dA=+0.0315, ESS~7495
+[equal-rho] bracket mu=4.029181, dA=+0.0285, ESS~7493
+[equal-rho] bracket mu=4.029281, dA=+0.0254, ESS~7491
+[equal-rho] bracket mu=4.029381, dA=+0.0223, ESS~7489
+[equal-rho] bracket mu=4.029481, dA=+0.0192, ESS~7486
+[equal-rho] bracket mu=4.029581, dA=+0.0161, ESS~7484
+[equal-rho] bracket mu=4.029681, dA=+0.0130, ESS~7481
+[equal-rho] bracket mu=4.029781, dA=+0.0099, ESS~7478
+[equal-rho] bracket mu=4.029881, dA=+0.0068, ESS~7475
+[equal-rho] bracket mu=4.029981, dA=+0.0038, ESS~7472
+mu* = 4.027981   ESS ~ 7505
+0.5071738840772818
+
+
+success: True
+chi^2* : 0.11164755871802526
+theta* : (0.7038726844400549, 1.4200000000000004, 4.024003781437431, 1.0, 0.6083233708633251, 0.19408256493799084)
+
+=== Step: target eps_sp=1.440 (prev=1.420) ===
+[mu=4.024004] f=m_dense-m_dilute=+0.3896
+[step] mu=4.028004 f=+0.2774
+[step] mu=4.032004 f=+0.1268
+[step] mu=4.036004 f=+0.0060
+[equal-rho] mu0=4.036004, dA=+0.0060, ESS~7505
+mu* = 4.036004   ESS ~ 7505
+0.4872711525649567
+
+
+success: False
+chi^2* : 0.07444603908502206
+theta* : (0.6965042843419175, 1.4400000000000004, 4.027526479983253, 1.0000000000735085, 0.5744203241219993, 0.034979596451816884)
+
+=== Step: target eps_sp=1.460 (prev=1.440) ===
+[mu=4.027526] f=m_dense-m_dilute=+0.2185
+[step] mu=4.031526 f=+0.0690
+[equal-rho] mu0=4.031526, dA=+0.0690, ESS~7505
+[equal-rho] bracket mu=4.031626, dA=+0.0660, ESS~7505
+[equal-rho] bracket mu=4.031726, dA=+0.0630, ESS~7505
+[equal-rho] bracket mu=4.031826, dA=+0.0599, ESS~7504
+[equal-rho] bracket mu=4.031926, dA=+0.0569, ESS~7504
+[equal-rho] bracket mu=4.032026, dA=+0.0538, ESS~7503
+[equal-rho] bracket mu=4.032126, dA=+0.0508, ESS~7502
+[equal-rho] bracket mu=4.032226, dA=+0.0478, ESS~7501
+[equal-rho] bracket mu=4.032326, dA=+0.0447, ESS~7500
+[equal-rho] bracket mu=4.032426, dA=+0.0417, ESS~7498
+[equal-rho] bracket mu=4.032526, dA=+0.0386, ESS~7497
+[equal-rho] bracket mu=4.032626, dA=+0.0356, ESS~7495
+[equal-rho] bracket mu=4.032726, dA=+0.0325, ESS~7493
+[equal-rho] bracket mu=4.032826, dA=+0.0295, ESS~7491
+[equal-rho] bracket mu=4.032926, dA=+0.0264, ESS~7489
+[equal-rho] bracket mu=4.033026, dA=+0.0234, ESS~7487
+[equal-rho] bracket mu=4.033126, dA=+0.0203, ESS~7484
+[equal-rho] bracket mu=4.033226, dA=+0.0173, ESS~7481
+[equal-rho] bracket mu=4.033326, dA=+0.0142, ESS~7478
+[equal-rho] bracket mu=4.033426, dA=+0.0112, ESS~7475
+[equal-rho] bracket mu=4.033526, dA=+0.0081, ESS~7472
+mu* = 4.031526   ESS ~ 7505
+0.5097348434377081
+
+
+success: True
+chi^2* : 0.3294581713589128
+theta* : (0.6765042843419175, 1.4600000000000004, 4.011526479983253, 1.0, 1.3966231322201084, 0.29414828322094516)
+
+=== Step: target eps_sp=1.480 (prev=1.460) ===
+[mu=4.011526] f=m_dense-m_dilute=-0.4377
+[step] mu=4.007526 f=-0.3149
+[step] mu=4.003526 f=-0.2137
+[step] mu=3.999526 f=-0.1011
+[step] mu=3.995526 f=-0.0064
+[equal-rho] mu0=3.995526, dA=-0.0064, ESS~7505
+mu* = 3.995526   ESS ~ 7505
+0.4822145236508994
+
+
+success: True
+chi^2* : 0.2822573238606242
+theta* : (0.6765043007702679, 1.4800000000000004, 3.995526492844387, 1.0, 0.33308946409241985, 0.03378849341515019)
+
+=== Step: target eps_sp=1.500 (prev=1.480) ===
+[mu=3.995526] f=m_dense-m_dilute=+0.5197
+[step] mu=3.999526 f=+0.4217
+[step] mu=4.003526 f=+0.3174
+[step] mu=4.007526 f=+0.2392
+[step] mu=4.011526 f=+0.1166
+[step] mu=4.015526 f=-0.0132
+[equal-rho] mu0=4.015526, dA=-0.0132, ESS~7505
+[equal-rho] bracket mu=4.015426, dA=-0.0102, ESS~7505
+[equal-rho] bracket mu=4.015326, dA=-0.0073, ESS~7505
+[equal-rho] bracket mu=4.015226, dA=-0.0043, ESS~7504
+[equal-rho] bracket mu=4.015126, dA=-0.0014, ESS~7504
+[equal-rho] bracket mu=4.015026, dA=+0.0016, ESS~7503
+[equal-rho] bisect mu=4.015276, dA=-0.0058, ESS~7505
+mu* = 4.015276   ESS ~ 7505
+0.48357495003331114
+
+
+success: True
+chi^2* : 0.3041586886719285
+theta* : (0.6767690456005353, 1.5000000000000004, 4.0150117480141185, 1.0, 0.3274062136441398, 0.03976773089169726)
+
+=== Step: target eps_sp=1.520 (prev=1.500) ===
+[mu=4.015012] f=m_dense-m_dilute=+0.5374
+[step] mu=4.019012 f=+0.4320
+[step] mu=4.023012 f=+0.3428
+[step] mu=4.027012 f=+0.2628
+[step] mu=4.031012 f=+0.1428
+[step] mu=4.035012 f=+0.0055
+[equal-rho] mu0=4.035012, dA=+0.0055, ESS~7505
+mu* = 4.035012   ESS ~ 7505
+0.4823557628247835
+
+
+success: True
+chi^2* : 0.2633277439886529
+theta* : (0.6763760810576113, 1.5200000000000005, 4.031604455834775, 1.0, 0.34768150330277253, 0.020738487933015852)
+
+=== Step: target eps_sp=1.540 (prev=1.520) ===
+[mu=4.031604] f=m_dense-m_dilute=+0.5508
+[step] mu=4.035604 f=+0.4786
+[step] mu=4.039604 f=+0.3844
+[step] mu=4.043604 f=+0.2869
+[step] mu=4.047604 f=+0.1679
+[step] mu=4.051604 f=+0.0273
+[equal-rho] mu0=4.051604, dA=+0.0273, ESS~7505
+[equal-rho] bracket mu=4.051704, dA=+0.0243, ESS~7505
+[equal-rho] bracket mu=4.051804, dA=+0.0212, ESS~7505
+[equal-rho] bracket mu=4.051904, dA=+0.0182, ESS~7504
+[equal-rho] bracket mu=4.052004, dA=+0.0152, ESS~7504
+[equal-rho] bracket mu=4.052104, dA=+0.0121, ESS~7503
+[equal-rho] bracket mu=4.052204, dA=+0.0091, ESS~7502
+[equal-rho] bracket mu=4.052304, dA=+0.0060, ESS~7501
+[equal-rho] bracket mu=4.052404, dA=+0.0030, ESS~7500
+[equal-rho] bracket mu=4.052504, dA=-0.0000, ESS~7498
+[equal-rho] bisect mu=4.052054, dA=+0.0136, ESS~7503
+[equal-rho] bisect mu=4.052279, dA=+0.0068, ESS~7501
+mu* = 4.052279   ESS ~ 7501
+0.4866209193870753
+
+
+success: True
+chi^2* : 0.23905203719625148
+theta* : (0.675029908115906, 1.5400000000000005, 4.0486552357767955, 1.0, 0.4010348984412612, 0.06563221793929312)
+
+=== Step: target eps_sp=1.560 (prev=1.540) ===
+[mu=4.048655] f=m_dense-m_dilute=+0.5388
+[step] mu=4.052655 f=+0.4629
+[step] mu=4.056655 f=+0.3580
+[step] mu=4.060655 f=+0.2388
+[step] mu=4.064655 f=+0.1284
+[step] mu=4.068655 f=+0.0063
+[equal-rho] mu0=4.068655, dA=+0.0063, ESS~7505
+mu* = 4.068655   ESS ~ 7505
+0.4838774150566289
+
+
+success: True
+chi^2* : 0.23079336992191266
+theta* : (0.6826067833963336, 1.5600000000000005, 4.048655235776794, 1.0, 0.3742951011246031, 0.034679243527420404)
+
+=== Step: target eps_sp=1.580 (prev=1.560) ===
+[mu=4.048655] f=m_dense-m_dilute=+0.9455
+[step] mu=4.052655 f=+0.9354
+[step] mu=4.056655 f=+0.9202
+[step] mu=4.060655 f=+0.9066
+[step] mu=4.064655 f=+0.8826
+[step] mu=4.068655 f=+0.8624
+[step] mu=4.072655 f=+0.8061
+[step] mu=4.076655 f=+0.7726
+[step] mu=4.080655 f=+0.7282
+[step] mu=4.084655 f=+0.6620
+[step] mu=4.088655 f=+0.5895
+[step] mu=4.092655 f=+0.4985
+[step] mu=4.096655 f=+0.3869
+[step] mu=4.100655 f=+0.2753
+[step] mu=4.104655 f=+0.1583
+[step] mu=4.108655 f=+0.0404
+[equal-rho] mu0=4.108655, dA=+0.0404, ESS~7505
+[equal-rho] bracket mu=4.108755, dA=+0.0372, ESS~7505
+[equal-rho] bracket mu=4.108855, dA=+0.0340, ESS~7505
+[equal-rho] bracket mu=4.108955, dA=+0.0309, ESS~7504
+[equal-rho] bracket mu=4.109055, dA=+0.0277, ESS~7504
+[equal-rho] bracket mu=4.109155, dA=+0.0245, ESS~7503
+[equal-rho] bracket mu=4.109255, dA=+0.0213, ESS~7502
+[equal-rho] bracket mu=4.109355, dA=+0.0181, ESS~7501
+[equal-rho] bracket mu=4.109455, dA=+0.0150, ESS~7499
+[equal-rho] bracket mu=4.109555, dA=+0.0118, ESS~7498
+[equal-rho] bracket mu=4.109655, dA=+0.0086, ESS~7496
+[equal-rho] bracket mu=4.109755, dA=+0.0054, ESS~7494
+[equal-rho] bracket mu=4.109855, dA=+0.0023, ESS~7492
+[equal-rho] bracket mu=4.109955, dA=-0.0009, ESS~7490
+[equal-rho] bisect mu=4.109305, dA=+0.0197, ESS~7501
+[equal-rho] bisect mu=4.109630, dA=+0.0094, ESS~7497
+mu* = 4.109630   ESS ~ 7497
+0.4819973351099267
+
+
+success: True
+chi^2* : 0.23828128564332016
+theta* : (0.6722700964254391, 1.5800000000000005, 4.099293548805893, 1.0000000000241482, 0.6376128533138351, 0.022703173603711994)
+
+=== Step: target eps_sp=1.600 (prev=1.580) ===
+[mu=4.099294] f=m_dense-m_dilute=+0.0196
+[equal-rho] mu0=4.099294, dA=+0.0196, ESS~7505
+[equal-rho] bracket mu=4.099394, dA=+0.0164, ESS~7505
+[equal-rho] bracket mu=4.099494, dA=+0.0133, ESS~7505
+[equal-rho] bracket mu=4.099594, dA=+0.0101, ESS~7504
+[equal-rho] bracket mu=4.099694, dA=+0.0070, ESS~7504
+[equal-rho] bracket mu=4.099794, dA=+0.0038, ESS~7503
+[equal-rho] bracket mu=4.099894, dA=+0.0007, ESS~7502
+[equal-rho] bracket mu=4.099994, dA=-0.0025, ESS~7501
+[equal-rho] bisect mu=4.099644, dA=+0.0085, ESS~7504
+mu* = 4.099644   ESS ~ 7504
+0.48085942704863427
+
+
+success: True
+chi^2* : 0.19628865716281468
+theta* : (0.6697295590891363, 1.6000000000000005, 4.094691598839569, 1.0000000000821385, 0.40760885987383594, 0.03928036504346681)
+
+=== Step: target eps_sp=1.620 (prev=1.600) ===
+[mu=4.094692] f=m_dense-m_dilute=+0.4987
+[step] mu=4.098692 f=+0.3888
+[step] mu=4.102692 f=+0.2689
+[step] mu=4.106692 f=+0.1603
+[step] mu=4.110692 f=+0.0442
+[equal-rho] mu0=4.110692, dA=+0.0442, ESS~7505
+[equal-rho] bracket mu=4.110792, dA=+0.0411, ESS~7505
+[equal-rho] bracket mu=4.110892, dA=+0.0379, ESS~7505
+[equal-rho] bracket mu=4.110992, dA=+0.0348, ESS~7504
+[equal-rho] bracket mu=4.111092, dA=+0.0316, ESS~7504
+[equal-rho] bracket mu=4.111192, dA=+0.0285, ESS~7503
+[equal-rho] bracket mu=4.111292, dA=+0.0253, ESS~7502
+[equal-rho] bracket mu=4.111392, dA=+0.0222, ESS~7501
+[equal-rho] bracket mu=4.111492, dA=+0.0190, ESS~7499
+[equal-rho] bracket mu=4.111592, dA=+0.0159, ESS~7498
+[equal-rho] bracket mu=4.111692, dA=+0.0127, ESS~7496
+[equal-rho] bracket mu=4.111792, dA=+0.0096, ESS~7495
+[equal-rho] bracket mu=4.111892, dA=+0.0064, ESS~7493
+[equal-rho] bracket mu=4.111992, dA=+0.0033, ESS~7490
+[equal-rho] bracket mu=4.112092, dA=+0.0001, ESS~7488
+[equal-rho] bracket mu=4.112192, dA=-0.0030, ESS~7486
+[equal-rho] bisect mu=4.111442, dA=+0.0206, ESS~7500
+[equal-rho] bisect mu=4.111817, dA=+0.0088, ESS~7494
+mu* = 4.111817   ESS ~ 7494
+0.48178680879413716
+
+
+success: True
+chi^2* : 0.1871928084859582
+theta* : (0.6668806638774021, 1.6200000000000006, 4.106611364368319, 1.0000000000803249, 0.42212959465000427, 0.04471183944595037)
+
+=== Step: target eps_sp=1.640 (prev=1.620) ===
+[mu=4.106611] f=m_dense-m_dilute=+0.4935
+[step] mu=4.110611 f=+0.3835
+[step] mu=4.114611 f=+0.2645
+[step] mu=4.118611 f=+0.1546
+[step] mu=4.122611 f=+0.0368
+[equal-rho] mu0=4.122611, dA=+0.0368, ESS~7505
+[equal-rho] bracket mu=4.122711, dA=+0.0336, ESS~7505
+[equal-rho] bracket mu=4.122811, dA=+0.0305, ESS~7505
+[equal-rho] bracket mu=4.122911, dA=+0.0273, ESS~7504
+[equal-rho] bracket mu=4.123011, dA=+0.0241, ESS~7504
+[equal-rho] bracket mu=4.123111, dA=+0.0210, ESS~7503
+[equal-rho] bracket mu=4.123211, dA=+0.0178, ESS~7502
+[equal-rho] bracket mu=4.123311, dA=+0.0146, ESS~7501
+[equal-rho] bracket mu=4.123411, dA=+0.0115, ESS~7499
+[equal-rho] bracket mu=4.123511, dA=+0.0083, ESS~7498
+[equal-rho] bracket mu=4.123611, dA=+0.0051, ESS~7496
+[equal-rho] bracket mu=4.123711, dA=+0.0020, ESS~7495
+[equal-rho] bracket mu=4.123811, dA=-0.0012, ESS~7493
+[equal-rho] bisect mu=4.123211, dA=+0.0178, ESS~7502
+[equal-rho] bisect mu=4.123511, dA=+0.0083, ESS~7498
+mu* = 4.123511   ESS ~ 7498
+0.48192271818787474
+
+
+success: True
+chi^2* : 0.2359594652878535
+theta* : (0.6565129890108631, 1.6400000000000006, 4.113143689501778, 1.0000000000145393, 0.6230729302284543, 0.01518080798103336)
+
+=== Step: target eps_sp=1.660 (prev=1.640) ===
+[mu=4.113144] f=m_dense-m_dilute=+0.0217
+[equal-rho] mu0=4.113144, dA=+0.0217, ESS~7505
+[equal-rho] bracket mu=4.113244, dA=+0.0187, ESS~7505
+[equal-rho] bracket mu=4.113344, dA=+0.0156, ESS~7505
+[equal-rho] bracket mu=4.113444, dA=+0.0125, ESS~7504
+[equal-rho] bracket mu=4.113544, dA=+0.0095, ESS~7504
+[equal-rho] bracket mu=4.113644, dA=+0.0064, ESS~7503
+[equal-rho] bracket mu=4.113744, dA=+0.0034, ESS~7502
+[equal-rho] bracket mu=4.113844, dA=+0.0003, ESS~7501
+[equal-rho] bracket mu=4.113944, dA=-0.0028, ESS~7500
+[equal-rho] bisect mu=4.113544, dA=+0.0095, ESS~7504
+mu* = 4.113544   ESS ~ 7504
+0.47820919387075284
+
+
+success: True
+chi^2* : 0.229543490323359
+theta* : (0.6558411446263014, 1.6600000000000006, 4.10706521652037, 1.0, 0.3738989681384853, 0.023117458674286332)
+
+=== Step: target eps_sp=1.680 (prev=1.660) ===
+[mu=4.107065] f=m_dense-m_dilute=+0.6396
+[step] mu=4.111065 f=+0.5496
+[step] mu=4.115065 f=+0.4666
+[step] mu=4.119065 f=+0.3606
+[step] mu=4.123065 f=+0.2530
+[step] mu=4.127065 f=+0.1299
+[step] mu=4.131065 f=-0.0103
+[equal-rho] mu0=4.131065, dA=-0.0103, ESS~7505
+[equal-rho] bracket mu=4.130965, dA=-0.0071, ESS~7505
+[equal-rho] bracket mu=4.130865, dA=-0.0040, ESS~7505
+[equal-rho] bracket mu=4.130765, dA=-0.0009, ESS~7504
+[equal-rho] bracket mu=4.130665, dA=+0.0022, ESS~7504
+[equal-rho] bisect mu=4.130865, dA=-0.0040, ESS~7505
+mu* = 4.130865   ESS ~ 7505
+0.47887541638907394
+
+
+success: False
+chi^2* : 0.20889891860481824
+theta* : (0.6455145867398391, 1.6800000000000006, 4.1205386586339054, 1.0000000000625782, 0.6403538551787242, 0.03440753895605443)
+
+=== Step: target eps_sp=1.700 (prev=1.680) ===
+[mu=4.120539] f=m_dense-m_dilute=+0.0270
+[equal-rho] mu0=4.120539, dA=+0.0270, ESS~7505
+[equal-rho] bracket mu=4.120639, dA=+0.0240, ESS~7505
+[equal-rho] bracket mu=4.120739, dA=+0.0210, ESS~7505
+[equal-rho] bracket mu=4.120839, dA=+0.0179, ESS~7504
+[equal-rho] bracket mu=4.120939, dA=+0.0149, ESS~7504
+[equal-rho] bracket mu=4.121039, dA=+0.0119, ESS~7503
+[equal-rho] bracket mu=4.121139, dA=+0.0088, ESS~7502
+[equal-rho] bracket mu=4.121239, dA=+0.0058, ESS~7501
+[equal-rho] bracket mu=4.121339, dA=+0.0027, ESS~7500
+[equal-rho] bracket mu=4.121439, dA=-0.0003, ESS~7498
+[equal-rho] bisect mu=4.120989, dA=+0.0134, ESS~7503
+[equal-rho] bisect mu=4.121214, dA=+0.0065, ESS~7501
+mu* = 4.121214   ESS ~ 7501
+0.48153097934710193
+
+
+success: True
+chi^2* : 0.12692718136783876
+theta* : (0.6421658069599707, 1.7000000000000006, 4.115265433863068, 1.0, 0.4569797547338099, 0.060844453734569114)
+
+=== Step: target eps_sp=1.720 (prev=1.700) ===
+[mu=4.115265] f=m_dense-m_dilute=+0.4779
+[step] mu=4.119265 f=+0.3674
+[step] mu=4.123265 f=+0.2612
+[step] mu=4.127265 f=+0.1562
+[step] mu=4.131265 f=+0.0245
+[equal-rho] mu0=4.131265, dA=+0.0245, ESS~7505
+[equal-rho] bracket mu=4.131365, dA=+0.0215, ESS~7505
+[equal-rho] bracket mu=4.131465, dA=+0.0184, ESS~7505
+[equal-rho] bracket mu=4.131565, dA=+0.0154, ESS~7504
+[equal-rho] bracket mu=4.131665, dA=+0.0123, ESS~7504
+[equal-rho] bracket mu=4.131765, dA=+0.0093, ESS~7503
+[equal-rho] bracket mu=4.131865, dA=+0.0062, ESS~7502
+[equal-rho] bracket mu=4.131965, dA=+0.0032, ESS~7501
+[equal-rho] bracket mu=4.132065, dA=+0.0001, ESS~7500
+[equal-rho] bracket mu=4.132165, dA=-0.0030, ESS~7498
+[equal-rho] bisect mu=4.131715, dA=+0.0108, ESS~7503
+[equal-rho] bisect mu=4.131940, dA=+0.0039, ESS~7501
+mu* = 4.131940   ESS ~ 7501
+0.47543637574950026
+
+
+success: True
+chi^2* : 0.22690454364255022
+theta* : (0.6469998432874597, 1.7200000000000006, 4.115585558060768, 1.000000000071169, 0.3842720555906232, 0.041066059523629676)
+
+=== Step: target eps_sp=1.740 (prev=1.720) ===
+[mu=4.115586] f=m_dense-m_dilute=+0.8994
+[step] mu=4.119586 f=+0.8830
+[step] mu=4.123586 f=+0.8578
+[step] mu=4.127586 f=+0.8139
+[step] mu=4.131586 f=+0.7812
+[step] mu=4.135586 f=+0.7306
+[step] mu=4.139586 f=+0.6525
+[step] mu=4.143586 f=+0.5945
+[step] mu=4.147586 f=+0.5158
+[step] mu=4.151586 f=+0.4095
+[step] mu=4.155586 f=+0.3045
+[step] mu=4.159586 f=+0.1855
+[step] mu=4.163586 f=+0.0625
+[equal-rho] mu0=4.163586, dA=+0.0625, ESS~7505
+[equal-rho] bracket mu=4.163686, dA=+0.0594, ESS~7505
+[equal-rho] bracket mu=4.163786, dA=+0.0563, ESS~7505
+[equal-rho] bracket mu=4.163886, dA=+0.0531, ESS~7504
+[equal-rho] bracket mu=4.163986, dA=+0.0500, ESS~7504
+[equal-rho] bracket mu=4.164086, dA=+0.0469, ESS~7503
+[equal-rho] bracket mu=4.164186, dA=+0.0438, ESS~7502
+[equal-rho] bracket mu=4.164286, dA=+0.0406, ESS~7501
+[equal-rho] bracket mu=4.164386, dA=+0.0375, ESS~7500
+[equal-rho] bracket mu=4.164486, dA=+0.0344, ESS~7498
+[equal-rho] bracket mu=4.164586, dA=+0.0312, ESS~7497
+[equal-rho] bracket mu=4.164686, dA=+0.0281, ESS~7495
+[equal-rho] bracket mu=4.164786, dA=+0.0250, ESS~7493
+[equal-rho] bracket mu=4.164886, dA=+0.0219, ESS~7491
+[equal-rho] bracket mu=4.164986, dA=+0.0187, ESS~7488
+[equal-rho] bracket mu=4.165086, dA=+0.0156, ESS~7486
+[equal-rho] bracket mu=4.165186, dA=+0.0125, ESS~7483
+[equal-rho] bracket mu=4.165286, dA=+0.0093, ESS~7480
+[equal-rho] bracket mu=4.165386, dA=+0.0062, ESS~7477
+[equal-rho] bracket mu=4.165486, dA=+0.0031, ESS~7474
+[equal-rho] bracket mu=4.165586, dA=-0.0001, ESS~7471
+[equal-rho] bisect mu=4.164586, dA=+0.0312, ESS~7497
+[equal-rho] bisect mu=4.165086, dA=+0.0156, ESS~7486
+[equal-rho] bisect mu=4.165336, dA=+0.0078, ESS~7479
+mu* = 4.165336   ESS ~ 7479
+0.4779906728847435
+
+
+success: True
+chi^2* : 0.030102028027717387
+theta* : (0.6421669403227256, 1.7400000000000007, 4.15566444025796, 1.0000000001209057, 0.5276354995158979, 0.05584307800882508)
+
+=== Step: target eps_sp=1.760 (prev=1.740) ===
+[mu=4.155664] f=m_dense-m_dilute=+0.4608
+[step] mu=4.159664 f=+0.3639
+[step] mu=4.163664 f=+0.2342
+[step] mu=4.167664 f=+0.1387
+[step] mu=4.171664 f=-0.0049
+[equal-rho] mu0=4.171664, dA=-0.0049, ESS~7505
+mu* = 4.171664   ESS ~ 7505
+0.47210259826782147
+
+
+success: True
+chi^2* : 0.22798758158456464
+theta* : (0.6317187160643748, 1.7600000000000007, 4.161216215999607, 0.999999999998711, 0.5792830027235978, -0.0024627763647875104)
+
+=== Step: target eps_sp=1.780 (prev=1.760) ===
+[mu=4.161216] f=m_dense-m_dilute=+0.0372
+[equal-rho] mu0=4.161216, dA=+0.0372, ESS~7505
+[equal-rho] bracket mu=4.161316, dA=+0.0341, ESS~7505
+[equal-rho] bracket mu=4.161416, dA=+0.0310, ESS~7505
+[equal-rho] bracket mu=4.161516, dA=+0.0280, ESS~7504
+[equal-rho] bracket mu=4.161616, dA=+0.0249, ESS~7504
+[equal-rho] bracket mu=4.161716, dA=+0.0218, ESS~7503
+[equal-rho] bracket mu=4.161816, dA=+0.0187, ESS~7502
+[equal-rho] bracket mu=4.161916, dA=+0.0157, ESS~7501
+[equal-rho] bracket mu=4.162016, dA=+0.0126, ESS~7500
+[equal-rho] bracket mu=4.162116, dA=+0.0095, ESS~7498
+[equal-rho] bracket mu=4.162216, dA=+0.0064, ESS~7497
+[equal-rho] bracket mu=4.162316, dA=+0.0033, ESS~7495
+[equal-rho] bracket mu=4.162416, dA=+0.0003, ESS~7493
+[equal-rho] bracket mu=4.162516, dA=-0.0028, ESS~7491
+[equal-rho] bisect mu=4.161866, dA=+0.0172, ESS~7502
+[equal-rho] bisect mu=4.162191, dA=+0.0072, ESS~7497
+mu* = 4.162191   ESS ~ 7497
+0.48034243837441704
+
+
+success: True
+chi^2* : 0.17112103208014273
+theta* : (0.6301687063696089, 1.7800000000000007, 4.154320617238838, 1.0, 0.4353512322107208, 0.06057609926953114)
+
+=== Step: target eps_sp=1.800 (prev=1.780) ===
+[mu=4.154321] f=m_dense-m_dilute=+0.6239
+[step] mu=4.158321 f=+0.5490
+[step] mu=4.162321 f=+0.4561
+[step] mu=4.166321 f=+0.3352
+[step] mu=4.170321 f=+0.2598
+[step] mu=4.174321 f=+0.1149
+[step] mu=4.178321 f=-0.0003
+[equal-rho] mu0=4.178321, dA=-0.0003, ESS~7505
+mu* = 4.178321   ESS ~ 7505
+0.47347101932045305
+
+
+success: True
+chi^2* : 0.026939130580306392
+theta* : (0.6227173883201534, 1.8000000000000007, 4.173148848148745, 1.0000000000575076, 0.498157522513348, 0.03536070836467906)
+
+=== Step: target eps_sp=1.820 (prev=1.800) ===
+[mu=4.173149] f=m_dense-m_dilute=+0.1486
+[step] mu=4.177149 f=+0.0143
+[equal-rho] mu0=4.177149, dA=+0.0143, ESS~7505
+[equal-rho] bracket mu=4.177249, dA=+0.0112, ESS~7505
+[equal-rho] bracket mu=4.177349, dA=+0.0081, ESS~7505
+[equal-rho] bracket mu=4.177449, dA=+0.0051, ESS~7504
+[equal-rho] bracket mu=4.177549, dA=+0.0020, ESS~7504
+[equal-rho] bracket mu=4.177649, dA=-0.0011, ESS~7503
+[equal-rho] bisect mu=4.177399, dA=+0.0066, ESS~7504
+mu* = 4.177399   ESS ~ 7504
+0.47097401732178545
+
+
+success: True
+chi^2* : 0.1946660589290357
+theta* : (0.6204624690765973, 1.8200000000000007, 4.171067086256012, 1.0000000000846414, 0.40278158293774485, 0.03969810589293192)
+
+=== Step: target eps_sp=1.840 (prev=1.820) ===
+[mu=4.171067] f=m_dense-m_dilute=+0.5378
+[step] mu=4.175067 f=+0.4572
+[step] mu=4.179067 f=+0.3571
+[step] mu=4.183067 f=+0.2422
+[step] mu=4.187067 f=+0.1360
+[step] mu=4.191067 f=+0.0079
+[equal-rho] mu0=4.191067, dA=+0.0079, ESS~7505
+mu* = 4.191067   ESS ~ 7505
+0.47199600266489006
+
+
+success: True
+chi^2* : 0.14654729360577137
+theta* : (0.6168216670364786, 1.8400000000000007, 4.184965051961423, 1.0000000000841904, 0.43191796559087686, 0.0461824698044228)
+
+=== Step: target eps_sp=1.860 (prev=1.840) ===
+[mu=4.184965] f=m_dense-m_dilute=+0.4689
+[step] mu=4.188965 f=+0.3699
+[step] mu=4.192965 f=+0.2744
+[step] mu=4.196965 f=+0.1330
+[step] mu=4.200965 f=-0.0029
+[equal-rho] mu0=4.200965, dA=-0.0029, ESS~7505
+mu* = 4.200965   ESS ~ 7505
+0.4703291139240506
+
+
+success: True
+chi^2* : 0.19272828082263466
+theta* : (0.6137790348664295, 1.8600000000000008, 4.195365221317404, 1.0000000000723583, 0.4030209440567907, 0.036754779018564804)
+
+=== Step: target eps_sp=1.880 (prev=1.860) ===
+[mu=4.195365] f=m_dense-m_dilute=+0.4901
+[step] mu=4.199365 f=+0.4033
+[step] mu=4.203365 f=+0.2994
+[step] mu=4.207365 f=+0.1912
+[step] mu=4.211365 f=+0.0657
+[equal-rho] mu0=4.211365, dA=+0.0657, ESS~7505
+[equal-rho] bracket mu=4.211465, dA=+0.0626, ESS~7505
+[equal-rho] bracket mu=4.211565, dA=+0.0595, ESS~7505
+[equal-rho] bracket mu=4.211665, dA=+0.0564, ESS~7504
+[equal-rho] bracket mu=4.211765, dA=+0.0534, ESS~7504
+[equal-rho] bracket mu=4.211865, dA=+0.0503, ESS~7503
+[equal-rho] bracket mu=4.211965, dA=+0.0472, ESS~7502
+[equal-rho] bracket mu=4.212065, dA=+0.0441, ESS~7501
+[equal-rho] bracket mu=4.212165, dA=+0.0410, ESS~7500
+[equal-rho] bracket mu=4.212265, dA=+0.0379, ESS~7498
+[equal-rho] bracket mu=4.212365, dA=+0.0348, ESS~7497
+[equal-rho] bracket mu=4.212465, dA=+0.0317, ESS~7495
+[equal-rho] bracket mu=4.212565, dA=+0.0286, ESS~7493
+[equal-rho] bracket mu=4.212665, dA=+0.0255, ESS~7491
+[equal-rho] bracket mu=4.212765, dA=+0.0225, ESS~7489
+[equal-rho] bracket mu=4.212865, dA=+0.0194, ESS~7486
+[equal-rho] bracket mu=4.212965, dA=+0.0163, ESS~7484
+[equal-rho] bracket mu=4.213065, dA=+0.0132, ESS~7481
+[equal-rho] bracket mu=4.213165, dA=+0.0101, ESS~7478
+[equal-rho] bracket mu=4.213265, dA=+0.0070, ESS~7475
+[equal-rho] bracket mu=4.213365, dA=+0.0039, ESS~7472
+mu* = 4.211365   ESS ~ 7505
+0.4912071952031979
+
+
+success: True
+chi^2* : 0.3556295386214008
+theta* : (0.5937790348664295, 1.8800000000000008, 4.191365221317403, 1.0, 1.279385180742362, 0.23996149463951436)
+
+=== Step: target eps_sp=1.900 (prev=1.880) ===
+[mu=4.191365] f=m_dense-m_dilute=-0.3470
+[step] mu=4.187365 f=-0.2561
+[step] mu=4.183365 f=-0.1215
+[step] mu=4.179365 f=-0.0309
+[equal-rho] mu0=4.179365, dA=-0.0309, ESS~7505
+[equal-rho] bracket mu=4.179265, dA=-0.0280, ESS~7505
+[equal-rho] bracket mu=4.179165, dA=-0.0251, ESS~7505
+[equal-rho] bracket mu=4.179065, dA=-0.0221, ESS~7504
+[equal-rho] bracket mu=4.178965, dA=-0.0192, ESS~7504
+[equal-rho] bracket mu=4.178865, dA=-0.0163, ESS~7503
+[equal-rho] bracket mu=4.178765, dA=-0.0134, ESS~7502
+[equal-rho] bracket mu=4.178665, dA=-0.0104, ESS~7501
+[equal-rho] bracket mu=4.178565, dA=-0.0075, ESS~7500
+[equal-rho] bracket mu=4.178465, dA=-0.0046, ESS~7499
+[equal-rho] bracket mu=4.178365, dA=-0.0017, ESS~7497
+[equal-rho] bracket mu=4.178265, dA=+0.0013, ESS~7496
+[equal-rho] bisect mu=4.178815, dA=-0.0148, ESS~7503
+[equal-rho] bisect mu=4.178540, dA=-0.0068, ESS~7500
+mu* = 4.178540   ESS ~ 7500
+0.468998001332445
+
+
+success: True
+chi^2* : 0.21935841642304132
+theta* : (0.5919994495004559, 1.9000000000000008, 4.173643938149376, 1.0, 0.3883893542456801, 0.04979050739509665)
+
+=== Step: target eps_sp=1.920 (prev=1.900) ===
+[mu=4.173644] f=m_dense-m_dilute=+0.5450
+[step] mu=4.177644 f=+0.4620
+[step] mu=4.181644 f=+0.3592
+[step] mu=4.185644 f=+0.2300
+[step] mu=4.189644 f=+0.1280
+[step] mu=4.193644 f=+0.0224
+[equal-rho] mu0=4.193644, dA=+0.0224, ESS~7505
+[equal-rho] bracket mu=4.193744, dA=+0.0194, ESS~7505
+[equal-rho] bracket mu=4.193844, dA=+0.0165, ESS~7505
+[equal-rho] bracket mu=4.193944, dA=+0.0135, ESS~7504
+[equal-rho] bracket mu=4.194044, dA=+0.0106, ESS~7504
+[equal-rho] bracket mu=4.194144, dA=+0.0076, ESS~7503
+[equal-rho] bracket mu=4.194244, dA=+0.0046, ESS~7502
+[equal-rho] bracket mu=4.194344, dA=+0.0017, ESS~7501
+[equal-rho] bracket mu=4.194444, dA=-0.0013, ESS~7500
+[equal-rho] bisect mu=4.194044, dA=+0.0106, ESS~7504
+[equal-rho] bisect mu=4.194244, dA=+0.0046, ESS~7502
+mu* = 4.194244   ESS ~ 7502
+0.46888740839440374
+
+
+success: True
+chi^2* : 0.07376359457423964
+theta* : (0.5831972167370335, 1.9200000000000008, 4.1854417073724095, 1.0, 0.5929299824963181, 0.06873729643381576)
+
+=== Step: target eps_sp=1.940 (prev=1.920) ===
+[mu=4.185442] f=m_dense-m_dilute=+0.1722
+[step] mu=4.189442 f=+0.0462
+[equal-rho] mu0=4.189442, dA=+0.0462, ESS~7505
+[equal-rho] bracket mu=4.189542, dA=+0.0433, ESS~7505
+[equal-rho] bracket mu=4.189642, dA=+0.0404, ESS~7505
+[equal-rho] bracket mu=4.189742, dA=+0.0375, ESS~7504
+[equal-rho] bracket mu=4.189842, dA=+0.0346, ESS~7504
+[equal-rho] bracket mu=4.189942, dA=+0.0317, ESS~7503
+[equal-rho] bracket mu=4.190042, dA=+0.0288, ESS~7502
+[equal-rho] bracket mu=4.190142, dA=+0.0259, ESS~7501
+[equal-rho] bracket mu=4.190242, dA=+0.0229, ESS~7500
+[equal-rho] bracket mu=4.190342, dA=+0.0200, ESS~7499
+[equal-rho] bracket mu=4.190442, dA=+0.0171, ESS~7497
+[equal-rho] bracket mu=4.190542, dA=+0.0142, ESS~7496
+[equal-rho] bracket mu=4.190642, dA=+0.0113, ESS~7494
+[equal-rho] bracket mu=4.190742, dA=+0.0084, ESS~7492
+[equal-rho] bracket mu=4.190842, dA=+0.0054, ESS~7490
+[equal-rho] bracket mu=4.190942, dA=+0.0025, ESS~7488
+[equal-rho] bracket mu=4.191042, dA=-0.0004, ESS~7486
+[equal-rho] bisect mu=4.190242, dA=+0.0229, ESS~7500
+[equal-rho] bisect mu=4.190642, dA=+0.0113, ESS~7494
+[equal-rho] bisect mu=4.190842, dA=+0.0054, ESS~7490
+mu* = 4.190842   ESS ~ 7490
+0.46899400399733515
+
+
+success: True
+chi^2* : 0.11133266099528655
+theta* : (0.587474784906608, 1.9400000000000008, 4.170841707372409, 1.0, 0.4585057764688456, 0.06881752378592232)
+
+=== Step: target eps_sp=1.960 (prev=1.940) ===
+[mu=4.170842] f=m_dense-m_dilute=+0.9045
+[step] mu=4.174842 f=+0.8813
+[step] mu=4.178842 f=+0.8548
+[step] mu=4.182842 f=+0.8278
+[step] mu=4.186842 f=+0.7753
+[step] mu=4.190842 f=+0.7476
+[step] mu=4.194842 f=+0.6870
+[step] mu=4.198842 f=+0.6200
+[step] mu=4.202842 f=+0.5428
+[step] mu=4.206842 f=+0.4614
+[step] mu=4.210842 f=+0.3536
+[step] mu=4.214842 f=+0.2514
+[step] mu=4.218842 f=+0.1358
+[step] mu=4.222842 f=+0.0310
+[equal-rho] mu0=4.222842, dA=+0.0310, ESS~7505
+[equal-rho] bracket mu=4.222942, dA=+0.0281, ESS~7505
+[equal-rho] bracket mu=4.223042, dA=+0.0251, ESS~7505
+[equal-rho] bracket mu=4.223142, dA=+0.0221, ESS~7504
+[equal-rho] bracket mu=4.223242, dA=+0.0191, ESS~7504
+[equal-rho] bracket mu=4.223342, dA=+0.0161, ESS~7503
+[equal-rho] bracket mu=4.223442, dA=+0.0131, ESS~7502
+[equal-rho] bracket mu=4.223542, dA=+0.0101, ESS~7501
+[equal-rho] bracket mu=4.223642, dA=+0.0071, ESS~7500
+[equal-rho] bracket mu=4.223742, dA=+0.0041, ESS~7499
+[equal-rho] bracket mu=4.223842, dA=+0.0011, ESS~7497
+[equal-rho] bracket mu=4.223942, dA=-0.0019, ESS~7495
+[equal-rho] bisect mu=4.223392, dA=+0.0146, ESS~7503
+[equal-rho] bisect mu=4.223667, dA=+0.0063, ESS~7500
+mu* = 4.223667   ESS ~ 7500
+0.46483011325782814
+
+
+success: True
+chi^2* : 0.1721887369066465
+theta* : (0.5765176035607645, 1.9600000000000009, 4.212709526026561, 1.0, 0.6519600317279136, 0.06435802430739354)
+
+=== Step: target eps_sp=1.980 (prev=1.960) ===
+[mu=4.212710] f=m_dense-m_dilute=+0.0509
+[equal-rho] mu0=4.212710, dA=+0.0509, ESS~7505
+[equal-rho] bracket mu=4.212810, dA=+0.0480, ESS~7505
+[equal-rho] bracket mu=4.212910, dA=+0.0450, ESS~7505
+[equal-rho] bracket mu=4.213010, dA=+0.0421, ESS~7504
+[equal-rho] bracket mu=4.213110, dA=+0.0392, ESS~7504
+[equal-rho] bracket mu=4.213210, dA=+0.0363, ESS~7503
+[equal-rho] bracket mu=4.213310, dA=+0.0333, ESS~7502
+[equal-rho] bracket mu=4.213410, dA=+0.0304, ESS~7501
+[equal-rho] bracket mu=4.213510, dA=+0.0275, ESS~7500
+[equal-rho] bracket mu=4.213610, dA=+0.0245, ESS~7499
+[equal-rho] bracket mu=4.213710, dA=+0.0216, ESS~7497
+[equal-rho] bracket mu=4.213810, dA=+0.0187, ESS~7496
+[equal-rho] bracket mu=4.213910, dA=+0.0157, ESS~7494
+[equal-rho] bracket mu=4.214010, dA=+0.0128, ESS~7492
+[equal-rho] bracket mu=4.214110, dA=+0.0099, ESS~7490
+[equal-rho] bracket mu=4.214210, dA=+0.0069, ESS~7488
+[equal-rho] bracket mu=4.214310, dA=+0.0040, ESS~7485
+[equal-rho] bracket mu=4.214410, dA=+0.0010, ESS~7483
+[equal-rho] bracket mu=4.214510, dA=-0.0019, ESS~7480
+[equal-rho] bisect mu=4.213610, dA=+0.0245, ESS~7499
+[equal-rho] bisect mu=4.214060, dA=+0.0113, ESS~7491
+[equal-rho] bisect mu=4.214285, dA=+0.0047, ESS~7486
+mu* = 4.214285   ESS ~ 7486
+0.4670779480346436
+
+
+success: True
+chi^2* : 0.1471266030795948
+theta* : (0.5659028282586728, 1.9800000000000009, 4.203669750724471, 1.0, 0.6661120751404237, 0.08483834479908772)
+
+=== Step: target eps_sp=2.000 (prev=1.980) ===
+[mu=4.203670] f=m_dense-m_dilute=+0.1009
+[step] mu=4.207670 f=-0.0119
+[equal-rho] mu0=4.207670, dA=-0.0119, ESS~7505
+[equal-rho] bracket mu=4.207570, dA=-0.0090, ESS~7505
+[equal-rho] bracket mu=4.207470, dA=-0.0062, ESS~7505
+[equal-rho] bracket mu=4.207370, dA=-0.0033, ESS~7504
+[equal-rho] bracket mu=4.207270, dA=-0.0005, ESS~7504
+[equal-rho] bracket mu=4.207170, dA=+0.0024, ESS~7503
+[equal-rho] bisect mu=4.207420, dA=-0.0047, ESS~7505
+mu* = 4.207420   ESS ~ 7505
+0.4655989340439706
+
+
+success: True
+chi^2* : 0.2008585654256943
+theta* : (0.5664826336486679, 2.000000000000001, 4.197920971181433, 1.0, 0.4229648757836999, 0.08643827606693685)
+
+=== Step: target eps_sp=2.020 (prev=2.000) ===
+[mu=4.197921] f=m_dense-m_dilute=+0.7129
+[step] mu=4.201921 f=+0.6569
+[step] mu=4.205921 f=+0.5864
+[step] mu=4.209921 f=+0.4978
+[step] mu=4.213921 f=+0.4320
+[step] mu=4.217921 f=+0.3387
+[step] mu=4.221921 f=+0.1995
+[step] mu=4.225921 f=+0.0783
+[equal-rho] mu0=4.225921, dA=+0.0783, ESS~7505
+[equal-rho] bracket mu=4.226021, dA=+0.0755, ESS~7505
+[equal-rho] bracket mu=4.226121, dA=+0.0726, ESS~7505
+[equal-rho] bracket mu=4.226221, dA=+0.0697, ESS~7504
+[equal-rho] bracket mu=4.226321, dA=+0.0668, ESS~7504
+[equal-rho] bracket mu=4.226421, dA=+0.0639, ESS~7503
+[equal-rho] bracket mu=4.226521, dA=+0.0610, ESS~7502
+[equal-rho] bracket mu=4.226621, dA=+0.0581, ESS~7501
+[equal-rho] bracket mu=4.226721, dA=+0.0552, ESS~7500
+[equal-rho] bracket mu=4.226821, dA=+0.0522, ESS~7499
+[equal-rho] bracket mu=4.226921, dA=+0.0493, ESS~7497
+[equal-rho] bracket mu=4.227021, dA=+0.0464, ESS~7496
+[equal-rho] bracket mu=4.227121, dA=+0.0435, ESS~7494
+[equal-rho] bracket mu=4.227221, dA=+0.0406, ESS~7492
+[equal-rho] bracket mu=4.227321, dA=+0.0377, ESS~7490
+[equal-rho] bracket mu=4.227421, dA=+0.0348, ESS~7488
+[equal-rho] bracket mu=4.227521, dA=+0.0319, ESS~7486
+[equal-rho] bracket mu=4.227621, dA=+0.0290, ESS~7483
+[equal-rho] bracket mu=4.227721, dA=+0.0260, ESS~7481
+[equal-rho] bracket mu=4.227821, dA=+0.0231, ESS~7478
+[equal-rho] bracket mu=4.227921, dA=+0.0202, ESS~7475
+mu* = 4.225921   ESS ~ 7505
+0.49073550966022655
+
+
+success: True
+chi^2* : 0.32754774938242437
+theta* : (0.5464826336486679, 2.020000000000001, 4.20592097118143, 1.0, 1.5771731193418739, 0.41005313134235555)
+
+=== Step: target eps_sp=2.040 (prev=2.020) ===
+[mu=4.205921] f=m_dense-m_dilute=-0.2588
+[step] mu=4.201921 f=-0.1375
+[step] mu=4.197921 f=-0.0405
+[equal-rho] mu0=4.197921, dA=-0.0405, ESS~7505
+[equal-rho] bracket mu=4.197821, dA=-0.0377, ESS~7505
+[equal-rho] bracket mu=4.197721, dA=-0.0350, ESS~7505
+[equal-rho] bracket mu=4.197621, dA=-0.0322, ESS~7504
+[equal-rho] bracket mu=4.197521, dA=-0.0295, ESS~7504
+[equal-rho] bracket mu=4.197421, dA=-0.0267, ESS~7503
+[equal-rho] bracket mu=4.197321, dA=-0.0239, ESS~7503
+[equal-rho] bracket mu=4.197221, dA=-0.0212, ESS~7502
+[equal-rho] bracket mu=4.197121, dA=-0.0184, ESS~7501
+[equal-rho] bracket mu=4.197021, dA=-0.0156, ESS~7499
+[equal-rho] bracket mu=4.196921, dA=-0.0129, ESS~7498
+[equal-rho] bracket mu=4.196821, dA=-0.0101, ESS~7497
+[equal-rho] bracket mu=4.196721, dA=-0.0074, ESS~7495
+[equal-rho] bracket mu=4.196621, dA=-0.0046, ESS~7493
+[equal-rho] bracket mu=4.196521, dA=-0.0018, ESS~7491
+[equal-rho] bracket mu=4.196421, dA=+0.0009, ESS~7489
+[equal-rho] bisect mu=4.197171, dA=-0.0198, ESS~7501
+[equal-rho] bisect mu=4.196796, dA=-0.0094, ESS~7496
+mu* = 4.196796   ESS ~ 7496
+0.46284077281812125
+
+
+success: True
+chi^2* : 0.30442215086857816
+theta* : (0.5464829312578724, 2.040000000000001, 4.196795673572226, 1.0, 0.34963942200257936, 0.09833314404987956)
+
+=== Step: target eps_sp=2.060 (prev=2.040) ===
+[mu=4.196796] f=m_dense-m_dilute=+0.5175
+[step] mu=4.200796 f=+0.4589
+[step] mu=4.204796 f=+0.3448
+[step] mu=4.208796 f=+0.2680
+[step] mu=4.212796 f=+0.1550
+[step] mu=4.216796 f=+0.0552
+[equal-rho] mu0=4.216796, dA=+0.0552, ESS~7505
+[equal-rho] bracket mu=4.216896, dA=+0.0524, ESS~7505
+[equal-rho] bracket mu=4.216996, dA=+0.0496, ESS~7505
+[equal-rho] bracket mu=4.217096, dA=+0.0468, ESS~7504
+[equal-rho] bracket mu=4.217196, dA=+0.0440, ESS~7504
+[equal-rho] bracket mu=4.217296, dA=+0.0412, ESS~7503
+[equal-rho] bracket mu=4.217396, dA=+0.0385, ESS~7502
+[equal-rho] bracket mu=4.217496, dA=+0.0357, ESS~7502
+[equal-rho] bracket mu=4.217596, dA=+0.0329, ESS~7500
+[equal-rho] bracket mu=4.217696, dA=+0.0301, ESS~7499
+[equal-rho] bracket mu=4.217796, dA=+0.0273, ESS~7498
+[equal-rho] bracket mu=4.217896, dA=+0.0245, ESS~7496
+[equal-rho] bracket mu=4.217996, dA=+0.0217, ESS~7495
+[equal-rho] bracket mu=4.218096, dA=+0.0189, ESS~7493
+[equal-rho] bracket mu=4.218196, dA=+0.0161, ESS~7491
+[equal-rho] bracket mu=4.218296, dA=+0.0133, ESS~7489
+[equal-rho] bracket mu=4.218396, dA=+0.0105, ESS~7487
+[equal-rho] bracket mu=4.218496, dA=+0.0077, ESS~7485
+[equal-rho] bracket mu=4.218596, dA=+0.0049, ESS~7482
+[equal-rho] bracket mu=4.218696, dA=+0.0021, ESS~7479
+[equal-rho] bracket mu=4.218796, dA=-0.0006, ESS~7477
+[equal-rho] bisect mu=4.217796, dA=+0.0273, ESS~7498
+[equal-rho] bisect mu=4.218296, dA=+0.0133, ESS~7489
+[equal-rho] bisect mu=4.218546, dA=+0.0063, ESS~7483
+mu* = 4.218546   ESS ~ 7483
+0.46418787475016654
+
+
+success: True
+chi^2* : 0.22205330350518093
+theta* : (0.5434949255722059, 2.060000000000001, 4.215556580327743, 1.0, 0.4494455013382807, 0.13391044950285266)
+
+=== Step: target eps_sp=2.080 (prev=2.060) ===
+[mu=4.215557] f=m_dense-m_dilute=+0.4346
+[step] mu=4.219557 f=+0.3582
+[step] mu=4.223557 f=+0.2477
+[step] mu=4.227557 f=+0.1347
+[step] mu=4.231557 f=+0.0341
+[equal-rho] mu0=4.231557, dA=+0.0341, ESS~7505
+[equal-rho] bracket mu=4.231657, dA=+0.0313, ESS~7505
+[equal-rho] bracket mu=4.231757, dA=+0.0286, ESS~7505
+[equal-rho] bracket mu=4.231857, dA=+0.0258, ESS~7504
+[equal-rho] bracket mu=4.231957, dA=+0.0230, ESS~7504
+[equal-rho] bracket mu=4.232057, dA=+0.0202, ESS~7503
+[equal-rho] bracket mu=4.232157, dA=+0.0175, ESS~7502
+[equal-rho] bracket mu=4.232257, dA=+0.0147, ESS~7502
+[equal-rho] bracket mu=4.232357, dA=+0.0119, ESS~7501
+[equal-rho] bracket mu=4.232457, dA=+0.0091, ESS~7499
+[equal-rho] bracket mu=4.232557, dA=+0.0063, ESS~7498
+[equal-rho] bracket mu=4.232657, dA=+0.0035, ESS~7496
+[equal-rho] bracket mu=4.232757, dA=+0.0008, ESS~7495
+[equal-rho] bracket mu=4.232857, dA=-0.0020, ESS~7493
+[equal-rho] bisect mu=4.232207, dA=+0.0161, ESS~7502
+[equal-rho] bisect mu=4.232532, dA=+0.0070, ESS~7498
+mu* = 4.232532   ESS ~ 7498
+0.46293137908061294
+
+
+success: True
+chi^2* : 0.21847102021701137
+theta* : (0.5411602101250177, 2.080000000000001, 4.228648693419473, 1.0, 0.44907089579746, 0.1358554695202185)
+
+=== Step: target eps_sp=2.100 (prev=2.080) ===
+[mu=4.228649] f=m_dense-m_dilute=+0.4830
+[step] mu=4.232649 f=+0.3965
+[step] mu=4.236649 f=+0.2951
+[step] mu=4.240649 f=+0.1912
+[step] mu=4.244649 f=+0.0736
+[equal-rho] mu0=4.244649, dA=+0.0736, ESS~7505
+[equal-rho] bracket mu=4.244749, dA=+0.0707, ESS~7505
+[equal-rho] bracket mu=4.244849, dA=+0.0679, ESS~7505
+[equal-rho] bracket mu=4.244949, dA=+0.0651, ESS~7504
+[equal-rho] bracket mu=4.245049, dA=+0.0623, ESS~7504
+[equal-rho] bracket mu=4.245149, dA=+0.0595, ESS~7503
+[equal-rho] bracket mu=4.245249, dA=+0.0567, ESS~7502
+[equal-rho] bracket mu=4.245349, dA=+0.0539, ESS~7502
+[equal-rho] bracket mu=4.245449, dA=+0.0511, ESS~7500
+[equal-rho] bracket mu=4.245549, dA=+0.0483, ESS~7499
+[equal-rho] bracket mu=4.245649, dA=+0.0455, ESS~7498
+[equal-rho] bracket mu=4.245749, dA=+0.0426, ESS~7496
+[equal-rho] bracket mu=4.245849, dA=+0.0398, ESS~7495
+[equal-rho] bracket mu=4.245949, dA=+0.0370, ESS~7493
+[equal-rho] bracket mu=4.246049, dA=+0.0342, ESS~7491
+[equal-rho] bracket mu=4.246149, dA=+0.0314, ESS~7489
+[equal-rho] bracket mu=4.246249, dA=+0.0286, ESS~7487
+[equal-rho] bracket mu=4.246349, dA=+0.0257, ESS~7484
+[equal-rho] bracket mu=4.246449, dA=+0.0229, ESS~7482
+[equal-rho] bracket mu=4.246549, dA=+0.0201, ESS~7479
+[equal-rho] bracket mu=4.246649, dA=+0.0173, ESS~7476
+mu* = 4.244649   ESS ~ 7505
+0.4853337774816789
+
+
+success: True
+chi^2* : 0.32209250620404406
+theta* : (0.5211602101250177, 2.100000000000001, 4.224648693419471, 1.0, 1.5525373189765015, 0.42195240287841124)
+
+=== Step: target eps_sp=2.120 (prev=2.100) ===
+[mu=4.224649] f=m_dense-m_dilute=-0.1831
+[step] mu=4.220649 f=-0.0830
+[equal-rho] mu0=4.220649, dA=-0.0830, ESS~7505
+[equal-rho] bracket mu=4.220549, dA=-0.0803, ESS~7505
+[equal-rho] bracket mu=4.220449, dA=-0.0777, ESS~7505
+[equal-rho] bracket mu=4.220349, dA=-0.0750, ESS~7504
+[equal-rho] bracket mu=4.220249, dA=-0.0724, ESS~7504
+[equal-rho] bracket mu=4.220149, dA=-0.0697, ESS~7503
+[equal-rho] bracket mu=4.220049, dA=-0.0670, ESS~7503
+[equal-rho] bracket mu=4.219949, dA=-0.0644, ESS~7502
+[equal-rho] bracket mu=4.219849, dA=-0.0617, ESS~7501
+[equal-rho] bracket mu=4.219749, dA=-0.0590, ESS~7500
+[equal-rho] bracket mu=4.219649, dA=-0.0564, ESS~7498
+[equal-rho] bracket mu=4.219549, dA=-0.0537, ESS~7497
+[equal-rho] bracket mu=4.219449, dA=-0.0510, ESS~7496
+[equal-rho] bracket mu=4.219349, dA=-0.0484, ESS~7494
+[equal-rho] bracket mu=4.219249, dA=-0.0457, ESS~7492
+[equal-rho] bracket mu=4.219149, dA=-0.0430, ESS~7490
+[equal-rho] bracket mu=4.219049, dA=-0.0403, ESS~7488
+[equal-rho] bracket mu=4.218949, dA=-0.0377, ESS~7486
+[equal-rho] bracket mu=4.218849, dA=-0.0350, ESS~7484
+[equal-rho] bracket mu=4.218749, dA=-0.0323, ESS~7481
+[equal-rho] bracket mu=4.218649, dA=-0.0297, ESS~7479
+mu* = 4.220649   ESS ~ 7505
+0.43217854763491004
+
+
+success: True
+chi^2* : 0.2966098002299424
+theta* : (0.5214659903178281, 2.120000000000001, 4.220639208251006, 1.0, 0.23220683255305727, -0.052555491109423196)
+
+=== Step: target eps_sp=2.140 (prev=2.120) ===
+[mu=4.220639] f=m_dense-m_dilute=+0.4897
+
+Triangular lattice Ising reference:  Tc = 3.640957,  p_add = 0.422650
+
+[array([1, 0, 1, 0, 1, 0]), array([0, 1, 0, 1, 0, 1]), array([2, 2, 2, 2, 2, 2])]
+Species (3 total, 2 non-empty):
+  0: [1 0 1 0 1 0]
+  1: [0 1 0 1 0 1]
+  2: [2 2 2 2 2 2]
+
+=== Step: target eps_sp=2.100 (prev=2.100) ===
+[mu=4.370000] f=m_dense-m_dilute=-0.6442
+[step] mu=4.366000 f=-0.5892
+[step] mu=4.362000 f=-0.5005
+[step] mu=4.358000 f=-0.3777
+[step] mu=4.354000 f=-0.2484
+[step] mu=4.350000 f=-0.1556
+[step] mu=4.346000 f=-0.0056
+[equal-rho] mu0=4.346000, dA=-0.0056, ESS~7505
+mu* = 4.346000   ESS ~ 7505
+0.45250099933377746
+
+
+success: True
+chi^2* : 0.016043709973702885
+theta* : (0.5700363152521444, 2.1, 4.345963271038029, 1.0000000000059845, 0.47125445213948786, 0.015445940077885705)
+
+=== Step: target eps_sp=2.120 (prev=2.100) ===
+[mu=4.345963] f=m_dense-m_dilute=+0.0021
+[equal-rho] mu0=4.345963, dA=+0.0021, ESS~7505
+mu* = 4.345963   ESS ~ 7505
+0.4551725516322451
+
+
+success: True
+chi^2* : 0.4029472674284197
+theta* : (0.5500363308937423, 2.12, 4.325963564194574, 1.0000000000655376, 0.8415249662927718, 0.05486819327059036)
+
+=== Step: target eps_sp=2.140 (prev=2.120) ===
+[mu=4.325964] f=m_dense-m_dilute=-0.3205
+[step] mu=4.321964 f=-0.2088
+[step] mu=4.317964 f=-0.0834
+[equal-rho] mu0=4.317964, dA=-0.0834, ESS~7505
+[equal-rho] bracket mu=4.317864, dA=-0.0804, ESS~7505
+[equal-rho] bracket mu=4.317764, dA=-0.0774, ESS~7505
+[equal-rho] bracket mu=4.317664, dA=-0.0744, ESS~7504
+[equal-rho] bracket mu=4.317564, dA=-0.0714, ESS~7504
+[equal-rho] bracket mu=4.317464, dA=-0.0684, ESS~7503
+[equal-rho] bracket mu=4.317364, dA=-0.0654, ESS~7502
+[equal-rho] bracket mu=4.317264, dA=-0.0624, ESS~7501
+[equal-rho] bracket mu=4.317164, dA=-0.0595, ESS~7500
+[equal-rho] bracket mu=4.317064, dA=-0.0565, ESS~7499
+[equal-rho] bracket mu=4.316964, dA=-0.0535, ESS~7497
+[equal-rho] bracket mu=4.316864, dA=-0.0505, ESS~7496
+[equal-rho] bracket mu=4.316764, dA=-0.0475, ESS~7494
+[equal-rho] bracket mu=4.316664, dA=-0.0444, ESS~7492
+[equal-rho] bracket mu=4.316564, dA=-0.0414, ESS~7490
+[equal-rho] bracket mu=4.316464, dA=-0.0384, ESS~7487
+[equal-rho] bracket mu=4.316364, dA=-0.0354, ESS~7485
+[equal-rho] bracket mu=4.316264, dA=-0.0324, ESS~7482
+[equal-rho] bracket mu=4.316164, dA=-0.0294, ESS~7480
+[equal-rho] bracket mu=4.316064, dA=-0.0264, ESS~7477
+[equal-rho] bracket mu=4.315964, dA=-0.0234, ESS~7474
+mu* = 4.317964   ESS ~ 7505
+0.4258774150566289
+
+
+success: True
+chi^2* : 0.36576359618084303
+theta* : (0.5500641926120772, 2.14, 4.31793570247624, 0.9999999999288612, 0.188898087049362, -0.08771937403226528)
+
+=== Step: target eps_sp=2.160 (prev=2.140) ===
+[mu=4.317936] f=m_dense-m_dilute=+0.5178
+[step] mu=4.321936 f=+0.4056
+[step] mu=4.325936 f=+0.3086
+[step] mu=4.329936 f=+0.2087
+[step] mu=4.333936 f=+0.0846
+[equal-rho] mu0=4.333936, dA=+0.0846, ESS~7505
+[equal-rho] bracket mu=4.334036, dA=+0.0816, ESS~7505
+[equal-rho] bracket mu=4.334136, dA=+0.0785, ESS~7505
+[equal-rho] bracket mu=4.334236, dA=+0.0755, ESS~7504
+[equal-rho] bracket mu=4.334336, dA=+0.0725, ESS~7504
+[equal-rho] bracket mu=4.334436, dA=+0.0694, ESS~7503
+[equal-rho] bracket mu=4.334536, dA=+0.0664, ESS~7502
+[equal-rho] bracket mu=4.334636, dA=+0.0634, ESS~7501
+[equal-rho] bracket mu=4.334736, dA=+0.0603, ESS~7500
+[equal-rho] bracket mu=4.334836, dA=+0.0573, ESS~7499
+[equal-rho] bracket mu=4.334936, dA=+0.0542, ESS~7497
+[equal-rho] bracket mu=4.335036, dA=+0.0512, ESS~7495
+[equal-rho] bracket mu=4.335136, dA=+0.0481, ESS~7493
+[equal-rho] bracket mu=4.335236, dA=+0.0451, ESS~7491
+[equal-rho] bracket mu=4.335336, dA=+0.0420, ESS~7489
+[equal-rho] bracket mu=4.335436, dA=+0.0390, ESS~7487
+[equal-rho] bracket mu=4.335536, dA=+0.0359, ESS~7485
+[equal-rho] bracket mu=4.335636, dA=+0.0329, ESS~7482
+[equal-rho] bracket mu=4.335736, dA=+0.0298, ESS~7479
+[equal-rho] bracket mu=4.335836, dA=+0.0268, ESS~7476
+[equal-rho] bracket mu=4.335936, dA=+0.0237, ESS~7473
+mu* = 4.333936   ESS ~ 7505
+0.48261425716189205
+
+
+success: True
+chi^2* : 0.36058591243363747
+theta* : (0.5300641926120772, 2.16, 4.313935702476239, 1.0, 1.9551094712983452, 0.583343029536926)
+
+=== Step: target eps_sp=2.180 (prev=2.160) ===
+[mu=4.313936] f=m_dense-m_dilute=-0.1956
+[step] mu=4.309936 f=-0.1099
+[step] mu=4.305936 f=+0.0145
+[equal-rho] mu0=4.305936, dA=+0.0145, ESS~7505
+[equal-rho] bracket mu=4.306036, dA=+0.0116, ESS~7505
+[equal-rho] bracket mu=4.306136, dA=+0.0087, ESS~7505
+[equal-rho] bracket mu=4.306236, dA=+0.0058, ESS~7504
+[equal-rho] bracket mu=4.306336, dA=+0.0029, ESS~7504
+[equal-rho] bracket mu=4.306436, dA=+0.0000, ESS~7503
+[equal-rho] bracket mu=4.306536, dA=-0.0029, ESS~7502
+[equal-rho] bisect mu=4.306236, dA=+0.0058, ESS~7504
+mu* = 4.306236   ESS ~ 7504
+0.45620786142571623
+
+
+success: True
+chi^2* : 0.3512765578463407
+theta* : (0.5100641926120771, 2.18, 4.28623570247624, 1.0, 1.1061404294273223, 0.21015738875310375)
+
+=== Step: target eps_sp=2.200 (prev=2.180) ===
+[mu=4.286236] f=m_dense-m_dilute=-0.2245
+[step] mu=4.282236 f=-0.1003
+[step] mu=4.278236 f=-0.0016
+[equal-rho] mu0=4.278236, dA=-0.0016, ESS~7505
+mu* = 4.278236   ESS ~ 7505
+0.45210926049300465
+
+[ising-ref] loaded cached triangular Ising reference from: cache/triangular_ising_reference_L64_b3000_n20000_seed12345.npz
+[array([1, 0, 1, 0, 1, 0]), array([0, 1, 0, 1, 0, 1]), array([2, 2, 2, 2, 2, 2])]
+Species (3 total, 2 non-empty):
+  0: [1 0 1 0 1 0]
+  1: [0 1 0 1 0 1]
+  2: [2 2 2 2 2 2]
+
+=== Step: target eps_sp=2.200 (prev=2.200) ===
+[mu=4.600000] f=m_dense-m_dilute=-0.9844
+[step] mu=4.596000 f=-0.9760
+[step] mu=4.592000 f=-0.9708
+[step] mu=4.588000 f=-0.9587
+[step] mu=4.584000 f=-0.9460
+[step] mu=4.580000 f=-0.9326
+[step] mu=4.576000 f=-0.9127
+[step] mu=4.572000 f=-0.8877
+[step] mu=4.568000 f=-0.8418
+[step] mu=4.564000 f=-0.7948
+[step] mu=4.560000 f=-0.7370
+[step] mu=4.556000 f=-0.6841
+[step] mu=4.552000 f=-0.6021
+[step] mu=4.548000 f=-0.5021
+[step] mu=4.544000 f=-0.3807
+[step] mu=4.540000 f=-0.2248
+[step] mu=4.536000 f=-0.1496
+[step] mu=4.532000 f=+0.0196
+[equal-rho] mu0=4.532000, dA=+0.0196, ESS~7505
+[equal-rho] bracket mu=4.532100, dA=+0.0160, ESS~7505
+[equal-rho] bracket mu=4.532200, dA=+0.0124, ESS~7505
+[equal-rho] bracket mu=4.532300, dA=+0.0089, ESS~7504
+[equal-rho] bracket mu=4.532400, dA=+0.0053, ESS~7503
+[equal-rho] bracket mu=4.532500, dA=+0.0017, ESS~7502
+[equal-rho] bracket mu=4.532600, dA=-0.0018, ESS~7501
+[equal-rho] bisect mu=4.532300, dA=+0.0089, ESS~7504
+mu* = 4.532300   ESS ~ 7504
+0.45122584943371086
+
+
+success: False
+chi^2* : 0.030150900135857885
+theta* : (0.6, 2.2, 4.532300000000007, 1.0, 0.42834045258714876, -0.017112690182910086)
+
+=== Step: target eps_sp=2.220 (prev=2.200) ===
+[mu=4.532300] f=m_dense-m_dilute=+0.0334
+[equal-rho] mu0=4.532300, dA=+0.0334, ESS~7505
+[equal-rho] bracket mu=4.532400, dA=+0.0299, ESS~7505
+[equal-rho] bracket mu=4.532500, dA=+0.0263, ESS~7505
+[equal-rho] bracket mu=4.532600, dA=+0.0228, ESS~7504
+[equal-rho] bracket mu=4.532700, dA=+0.0192, ESS~7503
+[equal-rho] bracket mu=4.532800, dA=+0.0157, ESS~7502
+[equal-rho] bracket mu=4.532900, dA=+0.0121, ESS~7501
+[equal-rho] bracket mu=4.533000, dA=+0.0086, ESS~7500
+[equal-rho] bracket mu=4.533100, dA=+0.0050, ESS~7499
+[equal-rho] bracket mu=4.533200, dA=+0.0015, ESS~7497
+[equal-rho] bracket mu=4.533300, dA=-0.0021, ESS~7495
+[equal-rho] bisect mu=4.532800, dA=+0.0157, ESS~7502
+[equal-rho] bisect mu=4.533050, dA=+0.0068, ESS~7499
+mu* = 4.533050   ESS ~ 7499
+0.4509873417721519
+
+
+success: True
+chi^2* : 0.025808857860683806
+theta* : (0.5976207286019891, 2.22, 4.514819908829595, 0.9999999999900038, 0.430616664333021, -0.018873902302390586)
+
+=== Step: target eps_sp=2.240 (prev=2.220) ===
+[mu=4.514820] f=m_dense-m_dilute=+0.8244
+[step] mu=4.518820 f=+0.7723
+[step] mu=4.522820 f=+0.7304
+[step] mu=4.526820 f=+0.6233
+[step] mu=4.530820 f=+0.5331
+[step] mu=4.534820 f=+0.4365
+[step] mu=4.538820 f=+0.3090
+[step] mu=4.542820 f=+0.1839
+[step] mu=4.546820 f=+0.0666
+[equal-rho] mu0=4.546820, dA=+0.0666, ESS~7505
+[equal-rho] bracket mu=4.546920, dA=+0.0631, ESS~7505
+[equal-rho] bracket mu=4.547020, dA=+0.0595, ESS~7505
+[equal-rho] bracket mu=4.547120, dA=+0.0560, ESS~7504
+[equal-rho] bracket mu=4.547220, dA=+0.0524, ESS~7503
+[equal-rho] bracket mu=4.547320, dA=+0.0488, ESS~7502
+[equal-rho] bracket mu=4.547420, dA=+0.0453, ESS~7501
+[equal-rho] bracket mu=4.547520, dA=+0.0417, ESS~7500
+[equal-rho] bracket mu=4.547620, dA=+0.0381, ESS~7499
+[equal-rho] bracket mu=4.547720, dA=+0.0346, ESS~7497
+[equal-rho] bracket mu=4.547820, dA=+0.0310, ESS~7495
+[equal-rho] bracket mu=4.547920, dA=+0.0274, ESS~7493
+[equal-rho] bracket mu=4.548020, dA=+0.0239, ESS~7490
+[equal-rho] bracket mu=4.548120, dA=+0.0203, ESS~7488
+[equal-rho] bracket mu=4.548220, dA=+0.0167, ESS~7485
+[equal-rho] bracket mu=4.548320, dA=+0.0132, ESS~7482
+[equal-rho] bracket mu=4.548420, dA=+0.0096, ESS~7479
+[equal-rho] bracket mu=4.548520, dA=+0.0060, ESS~7476
+[equal-rho] bracket mu=4.548620, dA=+0.0024, ESS~7472
+[equal-rho] bracket mu=4.548720, dA=-0.0011, ESS~7468
+[equal-rho] bisect mu=4.547770, dA=+0.0328, ESS~7496
+[equal-rho] bisect mu=4.548245, dA=+0.0158, ESS~7484
+[equal-rho] bisect mu=4.548482, dA=+0.0073, ESS~7477
+mu* = 4.548482   ESS ~ 7477
+0.44786275816122584
+
+
+=== Step: target eps_sp=2.260 (prev=2.240) ===
+[mu=4.528483] f=m_dense-m_dilute=-0.3426
+[step] mu=4.524483 f=-0.2121
+[step] mu=4.520483 f=-0.0710
+[equal-rho] mu0=4.520483, dA=-0.0710, ESS~7505
+[equal-rho] bracket mu=4.520383, dA=-0.0676, ESS~7505
+[equal-rho] bracket mu=4.520283, dA=-0.0641, ESS~7505
+[equal-rho] bracket mu=4.520183, dA=-0.0607, ESS~7504
+[equal-rho] bracket mu=4.520083, dA=-0.0573, ESS~7503
+[equal-rho] bracket mu=4.519983, dA=-0.0538, ESS~7503
+[equal-rho] bracket mu=4.519883, dA=-0.0504, ESS~7502
+[equal-rho] bracket mu=4.519783, dA=-0.0469, ESS~7500
+[equal-rho] bracket mu=4.519683, dA=-0.0435, ESS~7499
+[equal-rho] bracket mu=4.519583, dA=-0.0401, ESS~7497
+[equal-rho] bracket mu=4.519483, dA=-0.0366, ESS~7495
+[equal-rho] bracket mu=4.519383, dA=-0.0332, ESS~7493
+[equal-rho] bracket mu=4.519283, dA=-0.0297, ESS~7491
+[equal-rho] bracket mu=4.519183, dA=-0.0263, ESS~7489
+[equal-rho] bracket mu=4.519083, dA=-0.0228, ESS~7486
+[equal-rho] bracket mu=4.518983, dA=-0.0194, ESS~7483
+[equal-rho] bracket mu=4.518883, dA=-0.0159, ESS~7481
+[equal-rho] bracket mu=4.518783, dA=-0.0125, ESS~7477
+[equal-rho] bracket mu=4.518683, dA=-0.0090, ESS~7474
+[equal-rho] bracket mu=4.518583, dA=-0.0056, ESS~7471
+[equal-rho] bracket mu=4.518483, dA=-0.0022, ESS~7467
+mu* = 4.520483   ESS ~ 7505
+0.4189327115256496
+
+
+
+=== Step: target eps_sp=2.980 (prev=2.960) ===
+[mu=5.015997] f=m_dense-m_dilute=+0.0786
+[equal-rho] mu0=5.015997, dA=+0.0786, ESS~7505
+[equal-rho] bracket mu=5.016097, dA=+0.0754, ESS~7505
+[equal-rho] bracket mu=5.016197, dA=+0.0721, ESS~7505
+[equal-rho] bracket mu=5.016297, dA=+0.0688, ESS~7504
+[equal-rho] bracket mu=5.016397, dA=+0.0656, ESS~7504
+[equal-rho] bracket mu=5.016497, dA=+0.0623, ESS~7503
+[equal-rho] bracket mu=5.016597, dA=+0.0590, ESS~7502
+[equal-rho] bracket mu=5.016697, dA=+0.0558, ESS~7501
+[equal-rho] bracket mu=5.016797, dA=+0.0525, ESS~7500
+[equal-rho] bracket mu=5.016897, dA=+0.0492, ESS~7498
+[equal-rho] bracket mu=5.016997, dA=+0.0460, ESS~7497
+[equal-rho] bracket mu=5.017097, dA=+0.0427, ESS~7495
+[equal-rho] bracket mu=5.017197, dA=+0.0394, ESS~7493
+[equal-rho] bracket mu=5.017297, dA=+0.0362, ESS~7491
+[equal-rho] bracket mu=5.017397, dA=+0.0329, ESS~7489
+[equal-rho] bracket mu=5.017497, dA=+0.0296, ESS~7486
+[equal-rho] bracket mu=5.017597, dA=+0.0263, ESS~7484
+[equal-rho] bracket mu=5.017697, dA=+0.0230, ESS~7481
+[equal-rho] bracket mu=5.017797, dA=+0.0198, ESS~7478
+[equal-rho] bracket mu=5.017897, dA=+0.0165, ESS~7475
+[equal-rho] bracket mu=5.017997, dA=+0.0132, ESS~7471
+mu* = 5.015997   ESS ~ 7505
+0.4048447701532311
+
+
+success: True
+chi^2* : 0.19734667193878486
+theta* : (0.3799974383727052, 2.98, 4.995997438372704, 1.0, -0.09508469794065692, -0.3013030992757958)
+
+=== Step: target eps_sp=3.000 (prev=2.980) ===
+[mu=4.995997] f=m_dense-m_dilute=+0.3591
+[step] mu=4.999997 f=+0.2709
+[step] mu=5.003997 f=+0.1650
+[step] mu=5.007997 f=+0.0080
+[equal-rho] mu0=5.007997, dA=+0.0080, ESS~7505
+mu* = 5.007997   ESS ~ 7505
+0.3790366422385077
+
+
+success: False
+chi^2* : 0.4667996711925016
+theta* : (0.3999738657221387, 3.0, 5.027847725415108, 1.0, 0.028822141303251506, -0.1829083211921709)
+
+=== Step: target eps_sp=3.020 (prev=3.000) ===
+[mu=5.027848] f=m_dense-m_dilute=+0.9123
+[step] mu=5.031848 f=+0.8755
+[step] mu=5.035848 f=+0.8712
+[step] mu=5.039848 f=+0.7875
+[step] mu=5.043848 f=+0.7355
+[step] mu=5.047848 f=+0.7009
+[step] mu=5.051848 f=+0.6725
+[step] mu=5.055848 f=+0.5474
+[step] mu=5.059848 f=+0.4473
+[step] mu=5.063848 f=+0.3566
+[step] mu=5.067848 f=+0.2356
+[step] mu=5.071848 f=+0.0616
+[equal-rho] mu0=5.071848, dA=+0.0616, ESS~7505
+[equal-rho] bracket mu=5.071948, dA=+0.0583, ESS~7505
+[equal-rho] bracket mu=5.072048, dA=+0.0550, ESS~7505
+[equal-rho] bracket mu=5.072148, dA=+0.0517, ESS~7504
+[equal-rho] bracket mu=5.072248, dA=+0.0484, ESS~7504
+[equal-rho] bracket mu=5.072348, dA=+0.0451, ESS~7503
+[equal-rho] bracket mu=5.072448, dA=+0.0418, ESS~7502
+[equal-rho] bracket mu=5.072548, dA=+0.0385, ESS~7501
+[equal-rho] bracket mu=5.072648, dA=+0.0352, ESS~7500
+[equal-rho] bracket mu=5.072748, dA=+0.0319, ESS~7498
+[equal-rho] bracket mu=5.072848, dA=+0.0286, ESS~7497
+[equal-rho] bracket mu=5.072948, dA=+0.0253, ESS~7495
+[equal-rho] bracket mu=5.073048, dA=+0.0220, ESS~7493
+[equal-rho] bracket mu=5.073148, dA=+0.0187, ESS~7491
+[equal-rho] bracket mu=5.073248, dA=+0.0154, ESS~7488
+[equal-rho] bracket mu=5.073348, dA=+0.0121, ESS~7486
+[equal-rho] bracket mu=5.073448, dA=+0.0088, ESS~7483
+[equal-rho] bracket mu=5.073548, dA=+0.0055, ESS~7480
+[equal-rho] bracket mu=5.073648, dA=+0.0022, ESS~7477
+[equal-rho] bracket mu=5.073748, dA=-0.0011, ESS~7474
+[equal-rho] bisect mu=5.072798, dA=+0.0303, ESS~7497
+[equal-rho] bisect mu=5.073273, dA=+0.0146, ESS~7488
+[equal-rho] bisect mu=5.073510, dA=+0.0068, ESS~7482
+mu* = 5.073510   ESS ~ 7482
+0.3793577614923384
+
+
+success: False
+chi^2* : 0.1345011132707854
+theta* : (0.3799738657221387, 3.02, 5.056390335763227, 1.0, 0.1063142676744545, -0.18311212862043993)
+
+=== Step: target eps_sp=3.040 (prev=3.020) ===
+[mu=5.056390] f=m_dense-m_dilute=+0.2453
+[step] mu=5.060390 f=+0.0793
+[equal-rho] mu0=5.060390, dA=+0.0793, ESS~7505
+[equal-rho] bracket mu=5.060490, dA=+0.0761, ESS~7505
+[equal-rho] bracket mu=5.060590, dA=+0.0728, ESS~7505
+[equal-rho] bracket mu=5.060690, dA=+0.0696, ESS~7504
+[equal-rho] bracket mu=5.060790, dA=+0.0663, ESS~7504
+[equal-rho] bracket mu=5.060890, dA=+0.0631, ESS~7503
+[equal-rho] bracket mu=5.060990, dA=+0.0599, ESS~7502
+[equal-rho] bracket mu=5.061090, dA=+0.0566, ESS~7501
+[equal-rho] bracket mu=5.061190, dA=+0.0534, ESS~7500
+[equal-rho] bracket mu=5.061290, dA=+0.0501, ESS~7498
+[equal-rho] bracket mu=5.061390, dA=+0.0469, ESS~7497
+[equal-rho] bracket mu=5.061490, dA=+0.0437, ESS~7495
+[equal-rho] bracket mu=5.061590, dA=+0.0404, ESS~7493
+[equal-rho] bracket mu=5.061690, dA=+0.0372, ESS~7491
+[equal-rho] bracket mu=5.061790, dA=+0.0339, ESS~7489
+[equal-rho] bracket mu=5.061890, dA=+0.0307, ESS~7486
+[equal-rho] bracket mu=5.061990, dA=+0.0274, ESS~7484
+[equal-rho] bracket mu=5.062090, dA=+0.0241, ESS~7481
+[equal-rho] bracket mu=5.062190, dA=+0.0209, ESS~7478
+[equal-rho] bracket mu=5.062290, dA=+0.0176, ESS~7475
+[equal-rho] bracket mu=5.062390, dA=+0.0144, ESS~7472
+mu* = 5.060390   ESS ~ 7505
+0.40135776149233837
+
+
+success: True
+chi^2* : 0.17633670203643087
+theta* : (0.3599738657221387, 3.04, 5.040390335763227, 1.0, -0.09502449117594919, -0.297326122802432)
+
+=== Step: target eps_sp=3.060 (prev=3.040) ===
+[mu=5.040390] f=m_dense-m_dilute=+0.4187
+[step] mu=5.044390 f=+0.2049
+[step] mu=5.048390 f=+0.1718
+[step] mu=5.052390 f=-0.0322
+[equal-rho] mu0=5.052390, dA=-0.0322, ESS~7505
+[equal-rho] bracket mu=5.052290, dA=-0.0290, ESS~7505
+[equal-rho] bracket mu=5.052190, dA=-0.0258, ESS~7505
+[equal-rho] bracket mu=5.052090, dA=-0.0226, ESS~7504
+[equal-rho] bracket mu=5.051990, dA=-0.0193, ESS~7504
+[equal-rho] bracket mu=5.051890, dA=-0.0161, ESS~7503
+[equal-rho] bracket mu=5.051790, dA=-0.0129, ESS~7502
+[equal-rho] bracket mu=5.051690, dA=-0.0096, ESS~7501
+[equal-rho] bracket mu=5.051590, dA=-0.0064, ESS~7500
+[equal-rho] bracket mu=5.051490, dA=-0.0032, ESS~7498
+[equal-rho] bracket mu=5.051390, dA=+0.0001, ESS~7497
+[equal-rho] bisect mu=5.051890, dA=-0.0161, ESS~7503
+[equal-rho] bisect mu=5.051640, dA=-0.0080, ESS~7500
+mu* = 5.051640   ESS ~ 7500
+0.37060759493670886
+
+
+success: True
+chi^2* : 0.48985054384557614
+theta* : (0.3799410074245655, 3.06, 5.071563105244226, 1.0, 0.02813944784372084, -0.1742741956270595)
+
+=== Step: target eps_sp=3.080 (prev=3.060) ===
+[mu=5.071563] f=m_dense-m_dilute=+0.8922
+[step] mu=5.075563 f=+0.8750
+[step] mu=5.079563 f=+0.8308
+[step] mu=5.083563 f=+0.7631
+[step] mu=5.087563 f=+0.7430
+[step] mu=5.091563 f=+0.7091
+[step] mu=5.095563 f=+0.6124
+[step] mu=5.099563 f=+0.5495
+[step] mu=5.103563 f=+0.4112
+[step] mu=5.107563 f=+0.2989
+[step] mu=5.111563 f=+0.1847
+[step] mu=5.115563 f=+0.0803
+[equal-rho] mu0=5.115563, dA=+0.0803, ESS~7505
+[equal-rho] bracket mu=5.115663, dA=+0.0771, ESS~7505
+[equal-rho] bracket mu=5.115763, dA=+0.0738, ESS~7505
+[equal-rho] bracket mu=5.115863, dA=+0.0706, ESS~7504
+[equal-rho] bracket mu=5.115963, dA=+0.0673, ESS~7504
+[equal-rho] bracket mu=5.116063, dA=+0.0640, ESS~7503
+[equal-rho] bracket mu=5.116163, dA=+0.0607, ESS~7502
+[equal-rho] bracket mu=5.116263, dA=+0.0575, ESS~7501
+[equal-rho] bracket mu=5.116363, dA=+0.0542, ESS~7500
+[equal-rho] bracket mu=5.116463, dA=+0.0509, ESS~7498
+[equal-rho] bracket mu=5.116563, dA=+0.0476, ESS~7497
+[equal-rho] bracket mu=5.116663, dA=+0.0444, ESS~7495
+[equal-rho] bracket mu=5.116763, dA=+0.0411, ESS~7493
+[equal-rho] bracket mu=5.116863, dA=+0.0378, ESS~7491
+[equal-rho] bracket mu=5.116963, dA=+0.0345, ESS~7489
+[equal-rho] bracket mu=5.117063, dA=+0.0312, ESS~7486
+[equal-rho] bracket mu=5.117163, dA=+0.0279, ESS~7484
+[equal-rho] bracket mu=5.117263, dA=+0.0247, ESS~7481
+[equal-rho] bracket mu=5.117363, dA=+0.0214, ESS~7478
+[equal-rho] bracket mu=5.117463, dA=+0.0181, ESS~7475
+[equal-rho] bracket mu=5.117563, dA=+0.0148, ESS~7471
+mu* = 5.115563   ESS ~ 7505
+0.3992378414390406
+
+
+success: True
+chi^2* : 0.18318087643718442
+theta* : (0.3599410074245655, 3.08, 5.095563105244222, 1.0, -0.09468641051178774, -0.2927929397014868)
+
+=== Step: target eps_sp=3.100 (prev=3.080) ===
+[mu=5.095563] f=m_dense-m_dilute=+0.3788
+[step] mu=5.099563 f=+0.1640
+[step] mu=5.103563 f=+0.1867
+[step] mu=5.107563 f=-0.0085
+[equal-rho] mu0=5.107563, dA=-0.0085, ESS~7505
+mu* = 5.107563   ESS ~ 7505
+0.36784010659560284
+
+
+success: True
+chi^2* : 0.16397818660723218
+theta* : (0.33994100742456546, 3.1, 5.087563105244221, 1.0, 0.11569700090122143, -0.17199924717720647)
+
+=== Step: target eps_sp=3.120 (prev=3.100) ===
+[mu=5.087563] f=m_dense-m_dilute=+0.3328
+[step] mu=5.091563 f=+0.0825
+[equal-rho] mu0=5.091563, dA=+0.0825, ESS~7505
+[equal-rho] bracket mu=5.091663, dA=+0.0793, ESS~7505
+[equal-rho] bracket mu=5.091763, dA=+0.0761, ESS~7505
+[equal-rho] bracket mu=5.091863, dA=+0.0730, ESS~7504
+[equal-rho] bracket mu=5.091963, dA=+0.0698, ESS~7504
+[equal-rho] bracket mu=5.092063, dA=+0.0666, ESS~7503
+[equal-rho] bracket mu=5.092163, dA=+0.0634, ESS~7502
+[equal-rho] bracket mu=5.092263, dA=+0.0602, ESS~7501
+[equal-rho] bracket mu=5.092363, dA=+0.0570, ESS~7500
+[equal-rho] bracket mu=5.092463, dA=+0.0538, ESS~7498
+[equal-rho] bracket mu=5.092563, dA=+0.0507, ESS~7497
+[equal-rho] bracket mu=5.092663, dA=+0.0475, ESS~7495
+[equal-rho] bracket mu=5.092763, dA=+0.0443, ESS~7493
+[equal-rho] bracket mu=5.092863, dA=+0.0411, ESS~7491
+[equal-rho] bracket mu=5.092963, dA=+0.0379, ESS~7489
+[equal-rho] bracket mu=5.093063, dA=+0.0347, ESS~7487
+[equal-rho] bracket mu=5.093163, dA=+0.0315, ESS~7484
+[equal-rho] bracket mu=5.093263, dA=+0.0283, ESS~7482
+[equal-rho] bracket mu=5.093363, dA=+0.0251, ESS~7479
+[equal-rho] bracket mu=5.093463, dA=+0.0219, ESS~7476
+[equal-rho] bracket mu=5.093563, dA=+0.0187, ESS~7473
+mu* = 5.091563   ESS ~ 7505
+0.39790539640239836
+
+
+success: True
+chi^2* : 0.160117837820129
+theta* : (0.31994100742456544, 3.12, 5.071563105244221, 1.0, -0.08448398490018036, -0.2871234336663281)
+
+=== Step: target eps_sp=3.140 (prev=3.120) ===
+[mu=5.071563] f=m_dense-m_dilute=+0.4749
+[step] mu=5.075563 f=+0.3618
+[step] mu=5.079563 f=+0.2469
+[step] mu=5.083563 f=+0.1027
+[step] mu=5.087563 f=+0.0513
+[equal-rho] mu0=5.087563, dA=+0.0513, ESS~7505
+[equal-rho] bracket mu=5.087663, dA=+0.0482, ESS~7505
+[equal-rho] bracket mu=5.087763, dA=+0.0451, ESS~7505
+[equal-rho] bracket mu=5.087863, dA=+0.0419, ESS~7504
+[equal-rho] bracket mu=5.087963, dA=+0.0388, ESS~7504
+[equal-rho] bracket mu=5.088063, dA=+0.0357, ESS~7503
+[equal-rho] bracket mu=5.088163, dA=+0.0325, ESS~7502
+[equal-rho] bracket mu=5.088263, dA=+0.0294, ESS~7501
+[equal-rho] bracket mu=5.088363, dA=+0.0263, ESS~7500
+[equal-rho] bracket mu=5.088463, dA=+0.0231, ESS~7499
+[equal-rho] bracket mu=5.088563, dA=+0.0200, ESS~7497
+[equal-rho] bracket mu=5.088663, dA=+0.0169, ESS~7495
+[equal-rho] bracket mu=5.088763, dA=+0.0137, ESS~7494
+[equal-rho] bracket mu=5.088863, dA=+0.0106, ESS~7492
+[equal-rho] bracket mu=5.088963, dA=+0.0075, ESS~7490
+[equal-rho] bracket mu=5.089063, dA=+0.0043, ESS~7487
+[equal-rho] bracket mu=5.089163, dA=+0.0012, ESS~7485
+[equal-rho] bracket mu=5.089263, dA=-0.0019, ESS~7482
+[equal-rho] bisect mu=5.088413, dA=+0.0247, ESS~7499
+[equal-rho] bisect mu=5.088838, dA=+0.0114, ESS~7492
+[equal-rho] bisect mu=5.089051, dA=+0.0047, ESS~7488
+mu* = 5.089051   ESS ~ 7488
+0.36829047301798795
+
+
+success: True
+chi^2* : 0.14475412152204112
+theta* : (0.2999410074245654, 3.14, 5.069050605244219, 1.0, 0.09680758804659355, -0.17948455554818252)
+
+=== Step: target eps_sp=3.160 (prev=3.140) ===
+[mu=5.069051] f=m_dense-m_dilute=+0.2801
+[step] mu=5.073051 f=+0.2097
+[step] mu=5.077051 f=+0.0712
+[equal-rho] mu0=5.077051, dA=+0.0712, ESS~7505
+[equal-rho] bracket mu=5.077151, dA=+0.0681, ESS~7505
+[equal-rho] bracket mu=5.077251, dA=+0.0650, ESS~7505
+[equal-rho] bracket mu=5.077351, dA=+0.0620, ESS~7504
+[equal-rho] bracket mu=5.077451, dA=+0.0589, ESS~7504
+[equal-rho] bracket mu=5.077551, dA=+0.0558, ESS~7503
+[equal-rho] bracket mu=5.077651, dA=+0.0528, ESS~7502
+[equal-rho] bracket mu=5.077751, dA=+0.0497, ESS~7501
+[equal-rho] bracket mu=5.077851, dA=+0.0466, ESS~7500
+[equal-rho] bracket mu=5.077951, dA=+0.0436, ESS~7499
+[equal-rho] bracket mu=5.078051, dA=+0.0405, ESS~7497
+[equal-rho] bracket mu=5.078151, dA=+0.0374, ESS~7496
+[equal-rho] bracket mu=5.078251, dA=+0.0343, ESS~7494
+[equal-rho] bracket mu=5.078351, dA=+0.0312, ESS~7492
+[equal-rho] bracket mu=5.078451, dA=+0.0282, ESS~7490
+[equal-rho] bracket mu=5.078551, dA=+0.0251, ESS~7488
+[equal-rho] bracket mu=5.078651, dA=+0.0220, ESS~7485
+[equal-rho] bracket mu=5.078751, dA=+0.0189, ESS~7483
+[equal-rho] bracket mu=5.078851, dA=+0.0158, ESS~7480
+[equal-rho] bracket mu=5.078951, dA=+0.0128, ESS~7477
+[equal-rho] bracket mu=5.079051, dA=+0.0097, ESS~7474
+mu* = 5.077051   ESS ~ 7505
+0.39403464357095264
+
+
+success: True
+chi^2* : 0.13636092558406931
+theta* : (0.2799410074245654, 3.16, 5.057050605244219, 1.0, -0.07940171806881936, -0.28420851187583746)
+
+=== Step: target eps_sp=3.180 (prev=3.160) ===
+[mu=5.057051] f=m_dense-m_dilute=+0.3843
+[step] mu=5.061051 f=+0.3006
+[step] mu=5.065051 f=+0.2621
+[step] mu=5.069051 f=+0.0815
+[equal-rho] mu0=5.069051, dA=+0.0815, ESS~7505
+[equal-rho] bracket mu=5.069151, dA=+0.0786, ESS~7505
+[equal-rho] bracket mu=5.069251, dA=+0.0756, ESS~7505
+[equal-rho] bracket mu=5.069351, dA=+0.0726, ESS~7504
+[equal-rho] bracket mu=5.069451, dA=+0.0696, ESS~7504
+[equal-rho] bracket mu=5.069551, dA=+0.0666, ESS~7503
+[equal-rho] bracket mu=5.069651, dA=+0.0636, ESS~7502
+[equal-rho] bracket mu=5.069751, dA=+0.0606, ESS~7501
+[equal-rho] bracket mu=5.069851, dA=+0.0576, ESS~7500
+[equal-rho] bracket mu=5.069951, dA=+0.0546, ESS~7499
+[equal-rho] bracket mu=5.070051, dA=+0.0516, ESS~7497
+[equal-rho] bracket mu=5.070151, dA=+0.0485, ESS~7496
+[equal-rho] bracket mu=5.070251, dA=+0.0455, ESS~7494
+[equal-rho] bracket mu=5.070351, dA=+0.0425, ESS~7492
+[equal-rho] bracket mu=5.070451, dA=+0.0395, ESS~7490
+[equal-rho] bracket mu=5.070551, dA=+0.0365, ESS~7488
+[equal-rho] bracket mu=5.070651, dA=+0.0335, ESS~7486
+[equal-rho] bracket mu=5.070751, dA=+0.0305, ESS~7483
+[equal-rho] bracket mu=5.070851, dA=+0.0274, ESS~7481
+[equal-rho] bracket mu=5.070951, dA=+0.0244, ESS~7478
+[equal-rho] bracket mu=5.071051, dA=+0.0214, ESS~7475
+mu* = 5.069051   ESS ~ 7505
+0.3986822118587608
+
+
+success: True
+chi^2* : 0.13396563144487939
+theta* : (0.2599410074245654, 3.18, 5.049050605244218, 1.0, -0.07810293056909781, -0.2821530167477535)
+
+=== Step: target eps_sp=3.200 (prev=3.180) ===
+[mu=5.049051] f=m_dense-m_dilute=+0.4109
+[step] mu=5.053051 f=+0.2526
+[step] mu=5.057051 f=+0.2053
+[step] mu=5.061051 f=+0.0897
+[equal-rho] mu0=5.061051, dA=+0.0897, ESS~7505
+[equal-rho] bracket mu=5.061151, dA=+0.0867, ESS~7505
+[equal-rho] bracket mu=5.061251, dA=+0.0838, ESS~7505
+[equal-rho] bracket mu=5.061351, dA=+0.0808, ESS~7504
+[equal-rho] bracket mu=5.061451, dA=+0.0779, ESS~7504
+[equal-rho] bracket mu=5.061551, dA=+0.0749, ESS~7503
+[equal-rho] bracket mu=5.061651, dA=+0.0720, ESS~7502
+[equal-rho] bracket mu=5.061751, dA=+0.0690, ESS~7501
+[equal-rho] bracket mu=5.061851, dA=+0.0661, ESS~7500
+[equal-rho] bracket mu=5.061951, dA=+0.0631, ESS~7499
+[equal-rho] bracket mu=5.062051, dA=+0.0601, ESS~7498
+[equal-rho] bracket mu=5.062151, dA=+0.0572, ESS~7496
+[equal-rho] bracket mu=5.062251, dA=+0.0542, ESS~7494
+[equal-rho] bracket mu=5.062351, dA=+0.0512, ESS~7493
+[equal-rho] bracket mu=5.062451, dA=+0.0483, ESS~7491
+[equal-rho] bracket mu=5.062551, dA=+0.0453, ESS~7488
+[equal-rho] bracket mu=5.062651, dA=+0.0423, ESS~7486
+[equal-rho] bracket mu=5.062751, dA=+0.0393, ESS~7484
+[equal-rho] bracket mu=5.062851, dA=+0.0364, ESS~7481
+[equal-rho] bracket mu=5.062951, dA=+0.0334, ESS~7478
+[equal-rho] bracket mu=5.063051, dA=+0.0304, ESS~7475
+mu* = 5.061051   ESS ~ 7505
+0.4002145236508994
+
+
+success: True
+chi^2* : 0.12320723303348072
+theta* : (0.2399410074245654, 3.2, 5.041050605244217, 1.0, -0.07113991528162034, -0.27700708883578773)
+
+=== Step: target eps_sp=3.220 (prev=3.200) ===
+[mu=5.041051] f=m_dense-m_dilute=+0.4145
+[step] mu=5.045051 f=+0.3073
+[step] mu=5.049051 f=+0.2036
+[step] mu=5.053051 f=+0.0858
+[equal-rho] mu0=5.053051, dA=+0.0858, ESS~7505
+[equal-rho] bracket mu=5.053151, dA=+0.0829, ESS~7505
+[equal-rho] bracket mu=5.053251, dA=+0.0800, ESS~7505
+[equal-rho] bracket mu=5.053351, dA=+0.0772, ESS~7504
+[equal-rho] bracket mu=5.053451, dA=+0.0743, ESS~7504
+[equal-rho] bracket mu=5.053551, dA=+0.0714, ESS~7503
+[equal-rho] bracket mu=5.053651, dA=+0.0685, ESS~7502
+[equal-rho] bracket mu=5.053751, dA=+0.0656, ESS~7501
+[equal-rho] bracket mu=5.053851, dA=+0.0627, ESS~7500
+[equal-rho] bracket mu=5.053951, dA=+0.0598, ESS~7499
+[equal-rho] bracket mu=5.054051, dA=+0.0569, ESS~7498
+[equal-rho] bracket mu=5.054151, dA=+0.0540, ESS~7496
+[equal-rho] bracket mu=5.054251, dA=+0.0511, ESS~7495
+[equal-rho] bracket mu=5.054351, dA=+0.0482, ESS~7493
+[equal-rho] bracket mu=5.054451, dA=+0.0453, ESS~7491
+[equal-rho] bracket mu=5.054551, dA=+0.0424, ESS~7489
+[equal-rho] bracket mu=5.054651, dA=+0.0395, ESS~7487
+[equal-rho] bracket mu=5.054751, dA=+0.0366, ESS~7484
+[equal-rho] bracket mu=5.054851, dA=+0.0336, ESS~7482
+[equal-rho] bracket mu=5.054951, dA=+0.0307, ESS~7479
+[equal-rho] bracket mu=5.055051, dA=+0.0278, ESS~7476
+mu* = 5.053051   ESS ~ 7505
+0.39786542305129907
+
+
+success: True
+chi^2* : 0.12216794672305649
+theta* : (0.2199410074245654, 3.22, 5.033050605244216, 1.0, -0.06655599600529057, -0.27467907364201094)
+
+=== Step: target eps_sp=3.240 (prev=3.220) ===
+[mu=5.033051] f=m_dense-m_dilute=+0.4258
+[step] mu=5.037051 f=+0.3542
+[step] mu=5.041051 f=+0.2261
+[step] mu=5.045051 f=+0.1424
+[step] mu=5.049051 f=-0.0243
+[equal-rho] mu0=5.049051, dA=-0.0243, ESS~7505
+[equal-rho] bracket mu=5.048951, dA=-0.0214, ESS~7505
+[equal-rho] bracket mu=5.048851, dA=-0.0185, ESS~7505
+[equal-rho] bracket mu=5.048751, dA=-0.0156, ESS~7504
+[equal-rho] bracket mu=5.048651, dA=-0.0128, ESS~7504
+[equal-rho] bracket mu=5.048551, dA=-0.0099, ESS~7503
+[equal-rho] bracket mu=5.048451, dA=-0.0071, ESS~7502
+[equal-rho] bracket mu=5.048351, dA=-0.0042, ESS~7502
+[equal-rho] bracket mu=5.048251, dA=-0.0013, ESS~7500
+[equal-rho] bracket mu=5.048151, dA=+0.0015, ESS~7499
+[equal-rho] bisect mu=5.048601, dA=-0.0113, ESS~7504
+[equal-rho] bisect mu=5.048376, dA=-0.0049, ESS~7502
+mu* = 5.048376   ESS ~ 7502
+0.3723770819453697
+
+
+success: True
+chi^2* : 0.11889401293372506
+theta* : (0.19994100742456541, 3.24, 5.028375605244214, 1.0, -0.0770277015401935, -0.2848060132410575)
+
+=== Step: target eps_sp=3.260 (prev=3.240) ===
+[mu=5.028376] f=m_dense-m_dilute=+0.3927
+[step] mu=5.032376 f=+0.2977
+[step] mu=5.036376 f=+0.1655
+[step] mu=5.040376 f=+0.0906
+[equal-rho] mu0=5.040376, dA=+0.0906, ESS~7505
+[equal-rho] bracket mu=5.040476, dA=+0.0879, ESS~7505
+[equal-rho] bracket mu=5.040576, dA=+0.0851, ESS~7505
+[equal-rho] bracket mu=5.040676, dA=+0.0824, ESS~7504
+[equal-rho] bracket mu=5.040776, dA=+0.0797, ESS~7504
+[equal-rho] bracket mu=5.040876, dA=+0.0769, ESS~7503
+[equal-rho] bracket mu=5.040976, dA=+0.0742, ESS~7503
+[equal-rho] bracket mu=5.041076, dA=+0.0715, ESS~7502
+[equal-rho] bracket mu=5.041176, dA=+0.0687, ESS~7501
+[equal-rho] bracket mu=5.041276, dA=+0.0660, ESS~7499
+[equal-rho] bracket mu=5.041376, dA=+0.0632, ESS~7498
+[equal-rho] bracket mu=5.041476, dA=+0.0605, ESS~7497
+[equal-rho] bracket mu=5.041576, dA=+0.0577, ESS~7495
+[equal-rho] bracket mu=5.041676, dA=+0.0549, ESS~7493
+[equal-rho] bracket mu=5.041776, dA=+0.0522, ESS~7492
+[equal-rho] bracket mu=5.041876, dA=+0.0494, ESS~7490
+[equal-rho] bracket mu=5.041976, dA=+0.0467, ESS~7488
+[equal-rho] bracket mu=5.042076, dA=+0.0439, ESS~7485
+[equal-rho] bracket mu=5.042176, dA=+0.0411, ESS~7483
+[equal-rho] bracket mu=5.042276, dA=+0.0384, ESS~7480
+[equal-rho] bracket mu=5.042376, dA=+0.0356, ESS~7478
+mu* = 5.040376   ESS ~ 7505
+0.40388807461692194
+
+
+success: True
+chi^2* : 0.14058374234874105
+theta* : (0.17994100742456542, 3.2600000000000002, 5.0203756052442134, 1.0, -0.05745339687846783, -0.26661218318691465)
+
+=== Step: target eps_sp=3.280 (prev=3.260) ===
+[mu=5.020376] f=m_dense-m_dilute=+0.4165
+[step] mu=5.024376 f=+0.3582
+[step] mu=5.028376 f=+0.2156
+[step] mu=5.032376 f=+0.1218
+[step] mu=5.036376 f=+0.0425
+[equal-rho] mu0=5.036376, dA=+0.0425, ESS~7505
+[equal-rho] bracket mu=5.036476, dA=+0.0398, ESS~7505
+[equal-rho] bracket mu=5.036576, dA=+0.0371, ESS~7505
+[equal-rho] bracket mu=5.036676, dA=+0.0343, ESS~7504
+[equal-rho] bracket mu=5.036776, dA=+0.0316, ESS~7504
+[equal-rho] bracket mu=5.036876, dA=+0.0289, ESS~7503
+[equal-rho] bracket mu=5.036976, dA=+0.0261, ESS~7503
+[equal-rho] bracket mu=5.037076, dA=+0.0234, ESS~7502
+[equal-rho] bracket mu=5.037176, dA=+0.0207, ESS~7501
+[equal-rho] bracket mu=5.037276, dA=+0.0179, ESS~7499
+[equal-rho] bracket mu=5.037376, dA=+0.0152, ESS~7498
+[equal-rho] bracket mu=5.037476, dA=+0.0125, ESS~7497
+[equal-rho] bracket mu=5.037576, dA=+0.0097, ESS~7495
+[equal-rho] bracket mu=5.037676, dA=+0.0070, ESS~7493
+[equal-rho] bracket mu=5.037776, dA=+0.0042, ESS~7492
+[equal-rho] bracket mu=5.037876, dA=+0.0015, ESS~7490
+[equal-rho] bracket mu=5.037976, dA=-0.0012, ESS~7488
+[equal-rho] bisect mu=5.037176, dA=+0.0207, ESS~7501
+[equal-rho] bisect mu=5.037576, dA=+0.0097, ESS~7495
+mu* = 5.037576   ESS ~ 7495
+0.3765876082611592
+
+
+success: True
+chi^2* : 0.11955197389177992
+theta* : (0.15994100742456543, 3.2800000000000002, 5.017575605244212, 1.0, -0.07084236889320576, -0.27811308766553433)
+
+=== Step: target eps_sp=3.300 (prev=3.280) ===
+[mu=5.017576] f=m_dense-m_dilute=+0.2911
+[step] mu=5.021576 f=+0.2357
+[step] mu=5.025576 f=+0.1082
+[step] mu=5.029576 f=+0.0376
+[equal-rho] mu0=5.029576, dA=+0.0376, ESS~7505
+[equal-rho] bracket mu=5.029676, dA=+0.0349, ESS~7505
+[equal-rho] bracket mu=5.029776, dA=+0.0323, ESS~7505
+[equal-rho] bracket mu=5.029876, dA=+0.0297, ESS~7504
+[equal-rho] bracket mu=5.029976, dA=+0.0270, ESS~7504
+[equal-rho] bracket mu=5.030076, dA=+0.0244, ESS~7503
+[equal-rho] bracket mu=5.030176, dA=+0.0217, ESS~7503
+[equal-rho] bracket mu=5.030276, dA=+0.0191, ESS~7502
+[equal-rho] bracket mu=5.030376, dA=+0.0164, ESS~7501
+[equal-rho] bracket mu=5.030476, dA=+0.0138, ESS~7500
+[equal-rho] bracket mu=5.030576, dA=+0.0111, ESS~7498
+[equal-rho] bracket mu=5.030676, dA=+0.0085, ESS~7497
+[equal-rho] bracket mu=5.030776, dA=+0.0058, ESS~7496
+[equal-rho] bracket mu=5.030876, dA=+0.0031, ESS~7494
+[equal-rho] bracket mu=5.030976, dA=+0.0005, ESS~7492
+[equal-rho] bracket mu=5.031076, dA=-0.0022, ESS~7490
+[equal-rho] bisect mu=5.030326, dA=+0.0177, ESS~7501
+[equal-rho] bisect mu=5.030701, dA=+0.0078, ESS~7497
+mu* = 5.030701   ESS ~ 7497
+0.3802744836775483
+
+
+success: True
+chi^2* : 0.15024634366677458
+theta* : (0.13994100742456544, 3.3000000000000003, 5.010700605244211, 1.0, -0.06539481644733998, -0.27370228076379677)
+
+=== Step: target eps_sp=3.320 (prev=3.300) ===
+[mu=5.010701] f=m_dense-m_dilute=+0.3427
+[step] mu=5.014701 f=+0.2492
+[step] mu=5.018701 f=+0.1652
+[step] mu=5.022701 f=+0.0498
+[equal-rho] mu0=5.022701, dA=+0.0498, ESS~7505
+[equal-rho] bracket mu=5.022801, dA=+0.0473, ESS~7505
+[equal-rho] bracket mu=5.022901, dA=+0.0448, ESS~7505
+[equal-rho] bracket mu=5.023001, dA=+0.0423, ESS~7504
+[equal-rho] bracket mu=5.023101, dA=+0.0398, ESS~7504
+[equal-rho] bracket mu=5.023201, dA=+0.0372, ESS~7503
+[equal-rho] bracket mu=5.023301, dA=+0.0347, ESS~7503
+[equal-rho] bracket mu=5.023401, dA=+0.0322, ESS~7502
+[equal-rho] bracket mu=5.023501, dA=+0.0296, ESS~7501
+[equal-rho] bracket mu=5.023601, dA=+0.0271, ESS~7500
+[equal-rho] bracket mu=5.023701, dA=+0.0246, ESS~7499
+[equal-rho] bracket mu=5.023801, dA=+0.0220, ESS~7497
+[equal-rho] bracket mu=5.023901, dA=+0.0195, ESS~7496
+[equal-rho] bracket mu=5.024001, dA=+0.0170, ESS~7494
+[equal-rho] bracket mu=5.024101, dA=+0.0144, ESS~7493
+[equal-rho] bracket mu=5.024201, dA=+0.0119, ESS~7491
+[equal-rho] bracket mu=5.024301, dA=+0.0093, ESS~7489
+[equal-rho] bracket mu=5.024401, dA=+0.0068, ESS~7487
+[equal-rho] bracket mu=5.024501, dA=+0.0042, ESS~7484
+[equal-rho] bracket mu=5.024601, dA=+0.0017, ESS~7482
+[equal-rho] bracket mu=5.024701, dA=-0.0009, ESS~7479
+[equal-rho] bisect mu=5.023701, dA=+0.0246, ESS~7499
+[equal-rho] bisect mu=5.024201, dA=+0.0119, ESS~7491
+[equal-rho] bisect mu=5.024451, dA=+0.0055, ESS~7485
+mu* = 5.024451   ESS ~ 7485
+0.3849820119920053
+
+
+success: True
+chi^2* : 0.28902297169164404
+theta* : (0.11994100742456544, 3.3200000000000003, 5.004450605244211, 1.0, 0.048207722494801986, -0.1993852275657815)
+
+=== Step: target eps_sp=3.340 (prev=3.320) ===
+[mu=5.004451] f=m_dense-m_dilute=+0.3451
+[step] mu=5.008451 f=+0.2484
+[step] mu=5.012451 f=+0.1670
+[step] mu=5.016451 f=+0.1051
+[step] mu=5.020451 f=+0.0055
+[equal-rho] mu0=5.020451, dA=+0.0055, ESS~7505
+mu* = 5.020451   ESS ~ 7505
+0.3850006662225183
+
+
+success: True
+chi^2* : 0.13912330652533383
+theta* : (0.09994100742456544, 3.3400000000000003, 5.000450605244209, 1.0, -0.04297778222643376, -0.2566226711308336)
+
+=== Step: target eps_sp=3.360 (prev=3.340) ===
+[mu=5.000451] f=m_dense-m_dilute=+0.3312
+[step] mu=5.004451 f=+0.2284
+[step] mu=5.008451 f=+0.1483
+[step] mu=5.012451 f=+0.0874
+[equal-rho] mu0=5.012451, dA=+0.0874, ESS~7505
+[equal-rho] bracket mu=5.012551, dA=+0.0851, ESS~7505
+[equal-rho] bracket mu=5.012651, dA=+0.0827, ESS~7505
+[equal-rho] bracket mu=5.012751, dA=+0.0803, ESS~7504
+[equal-rho] bracket mu=5.012851, dA=+0.0780, ESS~7504
+[equal-rho] bracket mu=5.012951, dA=+0.0756, ESS~7504
+[equal-rho] bracket mu=5.013051, dA=+0.0732, ESS~7503
+[equal-rho] bracket mu=5.013151, dA=+0.0709, ESS~7502
+[equal-rho] bracket mu=5.013251, dA=+0.0685, ESS~7501
+[equal-rho] bracket mu=5.013351, dA=+0.0661, ESS~7500
+[equal-rho] bracket mu=5.013451, dA=+0.0637, ESS~7499
+[equal-rho] bracket mu=5.013551, dA=+0.0613, ESS~7498
+[equal-rho] bracket mu=5.013651, dA=+0.0589, ESS~7496
+[equal-rho] bracket mu=5.013751, dA=+0.0566, ESS~7495
+[equal-rho] bracket mu=5.013851, dA=+0.0542, ESS~7493
+[equal-rho] bracket mu=5.013951, dA=+0.0518, ESS~7492
+[equal-rho] bracket mu=5.014051, dA=+0.0494, ESS~7490
+[equal-rho] bracket mu=5.014151, dA=+0.0470, ESS~7488
+[equal-rho] bracket mu=5.014251, dA=+0.0446, ESS~7486
+[equal-rho] bracket mu=5.014351, dA=+0.0422, ESS~7483
+[equal-rho] bracket mu=5.014451, dA=+0.0398, ESS~7481
+mu* = 5.012451   ESS ~ 7505
+0.4132285143237841
+
+
+success: True
+chi^2* : 0.07255999300169806
+theta* : (0.09927860329758224, 3.3600000000000003, 4.992450605244208, 1.0, 0.25485210235009614, -0.06065649709064927)
+
+=== Step: target eps_sp=3.380 (prev=3.360) ===
+[mu=4.992451] f=m_dense-m_dilute=+0.7150
+[step] mu=4.996451 f=+0.7077
+[step] mu=5.000451 f=+0.6648
+[step] mu=5.004451 f=+0.6301
+[step] mu=5.008451 f=+0.5920
+[step] mu=5.012451 f=+0.5672
+[step] mu=5.016451 f=+0.5047
+[step] mu=5.020451 f=+0.4616
+[step] mu=5.024451 f=+0.3925
+[step] mu=5.028451 f=+0.2686
+[step] mu=5.032451 f=+0.2401
+[step] mu=5.036451 f=+0.1482
+[step] mu=5.040451 f=+0.0358
+[equal-rho] mu0=5.040451, dA=+0.0358, ESS~7505
+[equal-rho] bracket mu=5.040551, dA=+0.0334, ESS~7505
+[equal-rho] bracket mu=5.040651, dA=+0.0310, ESS~7505
+[equal-rho] bracket mu=5.040751, dA=+0.0286, ESS~7504
+[equal-rho] bracket mu=5.040851, dA=+0.0261, ESS~7504
+[equal-rho] bracket mu=5.040951, dA=+0.0237, ESS~7503
+[equal-rho] bracket mu=5.041051, dA=+0.0213, ESS~7503
+[equal-rho] bracket mu=5.041151, dA=+0.0188, ESS~7502
+[equal-rho] bracket mu=5.041251, dA=+0.0164, ESS~7501
+[equal-rho] bracket mu=5.041351, dA=+0.0139, ESS~7500
+[equal-rho] bracket mu=5.041451, dA=+0.0115, ESS~7499
+[equal-rho] bracket mu=5.041551, dA=+0.0090, ESS~7498
+[equal-rho] bracket mu=5.041651, dA=+0.0066, ESS~7496
+[equal-rho] bracket mu=5.041751, dA=+0.0041, ESS~7495
+[equal-rho] bracket mu=5.041851, dA=+0.0017, ESS~7493
+[equal-rho] bracket mu=5.041951, dA=-0.0008, ESS~7491
+[equal-rho] bisect mu=5.041201, dA=+0.0176, ESS~7502
+[equal-rho] bisect mu=5.041576, dA=+0.0084, ESS~7497
+mu* = 5.041576   ESS ~ 7497
+0.38619187208527644
+
+
+success: True
+chi^2* : 0.1376869051574097
+theta* : (0.07927860329758224, 3.3800000000000003, 5.0215756052442035, 1.0, -0.04528465448560077, -0.25495544175746665)
+
+=== Step: target eps_sp=3.400 (prev=3.380) ===
+[mu=5.021576] f=m_dense-m_dilute=+0.3238
+[step] mu=5.025576 f=+0.2473
+[step] mu=5.029576 f=+0.1670
+[step] mu=5.033576 f=+0.1330
+[step] mu=5.037576 f=+0.0193
+[equal-rho] mu0=5.037576, dA=+0.0193, ESS~7505
+[equal-rho] bracket mu=5.037676, dA=+0.0170, ESS~7505
+[equal-rho] bracket mu=5.037776, dA=+0.0146, ESS~7505
+[equal-rho] bracket mu=5.037876, dA=+0.0123, ESS~7504
+[equal-rho] bracket mu=5.037976, dA=+0.0099, ESS~7504
+[equal-rho] bracket mu=5.038076, dA=+0.0076, ESS~7504
+[equal-rho] bracket mu=5.038176, dA=+0.0052, ESS~7503
+[equal-rho] bracket mu=5.038276, dA=+0.0029, ESS~7502
+[equal-rho] bracket mu=5.038376, dA=+0.0005, ESS~7501
+[equal-rho] bracket mu=5.038476, dA=-0.0018, ESS~7500
+[equal-rho] bisect mu=5.038026, dA=+0.0088, ESS~7504
+mu* = 5.038026   ESS ~ 7504
+0.3925742838107928
+
+
+success: True
+chi^2* : 0.1521408105831945
+theta* : (0.059278603297582236, 3.4000000000000004, 5.018025605244202, 1.0, -0.029471193658198513, -0.2428847715883471)
+
+=== Step: target eps_sp=3.420 (prev=3.400) ===
+[mu=5.018026] f=m_dense-m_dilute=+0.2797
+[step] mu=5.022026 f=+0.2612
+[step] mu=5.026026 f=+0.1606
+[step] mu=5.030026 f=+0.0749
+[equal-rho] mu0=5.030026, dA=+0.0749, ESS~7505
+[equal-rho] bracket mu=5.030126, dA=+0.0726, ESS~7505
+[equal-rho] bracket mu=5.030226, dA=+0.0704, ESS~7505
+[equal-rho] bracket mu=5.030326, dA=+0.0682, ESS~7504
+[equal-rho] bracket mu=5.030426, dA=+0.0659, ESS~7504
+[equal-rho] bracket mu=5.030526, dA=+0.0637, ESS~7504
+[equal-rho] bracket mu=5.030626, dA=+0.0614, ESS~7503
+[equal-rho] bracket mu=5.030726, dA=+0.0591, ESS~7502
+[equal-rho] bracket mu=5.030826, dA=+0.0569, ESS~7501
+[equal-rho] bracket mu=5.030926, dA=+0.0546, ESS~7500
+[equal-rho] bracket mu=5.031026, dA=+0.0523, ESS~7499
+[equal-rho] bracket mu=5.031126, dA=+0.0501, ESS~7498
+[equal-rho] bracket mu=5.031226, dA=+0.0478, ESS~7497
+[equal-rho] bracket mu=5.031326, dA=+0.0455, ESS~7495
+[equal-rho] bracket mu=5.031426, dA=+0.0433, ESS~7494
+[equal-rho] bracket mu=5.031526, dA=+0.0410, ESS~7492
+[equal-rho] bracket mu=5.031626, dA=+0.0387, ESS~7490
+[equal-rho] bracket mu=5.031726, dA=+0.0364, ESS~7488
+[equal-rho] bracket mu=5.031826, dA=+0.0341, ESS~7486
+[equal-rho] bracket mu=5.031926, dA=+0.0318, ESS~7484
+[equal-rho] bracket mu=5.032026, dA=+0.0295, ESS~7482
+mu* = 5.030026   ESS ~ 7505
+0.4144836775483011
+
+
+success: True
+chi^2* : 0.05430258569094739
+theta* : (0.0692872877562569, 3.4200000000000004, 5.010025605244201, 1.0, 0.23938201304536233, -0.06394164876614991)
+
