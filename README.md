@@ -39,20 +39,7 @@ paths resolve:
 jupyter lab            # then open notebooks/<name>.ipynb
 ```
 
-The cube SLURM scripts expect to be submitted from `src/` (they resolve paths
-from `$SLURM_SUBMIT_DIR`):
-
-```bash
-cd src
-sbatch build_cube_cache_streaming_directional.sh
-sbatch run_cube_spinodal_scan_assoc_lowmem.sh
-```
 
 ## Notes
 - Dependencies: `numpy`, `scipy`, `matplotlib`, `numba`, `pandas`, and `torch`
   (used by some spinodal/Mercedes scans).
-- `notebooks/spinodal_stick_shaped_class_free_energy_fast.ipynb` imports a
-  module `plaquette_by_species_class_free_energy` that is not included in this
-  repository; add it to `src/` before running that notebook.
-- `Archive.zip` and machine-generated caches (`__pycache__/`,
-  `.ipynb_checkpoints/`, Numba `*.nbc`/`*.nbi`) are git-ignored.
