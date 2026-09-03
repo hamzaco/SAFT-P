@@ -1,6 +1,5 @@
 # simulate_functions_triangular.py
 # MC simulation on a 2D triangular lattice with 6-patch particles (Numba)
-import math
 import numpy as np
 import numba as nb
 

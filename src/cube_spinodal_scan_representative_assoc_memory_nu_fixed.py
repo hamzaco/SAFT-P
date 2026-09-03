@@ -31,10 +31,8 @@ import os
 import pickle
 import time
 from pathlib import Path
-from typing import Optional, Tuple
 
 import numpy as np
-from scipy.spatial import ConvexHull
 
 try:
     from numba import njit as _njit
@@ -1413,62 +1411,6 @@ def _build_fd_jacobian_field(mu, W, phi, pts, pss, m_patch, delta, A, e, lm, pi_
     return Jac
 
 
-def _solve_single_phi_newton_field(
-    phi, mu0, W0, pts, pss, m_patch, delta, A, e, lm, pi_ext,
-    *, tol=1e-8, max_iter=30, step_cap=10.0, h_fd=1e-7,
-):
-    Fd = W0.shape[0]
-    n = 1 + Fd
-    mu = float(mu0)
-    W = W0.copy()
-
-    R, f = _eval_residual_reduced_cube_sparse_field(mu, W, phi, pts, pss, m_patch, delta, A, e, lm, pi_ext)
-    rn = float(np.linalg.norm(R))
-    if rn > 0.1:
-        mu = _find_initial_mu_cube_sparse_field(phi, W, pts, pss, m_patch, delta, A, e, lm, pi_ext)
-        R, f = _eval_residual_reduced_cube_sparse_field(mu, W, phi, pts, pss, m_patch, delta, A, e, lm, pi_ext)
-        rn = float(np.linalg.norm(R))
-
-    best_x = np.empty(n, dtype=np.float64)
-    best_x[0] = mu
-    best_x[1:] = W.copy()
-    best_rn = rn
-    best_f = float(f) if np.isfinite(f) else np.nan
-
-    for _it in range(max_iter):
-        if rn < tol:
-            break
-        Jac = _build_fd_jacobian_field(mu, W, phi, pts, pss, m_patch, delta, A, e, lm, pi_ext, R, h_fd)
-        try:
-            dp = np.linalg.solve(Jac, -R)
-        except np.linalg.LinAlgError:
-            break
-        np.clip(dp, -step_cap, step_cap, out=dp)
-
-        alpha = 1.0
-        accepted = False
-        for _ls in range(8):
-            R_try, f_try = _eval_residual_reduced_cube_sparse_field(
-                mu + alpha * dp[0], W + alpha * dp[1:],
-                phi, pts, pss, m_patch, delta, A, e, lm, pi_ext)
-            if float(np.linalg.norm(R_try)) < rn:
-                accepted = True
-                break
-            alpha *= 0.5
-        if not accepted:
-            break
-
-        mu += alpha * dp[0]
-        W += alpha * dp[1:]
-        R, f = _eval_residual_reduced_cube_sparse_field(mu, W, phi, pts, pss, m_patch, delta, A, e, lm, pi_ext)
-        rn = float(np.linalg.norm(R))
-        if rn < best_rn:
-            best_x[0] = mu
-            best_x[1:] = W.copy()
-            best_rn = rn
-            best_f = float(f)
-
-    return {"x": best_x, "rn": best_rn, "f": best_f, "success": best_rn <= tol}
 
 
 

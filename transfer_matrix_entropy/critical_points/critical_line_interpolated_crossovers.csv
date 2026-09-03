@@ -1,0 +1,5 @@
+model,W,target_entropy_per_particle,eps_d_crossover,eps_nd_interpolated,mu_interpolated,bracket_eps_d_low,bracket_eps_d_high,status
+stick,3,0.34657359027997264,1.8293825787398907,1.2679070041047977,4.415200464993407,1.8,1.96,interpolation between FSS-checked logged points
+stick,4,0.34657359027997264,1.8531609157831352,1.2582449637738147,4.415448880880893,1.8,1.96,interpolation between FSS-checked logged points
+L-shaped,3,0.6931471805599453,4.3595266283919445,1.0863290392260445,6.798433633550307,4.18,5.56,interpolation between logged MC critical-line points
+L-shaped,4,0.6931471805599453,3.8934019498577612,1.0952496565369525,6.399133703496386,3.66,4.18,interpolation between logged MC critical-line points

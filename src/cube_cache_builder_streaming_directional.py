@@ -4,9 +4,10 @@ import argparse
 import gzip
 import hashlib
 import pickle
+import shutil
 from itertools import permutations, product
 from pathlib import Path
-from typing import Iterable, List, Optional
+from typing import Iterable, Optional
 
 import numpy as np
 
@@ -259,158 +260,13 @@ def _build_directional_face_basis(n_patch_types: int):
     return face_radix, small_face_ids, small_face_dirs.astype(np.int64), small_face_slots
 
 
-def _build_undirected_face_basis(n_patch_types: int):
-    # Backward-compatible alias: this implementation is direction-resolved.
-    face_radix, small_face_ids, _small_face_dirs, small_face_slots = _build_directional_face_basis(n_patch_types)
-    return face_radix, small_face_ids, small_face_slots
-
-
-def _cfg_face_ids_from_cfg(patches: np.ndarray, cfg: np.ndarray, n_patch_types: int) -> np.ndarray:
-    """Undirected 4-slot face-pattern id for every stored microstate and face.
-
-    cfg_face_ids[row, face_dir] is an integer in [0, M**4). It intentionally
-    does not include face_dir. This is for optional debugging/future analysis;
-    the scanner may use either orbit-averaged class-level arrays or explicit oriented-state patch arrays.
-    """
-    patches = np.asarray(patches, dtype=np.int64)
-    cfg = np.asarray(cfg, dtype=np.int64)
-    face_radix = int(n_patch_types ** 4)
-    out_dtype = _min_uint_dtype(face_radix - 1)
-    out = np.empty((cfg.shape[0], 6), dtype=out_dtype)
-    for face_dir in range(6):
-        corners = FACE_SLOT_CORNERS[face_dir]
-        slots = np.empty((cfg.shape[0], 4), dtype=np.int64)
-        for slot in range(4):
-            slots[:, slot] = patches[cfg[:, int(corners[slot])], face_dir]
-        face_id = ((slots[:, 0] * n_patch_types + slots[:, 1]) * n_patch_types + slots[:, 2]) * n_patch_types + slots[:, 3]
-        out[:, face_dir] = face_id.astype(out_dtype, copy=False)
-    return out
 
 
 
-def _orbit_averaged_boundary_sparse_from_key(key: np.ndarray, n_patch_types: int):
-    """Orbit-averaged undirected face-pattern counts for one canonical cube class.
-
-    A canonical cube class represents a rotational orbit of boundary flats. The
-    association layer must not use only the lexicographic representative and it
-    must not attach a lattice direction to a face type after cube orientations
-    have been quotient/canonicalized. This routine averages the six face
-    patterns over all unique rotated boundary flats in the orbit:
-
-        m_{g,t} = (1/|O_g|) sum_{R in O_g} n_t(R g)
-
-    where t is now only a 4-slot face pattern in [0, M**4). The returned weights
-    always sum to 6 for every nonempty class.
-    """
-    key = np.asarray(key, dtype=np.int64)
-    n_patch_types = int(n_patch_types)
-    face_radix = int(n_patch_types ** 4)
-    counts = {}
-    orbit_flats = _unique_orbit_flats_from_key(key, n_patch_types)
-    if not orbit_flats:
-        return np.empty(0, dtype=_min_uint_dtype(face_radix - 1)), np.empty(0, dtype=np.float32)
-
-    for flat in orbit_flats:
-        flat = np.asarray(flat, dtype=np.int64)
-        for face_dir in range(6):
-            face_id = _encode_face_slots(flat[FACE_FLAT_IDX[face_dir]], n_patch_types)
-            counts[int(face_id)] = counts.get(int(face_id), 0) + 1
-
-    denom = float(len(orbit_flats))
-    face_ids = np.asarray(sorted(counts.keys()), dtype=_min_uint_dtype(face_radix - 1))
-    weights = np.asarray([counts[int(t)] / denom for t in face_ids.tolist()], dtype=np.float32)
-    return face_ids, weights
 
 
-def _build_orbit_averaged_patch_arrays(
-    group_keys_arr: np.ndarray,
-    n_patch_types: int,
-    *,
-    group_index_dtype=None,
-    verbose: bool = True,
-    label: str = "cube-cache",
-):
-    """Build sparse patch arrays using rotation-orbit averaged face-pattern counts.
 
-    Returns arrays with the same contract as the old patch arrays:
-      patch_to_species[a] = cube class g
-      patch_to_small[a]   = undirected 4-slot face-pattern type t in [0, M**4)
-      m_patch[a]          = average multiplicity/count of type t on class g
 
-    Each class can contribute more than six sparse entries because rotating a
-    canonical class can expose multiple face-pattern types. The sum of m_patch
-    over entries of each class is exactly 6.
-    """
-    group_keys_arr = np.asarray(group_keys_arr, dtype=np.int64)
-    n_groups = int(group_keys_arr.shape[0])
-    n_patch_types = int(n_patch_types)
-    face_radix = int(n_patch_types ** 4)
-    n_small_faces = 6 * face_radix
-    small_dtype = _min_uint_dtype(n_small_faces - 1)
-    if group_index_dtype is None:
-        group_index_dtype = _min_uint_dtype(max(n_groups - 1, 0))
-
-    sizes = np.empty(n_groups, dtype=np.int64)
-    total = 0
-    min_sum = np.inf
-    max_sum = -np.inf
-    report_every = max(1, n_groups // 10)
-
-    for g in range(n_groups):
-        face_ids, weights = _orbit_averaged_boundary_sparse_from_key(group_keys_arr[g], n_patch_types)
-        sizes[g] = int(face_ids.size)
-        total += int(face_ids.size)
-        s = float(np.sum(weights, dtype=np.float64))
-        min_sum = min(min_sum, s)
-        max_sum = max(max_sum, s)
-        if verbose and ((g + 1) % report_every == 0 or g + 1 == n_groups):
-            print(f"[{label}] boundary-orbit-undirected pass1 {g + 1}/{n_groups}; sparse_entries={total}", flush=True)
-
-    patch_group_ptr = np.empty(n_groups + 1, dtype=np.int64)
-    patch_group_ptr[0] = 0
-    np.cumsum(sizes, out=patch_group_ptr[1:])
-    total_entries = int(patch_group_ptr[-1])
-
-    patch_to_species = np.empty(total_entries, dtype=group_index_dtype)
-    patch_to_small = np.empty(total_entries, dtype=small_dtype)
-    # float32 is enough for fractions like k/24 and saves substantial cache/RSS.
-    # The scanner promotes arithmetic to float64 where needed.
-    m_patch = np.empty(total_entries, dtype=np.float32)
-
-    report_every = max(1, n_groups // 10)
-    for g in range(n_groups):
-        lo = int(patch_group_ptr[g])
-        hi = int(patch_group_ptr[g + 1])
-        face_ids, weights = _orbit_averaged_boundary_sparse_from_key(group_keys_arr[g], n_patch_types)
-        if hi - lo != face_ids.size:
-            raise RuntimeError(f"Boundary sparse-size mismatch for group {g}: pass1={hi-lo}, pass2={face_ids.size}")
-        patch_to_species[lo:hi] = g
-        patch_to_small[lo:hi] = face_ids.astype(small_dtype, copy=False)
-        m_patch[lo:hi] = weights.astype(np.float32, copy=False)
-        if verbose and ((g + 1) % report_every == 0 or g + 1 == n_groups):
-            print(f"[{label}] boundary-orbit-undirected pass2 {g + 1}/{n_groups}", flush=True)
-
-    mean_size = float(np.mean(sizes)) if n_groups else 0.0
-    max_size = int(np.max(sizes)) if n_groups else 0
-    min_size = int(np.min(sizes)) if n_groups else 0
-    stats = {
-        "boundary_patch_mode": "rotation_orbit_averaged_undirected_face_patterns",
-        "boundary_sparse_entries": int(total_entries),
-        "patches_per_group_min": min_size,
-        "patches_per_group_max": max_size,
-        "patches_per_group_mean": mean_size,
-        "m_patch_sum_min": float(min_sum),
-        "m_patch_sum_max": float(max_sum),
-        "m_patch_sum_expected": 6.0,
-    }
-    if verbose:
-        print(
-            f"[{label}] boundary_patch_mode={stats['boundary_patch_mode']} "
-            f"entries={total_entries} per_group[min,max,mean]=({min_size},{max_size},{mean_size:.3f}) "
-            f"m_sum[min,max]=({stats['m_patch_sum_min']:.6g},{stats['m_patch_sum_max']:.6g})",
-            flush=True,
-        )
-    return patch_to_species, patch_to_small, m_patch, patch_group_ptr, stats
 
 
 
@@ -605,7 +461,7 @@ def _build_bond_hist_from_bond_pairs(bond_a: np.ndarray, bond_b: np.ndarray, n_p
     return out
 
 
-def save_cube_cache(cache: dict, path: str | Path) -> None:
+def save_cube_cache(cache: dict, path: str | Path, already_written: Optional[set] = None) -> None:
     """Save cache either as legacy pickle-gzip or mmap-ready directory.
 
     If *path* ends with .pkl.gz/.pickle.gz/.pkl/.pickle, write the legacy pickle.
@@ -632,15 +488,17 @@ def save_cube_cache(cache: dict, path: str | Path) -> None:
         "oriented_to_group", "orientation_group_ptr", "orientation_face_keys",
         "cfg_face_ids",
     ]
+    written = set(already_written or ())
     for name in big_names:
-        if name in cache:
+        if name in cache and name not in written:
             np.save(path / f"{name}.npy", np.ascontiguousarray(cache[name]))
 
-    if "bond_hist" in cache:
-        bond_hist = np.asarray(cache["bond_hist"])
-    else:
-        bond_hist = _build_bond_hist_from_bond_pairs(cache["bond_a"], cache["bond_b"], npt)
-    np.save(path / "bond_hist.npy", np.ascontiguousarray(bond_hist))
+    if "bond_hist" not in written:
+        if "bond_hist" in cache:
+            bond_hist = np.asarray(cache["bond_hist"])
+        else:
+            bond_hist = _build_bond_hist_from_bond_pairs(cache["bond_a"], cache["bond_b"], npt)
+        np.save(path / "bond_hist.npy", np.ascontiguousarray(bond_hist))
 
     # Keep bond_a/b optional.  The scanner no longer needs them once bond_hist exists,
     # but they are useful for debugging and backward compatibility.
@@ -788,7 +646,23 @@ def _orbit_size_from_key(key: np.ndarray, n_patch_types: int) -> int:
     return len(seen)
 
 
-def _compatible_cfgs_from_flat(flat: np.ndarray, triple_values_by_corner, triple_species_by_corner) -> np.ndarray:
+def _species_lists_from_flat(flat: np.ndarray, triple_values_by_corner, triple_species_by_corner,
+                             lookup_by_corner=None):
+    """
+    Per-corner lists of species compatible with one boundary flat.
+
+    Split out of ``_compatible_cfgs_from_flat`` so the number of configurations
+    in a class can be counted without materialising them -- which is what lets
+    ``expand_group_shard`` preallocate its output instead of building a list of
+    blocks and concatenating (the concatenate doubles peak memory, and at 13
+    species the shard array is gigabytes).
+
+    ``lookup_by_corner`` is the first return value of ``_build_corner_lookup``:
+    a per-corner dict keyed by the exposed triple.  When supplied the per-corner
+    match is a hash lookup instead of a linear scan over every distinct triple,
+    which is what makes the extra counting pass cheaper than the single pass it
+    replaces.
+    """
     flat = np.asarray(flat, dtype=np.int64)
     if flat.shape != (24,):
         raise ValueError(f"flat boundary must have shape (24,), got {flat.shape}")
@@ -796,6 +670,12 @@ def _compatible_cfgs_from_flat(flat: np.ndarray, triple_values_by_corner, triple
     species_lists = []
     for corner in range(8):
         tri = tuple(int(x) for x in flat[CORNER_FACE_SLOT_IDX[corner]].tolist())
+        if lookup_by_corner is not None:
+            got = lookup_by_corner[corner].get(tri)
+            if got is None:
+                raise RuntimeError(f"No unique compatible species list for corner {corner} and triple {tri}.")
+            species_lists.append(got)
+            continue
         vals = triple_values_by_corner[corner]
         hit = np.where(np.all(vals == np.asarray(tri, dtype=vals.dtype), axis=1))[0]
         if hit.size != 1:
@@ -804,8 +684,28 @@ def _compatible_cfgs_from_flat(flat: np.ndarray, triple_values_by_corner, triple
 
     if any(len(x) == 0 for x in species_lists):
         raise RuntimeError("Encountered empty compatible species list.")
+    return species_lists
+
+
+def _compatible_cfgs_from_flat(flat: np.ndarray, triple_values_by_corner, triple_species_by_corner,
+                               out_dtype=np.int32, lookup_by_corner=None) -> np.ndarray:
+    species_lists = _species_lists_from_flat(flat, triple_values_by_corner, triple_species_by_corner,
+                                             lookup_by_corner=lookup_by_corner)
     grids = np.meshgrid(*species_lists, indexing="ij")
-    return np.stack(grids, axis=-1).reshape(-1, 8).astype(np.int32, copy=False)
+    return np.stack(grids, axis=-1).reshape(-1, 8).astype(out_dtype, copy=False)
+
+
+def _cfg_count_from_key(key: np.ndarray, triple_values_by_corner, triple_species_by_corner,
+                        n_patch_types: int, lookup_by_corner=None) -> int:
+    """Number of configurations in a canonical class, without building them."""
+    total = 0
+    for flat in _unique_orbit_flats_from_key(key, n_patch_types):
+        n = 1
+        for lst in _species_lists_from_flat(flat, triple_values_by_corner, triple_species_by_corner,
+                                            lookup_by_corner=lookup_by_corner):
+            n *= int(len(lst))
+        total += n
+    return int(total)
 
 
 def _unique_orbit_flats_from_key(key: np.ndarray, n_patch_types: int) -> list[np.ndarray]:
@@ -821,10 +721,12 @@ def _unique_orbit_flats_from_key(key: np.ndarray, n_patch_types: int) -> list[np
     return out
 
 
-def _compatible_cfgs_from_key(key: np.ndarray, triple_values_by_corner, triple_species_by_corner, n_patch_types: int) -> np.ndarray:
+def _compatible_cfgs_from_key(key: np.ndarray, triple_values_by_corner, triple_species_by_corner, n_patch_types: int,
+                              out_dtype=np.int32, lookup_by_corner=None) -> np.ndarray:
     cfg_blocks = []
     for flat in _unique_orbit_flats_from_key(key, n_patch_types):
-        cfg_blocks.append(_compatible_cfgs_from_flat(flat, triple_values_by_corner, triple_species_by_corner))
+        cfg_blocks.append(_compatible_cfgs_from_flat(flat, triple_values_by_corner, triple_species_by_corner,
+                                                     out_dtype=out_dtype, lookup_by_corner=lookup_by_corner))
 
     if not cfg_blocks:
         return np.empty((0, 8), dtype=np.int32)
@@ -1001,12 +903,31 @@ def cubes_from_cache(cache: dict, J: np.ndarray, mu: Optional[np.ndarray] = None
     cfg = np.asarray(cache["cfg"], dtype=np.int64)
     group_ptr = np.asarray(cache["group_ptr"], dtype=np.int64)
     group_orbit_mult = np.asarray(cache["group_orbit_mult"], dtype=np.float64)
-    bond_a = np.asarray(cache["bond_a"], dtype=np.int64)
-    bond_b = np.asarray(cache["bond_b"], dtype=np.int64)
+    # Caches built by merge_expand_shards carry bond_hist instead of the raw
+    # bond pairs (see the note there).  The two are equivalent for the energy:
+    # bond_hist[r, a*npt+b] counts how many of the 12 bonds of configuration r
+    # are the ordered patch pair (a, b), so E_r = bond_hist[r] . J.ravel().
+    _has_pairs = ("bond_a" in cache) and ("bond_b" in cache)
+    if _has_pairs:
+        bond_a = np.asarray(cache["bond_a"], dtype=np.int64)
+        bond_b = np.asarray(cache["bond_b"], dtype=np.int64)
+    else:
+        bond_hist = np.asarray(cache["bond_hist"])
     species_counts = np.asarray(cache["species_counts"], dtype=np.float64)
     n_groups = int(cache["n_groups"])
 
-    E = J[bond_a, bond_b].sum(axis=1)
+    # Chunked either way: the full-array forms (a (total_cfg, 12) float64 gather,
+    # or a float64 copy of bond_hist) are tens of GB once n_species is large.
+    n_rows = int(cfg.shape[0])
+    E = np.empty(n_rows, dtype=np.float64)
+    Jflat = np.asarray(J, dtype=np.float64).ravel()
+    step = 1_000_000
+    for lo in range(0, n_rows, step):
+        hi = min(n_rows, lo + step)
+        if _has_pairs:
+            E[lo:hi] = J[bond_a[lo:hi], bond_b[lo:hi]].sum(axis=1)
+        else:
+            E[lo:hi] = bond_hist[lo:hi].astype(np.float64, copy=False) @ Jflat
     mu_sum = mu_vec[cfg].sum(axis=1)
     Eeff = E - mu_sum
 
@@ -1242,7 +1163,8 @@ def expand_group_shard(
     verbose: bool = True,
 ) -> str:
     patches = load_patches_npy(patches_path)
-    _, triple_values_by_corner, triple_species_by_corner = _build_corner_lookup(patches)
+    n_species = int(patches.shape[0])
+    corner_lookup, triple_values_by_corner, triple_species_by_corner = _build_corner_lookup(patches)
     n_patch_types = int(patches.max()) + 1
 
     z = _load_npz(merged_keys_path)
@@ -1251,27 +1173,64 @@ def expand_group_shard(
     n_groups = len(group_keys)
 
     group_ids = np.arange(shard_id, n_groups, n_shards, dtype=np.int64)
-    cfg_blocks: List[np.ndarray] = []
-    group_ptr = [0]
-    local_keys = []
-    local_orbit = []
 
-    for g in group_ids.tolist():
+    # Configuration indices are species ids, so the smallest unsigned type that
+    # holds n_species-1 is enough.  The old code stored int32, which is 4x the
+    # bytes for every one of the S**8 configurations -- 2.6 GB per shard instead
+    # of 0.65 GB at 13 species, and with ten tasks pinned to one node that alone
+    # is the difference between fitting and being OOM-killed.
+    cfg_dtype = _min_uint_dtype(max(n_species - 1, 0))
+
+    # Pass 1: sizes only, computed from the per-corner species lists without
+    # materialising a single configuration.  Preallocating from these removes
+    # the list-of-blocks + np.concatenate pattern, which held two full copies of
+    # the shard at once.
+    sizes = np.empty(group_ids.shape[0], dtype=np.int64)
+    for i, g in enumerate(group_ids.tolist()):
+        sizes[i] = _cfg_count_from_key(group_keys[g], triple_values_by_corner,
+                                       triple_species_by_corner, n_patch_types,
+                                       lookup_by_corner=corner_lookup)
+    group_ptr_arr = np.zeros(group_ids.shape[0] + 1, dtype=np.int64)
+    np.cumsum(sizes, out=group_ptr_arr[1:])
+    total_rows = int(group_ptr_arr[-1])
+
+    if verbose:
+        print(f"[cube-expand] shard={shard_id}/{n_shards} groups={len(group_ids)} "
+              f"rows={total_rows} dtype={np.dtype(cfg_dtype).name} "
+              f"cfg={total_rows * 8 * np.dtype(cfg_dtype).itemsize / 1e9:.2f} GB", flush=True)
+
+    # Pass 2: fill the preallocated buffer one class at a time.  Peak extra
+    # memory is one class block, not one shard.
+    cfg = np.empty((total_rows, 8), dtype=cfg_dtype)
+    local_keys = np.empty((group_ids.shape[0], group_keys.shape[1]), dtype=np.int64)
+    local_orbit = np.empty(group_ids.shape[0], dtype=np.float64)
+    for i, g in enumerate(group_ids.tolist()):
         key = group_keys[g]
-        cfgs = _compatible_cfgs_from_key(key, triple_values_by_corner, triple_species_by_corner, n_patch_types)
-        cfg_blocks.append(cfgs.astype(np.int32, copy=False))
-        group_ptr.append(group_ptr[-1] + cfgs.shape[0])
-        local_keys.append(key)
-        local_orbit.append(orbit_sizes[g])
+        block = _compatible_cfgs_from_key(key, triple_values_by_corner, triple_species_by_corner,
+                                          n_patch_types, out_dtype=cfg_dtype,
+                                          lookup_by_corner=corner_lookup)
+        lo, hi = int(group_ptr_arr[i]), int(group_ptr_arr[i + 1])
+        if block.shape[0] != hi - lo:
+            # _cfg_count_from_key assumes the orbit flats of one key contribute
+            # disjoint configuration sets (a configuration determines its own
+            # boundary flat, so they must).  Fail loudly rather than write a
+            # misaligned shard if that ever stops holding.
+            raise RuntimeError(
+                f"Predicted {hi - lo} configurations for group {g} but built "
+                f"{block.shape[0]}; the class-size shortcut is invalid for this geometry."
+            )
+        cfg[lo:hi] = block
+        local_keys[i] = key
+        local_orbit[i] = orbit_sizes[g]
+    group_ptr = group_ptr_arr
 
-    cfg = np.concatenate(cfg_blocks, axis=0) if cfg_blocks else np.empty((0, 8), dtype=np.int32)
     out_path = Path(out_dir) / f"expand_shard_{int(shard_id):04d}.npz"
     _save_npz(
         out_path,
         group_ids=group_ids,
-        group_keys=np.asarray(local_keys, dtype=np.int64),
-        orbit_sizes=np.asarray(local_orbit, dtype=np.float64),
-        group_ptr=np.asarray(group_ptr, dtype=np.int64),
+        group_keys=local_keys,
+        orbit_sizes=local_orbit,
+        group_ptr=group_ptr,
         cfg=cfg,
         shard_id=np.asarray([int(shard_id)], dtype=np.int64),
         n_shards=np.asarray([int(n_shards)], dtype=np.int64),
@@ -1347,15 +1306,58 @@ def merge_expand_shards(
     total_cfg = int(group_ptr[-1])
 
     cfg_dtype = _min_uint_dtype(max(n_species - 1, 0))
-    patch_dtype = _min_uint_dtype(max(n_patch_types - 1, 0))
     group_index_dtype = _min_uint_dtype(max(n_groups - 1, 0))
 
+    # cfg, species_counts and bond_hist each span every configuration, so at 13
+    # species they are 6.5 + 10.6 + 7.3 = 24.4 GB -- and that is exactly what
+    # ends up on disk.  Holding them in RAM to write them out afterwards is the
+    # single largest term in this function, so when the destination is a
+    # directory cache (the default) they are allocated as memory-mapped .npy
+    # files in their final location and filled in place.  Resident memory then
+    # tracks the OS page cache rather than the array size, and save_cube_cache
+    # is told not to write them again.
+    _final_path = Path(final_cache_path)
+    _use_memmap = not _cache_path_is_pickle(_final_path)
+    if _use_memmap:
+        _final_path.mkdir(parents=True, exist_ok=True)
+        _marker = _final_path / ".ready"
+        if _marker.exists():
+            _marker.unlink()
+
+        # Writing through a memmap trades RAM for disk, and a memmap write to a
+        # full filesystem dies with SIGBUS (a bare "Bus error", no traceback)
+        # partway through, leaving a corrupt cache.  Check up front instead.
+        _need = total_cfg * (8 * np.dtype(cfg_dtype).itemsize
+                             + n_species
+                             + n_patch_types * n_patch_types)
+        _free = shutil.disk_usage(_final_path).free
+        if _free < _need * 1.05:
+            raise RuntimeError(
+                f"Cache directory {_final_path} has {_free / 1e9:.1f} GB free but the "
+                f"cache needs {_need / 1e9:.1f} GB (cfg + species_counts + bond_hist for "
+                f"{total_cfg:,} configurations).  Free space or point --final-cache "
+                "somewhere larger; a memmap write to a full filesystem fails with SIGBUS "
+                "partway through and leaves an unusable cache."
+            )
+        if verbose:
+            print(f"[cube-cache-final] memmap cache at {_final_path}: "
+                  f"need {_need / 1e9:.1f} GB, free {_free / 1e9:.1f} GB", flush=True)
+
+    def _alloc(name, shape, dtype):
+        if not _use_memmap:
+            return np.zeros(shape, dtype=dtype)
+        return np.lib.format.open_memmap(_final_path / f"{name}.npy", mode="w+",
+                                         dtype=dtype, shape=shape)
+
     # Pass 2: allocate once and stream shard cfg blocks directly into final positions.
-    cfg = np.empty((total_cfg, 8), dtype=cfg_dtype)
+    cfg = _alloc("cfg", (total_cfg, 8), cfg_dtype)
     for fpz, gids in zip(files, file_group_ids):
         z = _load_npz(fpz)
         gptr = np.asarray(z["group_ptr"], dtype=np.int64)
-        shard_cfg = np.asarray(z["cfg"], dtype=np.int64)
+        # Read the shard in its stored dtype.  This used to force int64, which
+        # for an 81M-row shard is a 5.2 GB temporary on top of the decompressed
+        # array itself, purely to hold species indices that fit in a byte.
+        shard_cfg = np.asarray(z["cfg"])
         for i, g in enumerate(gids.tolist()):
             src_lo = int(gptr[i])
             src_hi = int(gptr[i + 1])
@@ -1372,9 +1374,15 @@ def merge_expand_shards(
     # Pass 3: derive bond hist inputs and species counts in chunks.
     # Do NOT materialize cfg.astype(int64) for the whole array. For 40M+ configs that
     # temporary is several GB and is the usual cause of OOM during merge-cache.
-    bond_a = np.empty((total_cfg, 12), dtype=patch_dtype)
-    bond_b = np.empty((total_cfg, 12), dtype=patch_dtype)
-    species_counts = np.zeros((total_cfg, n_species), dtype=np.uint8)
+    # bond_hist is accumulated directly in the chunk loop below.  The old code
+    # materialised bond_a and bond_b in full (2 x total_cfg x 12 bytes = 19.6 GB
+    # at 13 species) and only histogrammed them afterwards inside
+    # save_cube_cache, which additionally allocated an int64 row index and an
+    # int64 column index spanning the whole array.  Nothing downstream needs the
+    # raw pairs once the histogram exists, so they are never built.
+    bond_hist = _alloc("bond_hist", (total_cfg, n_patch_types * n_patch_types), np.uint8)
+    species_counts = _alloc("species_counts", (total_cfg, n_species), np.uint8)
+
 
     small_dtype = _min_uint_dtype(6 * face_radix - 1)
     cfg_face_ids = None
@@ -1389,9 +1397,12 @@ def merge_expand_shards(
         hi = min(total_cfg, lo + post_chunk_rows)
         cfg_chunk = cfg[lo:hi].astype(np.int64, copy=False)
 
+        bh = bond_hist[lo:hi]
+        rows_bond = np.arange(hi - lo, dtype=np.int64)
         for k, (ci, di, cj, dj) in enumerate(CUBE_BONDS):
-            bond_a[lo:hi, k] = patches[cfg_chunk[:, ci], di].astype(patch_dtype, copy=False)
-            bond_b[lo:hi, k] = patches[cfg_chunk[:, cj], dj].astype(patch_dtype, copy=False)
+            a_k = patches[cfg_chunk[:, ci], di].astype(np.int64, copy=False)
+            b_k = patches[cfg_chunk[:, cj], dj].astype(np.int64, copy=False)
+            np.add.at(bh, (rows_bond, a_k * n_patch_types + b_k), 1)
 
         sc = species_counts[lo:hi]
         rows_local = np.arange(hi - lo, dtype=np.int64)
@@ -1430,8 +1441,7 @@ def merge_expand_shards(
         "group_orbit_mult": np.ones(n_groups, dtype=np.float64),
         "boundary_orbit_mult": orbit_sizes_all,
         "cfg_includes_full_orbit": True,
-        "bond_a": bond_a,
-        "bond_b": bond_b,
+        "bond_hist": bond_hist,
         "species_counts": species_counts,
         "group_keys": group_keys_all,
         "n_groups": n_groups,
@@ -1457,12 +1467,19 @@ def merge_expand_shards(
     if cfg_face_ids is not None:
         cache["cfg_face_ids"] = cfg_face_ids
 
-    save_cube_cache(cache, final_cache_path)
+    if _use_memmap:
+        for _arr in (cfg, species_counts, bond_hist):
+            _arr.flush()
+        save_cube_cache(cache, final_cache_path,
+                        already_written={"cfg", "species_counts", "bond_hist"})
+    else:
+        save_cube_cache(cache, final_cache_path)
     if verbose:
-        print(f"[cube-cache-final] unique_classes={n_groups}, reduced_cfgs={total_cfg} -> {final_cache_path}")
+        print(f"[cube-cache-final] unique_classes={n_groups}, reduced_cfgs={total_cfg} -> {final_cache_path} "
+              f"(memmap={_use_memmap})")
         print(f"[cube-cache-final] face_basis_mode=directional_6xM4_deterministic_opposite_faces n_ft={len(small_face_ids)} expected={6 * face_radix}")
         cft_dtype = None if cfg_face_ids is None else cfg_face_ids.dtype
-        print(f"[cube-cache-final] dtypes cfg={cfg.dtype} bond={bond_a.dtype} patch_to_species={patch_to_species.dtype} patch_to_small={patch_to_small.dtype} cfg_face_ids={cft_dtype}")
+        print(f"[cube-cache-final] dtypes cfg={cfg.dtype} bond_hist={bond_hist.dtype} patch_to_species={patch_to_species.dtype} patch_to_small={patch_to_small.dtype} cfg_face_ids={cft_dtype}")
     return str(final_cache_path)
 
 

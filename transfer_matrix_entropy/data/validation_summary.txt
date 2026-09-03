@@ -1,0 +1,10 @@
+stick    W=1: N=  2, v=[0,0], h=[0,1], s(0)=0.693147180560, FD derivative error=2.239e-11, mu=1, rho(A0)=1, s_inf=0.000000000000, zero_edges=1
+stick    W=2: N=  4, v=[0,1], h=[0,2], s(0)=0.693147180560, FD derivative error=4.263e-12, mu=2, rho(A0)=1, s_inf=0.000000000000, zero_edges=1
+stick    W=3: N=  8, v=[0,2], h=[0,3], s(0)=0.693147180560, FD derivative error=3.764e-10, mu=3, rho(A0)=1, s_inf=0.000000000000, zero_edges=1
+stick    W=4: N= 16, v=[0,3], h=[0,4], s(0)=0.693147180560, FD derivative error=8.823e-12, mu=4, rho(A0)=1, s_inf=0.000000000000, zero_edges=1
+L-shaped W=1: N=  4, v=[0,0], h=[0,1], s(0)=1.386294361120, FD derivative error=1.317e-10, mu=0.5, rho(A0)=2, s_inf=0.693147180560, zero_edges=8
+L-shaped W=2: N= 16, v=[0,1], h=[0,2], s(0)=1.386294361120, FD derivative error=2.880e-10, mu=2, rho(A0)=1, s_inf=0.000000000000, zero_edges=4
+L-shaped W=3: N= 64, v=[0,1], h=[0,3], s(0)=1.386294361120, FD derivative error=2.206e-10, mu=2.5, rho(A0)=4, s_inf=0.462098120373, zero_edges=128
+L-shaped W=4: N=256, v=[0,2], h=[0,4], s(0)=1.386294361120, FD derivative error=2.793e-11, mu=4, rho(A0)=1, s_inf=0.000000000000, zero_edges=16
+stick    W=2, Lx=3: direct-vs-trace relative error=6.088e-16
+L-shaped W=2, Lx=3: direct-vs-trace relative error=1.063e-14

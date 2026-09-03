@@ -1,0 +1,16 @@
+stick       W=3: dlnlambda/deps_nd FD error=3.468e-10
+stick       W=3: dlnlambda/deps_d FD error=6.872e-10
+stick       W=3: dlnlambda/dmu FD error=2.158e-10
+stick       W=4: dlnlambda/deps_nd FD error=3.978e-10
+stick       W=4: dlnlambda/deps_d FD error=3.802e-10
+stick       W=4: dlnlambda/dmu FD error=4.165e-10
+L-shaped    W=3: dlnlambda/deps_nd FD error=1.731e-09
+L-shaped    W=3: dlnlambda/deps_d FD error=9.819e-10
+L-shaped    W=3: dlnlambda/dmu FD error=2.864e-10
+L-shaped    W=4: dlnlambda/deps_nd FD error=4.260e-10
+L-shaped    W=4: dlnlambda/deps_d FD error=1.518e-09
+L-shaped    W=4: dlnlambda/dmu FD error=5.591e-10
+stick    W=3: eps_d=0, |s_int-ln(q)|=4.441e-16
+stick    W=4: eps_d=0, |s_int-ln(q)|=5.551e-16
+L-shaped W=3: eps_d=0, |s_int-ln(q)|=1.998e-15
+L-shaped W=4: eps_d=0, |s_int-ln(q)|=4.663e-15

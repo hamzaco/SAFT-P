@@ -1,0 +1,218 @@
+[
+ {
+  "geometry": "stick",
+  "eps_c": 0.55,
+  "n": 2,
+  "interior_key": "none",
+  "internal_term": "mean_energy",
+  "eps_a_crit": 5.2978515625,
+  "wall": 0.9
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 0.55,
+  "n": 2,
+  "interior_key": "none",
+  "internal_term": "class_free_energy",
+  "eps_a_crit": 6.9482421875,
+  "wall": 0.4
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 0.55,
+  "n": 3,
+  "interior_key": "occupancy",
+  "internal_term": "class_free_energy",
+  "eps_a_crit": 5.1513671875,
+  "wall": 41.4
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 0.55,
+  "n": 3,
+  "interior_key": "occupancy",
+  "internal_term": "mean_energy",
+  "eps_a_crit": 3.8916015625,
+  "wall": 40.6
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 0.65,
+  "n": 2,
+  "interior_key": "none",
+  "internal_term": "mean_energy",
+  "eps_a_crit": 4.3310546875,
+  "wall": 0.5
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 0.65,
+  "n": 2,
+  "interior_key": "none",
+  "internal_term": "class_free_energy",
+  "eps_a_crit": 5.9033203125,
+  "wall": 0.4
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 0.65,
+  "n": 3,
+  "interior_key": "occupancy",
+  "internal_term": "class_free_energy",
+  "eps_a_crit": 4.5263671875,
+  "wall": 40.3
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 0.65,
+  "n": 3,
+  "interior_key": "occupancy",
+  "internal_term": "mean_energy",
+  "eps_a_crit": 3.4033203125,
+  "wall": 40.5
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 0.8,
+  "n": 2,
+  "interior_key": "none",
+  "internal_term": "mean_energy",
+  "eps_a_crit": 3.4033203125,
+  "wall": 0.5
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 0.8,
+  "n": 2,
+  "interior_key": "none",
+  "internal_term": "class_free_energy",
+  "eps_a_crit": 4.8193359375,
+  "wall": 0.5
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 0.8,
+  "n": 3,
+  "interior_key": "occupancy",
+  "internal_term": "class_free_energy",
+  "eps_a_crit": 3.8623046875,
+  "wall": 41.8
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 0.8,
+  "n": 3,
+  "interior_key": "occupancy",
+  "internal_term": "mean_energy",
+  "eps_a_crit": 2.8564453125,
+  "wall": 41.1
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 1.0,
+  "n": 2,
+  "interior_key": "none",
+  "internal_term": "mean_energy",
+  "eps_a_crit": 2.5341796875,
+  "wall": 0.5
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 1.0,
+  "n": 2,
+  "interior_key": "none",
+  "internal_term": "class_free_energy",
+  "eps_a_crit": 3.8427734375,
+  "wall": 0.4
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 1.0,
+  "n": 3,
+  "interior_key": "occupancy",
+  "internal_term": "class_free_energy",
+  "eps_a_crit": 3.1787109375,
+  "wall": 41.6
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 1.0,
+  "n": 3,
+  "interior_key": "occupancy",
+  "internal_term": "mean_energy",
+  "eps_a_crit": 2.2900390625,
+  "wall": 40.4
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 1.4,
+  "n": 2,
+  "interior_key": "none",
+  "internal_term": "mean_energy",
+  "eps_a_crit": 1.1083984375,
+  "wall": 0.5
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 1.4,
+  "n": 2,
+  "interior_key": "none",
+  "internal_term": "class_free_energy",
+  "eps_a_crit": 2.4267578125,
+  "wall": 0.5
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 1.4,
+  "n": 3,
+  "interior_key": "occupancy",
+  "internal_term": "class_free_energy",
+  "eps_a_crit": 2.0751953125,
+  "wall": 41.3
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 1.4,
+  "n": 3,
+  "interior_key": "occupancy",
+  "internal_term": "mean_energy",
+  "eps_a_crit": 1.1572265625,
+  "wall": 40.7
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 1.8,
+  "n": 2,
+  "interior_key": "none",
+  "internal_term": "mean_energy",
+  "eps_a_crit": 0.0,
+  "wall": 0.0
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 1.8,
+  "n": 2,
+  "interior_key": "none",
+  "internal_term": "class_free_energy",
+  "eps_a_crit": 0.9521484375,
+  "wall": 0.5
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 1.8,
+  "n": 3,
+  "interior_key": "occupancy",
+  "internal_term": "class_free_energy",
+  "eps_a_crit": 0.5908203125,
+  "wall": 42.2
+ },
+ {
+  "geometry": "stick",
+  "eps_c": 1.8,
+  "n": 3,
+  "interior_key": "occupancy",
+  "internal_term": "mean_energy",
+  "eps_a_crit": 0.0,
+  "wall": 3.4
+ }
+]

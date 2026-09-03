@@ -4,6 +4,13 @@ from typing import Optional, Tuple, Dict, Any, List
 from itertools import permutations, product
 import torch.nn.functional as F
 
+from plaquette_composition import (
+    COMPOSITION_KEYS,
+    resolve_component_map,
+    composition_code,
+    describe_components,
+)
+
 def _rot90_species_map(n_species: int, rot90_species: Optional[np.ndarray]) -> np.ndarray:
     """
     rot90_species: permutation of [0..S-1] giving the species after a 90° CW rotation.
@@ -566,11 +573,69 @@ def build_plaquettes_by_species(
     undirected_edges: bool = False,
     canonicalize_by_edges: bool = False,
     canonicalize_by_boundary_edges: bool = False,   # NEW
+    composition_key: str = "components",
+    species_to_component: Any = None,
+    vacancy_index: int = -1,
     return_class_members: bool = False,
+    return_composition_info: bool = False,
 ) -> Any:
+    """
+    Group the S**4 microstates of a 2x2 plaquette into macrostate classes.
+
+    Canonicalisation
+    ----------------
+    ``canonicalize_by_boundary_edges=True`` groups microstates by their outgoing
+    boundary-edge 4-tuple, canonicalised over the C4 rotation of the plaquette.
+    That collapses the four lab-frame images of one plaquette into a single
+    class, which is exact: a rotation is a symmetry of the lattice and does not
+    change what the cluster is made of.
+
+    ``composition_key`` (composition awareness)
+    -------------------------------------------
+    The boundary signature alone does *not* pin the composition.  A corner
+    contributes only its two outward patches, so two microstates with different
+    numbers of particles can expose the same boundary and were previously merged
+    into one class.  Their Boltzmann average then gave the class a fractional
+    ``A_p``, turning the composition constraint ``sum_p A_p rho_p = phi`` into a
+    mean-field smear and leaving the intra-class weights dependent on the mu
+    used at build time.  Orientational degeneracy is a real symmetry;
+    compositional degeneracy is not, and must not be averaged over.
+
+        "components"  (default) class key = boundary signature x count per
+                      chemical component.  A component is a set of species
+                      closed under ``rot90_species``; by default it is exactly
+                      the orbit decomposition of that map, so the stick's
+                      {0,1} and the L-shape's {0,1,2,3} collapse to one particle
+                      component while the vacancy stays separate, and the
+                      chirality model's ABEE / BAEE / CD / vacancy groups are
+                      recovered automatically.  Because components are unions of
+                      rotation orbits, the count vector is C4-invariant and can
+                      be appended to the canonical key directly.
+
+        "species"     class key = boundary signature x full per-species count
+                      vector, minimised jointly over the four rotated images.
+                      Strictest: also separates orientational-isomer counts.
+
+        "none"        legacy behaviour, boundary signature only.  Kept so the
+                      published numbers can still be regenerated and regressed
+                      against.
+
+    ``composition_key`` is inert when neither canonicalisation flag is set,
+    because the class is then the full rotation orbit of one microstate and its
+    composition is already exact.
+
+    ``species_to_component`` overrides the default component map: pass
+    ``"occupancy"`` to coarsen down to (vacancy, everything else) -- the single
+    coordinate the reduced solver actually constrains -- or an explicit
+    length-S array.  It is validated to be constant on rotation orbits.
+    """
 
     if canonicalize_by_edges and canonicalize_by_boundary_edges:
         raise ValueError("Pick one: canonicalize_by_edges OR canonicalize_by_boundary_edges, not both.")
+
+    composition_key = str(composition_key).strip().lower()
+    if composition_key not in COMPOSITION_KEYS:
+        raise ValueError(f"composition_key must be one of {COMPOSITION_KEYS}, got {composition_key!r}")
 
     patches = np.asarray(patches, dtype=np.int64)
     J = np.asarray(J, dtype=np.float64)
@@ -589,6 +654,48 @@ def build_plaquettes_by_species(
         raise ValueError(f"mu must have shape ({Ssp},), got {mu_vec.shape}")
 
     rot_map = _rot90_species_map(Ssp, rot90_species)
+
+    # Composition awareness is only meaningful for the canonicalisation modes
+    # that merge distinct microstates behind a common boundary signature.
+    merges_compositions = bool(canonicalize_by_edges or canonicalize_by_boundary_edges)
+    if not merges_compositions:
+        composition_key = "none"
+
+    if composition_key == "none":
+        comp_map = np.arange(Ssp, dtype=np.int64)
+        n_components = Ssp
+        n_comp_codes = 1
+    else:
+        # composition_key="species" is only well defined when the rotation does
+        # not relabel species.  When it does (stick 0<->1, L 0->1->2->3), a
+        # class is by construction the union of four species-relabelled images
+        # of one microstate, so no per-species count vector can be constant
+        # across it and the finest well-defined composition is the per-component
+        # one.  resolve_component_map raises with that diagnosis.
+        comp_map, n_components = resolve_component_map(
+            Ssp,
+            "species" if composition_key == "species" else species_to_component,
+            rot_map=rot_map,
+            vacancy_index=vacancy_index,
+            rot_name="rot90_species",
+        )
+        _, n_comp_codes = composition_code(np.zeros(Ssp), comp_map, n_components, 4)
+
+        # Every microstate in a composition-aware class carries the same
+        # mu . n, so that term factors out of the intra-class Boltzmann sum and
+        # the class internal free energy is mu-independent -- but only if mu is
+        # constant within a component.  Warn rather than fail: mu is zero at
+        # every call site in this repository.
+        for c in range(n_components):
+            members = np.where(comp_map == c)[0]
+            if members.size > 1 and not np.allclose(mu_vec[members], mu_vec[members[0]]):
+                import warnings
+                warnings.warn(
+                    f"mu is not constant on chemical component {c} "
+                    f"(species {members.tolist()}); the class internal free "
+                    "energy will retain a residual dependence on the build-time mu.",
+                    RuntimeWarning,
+                )
 
     N, E, Sdir, W = 0, 1, 2, 3
 
@@ -711,7 +818,20 @@ def build_plaquettes_by_species(
                     seen_orbits.add(orbit)
                     orbit_reps.append(rots[0])
 
-    def _canonical_key_by_internal_edges(cfg: Tuple[int, int, int, int]) -> Tuple[int, int, int, int]:
+    def _comp_code(cfg: Tuple[int, int, int, int]) -> int:
+        """
+        Composition code of one microstate.  For composition_key="components"
+        this is invariant under the C4 rotation (components are unions of
+        rotation orbits), so it is the same for every member of the orbit; for
+        "species" it is not, which is why the caller minimises the (boundary,
+        composition) pair jointly over the orbit.
+        """
+        if composition_key == "none":
+            return 0
+        code, _ = composition_code(cfg_species_counts(cfg), comp_map, n_components, 4)
+        return code
+
+    def _canonical_key_by_internal_edges(cfg: Tuple[int, int, int, int]) -> Tuple[Any, ...]:
         rots = unique_rots(cfg)
         keys = []
         for r in rots:
@@ -721,10 +841,10 @@ def build_plaquettes_by_species(
             right  = _edge_id(pUR[Sdir], pBR[N])    # internal
             bottom = _edge_id(pBL[E],    pBR[W])    # internal
             left   = _edge_id(pUL[Sdir], pBL[N])    # internal
-            keys.append((top, right, bottom, left))
+            keys.append(((top, right, bottom, left), _comp_code(r)))
         return min(keys)
 
-    def _canonical_key_by_boundary_edges(cfg: Tuple[int, int, int, int]) -> Tuple[int, int, int, int]:
+    def _canonical_key_by_boundary_edges(cfg: Tuple[int, int, int, int]) -> Tuple[Any, ...]:
         if not use_4_patch:
             raise ValueError("canonicalize_by_boundary_edges requires use_4_patch=True (perimeter edge ids).")
         rots = unique_rots(cfg)
@@ -736,7 +856,7 @@ def build_plaquettes_by_species(
             right  = _edge_id(pUR[E],    pBR[E])        # boundary
             bottom = _edge_id(pBR[Sdir], pBL[Sdir])     # boundary
             left   = _edge_id(pBL[W],    pUL[W])        # boundary
-            keys.append((top, right, bottom, left))
+            keys.append(((top, right, bottom, left), _comp_code(r)))
         return min(keys)
 
     groups: Dict[Any, Dict[str, Any]] = {}
@@ -902,20 +1022,31 @@ def build_plaquettes_by_species(
         eps_small[1*M:2*M, 3*M:4*M] = J
         eps_small[3*M:4*M, 1*M:2*M] = J.T
 
-    if return_class_members:
-        return (
-            eps_small,
-            intra_bonds,
-            plaq_to_species,
-            m_patch,
-            patch_to_species,
-            patch_to_small,
-            plaq_configs,
-            mult_arr,
-            plaq_class_members,
-        )
+    out = (eps_small, intra_bonds, plaq_to_species, m_patch,
+           patch_to_species, patch_to_small, plaq_configs, mult_arr)
 
-    return eps_small, intra_bonds, plaq_to_species, m_patch, patch_to_species, patch_to_small, plaq_configs, mult_arr
+    if return_class_members:
+        out = out + (plaq_class_members,)
+
+    if return_composition_info:
+        comp_counts = np.zeros((P, n_components), dtype=np.float64)
+        np.add.at(comp_counts.T, comp_map, plaq_to_species.T)
+        resid = np.abs(comp_counts - np.rint(comp_counts))
+        out = out + ({
+            "composition_key": composition_key,
+            "comp_map": comp_map,
+            "n_components": n_components,
+            "components": describe_components(comp_map, n_components),
+            "n_classes": P,
+            "component_counts": comp_counts,
+            # With a composition-aware key every class must hold an integer
+            # number of sites of each chemical component.  This is 0 by
+            # construction for composition_key != "none" and is exactly what is
+            # nonzero in the legacy path.
+            "max_noninteger_residual": float(resid.max()) if resid.size else 0.0,
+        },)
+
+    return out
 
 
 def build_cubes_species(
@@ -925,7 +1056,12 @@ def build_cubes_species(
     *,
     epsilon_patch: Optional[np.ndarray] = None,
     canonicalize_by_boundary_edges: bool = True,
+    composition_key: str = "components",
+    species_to_component: Any = None,
+    vacancy_index: int = -1,
+    rot_species: Optional[np.ndarray] = None,
     return_class_members: bool = False,
+    return_composition_info: bool = False,
 ) -> Any:
     """
     Build 2x2x2 canonical cube macrostates from 6-patch species.
@@ -934,8 +1070,31 @@ def build_cubes_species(
       [N, E, S, W, top(+z), bottom(-z)].
 
     Canonicalization:
-      - boundary-edge canonicalization only
-      - rotational degeneracies are removed by the 24 proper cube rotations
+      - boundary-FACE canonicalization, over the 24 proper cube rotations
+      - composition is carried in the class key (see ``composition_key``)
+
+    ``composition_key``
+    -------------------
+    The six boundary faces do not determine what the cube is made of: a corner
+    exposes only three of its six patches, so microstates with different numbers
+    of particles can share a face signature and used to be merged into one
+    class with a fractional Boltzmann-averaged composition.  Rotation is a
+    symmetry and may be collapsed; composition is not and may not.
+
+        "components"  (default) class key = face signature x count per chemical
+                      component.  Unlike the square/hexagon builders the 24
+                      rotations here act on the *patch decoration array*, not on
+                      species labels, so the per-species count vector is already
+                      rotation-invariant and the default component map is one
+                      component per species -- the strictest choice, and exact.
+                      Pass ``species_to_component="occupancy"`` to coarsen to
+                      (vacancy, everything else), or ``rot_species`` if your
+                      species list does encode orientations that a cube rotation
+                      permutes.
+
+        "species"     explicit synonym for one component per species.
+
+        "none"        legacy behaviour: face signature only.
 
     Returns (same contract style as build_plaquettes_by_species):
       eps_small, intra_bonds, cube_to_species, m_patch,
@@ -943,6 +1102,10 @@ def build_cubes_species(
     """
     if not canonicalize_by_boundary_edges:
         raise ValueError("build_cubes_species supports only canonicalize_by_boundary_edges=True.")
+
+    composition_key = str(composition_key).strip().lower()
+    if composition_key not in COMPOSITION_KEYS:
+        raise ValueError(f"composition_key must be one of {COMPOSITION_KEYS}, got {composition_key!r}")
 
     if J is None and epsilon_patch is None:
         raise ValueError("Provide either J or epsilon_patch.")
@@ -971,6 +1134,18 @@ def build_cubes_species(
     mu_vec = np.zeros(n_species, dtype=np.float64) if mu is None else np.asarray(mu, dtype=np.float64)
     if mu_vec.shape != (n_species,):
         raise ValueError(f"mu must have shape ({n_species},), got {mu_vec.shape}")
+
+    if composition_key == "none":
+        comp_map = np.arange(n_species, dtype=np.int64)
+        n_components = n_species
+    else:
+        comp_map, n_components = resolve_component_map(
+            n_species,
+            "species" if composition_key == "species" else species_to_component,
+            rot_map=rot_species,
+            vacancy_index=vacancy_index,
+            rot_name="rot_species",
+        )
 
     # Hard guard: exhaustive 8-corner enumeration scales as n_species**8.
     total_cfg = int(n_species ** 8)
@@ -1106,14 +1281,21 @@ def build_cubes_species(
     if len(rotations) != 24:
         raise RuntimeError(f"Expected 24 proper cube rotations, found {len(rotations)}.")
 
-    def _canonical_boundary_key(cfg: Tuple[int, ...]) -> Tuple[int, int, int, int, int, int]:
+    def _canonical_boundary_key(cfg: Tuple[int, ...]) -> Tuple[Any, ...]:
         cp = patches[np.asarray(cfg, dtype=np.int64)]  # (8,6)
         keys = []
         for corner_perm, dir_perm in rotations:
             cp_rot = np.empty((8, 6), dtype=np.int64)
             cp_rot[corner_perm[:, None], dir_perm[None, :]] = cp
             keys.append(_face_ids_from_corner_patches(cp_rot))
-        return min(keys)
+        face_key = min(keys)
+        if composition_key == "none":
+            return face_key
+        # The 24 rotations permute corners and patch directions but never
+        # species labels, so this code is the same for every member of the
+        # rotation orbit and can be prepended without further bookkeeping.
+        code, _ = composition_code(_cfg_species_counts(cfg), comp_map, n_components, 8)
+        return (code,) + tuple(face_key)
 
     def _new_acc() -> Dict[str, Any]:
         return {
@@ -1148,8 +1330,9 @@ def build_cubes_species(
         for fid in _face_ids_from_corner_patches(cp):
             acc["boundary_sum"][int(fid)] = acc["boundary_sum"].get(int(fid), 0.0) + contrib
 
-    groups: Dict[Tuple[int, int, int, int, int, int], Dict[str, Any]] = {}
-    members_map: Dict[Tuple[int, int, int, int, int, int], set] = {}
+
+    groups: Dict[Any, Dict[str, Any]] = {}
+    members_map: Dict[Any, set] = {}
     for cfg in np.ndindex(*(n_species,) * 8):
         key = _canonical_boundary_key(cfg)
         acc = groups.get(key)
@@ -1162,7 +1345,7 @@ def build_cubes_species(
         if return_class_members:
             members_map[key].add(tuple(int(x) for x in cfg))
 
-    keys_in_order: List[Tuple[int, int, int, int, int, int]] = []
+    keys_in_order: List[Any] = []
     cube_configs = []
     intra_bonds = []
     cube_to_species_rows = []
@@ -1220,24 +1403,7 @@ def build_cubes_species(
         J[p4[:, None], p3[None, :]]
     ).astype(np.float64, copy=False)
 
-    if return_class_members:
-        cube_class_members: List[Tuple[Tuple[int, ...], ...]] = []
-        for key in keys_in_order:
-            members = tuple(sorted(members_map.get(key, set())))
-            cube_class_members.append(members)
-        return (
-            eps_small,
-            intra_bonds,
-            cube_to_species,
-            m_patch,
-            patch_to_species,
-            patch_to_small,
-            cube_configs,
-            mult_arr,
-            cube_class_members,
-        )
-
-    return (
+    out = (
         eps_small,
         intra_bonds,
         cube_to_species,
@@ -1247,6 +1413,29 @@ def build_cubes_species(
         cube_configs,
         mult_arr,
     )
+
+    if return_class_members:
+        cube_class_members: List[Tuple[Tuple[int, ...], ...]] = []
+        for key in keys_in_order:
+            members = tuple(sorted(members_map.get(key, set())))
+            cube_class_members.append(members)
+        out = out + (cube_class_members,)
+
+    if return_composition_info:
+        comp_counts = np.zeros((P_macro, n_components), dtype=np.float64)
+        np.add.at(comp_counts.T, comp_map, cube_to_species.T)
+        resid = np.abs(comp_counts - np.rint(comp_counts))
+        out = out + ({
+            "composition_key": composition_key,
+            "comp_map": comp_map,
+            "n_components": n_components,
+            "components": describe_components(comp_map, n_components),
+            "n_classes": P_macro,
+            "component_counts": comp_counts,
+            "max_noninteger_residual": float(resid.max()) if resid.size else 0.0,
+        },)
+
+    return out
 
 def residual_free_energy_simple(
     rho: torch.Tensor,

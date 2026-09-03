@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib
 matplotlib.use("Agg")          # non-interactive backend for cluster
 import matplotlib.pyplot as plt
-from typing import Dict, Tuple, List, Optional
+from typing import Dict, Tuple, List
 from scipy.optimize import minimize
 from concurrent.futures import ProcessPoolExecutor
 import multiprocessing as mp

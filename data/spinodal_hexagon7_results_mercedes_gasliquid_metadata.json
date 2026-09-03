@@ -1,0 +1,59 @@
+{
+  "factor": 6.0,
+  "z": 6,
+  "canonicalize_by_boundary_edges": true,
+  "composition_key": "components",
+  "phi1_max": 0.4,
+  "chunk_size": 200000,
+  "patches": [
+    [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  ],
+  "rot60_species": [
+    1,
+    0,
+    2
+  ],
+  "n_points": 129,
+  "n_binodals": 129,
+  "n_dense_dense_rejected": 135,
+  "eps_as_range": [
+    0.0,
+    4.0
+  ],
+  "eps_cs_range": [
+    0.0,
+    1.1
+  ],
+  "note": "Gas-liquid (dilute-dense) coexistence only. Segments with phi1 > 0.40 -- the dense-dense honeycomb-network / closed-ring tangent -- are rejected; the MC critical line does not track that transition.",
+  "solver": "hex_mercedes.solve_curve_robust (multi-start: forward/reverse, direct-W/log-W, cold/hot W seeds)",
+  "differs_from_spinodal_hexagon7_results_mercedes_torch": {
+    "dense_dense_points_removed": 16,
+    "points_recovered_by_multi_start": 26,
+    "unchanged": 102,
+    "one_phi_grid_step_difference": 1,
+    "note": "Two independent causes. The phi1<=0.40 filter removes 16 dense-dense points. The multi-start solver recovers 26 points at eps_a 3.4-4.0, eps_c 0.17-0.33 where a single Newton sweep leaves holes in f(phi) and the two-phase test fails; the scan cell in spinodal_hex_mercedes.ipynb still uses the single-sweep numba path, so re-running it applies the filter but does not recover those points."
+  }
+}

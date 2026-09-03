@@ -3,6 +3,13 @@ import torch
 from typing import Optional, Tuple, Dict, Any, List
 import torch.nn.functional as F
 
+from plaquette_composition import (
+    COMPOSITION_KEYS,
+    resolve_component_map,
+    composition_codes_bulk,
+    describe_components,
+)
+
 try:
     from numba import njit as _njit
     _HAS_NUMBA = True
@@ -1414,11 +1421,45 @@ def build_hexagon7_by_species(
     undirected_edges: bool = False,
     canonicalize_by_boundary_edges: bool = True,
     split_center_vacancy: bool = False,
+    composition_key: str = "components",
+    species_to_component: Any = None,
+    vacancy_index: int = -1,
     return_class_members: bool = False,
+    return_composition_info: bool = False,
     chunk_size: int = 200_000,
 ) -> Any:
     """
     Vectorized 7-site compact-hexagon builder for a triangular lattice.
+
+    ``composition_key`` (composition-aware classes)
+    -----------------------------------------------
+    The six boundary faces are built from the ring sites only, so the centre
+    site is invisible to the class key and ring sites contribute only their
+    outward patches.  With the plain boundary key, hexagons holding different
+    numbers of particles therefore landed in the same class and were
+    Boltzmann-averaged into a single fractional composition.  A 60 deg rotation
+    is a symmetry of the cluster and may be collapsed; a change of composition
+    is not, and must not be.
+
+        "components"  (default) class key = boundary-face signature x count per
+                      chemical component, where a component is a set of species
+                      closed under ``rot60_species`` (by default exactly the
+                      orbits of that map, so the six orientations of one
+                      particle collapse while chemically distinct particles and
+                      the vacancy stay separate).  Because components are unions
+                      of rotation orbits the count vector is C6-invariant and is
+                      simply prepended to the canonical key.
+
+        "species"     one component per species; only well defined when
+                      ``rot60_species`` does not relabel species.
+
+        "none"        legacy behaviour: boundary-face signature only.
+
+    ``split_center_vacancy`` is the older, partial version of the same idea (it
+    separates centre-vacant from centre-occupied but nothing else).  It stays
+    supported and is orthogonal: it is a *positional* distinction, whereas
+    ``composition_key`` is a compositional one.  With ``composition_key`` on,
+    ``split_center_vacancy`` is usually redundant.
 
     Patch-order convention for each species row in `patches`:
       (0,1,2,3,4,5) = (E, NE, NW, W, SW, SE)
@@ -1481,6 +1522,14 @@ def build_hexagon7_by_species(
     if split_center_vacancy and not canonicalize_by_boundary_edges:
         raise ValueError("split_center_vacancy=True requires canonicalize_by_boundary_edges=True")
 
+    composition_key = str(composition_key).strip().lower()
+    if composition_key not in COMPOSITION_KEYS:
+        raise ValueError(f"composition_key must be one of {COMPOSITION_KEYS}, got {composition_key!r}")
+    if not canonicalize_by_boundary_edges:
+        # The class is then the full rotation orbit of one microstate, whose
+        # composition is already exact.
+        composition_key = "none"
+
     patches = np.asarray(patches, dtype=np.int64)
     J = np.asarray(J, dtype=np.float64)
 
@@ -1504,6 +1553,22 @@ def build_hexagon7_by_species(
     for _ in range(5):
         rot_powers.append(rot_map[rot_powers[-1]])
     rot_powers = np.asarray(rot_powers, dtype=np.int64)  # (6,S)
+
+    if composition_key == "none":
+        comp_map = np.arange(Ssp, dtype=np.int64)
+        n_components = Ssp
+    else:
+        comp_map, n_components = resolve_component_map(
+            Ssp,
+            "species" if composition_key == "species" else species_to_component,
+            rot_map=rot_map,
+            vacancy_index=vacancy_index,
+            rot_name="rot60_species",
+        )
+
+    # Leading columns of the class key that are NOT boundary faces.
+    # Key layout is (composition?, center_flag?, face0..face5).
+    n_prefix_cols = int(composition_key != "none") + int(bool(split_center_vacancy))
 
     # Ring site order = (E, NE, NW, W, SW, SE)
     ring_coords = np.asarray([
@@ -1601,6 +1666,13 @@ def build_hexagon7_by_species(
                 # under rotation, so this flag is rotation-invariant.
                 center_flag = (cfg[:, 0] == Ssp - 1).astype(np.int64).reshape(-1, 1)
                 keys = np.column_stack([center_flag, keys])
+            if composition_key != "none":
+                # Components are unions of rot60 orbits, so this code is the
+                # same for all six rotated images of a hexagon and can be
+                # prepended to the canonical key with no further bookkeeping.
+                comp_codes, _ = composition_codes_bulk(
+                    species_counts.astype(np.int64), comp_map, n_components, 7)
+                keys = np.column_stack([comp_codes.reshape(-1, 1), keys])
         else:
             cfg_rots = np.empty((B, 6, 7), dtype=np.int64)
             base_idx = np.arange(6, dtype=np.int64)
@@ -1672,9 +1744,9 @@ def build_hexagon7_by_species(
         intra_bonds.append(float(rec["E0"]))
         hex_to_species_rows.append(rec["species_sum"] / w)
 
-        # When split_center_vacancy=True the key is (center_flag, face0..face5);
-        # face info lives in the last 6 elements only.
-        face_key = key_t[1:] if split_center_vacancy else key_t
+        # Key layout is (composition?, center_flag?, face0..face5); the face
+        # information lives in the last 6 elements only.
+        face_key = key_t[n_prefix_cols:] if n_prefix_cols else key_t
         uniq_face, cnt_face = np.unique(np.asarray(face_key, dtype=np.int64), return_counts=True)
         boundary_avg_list.append({int(u): float(c) for u, c in zip(uniq_face, cnt_face)})
 
@@ -1717,22 +1789,29 @@ def build_hexagon7_by_species(
         + J[fi2[:, None], fi0[None, :]]
     )
 
+    out = (eps_small, intra_bonds, hex_to_species, m_patch,
+           patch_to_species, patch_to_small, hex_configs, mult_arr)
+
     if return_class_members:
         class_members = [tuple(sorted(set(_rotate_hex7_cfg(tuple(int(x) for x in cfg.tolist()), rot_map, k) for k in range(6))))
                          for cfg in hex_configs]
-        return (
-            eps_small,
-            intra_bonds,
-            hex_to_species,
-            m_patch,
-            patch_to_species,
-            patch_to_small,
-            hex_configs,
-            mult_arr,
-            class_members,
-        )
+        out = out + (class_members,)
 
-    return eps_small, intra_bonds, hex_to_species, m_patch, patch_to_species, patch_to_small, hex_configs, mult_arr
+    if return_composition_info:
+        comp_counts = np.zeros((P, n_components), dtype=np.float64)
+        np.add.at(comp_counts.T, comp_map, hex_to_species.T)
+        resid = np.abs(comp_counts - np.rint(comp_counts))
+        out = out + ({
+            "composition_key": composition_key,
+            "comp_map": comp_map,
+            "n_components": n_components,
+            "components": describe_components(comp_map, n_components),
+            "n_classes": P,
+            "component_counts": comp_counts,
+            "max_noninteger_residual": float(resid.max()) if resid.size else 0.0,
+        },)
+
+    return out
 
 
 # convenient aliases
@@ -1750,6 +1829,9 @@ def build_hexagon7_geometry_cache(
     *,
     canonicalize_by_boundary_edges: bool = True,
     split_center_vacancy: bool = False,
+    composition_key: str = "components",
+    species_to_component: Any = None,
+    vacancy_index: int = -1,
     chunk_size: int = 200_000,
 ) -> dict:
     """
@@ -1772,6 +1854,11 @@ def build_hexagon7_geometry_cache(
     """
     if split_center_vacancy and not canonicalize_by_boundary_edges:
         raise ValueError("split_center_vacancy=True requires canonicalize_by_boundary_edges=True")
+    composition_key = str(composition_key).strip().lower()
+    if composition_key not in COMPOSITION_KEYS:
+        raise ValueError(f"composition_key must be one of {COMPOSITION_KEYS}, got {composition_key!r}")
+    if not canonicalize_by_boundary_edges:
+        composition_key = "none"
     patches = np.asarray(patches, dtype=np.int64)
     Ssp = int(patches.shape[0])
     n_dirs = int(patches.shape[1])
@@ -1784,6 +1871,18 @@ def build_hexagon7_geometry_cache(
     for _ in range(5):
         rot_powers.append(rot_map[rot_powers[-1]])
     rot_powers = np.asarray(rot_powers, dtype=np.int64)
+
+    if composition_key == "none":
+        comp_map = np.arange(Ssp, dtype=np.int64)
+        n_components = Ssp
+    else:
+        comp_map, n_components = resolve_component_map(
+            Ssp,
+            "species" if composition_key == "species" else species_to_component,
+            rot_map=rot_map,
+            vacancy_index=vacancy_index,
+            rot_name="rot60_species",
+        )
 
     ring_coords = np.asarray([
         [ 1,  0], [ 0,  1], [-1,  1], [-1,  0], [ 0, -1], [ 1, -1],
@@ -1864,6 +1963,13 @@ def build_hexagon7_geometry_cache(
                 # center-vacancy flag is rotation-invariant and safe to prepend.
                 center_flag = (cfg[:, 0] == Ssp - 1).astype(np.int64).reshape(-1, 1)
                 keys = np.column_stack([center_flag, keys])
+            if composition_key != "none":
+                # Chemical-component counts: rotation-invariant, so prepending
+                # them separates classes that differ in composition while
+                # leaving the C6 orientational collapse untouched.
+                comp_codes, _ = composition_codes_bulk(
+                    species_counts.astype(np.int64), comp_map, n_components, 7)
+                keys = np.column_stack([comp_codes.reshape(-1, 1), keys])
         else:
             cfg_rots = np.empty((B, 6, 7), dtype=np.int64)
             for k in range(6):
@@ -1887,10 +1993,10 @@ def build_hexagon7_geometry_cache(
     n_groups = uniq_keys.shape[0]
 
     # Boundary face info per group (J-independent).
-    # When canonicalize_by_boundary_edges the key is the 6-face tuple,
-    # or (center_flag, face0..face5) when split_center_vacancy=True —
-    # face info lives in the last 6 elements only.
-    face_col_start = 1 if split_center_vacancy else 0
+    # When canonicalize_by_boundary_edges the key layout is
+    # (composition?, center_flag?, face0..face5) — face info lives in the
+    # last 6 elements only.
+    face_col_start = int(composition_key != "none") + int(bool(split_center_vacancy))
     all_face_ids_set: set = set()
     group_face_info: list = [None] * n_groups
     for g in range(n_groups):
@@ -1931,6 +2037,9 @@ def build_hexagon7_geometry_cache(
         "patches": patches.copy(),
         "canonicalize_by_boundary_edges": canonicalize_by_boundary_edges,
         "split_center_vacancy": split_center_vacancy,
+        "composition_key": composition_key,
+        "comp_map": comp_map,
+        "n_components": n_components,
         "patch_to_species": patch_to_species,
         "patch_to_small": patch_to_small,
         "m_patch": m_patch,
@@ -2439,203 +2548,11 @@ def solve_free_energy_curve_reduced(
     return {"phi": phi_grid, "f": fvals, "mu": mus, "mu_W": (mu, W.copy())}
 
 
-def report_free_energy_curvature(phi: np.ndarray, f: np.ndarray, *, edge_trim: int = 8):
-    """
-    Summarize weak curvature of f(phi) on a dense grid (e.g. from solve_free_energy_curve_reduced).
-
-    A nearly straight f(phi) can still show a small **non-affine** bend. For binodal extraction via
-    convex hull / double tangent, a positive ``bulge_above_chord`` (f above the secant through the
-    first and last valid points) is the relevant “slight” departure from linearity.
-
-    Parameters
-    ----------
-    phi, f : 1D arrays (only finite pairs are used).
-    edge_trim : drop this many points at each end before summarizing f'' (np.gradient is noisy there).
-
-    Returns
-    -------
-    dict with keys: phi, f (filtered), c_quad (coeff of phi^2 in LS fit), delta_r2_quad_minus_linear,
-    fpp_median_interior, bulge_above_chord_max, bulge_phi_at_max, bulge_above_chord_min.
-    """
-    phi = np.asarray(phi, dtype=np.float64)
-    f = np.asarray(f, dtype=np.float64)
-    m = np.isfinite(f) & np.isfinite(phi)
-    phi, f = phi[m], f[m]
-    if phi.size < 12:
-        raise ValueError("need at least ~12 valid (phi, f) points")
-
-    order = np.argsort(phi)
-    phi, f = phi[order], f[order]
-
-    Xd = np.column_stack([np.ones_like(phi), phi, phi ** 2])
-    coef_q, _, _, _ = np.linalg.lstsq(Xd, f, rcond=None)
-    c_quad = float(coef_q[2])
-
-    Xl = np.column_stack([np.ones_like(phi), phi])
-    coef_l, _, _, _ = np.linalg.lstsq(Xl, f, rcond=None)
-    f_lin = coef_l[0] + coef_l[1] * phi
-    ss_res_lin = float(np.sum((f - f_lin) ** 2))
-    ss_res_quad = float(np.sum((f - (Xd @ coef_q)) ** 2))
-    ss_tot = float(np.sum((f - np.mean(f)) ** 2))
-    r2_lin = 1.0 - ss_res_lin / ss_tot if ss_tot > 0 else 1.0
-    r2_quad = 1.0 - ss_res_quad / ss_tot if ss_tot > 0 else 1.0
-    delta_r2 = r2_quad - r2_lin
-
-    dphi = float(np.mean(np.diff(phi)))
-    fp = np.gradient(f, dphi)
-    fpp = np.gradient(fp, dphi)
-    lo, hi = edge_trim, phi.size - edge_trim
-    if hi > lo:
-        fpp_med = float(np.median(fpp[lo:hi]))
-    else:
-        fpp_med = float(np.median(fpp))
-
-    chord = f[0] + (f[-1] - f[0]) * (phi - phi[0]) / (phi[-1] - phi[0] + 1e-30)
-    bulge = f - chord
-    k = int(np.argmax(bulge))
-    j = int(np.argmin(bulge))
-
-    return {
-        "phi": phi,
-        "f": f,
-        "c_quad": c_quad,
-        "delta_r2_quad_minus_linear": float(delta_r2),
-        "fpp_median_interior": fpp_med,
-        "bulge_above_chord_max": float(bulge[k]),
-        "bulge_phi_at_max": float(phi[k]),
-        "bulge_above_chord_min": float(bulge[j]),
-    }
 
 
 # ---------------------------------------------------------------------------
 # Spinodal / binodal detection via mu(phi) — no smoothing required
 # ---------------------------------------------------------------------------
 
-def spinodal_from_mu(phi, mu):
-    """
-    Find spinodal points as zero crossings of d(mu)/d(phi).
-
-    The spinodal condition f''(phi) = 0 is equivalent to d(mu)/d(phi) = 0
-    since mu = df/dphi.  Using mu directly requires only one numerical
-    differentiation instead of two, giving much cleaner results.
-
-    Parameters
-    ----------
-    phi, mu : 1D array-like (NaN entries are ignored)
-
-    Returns
-    -------
-    list of float — spinodal phi values
-    """
-    phi = np.asarray(phi, dtype=np.float64)
-    mu  = np.asarray(mu,  dtype=np.float64)
-    valid = np.isfinite(phi) & np.isfinite(mu)
-    phi_v = phi[valid]
-    mu_v  = mu[valid]
-    if len(phi_v) < 4:
-        return []
-    dmu = np.gradient(mu_v, phi_v)
-    crossings = []
-    for i in range(len(phi_v) - 1):
-        y1, y2 = dmu[i], dmu[i + 1]
-        if abs(y1) < 1e-15:
-            crossings.append(float(phi_v[i]))
-        elif y1 * y2 < 0:
-            t = -y1 / (y2 - y1)
-            crossings.append(float(phi_v[i] + t * (phi_v[i + 1] - phi_v[i])))
-    if abs(dmu[-1]) < 1e-15:
-        crossings.append(float(phi_v[-1]))
-    return crossings
 
 
-def maxwell_binodal(phi, mu):
-    """
-    Maxwell equal-area construction on mu(phi) to find binodal coexistence.
-
-    Finds phi1 < phi2 such that mu(phi1) = mu(phi2) = mu_coex and
-    integral_{phi1}^{phi2} [mu(phi) - mu_coex] dphi = 0.
-
-    Replaces the convex-hull / barrier-threshold approach with a threshold-free
-    method that remains accurate near the critical point.
-
-    Parameters
-    ----------
-    phi, mu : 1D array-like (NaN entries are ignored)
-
-    Returns
-    -------
-    dict with keys:
-        phi1, phi2       — binodal (coexistence) compositions
-        mu               — coexistence chemical potential
-        spinodal_lo      — lower spinodal point
-        spinodal_hi      — upper spinodal point
-        s_curve_height   — max(mu) - min(mu) in the S-curve region (strength proxy)
-    or None if no coexistence is found.
-    """
-    from scipy.optimize import brentq
-
-    phi = np.asarray(phi, dtype=np.float64)
-    mu  = np.asarray(mu,  dtype=np.float64)
-    valid = np.isfinite(phi) & np.isfinite(mu)
-    phi_v = phi[valid]
-    mu_v  = mu[valid]
-    if len(phi_v) < 5:
-        return None
-
-    sp = spinodal_from_mu(phi_v, mu_v)
-    if len(sp) < 2:
-        return None
-
-    phi_lo, phi_hi = float(min(sp)), float(max(sp))
-    # Require the two spinodal points to be distinct and away from the edges
-    if phi_hi - phi_lo < 1e-6:
-        return None
-    if phi_lo <= phi_v[0] + 1e-8 or phi_hi >= phi_v[-1] - 1e-8:
-        return None
-
-    mu_interp = lambda p: float(np.interp(p, phi_v, mu_v))
-
-    # S-curve local extrema
-    mu_at_lo = mu_interp(phi_lo)   # local max of mu
-    mu_at_hi = mu_interp(phi_hi)   # local min of mu
-    mu_c_lo  = min(mu_at_lo, mu_at_hi)
-    mu_c_hi  = max(mu_at_lo, mu_at_hi)
-    if mu_c_hi - mu_c_lo < 1e-15:
-        return None
-
-    def area_imbalance(mu_c):
-        try:
-            p1 = brentq(lambda p: mu_interp(p) - mu_c,
-                        float(phi_v[0]), phi_lo - 1e-8, xtol=1e-13)
-            p2 = brentq(lambda p: mu_interp(p) - mu_c,
-                        phi_hi + 1e-8, float(phi_v[-1]), xtol=1e-13)
-        except ValueError:
-            return np.nan
-        mask = (phi_v >= p1) & (phi_v <= p2)
-        if mask.sum() < 2:
-            return 0.0
-        return float(np.trapz(mu_v[mask] - mu_c, phi_v[mask]))
-
-    a0 = area_imbalance(mu_c_lo + 1e-10)
-    a1 = area_imbalance(mu_c_hi - 1e-10)
-    if np.isnan(a0) or np.isnan(a1) or (a0 * a1) >= 0.0:
-        return None
-
-    try:
-        mu_coex = brentq(area_imbalance, mu_c_lo + 1e-10, mu_c_hi - 1e-10,
-                         xtol=1e-13, maxiter=200)
-        p1 = brentq(lambda p: mu_interp(p) - mu_coex,
-                    float(phi_v[0]), phi_lo - 1e-8, xtol=1e-13)
-        p2 = brentq(lambda p: mu_interp(p) - mu_coex,
-                    phi_hi + 1e-8, float(phi_v[-1]), xtol=1e-13)
-    except (ValueError, RuntimeError):
-        return None
-
-    return {
-        "phi1":          float(p1),
-        "phi2":          float(p2),
-        "mu":            float(mu_coex),
-        "spinodal_lo":   phi_lo,
-        "spinodal_hi":   phi_hi,
-        "s_curve_height": float(mu_c_hi - mu_c_lo),
-    }
