@@ -1,6 +1,3 @@
-# Hard requirements. torch is NOT optional: plaquette_by_species,
-# plaquette_by_species_hexagon, saftp_chirality and orig_solver_ref import it at
-# module level and the constrained free-energy solver is written in torch tensors.
 numpy
 scipy
 matplotlib
